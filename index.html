@@ -45,6 +45,14 @@
             color: #555;
         }
 
+        /* Image Section */
+        .feature-image {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+        }
+
         /* Call to Action Button */
         .cta-button {
             display: inline-block;
@@ -68,6 +76,44 @@
             text-align: center;
             padding: 20px;
             margin-top: 40px;
+        }
+
+        /* Contact Us page styling */
+        .contact-form {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .contact-form button {
+            padding: 12px 24px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #45a049;
         }
 
         /* Stripe Buy Button container */
@@ -99,24 +145,7 @@
     </header>
 
     <main>
-        <p>Cheaper, Greener, Better. Freshly harvested worm juice from the heart of nature.</p>
-        <p>Support a small family business and give your plants the nutrients they deserve.</p>
+        <!-- Feature Image -->
+        <img src="https://yasswormfarms.github.io/YassWormFarms/main%20photo.jpg" alt="Yass Worm Farms Feature" class="feature-image">
 
-        <a href="https://buy.stripe.com/8wM6rC0Dl5gnbCM000" class="cta-button">Buy Worm Juice Now</a>
-
-        <div class="stripe-button-container">
-            <stripe-buy-button
-                buy-button-id="buy_btn_1QTAVoHILM4JibGmPpJvaiLt"
-                publishable-key="pk_live_51J6QpnHILM4JibGmYZro16cPkrXxedrgoYlEULlOCh13lVuLAkpt9bMXKSxb2daVMFu85vxNeRFftykdtf0oAMlW00hiA1cdHE">
-            </stripe-buy-button>
-        </div>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Yass Worm Farms. All Rights Reserved.</p>
-    </footer>
-
-    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
-</body>
-
-</html>
+        <p>Cheaper, Greener, Better. Freshly 
