@@ -26,20 +26,29 @@
         main {
             text-align: center;
             margin-top: 0;  /* Remove margin at the top */
+            position: relative;  /* To allow positioning of text over the image */
         }
 
         main p {
             font-size: 1.2rem;
             margin-bottom: 20px;
-            color: #555;
+            color: #fff; /* White text for contrast on the image */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Center the text */
+            z-index: 1; /* Ensure text is above the image */
         }
 
-        /* Image Section - Resized to 1.5 times the size */
+        /* Image Section - Full screen background */
         .feature-image {
-            max-width: 75%;  /* Make the image 1.5 times the original size */
-            height: auto;
-            display: block;
-            margin: 0 auto;  /* Ensure image is centered with no margin on top */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;  /* Full viewport height */
+            object-fit: cover;  /* Ensure image covers the screen while maintaining aspect ratio */
+            z-index: 0; /* Place the image behind the text */
         }
 
         /* Call to Action Button */
@@ -92,7 +101,7 @@
 <body>
 
     <main>
-        <!-- Feature Image - 1.5 times the size -->
+        <!-- Feature Image - Full screen background image -->
         <img src="https://yasswormfarms.github.io/YassWormFarms/main4.png" alt="Yass Worm Farms Feature" class="feature-image">
 
         <p>Cheaper, Greener, Better. Freshly harvested worm juice from the heart of nature.</p>
