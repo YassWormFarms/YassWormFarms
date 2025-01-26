@@ -34,13 +34,13 @@
             color: #555;
         }
 
-        /* Image Section - Make it fit the vertical height of the screen */
+        /* Image Section - Make it fill the viewport vertically */
         .feature-image {
-            width: auto;               /* Keep width auto to maintain aspect ratio */
-            height: 100vh;             /* Make the image height 100% of the viewport */
-            object-fit: cover;        /* Ensures the image covers the entire area without distortion */
+            width: 100%;          /* Ensure image takes up full width */
+            height: 100vh;        /* Make the image fill 100% of the viewport height */
+            object-fit: cover;    /* Ensures the image covers the area without distortion, cropping if needed */
             display: block;
-            margin: 0 auto;            /* Center the image horizontally */
+            margin: 0 auto;       /* Center the image horizontally */
         }
 
         /* Call to Action Button */
@@ -93,7 +93,7 @@
 <body>
 
     <main>
-        <!-- Feature Image - 1.5 times the size -->
+        <!-- Feature Image - Vertically fills the screen -->
         <img src="https://yasswormfarms.github.io/YassWormFarms/main4.png" alt="Yass Worm Farms Feature" class="feature-image">
 
         <p>Cheaper, Greener, Better. Freshly harvested worm juice from the heart of nature.</p>
