@@ -62,4 +62,55 @@
             background-color: #333;
             color: white;
             text-align: center;
-            pa
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        /* Stripe Buy Button container */
+        .stripe-button-container {
+            display: flex;
+            justify-content: center;  /* Horizontally center the button */
+            align-items: center;      /* Vertically center the button */
+            margin-top: 40px;         /* Move the button to the bottom */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            main p {
+                font-size: 1rem;
+            }
+
+            .cta-button {
+                padding: 12px 24px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <!-- Feature Image - 1.5 times the size -->
+        <img src="https://yasswormfarms.github.io/YassWormFarms/main4.png" alt="Yass Worm Farms Feature" class="feature-image">
+
+        <p>Cheaper, Greener, Better. Freshly harvested worm juice from the heart of nature.</p>
+        <p>Support a small family business and give your plants the nutrients they deserve.</p>
+    </main>
+
+    <div class="stripe-button-container">
+        <!-- Stripe Buy Button at the bottom -->
+        <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+        <stripe-buy-button
+            buy-button-id="buy_btn_1QTAVoHILM4JibGmPpJvaiLt"
+            publishable-key="pk_live_51J6QpnHILM4JibGmYZro16cPkrXxedrgoYlEULlOCh13lVuLAkpt9bMXKSxb2daVMFu85vxNeRFftykdtf0oAMlW00hiA1cdHE">
+        </stripe-buy-button>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Yass Worm Farms. All Rights Reserved.</p>
+        <a href="contact.html">Contact Us</a>
+    </footer>
+</body>
+
+</html>
