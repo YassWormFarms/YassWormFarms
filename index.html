@@ -26,29 +26,21 @@
         main {
             text-align: center;
             margin-top: 0;  /* Remove margin at the top */
-            position: relative;  /* To allow positioning of text over the image */
         }
 
         main p {
             font-size: 1.2rem;
             margin-bottom: 20px;
-            color: #fff; /* White text for contrast on the image */
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%); /* Center the text */
-            z-index: 1; /* Ensure text is above the image */
+            color: #555;
         }
 
-        /* Image Section - Full screen background */
+        /* Image Section - Make it fit the vertical height of the screen */
         .feature-image {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100vh;  /* Full viewport height */
-            object-fit: cover;  /* Ensure image covers the screen while maintaining aspect ratio */
-            z-index: 0; /* Place the image behind the text */
+            width: auto;               /* Keep width auto to maintain aspect ratio */
+            height: 100vh;             /* Make the image height 100% of the viewport */
+            object-fit: cover;        /* Ensures the image covers the entire area without distortion */
+            display: block;
+            margin: 0 auto;            /* Center the image horizontally */
         }
 
         /* Call to Action Button */
@@ -101,8 +93,8 @@
 <body>
 
     <main>
-        <!-- Feature Image - Full screen background image -->
-        <img src="https://yasswormfarms.github.io/YassWormFarms/main4.PNG" alt="Yass Worm Farms Feature" class="feature-image">
+        <!-- Feature Image - 1.5 times the size -->
+        <img src="https://yasswormfarms.github.io/YassWormFarms/main4.png" alt="Yass Worm Farms Feature" class="feature-image">
 
         <p>Cheaper, Greener, Better. Freshly harvested worm juice from the heart of nature.</p>
         <p>Support a small family business and give your plants the nutrients they deserve.</p>
