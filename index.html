@@ -34,11 +34,11 @@
             color: #555;
         }
 
-        /* Image Section - Make the image fill the viewport height */
+        /* Image Section - Ensure full image is visible within the vertical viewport */
         .feature-image {
             width: 100%;          /* Ensure image takes up full width */
             height: 100vh;        /* Make the image fill 100% of the viewport height */
-            object-fit: cover;    /* Ensures the image covers the area without distortion, cropping if needed */
+            object-fit: contain;  /* Ensure the entire image is contained within the area */
             display: block;
             margin: 0 auto;       /* Center the image horizontally */
         }
