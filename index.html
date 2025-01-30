@@ -19,13 +19,13 @@
             background-color: #f4f4f4;
             color: #333;
             line-height: 1.6;
-            margin-top: 0;  /* Remove margin at the top */
+            margin-top: 0;
         }
 
         /* Main content */
         main {
             text-align: center;
-            margin-top: 0;  /* Remove margin at the top */
+            margin-top: 0;
         }
 
         main p {
@@ -34,16 +34,40 @@
             color: #555;
         }
 
-        /* Image Section - Ensure full image is visible within the vertical viewport */
+        /* Image Section */
         .feature-image {
-            width: 100%;          /* Ensure image takes up full width */
-            height: 100vh;        /* Make the image fill 100% of the viewport height */
-            object-fit: contain;  /* Ensure the entire image is contained within the area */
+            width: 100%;
+            height: 100vh;
+            object-fit: contain;
             display: block;
-            margin: 0 auto;       /* Center the image horizontally */
+            margin: 0 auto;
         }
 
-        /* Call to Action Button */
+        /* New Product Section */
+        .product-section {
+            padding: 40px;
+            background-color: #fff;
+            color: #333;
+            text-align: left;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .product-section h1,
+        .product-section h2 {
+            color: #4CAF50;
+        }
+
+        .product-section h3 {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .product-section ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
         .cta-button {
             display: inline-block;
             background-color: #4CAF50;
@@ -68,12 +92,12 @@
             margin-top: 40px;
         }
 
-        /* Stripe Buy Button container */
+        /* Stripe Button container */
         .stripe-button-container {
             display: flex;
-            justify-content: center;  /* Horizontally center the button */
-            align-items: center;      /* Vertically center the button */
-            margin-top: 40px;         /* Move the button to the bottom */
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
         }
 
         /* Responsive Design */
@@ -93,15 +117,41 @@
 <body>
 
     <main>
-        <!-- Feature Image - Resize it to fill the viewport height -->
+        <!-- Feature Image -->
         <img src="https://yasswormfarms.github.io/YassWormFarms/main4.png" alt="Yass Worm Farms Feature" class="feature-image">
 
         <p>Cheaper, Greener, Better. Freshly harvested worm juice from the heart of nature.</p>
         <p>Support a small family business and give your plants the nutrients they deserve.</p>
     </main>
 
+    <!-- Product Information Section -->
+    <div class="product-section">
+        <h1>YASS WORM FARMS PRODUCTS</h1>
+        <p><strong>BETTER – GREENER - CHEAPER</strong></p>
+
+        <h2>1. PREMIUM WORM JUICE FERTILIZER</h2>
+        <p>Teaming with Microbes, Bacteria, and Fungi (Lab report)</p>
+
+        <h2>2. BLACK GOLD WORM CASTINGS</h2>
+        <p>Also teaming with Microbes, Bacteria, and Fungi (Lab report)</p>
+
+        <h3>BENEFITS GALORE</h3>
+        <ul>
+            <li>Increases microbial diversity – long term use of synthetic fertilizers reduces soil microbial diversity. The microbe Pseudomonas, for example, enables the plant to tolerate lower frost temperatures. Full list of microbes, bacteria, and fungi <a href="your-link-here">here</a>.</li>
+            <li>Encourages increased root growth length.</li>
+            <li>Increases photosynthetic rates.</li>
+            <li>Reduces plant water stress.</li>
+            <li>Increases plant insect resistance.</li>
+            <li>Increases soil carbon levels.</li>
+            <li>Awakens your land's super bank.</li>
+            <li>Enhances and builds soil health.</li>
+            <li>Biodegradable – cleans up any soil residue from Glyphosate.</li>
+            <li>ORGANIC AND ECO FRIENDLY</li>
+        </ul>
+    </div>
+
     <div class="stripe-button-container">
-        <!-- Stripe Buy Button at the bottom -->
+        <!-- Stripe Buy Button -->
         <script async src="https://js.stripe.com/v3/buy-button.js"></script>
         <stripe-buy-button
             buy-button-id="buy_btn_1QTAVoHILM4JibGmPpJvaiLt"
