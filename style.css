@@ -47,12 +47,13 @@ main p {
 
 /* Image Section */
 .feature-image {
-    height: 100%;  /* Ensures the height adjusts automatically based on the width */
-    width: auto;
-    max-height: 100vh;  /* Ensures the image does not exceed the viewport height */
-    object-fit: contain;  /* Makes sure the entire image is visible and maintains its aspect ratio */
+    height: 100%;        /* The image will take up the full height of the container */
+    width: auto;         /* The width will adjust automatically based on the height */
+    max-height: 100vh;   /* Ensure the image does not exceed the viewport height */
+    object-fit: contain; /* Ensures the entire image is visible and maintains its aspect ratio */
     display: block;
     margin: 0 auto;
+    max-width: 100%;     /* Ensure the image does not exceed the width of its container */
 }
 
 
