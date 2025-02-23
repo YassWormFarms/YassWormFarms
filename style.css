@@ -47,8 +47,8 @@ main p {
 
 /* Image Section */
 .feature-image {
-    width: 100%;
-    height: auto;  /* Ensures the height adjusts automatically based on the width */
+    height: 100%;  /* Ensures the height adjusts automatically based on the width */
+    width: auto;
     max-height: 100vh;  /* Ensures the image does not exceed the viewport height */
     object-fit: contain;  /* Makes sure the entire image is visible and maintains its aspect ratio */
     display: block;
