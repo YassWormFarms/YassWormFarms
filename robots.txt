@@ -1,0 +1,11 @@
+# Allow all user agents to crawl everything except sensitive files
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /checkout/
+
+# Crawl delay for all bots (to prevent overloading your server)
+Crawl-delay: 10
+
+# Sitemap for better indexing
+Sitemap: https://www.yasswormfarms.com/sitemap.xml
