@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://www.yasswormfarms.com/index.html</loc>
+    <lastmod>2025-03-31</lastmod> <!-- Update the date to reflect when the page was last modified -->
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.yasswormfarms.com/application-rates.html</loc>
+    <lastmod>2025-03-31</lastmod> <!-- Update the date to reflect when the page was last modified -->
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.yasswormfarms.com/laboratory-results.html</loc>
+    <lastmod>2025-03-31</lastmod> <!-- Update the date to reflect when the page was last modified -->
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.yasswormfarms.com/contact.html</loc>
+    <lastmod>2025-03-31</lastmod> <!-- Update the date to reflect when the page was last modified -->
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</sitemapindex>
