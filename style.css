@@ -137,7 +137,7 @@ footer {
     float: left;
     margin-right: 20px;
     margin-bottom: 10px;
-    width: 200px; /* You can adjust the size of the image */
+    width: 33%; /* This will make the image one third of its original size */
     height: auto;
     border-radius: 8px;
 }
