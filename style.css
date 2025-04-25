@@ -125,3 +125,25 @@ footer {
         font-size: 1rem;
     }
 }
+
+/* Inline Image Styling */
+.inline-image-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.inline-image {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    width: 200px; /* You can adjust the size of the image */
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Ensure the text wraps nicely around the image */
+.inline-image-container p {
+    text-align: justify;
+}
+
