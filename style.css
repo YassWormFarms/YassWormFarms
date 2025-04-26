@@ -21,10 +21,6 @@ nav {
     text-align: center;
 }
 
-.product-section p {
-    margin-bottom: 10px; /* Or 0px if you want them flush */
-}
-
 
 nav a {
     color: white;
