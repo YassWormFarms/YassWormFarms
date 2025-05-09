@@ -21,7 +21,6 @@ nav {
     text-align: center;
 }
 
-
 nav a {
     color: white;
     text-decoration: none;
@@ -48,15 +47,14 @@ main p {
 
 /* Image Section */
 .feature-image {
-    height: 100%;        /* The image will take up the full height of the container */
-    width: auto;         /* The width will adjust automatically based on the height */
-    max-height: 100vh;   /* Ensure the image does not exceed the viewport height */
-    object-fit: contain; /* Ensures the entire image is visible and maintains its aspect ratio */
+    height: 100%;
+    width: auto;
+    max-height: 100vh;
+    object-fit: contain;
     display: block;
     margin: 0 auto;
-    max-width: 100%;     /* Ensure the image does not exceed the width of its container */
+    max-width: 100%;
 }
-
 
 /* Product Section */
 .product-section {
@@ -83,6 +81,7 @@ main p {
     padding-left: 20px;
 }
 
+/* CTA Button */
 .cta-button {
     display: inline-block;
     background-color: #4CAF50;
@@ -126,25 +125,90 @@ footer {
         font-size: 1rem;
     }
 }
+
 /* Inline Image Styling */
 .inline-image-container {
     display: flex;
-    align-items: flex-start; /* Aligns the image and text at the top */
-    margin-bottom: 20px; /* Space below the whole container */
+    align-items: flex-start;
+    margin-bottom: 20px;
 }
 
 .inline-image {
-    width: 33%; /* Make the image 1/3 of the container's width */
+    width: 33%;
     height: auto;
-    margin-right: 20px; /* Space between the image and text */
+    margin-right: 20px;
     border-radius: 8px;
 }
 
 .inline-text p {
     font-size: 1.1rem;
     line-height: 1.6;
-    margin-bottom: 15px; /* Adds space between paragraphs */
+    margin-bottom: 15px;
     color: #555;
 }
 
+/* --- ADDED STYLES --- */
+
+/* Highlight Block */
+.highlight-yellow {
+    background-color: yellow;
+    font-weight: bold;
+    padding: 5px 10px;
+    display: inline-block;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+}
+
+/* Red/yellow emphasis text */
+.red-highlight {
+    background-color: yellow;
+    font-weight: bold;
+    color: red;
+    padding: 5px;
+    display: inline-block;
+}
+
+/* Microbe list */
+.microbe-list p {
+    margin-bottom: 10px;
+}
+
+.microbe-list strong {
+    text-decoration: underline;
+    color: #000;
+}
+
+/* Testimonial block */
+.testimonial {
+    display: flex;
+    align-items: flex-start;
+    margin: 20px 0;
+}
+
+.testimonial img {
+    max-width: 200px;
+    margin-right: 20px;
+    border: 2px solid #999;
+}
+
+.testimonial-text {
+    flex: 1;
+    font-style: italic;
+}
+
+.testimonial .example {
+    background-color: #eee;
+    border-left: 4px solid #000;
+    padding: 10px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Storage Warning */
+.storage-warning {
+    background-color: #fefcbf;
+    padding: 10px;
+    border-left: 5px solid #f0c000;
+    font-weight: bold;
+    margin: 20px 0;
 }
