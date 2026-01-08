@@ -1,215 +1,40 @@
-/* COLOR PALETTE */
-:root {
-  --green: #064d28;
-  --coffee: #4b3621;
-  --light-grey: #f2f2f2;
-}
+<main>
 
-/* GENERAL */
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: white;
-  color: var(--coffee);
-}
+<!-- Feature Image -->
+    <img src="https://yasswormfarms.github.io/YassWormFarms/main4.png" alt="Yass Worm Farms Feature"
+    <img src="https://yasswormfarms.github.io/YassWormFarms/main4.png"
+      alt="Yass Worm Farms Feature"
+class="feature-image"
+style="width:100%; display:block; margin-bottom:30px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.3);">
 
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-}
+@@ -94,12 +95,14 @@ <h2 style="text-align:center; color:#006400; margin-bottom:15px;">
+style="max-width:700px; width:100%; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.25);">
+</section>
 
-.narrow {
-  max-width: 800px;
-}
+    <!-- LAB TEXT -->
+    <!-- LAB TEXT (UPDATED – SAME FORMAT) -->
+<section style="text-align:center; margin:20px 0 40px 0; color:#004d00; line-height:1.5; font-size:18px; text-transform: uppercase; font-weight:700;">
+<p>CHECK OUT OUR LATEST LAB RESULTS ABOVE</p>
+<p>
+        OUR MAGIC TRICK IS TO HAVE VERY LOW LACTIC ACID BACTERIA (LAB) MICROBE NUMBERS AND VERY HIGH FUNGI,
+        YEAST, ACTINOMYCETES AND PHOTOSYNTHETIC BACTERIA MICROBE NUMBERS.
+        OUR MAGIC TRICK IS TO HAVE VERY LOW LACTIC ACID BACTERIA (LAB) MICROBE NUMBERS AND VERY HIGH
+        MORE BENEFICIAL FUNGI, YEAST, ACTINOMYCETES AND PHOTOSYNTHETIC BACTERIA MICROBES.
+        LACTIC ACID BACTERIA (LAB) IS OK AND HAS SOME BENEFITS BUT IS VERY AGGRESSIVE AND CAN
+        EASILY DOMINATE A MIXTURE.
+</p>
+</section>
 
-.center {
-  text-align: center;
-}
+@@ -117,7 +120,6 @@ <h2 style="color:#006400; text-align:center;">
+Worm Juice Fertiliser will make your garden or grass GROW FASTER
+</p>
 
-
-/* HEADER */
-.header {
-  background: white;
-  border-bottom: 2px solid #ddd;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
-.header-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 0;
-}
-
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: var(--green);
-}
-
-.nav-list {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-  padding: 0;
-}
-
-.nav-list li a {
-  text-decoration: none;
-  font-weight: bold;
-  color: var(--coffee);
-}
-
-.nav-list li a:hover {
-  color: var(--green);
-}
+      <!-- REPLACED PARAGRAPH -->
+<p>
+There are many large companies who have been producing and selling these worm products for many years.
+There is a growing number of new companies becoming involved. We have listed our favorites at the bottom
+@@ -153,3 +155,4 @@ <h2 style="color:#006400; text-align:center;">
+</html>
 
 
-/* HERO */
-.hero {
-  height: 70vh;
-  background: url('YOUR-HERO-IMAGE.jpg') center/cover no-repeat;
-  position: relative;
-}
 
-.hero-overlay {
-  background: rgba(0,0,0,0.55);
-  position: absolute;
-  inset: 0;
-}
-
-.hero-text {
-  position: relative;
-  text-align: center;
-  top: 50%;
-  transform: translateY(-50%);
-  color: white;
-}
-
-.hero-text h1 {
-  font-size: 55px;
-  margin: 0;
-}
-
-.hero-text p {
-  font-size: 22px;
-  margin: 15px 0;
-}
-
-.btn {
-  display: inline-block;
-  padding: 12px 25px;
-  background: var(--green);
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
-}
-
-.btn:hover {
-  background: var(--coffee);
-}
-
-
-/* SECTIONS */
-.section {
-  padding: 60px 0;
-}
-
-.section-title {
-  text-align: center;
-  color: var(--green);
-  font-size: 32px;
-  margin-bottom: 25px;
-}
-
-
-/* BENEFITS */
-.benefit-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.benefit-card {
-  border: 2px solid var(--green);
-  border-radius: 10px;
-  padding: 20px;
-  text-align: center;
-}
-
-
-/* HIGHLIGHT SECTION */
-.highlight-section {
-  background: var(--green);
-  padding: 80px 0;
-  text-align: center;
-}
-
-.light {
-  color: white;
-}
-
-.light-btn {
-  background: white;
-  color: var(--green);
-}
-
-.light-btn:hover {
-  color: white;
-  background: var(--coffee);
-}
-
-
-/* LAB RESULTS */
-.lab-box {
-  border: 2px solid var(--coffee);
-  border-radius: 10px;
-  padding: 25px;
-  text-align: center;
-  max-width: 700px;
-  margin: auto;
-}
-
-.green-text {
-  color: var(--green);
-  font-size: 20px;
-  font-weight: bold;
-}
-
-
-/* TESTIMONIAL */
-.grey {
-  background: var(--light-grey);
-}
-
-.testimonial {
-  max-width: 700px;
-  margin: auto;
-  text-align: center;
-  font-style: italic;
-}
-
-
-/* FOOTER */
-.footer {
-  background: var(--coffee);
-  color: white;
-  text-align: center;
-  padding: 20px 0;
-}
-
-
-/* MOBILE */
-@media(max-width: 900px) {
-  .benefit-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-text h1 {
-    font-size: 38px;
-  }
-}
