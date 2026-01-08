@@ -1,158 +1,121 @@
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yass Worm Farms</title>
-  <link rel="stylesheet" href="style.css">
-  <meta name="description"
-    content="Yass Worm Farms offers organic worm juice fertiliser and worm castings to boost soil health and promote plant growth. Support a small family business today.">
-  <meta name="keywords"
-    content="worm juice, worm castings, organic fertiliser, soil health, eco-friendly fertiliser, plant nutrients">
-  <script async src="https://js.stripe.com/v3/buy-button.js"></script>
-
-  <style>
-    .testimonial {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 2em 0;
-    }
-
-    .testimonial figure,
-    .testimonial figure img {
-      width: 100%;
-      margin: 0;
-      padding: 0;
-      display: block;
-    }
-
-    .testimonial-text {
-      padding: 1em;
-      max-width: 800px;
-      text-align: center;
-    }
-
-    .feature-image {
-      width: 100%;
-      display: block;
-      margin-bottom: 0.5em;
-    }
-
-    @media (min-width: 768px) {
-      .testimonial-text {
-        padding: 2em;
-      }
-    }
-
-    @media (max-width: 767px) {
-      .product-section header h2 {
-        margin-top: 0.2em;
-      }
-
-      .product-section header {
-        padding-top: 0;
-        margin-top: 0;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yass Worm Farms</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-  <!-- Navigation Menu -->
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="application-rates.html">Application Rates</a>
-    <a href="shop.html">Shop</a>
-    <a href="laboratory-results.html">Laboratory Results</a>
-    <a href="contact.html">Contact Us</a>
-  </nav>
+<header class="header">
+  <div class="container header-content">
+    <div class="logo">Yass Worm Farms</div>
+    <nav>
+      <ul class="nav-list">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#benefits">Benefits</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#labresults">Lab Results</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-  <main>
 
-    <!-- Feature Image -->
-    <img src="https://yasswormfarms.github.io/YassWormFarms/main4.png"
-      alt="Yass Worm Farms Feature"
-      class="feature-image"
-      style="width:100%; display:block; margin-bottom:30px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.3);">
+<section id="home" class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-text">
+    <h1>Yass Worm Farms</h1>
+    <p>Worm Juice Fertiliser: Nature’s Rocket Fuel for Plants</p>
+    <a href="#products" class="btn">Shop Now</a>
+  </div>
+</section>
 
-    <!-- Latest Lab Results Heading -->
-    <h2 style="text-align:center; color:#006400; margin-bottom:15px;">
-      Latest Laboratory Results<br>
-      Our most recent microbial laboratory report for our Worm Juice Fertiliser.
-    </h2>
 
-    <!-- Lab Report Image -->
-    <section style="text-align:center; margin-bottom:20px;">
-      <img src="https://raw.githubusercontent.com/YassWormFarms/YassWormFarms/main/goodlab.png"
-        alt="Microbiological Analysis - Latest Lab Results"
-        style="max-width:700px; width:100%; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.25);">
-    </section>
+<section id="benefits" class="section">
+  <div class="container">
+    <h2 class="section-title">Why Choose Worm Juice?</h2>
 
-    <!-- LAB TEXT (UPDATED – SAME FORMAT) -->
-    <section style="text-align:center; margin:20px 0 40px 0; color:#004d00; line-height:1.5; font-size:18px; text-transform: uppercase; font-weight:700;">
-      <p>CHECK OUT OUR LATEST LAB RESULTS ABOVE</p>
-      <p>
-        OUR MAGIC TRICK IS TO HAVE VERY LOW LACTIC ACID BACTERIA (LAB) MICROBE NUMBERS AND VERY HIGH
-        MORE BENEFICIAL FUNGI, YEAST, ACTINOMYCETES AND PHOTOSYNTHETIC BACTERIA MICROBES.
-        LACTIC ACID BACTERIA (LAB) IS OK AND HAS SOME BENEFITS BUT IS VERY AGGRESSIVE AND CAN
-        EASILY DOMINATE A MIXTURE.
-      </p>
-    </section>
+    <div class="benefit-grid">
+      <div class="benefit-card">
+        <h3>🌱 Faster Plant Growth</h3>
+        <p>Packed with beneficial microbes that boost soil life and stimulate stronger, faster plant growth.</p>
+      </div>
 
-    <!-- Main Product Section -->
-    <div class="product-section">
-      <h2 style="color:#006400; text-align:center;">
-        Vineyards, Orchards, Broad Acre Farms, Horticulture, Dairy, Vegetables, Pasture
-      </h2>
+      <div class="benefit-card">
+        <h3>💧 Improves Soil Health</h3>
+        <p>Rebuilds soil structure, retains moisture and supports long-term soil sustainability.</p>
+      </div>
 
-      <h2 style="color:#006400; text-align:center;">
-        WORM JUICE FERTILISER IS TEEMING WITH MILLIONS OF BENEFICIAL BACTERIA AND FUNGI MICROBES
-      </h2>
-
-      <p style="color:red; font-weight:bold; text-align:center;">
-        Worm Juice Fertiliser will make your garden or grass GROW FASTER
-      </p>
-
-      <p>
-        There are many large companies who have been producing and selling these worm products for many years.
-        There is a growing number of new companies becoming involved. We have listed our favorites at the bottom
-        of this page. We are small in comparison to some, but we are proud of our commitment to quality, value for money
-        and sustainability.
-        <br><br>
-        <span style="background:#e6ffe6; padding:8px 12px; border-radius:8px; font-weight:bold; color:#004d00; display:inline-block;">
-          We believe we not only have the <strong>best product</strong>, we also have the <strong>cheapest prices</strong>.
-        </span>
-        <br><br>
-        <em>— James Brown</em>
-      </p>
-
-      <!-- Warren Photo -->
-      <div style="text-align:center; margin: 20px 0;">
-        <img src="https://yasswormfarms.github.io/YassWormFarms/warren.jpg"
-          alt="Warren from Mandurama loading our worm juice fertilizer at the Yass Ampol Service Centre. Warren plans to spray his Lucerne crop."
-          style="max-width:400px; width:100%; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.2);">
-        <p style="font-style: italic; color: #555;">
-          Warren from Mandurama loading our worm juice fertilizer at the Yass Ampol Service Centre.
-          Warren plans to spray his Lucerne crop.
-        </p>
+      <div class="benefit-card">
+        <h3>🐛 100% Natural</h3>
+        <p>Chemical-free, environmentally friendly and safe for gardens, pets and kids.</p>
       </div>
     </div>
+  </div>
+</section>
 
-  </main>
 
-  <footer>
-    <p>&copy; 2025 Yass Worm Farms. all rights reserved.</p>
-  </footer>
+<section id="products" class="highlight-section">
+  <div class="container narrow">
+    <h2 class="section-title light">Our Worm Juice</h2>
+    <p class="center light">
+      Powerful organic fertiliser made by nature — supporting farmers, gardeners and soil lovers across Australia.
+    </p>
+    <a href="#" class="btn light-btn">View Product Range</a>
+  </div>
+</section>
+
+
+<section id="labresults" class="section">
+  <div class="container">
+    <h2 class="section-title">Latest Lab Results</h2>
+
+    <div class="lab-box">
+      <h3>NEWSFLASH</h3>
+      <p>
+        We have figured out how to create extremely high fungi, yeast, actinomycetes
+        and photosynthetic bacteria numbers — while keeping lactic acid bacteria low.
+      </p>
+
+      <h4 class="green-text">🚀 Rocket Fuel For Plants 🚀</h4>
+      <p>Strong biology. Strong soil. Strong plants.</p>
+    </div>
+  </div>
+</section>
+
+
+<section id="testimonials" class="section grey">
+  <div class="container">
+    <h2 class="section-title">What People Are Saying</h2>
+
+    <div class="testimonial">
+      <p>"My plants have never looked happier. Strong growth, lush leaves and incredible soil health. Highly recommend!"</p>
+      <h4>- Happy Gardener</h4>
+    </div>
+  </div>
+</section>
+
+
+<section id="about" class="section">
+  <div class="container">
+    <h2 class="section-title">About Yass Worm Farms</h2>
+    <p class="center">
+      We are passionate about soil life, regenerative growing and helping people
+      unlock nature’s power through living fertilisers.
+    </p>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 Yass Worm Farms — All Rights Reserved</p>
+  </div>
+</footer>
 
 </body>
 </html>
-
-
-
