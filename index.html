@@ -38,7 +38,7 @@ body{
 nav{
   background:white;
   border-bottom:2px solid #ddd;
-  padding:15px 5%;
+  padding:15px 10%; /* doubled width padding */
   display:flex;
   justify-content:space-between;
   align-items:center;
@@ -49,17 +49,17 @@ nav{
 }
 
 nav .logo{
-  height:60px;
+  height:100px; /* bigger logo */
   transition: height 0.3s ease;
 }
 
 nav.shrink{
-  padding:5px 5%;
+  padding:5px 10%;
   border-bottom:1px solid #ccc;
 }
 
 nav.shrink .logo{
-  height:40px;
+  height:60px;
 }
 
 .nav-links{
@@ -121,7 +121,7 @@ section{
 .section-title{
   text-align:center;
   color:var(--green);
-  font-size:32px;
+  font-size:36px; /* larger font for subheadings */
   margin-bottom:20px;
 }
 
@@ -161,6 +161,7 @@ section{
 
 .product-box h2{
   color:var(--green);
+  font-size:28px; /* larger font for h2 */
 }
 
 .product-box .highlight{
@@ -200,6 +201,10 @@ footer{
 @media(max-width:900px){
   .hero-text h1{font-size:36px;}
   .hero-text p{font-size:18px;}
+  .section-title{font-size:28px;}
+  .product-box h2{font-size:22px;}
+  nav .logo{height:70px;}
+  nav.shrink .logo{height:50px;}
 }
 </style>
 </head>
@@ -242,76 +247,7 @@ footer{
       alt="Microbiological Analysis - Latest Lab Results">
 
     <div class="lab-text">
-      CHECK OUT OUR LATEST LAB RESULTS ABOVE <br><br>
-      OUR MAGIC TRICK IS TO HAVE VERY LOW LACTIC ACID BACTERIA (LAB) MICROBE NUMBERS AND VERY HIGH
-      MORE BENEFICIAL FUNGI, YEAST, ACTINOMYCETES AND PHOTOSYNTHETIC BACTERIA MICROBES.
-      LACTIC ACID BACTERIA (LAB) IS OK AND HAS SOME BENEFITS BUT IS VERY AGGRESSIVE AND CAN
-      EASILY DOMINATE A MIXTURE.
-    </div>
-  </div>
-</section>
+      CHECK OUT OUR LATEST LAB RESULTS ABOVE <br>
 
-
-<!-- PRODUCT INFORMATION -->
-<section>
-  <div class="product-box">
-
-    <h2>Vineyards, Orchards, Broad Acre Farms, Horticulture, Dairy, Vegetables, Pasture</h2>
-
-    <h2>WORM JUICE FERTILISER IS TEEMING WITH MILLIONS OF BENEFICIAL BACTERIA AND FUNGI MICROBES</h2>
-
-    <p style="color:red; font-weight:bold;">
-      Worm Juice Fertiliser will make your garden or grass GROW FASTER
-    </p>
-
-    <p>
-      There are many large companies who have been producing and selling these worm products for many years.
-      There is a growing number of new companies becoming involved. We have listed our favorites at the bottom
-      of this page. We are small in comparison to some, but we are proud of our commitment to quality, value for money
-      and sustainability.
-      <br><br>
-
-      <span class="highlight">
-        We believe we not only have the <strong>best product</strong>, we also have the <strong>cheapest prices</strong>.
-      </span>
-
-      <br><br>
-      <em>— James Brown</em>
-    </p>
-
-    <div class="photo-block">
-      <img src="https://yasswormfarms.github.io/YassWormFarms/warren.jpg"
-        alt="Warren loading worm juice fertiliser">
-      <p style="font-style: italic; color: #555;">
-        Warren from Mandurama loading our worm juice fertilizer at the Yass Ampol Service Centre.
-        Warren plans to spray his Lucerne crop.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- FOOTER -->
-<footer>
-  <p>© 2025 Yass Worm Farms. All rights reserved.</p>
-</footer>
-
-<!-- =========================== -->
-<!-- SHRINKING HEADER SCRIPT -->
-<!-- =========================== -->
-<script>
-  const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => {
-    if(window.scrollY > 50){
-      navbar.classList.add('shrink');
-    } else {
-      navbar.classList.remove('shrink');
-    }
-  });
-</script>
-
-</body>
-</html>
 
 
