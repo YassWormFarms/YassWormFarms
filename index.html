@@ -239,7 +239,7 @@ nav a:hover{
 }
 
 /* =========================== */
-/* PROFESSIONAL TESTIMONY SECTION - SIDE BY SIDE */
+/* PROFESSIONAL TESTIMONY SECTION */
 .testimony-section {
   background: linear-gradient(120deg, #e6f9e6, #d8f0c8);
   padding: 60px 5%;
@@ -249,31 +249,27 @@ nav a:hover{
   max-width: 1200px;
   margin: auto;
   display: flex;
-  flex-direction: row;
-  gap: 40px;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 50px;
 }
 
 .testimony-entry {
   display: flex;
   flex-direction: row;
+  gap: 40px;
   align-items: flex-start;
   background: #ffffffcc;
-  padding: 20px;
+  padding: 30px;
   border-radius: 15px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-  flex: 1 1 48%;
-  max-width: 48%;
 }
 
 .testimony-entry img {
-  width: 450px; /* bigger photo */
+  width: 400px; /* big photo */
   height: auto;
   border-radius: 15px;
   object-fit: cover;
   flex-shrink: 0;
-  margin-right: 25px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
@@ -282,7 +278,7 @@ nav a:hover{
 }
 
 .testimony-text h3 {
-  font-size: 30px; /* bigger title for Warren */
+  font-size: 28px;
   color: var(--green);
   margin-top: 0;
   margin-bottom: 15px;
@@ -291,7 +287,7 @@ nav a:hover{
 .testimony-text p {
   font-size: 18px;
   line-height: 1.7;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
 /* MOBILE RESPONSIVENESS */
@@ -324,25 +320,23 @@ nav a:hover{
     padding: 20px 5%;
   }
   .logo-section img {
-    width:12cm;
-  }
-  .testimony-container {
-    flex-direction: column;
+    width:12cm; /* slightly smaller for mobile */
   }
   .testimony-entry {
     flex-direction: column;
-    max-width: 100%;
     align-items: center;
     text-align: center;
   }
+
   .testimony-entry img {
     width: 80%;
     margin-bottom: 20px;
-    margin-right: 0;
   }
+
   .testimony-text h3 {
     font-size: 24px;
   }
+
   .testimony-text p {
     font-size: 16px;
   }
@@ -445,7 +439,6 @@ footer{
     </div>
 
     <div class="testimony-entry">
-      <img src="warren.jpg" alt="Andrew from East Gippsland">
       <div class="testimony-text">
         <h3>Advice from Andrew – Dairy Farmer (East Gippsland)</h3>
         <p>Andrew, a dairy farmer friend from East Gippsland, replaced all synthetic fertilisers with worm juice. He now saves around $50,000 annually and boasts the most outstanding pasture in the district. I asked Andrew what to look for after spraying a lucerne crop with worm juice, and here’s what he said:</p>
@@ -471,5 +464,6 @@ footer{
 
 </body>
 </html>
+
 
 
