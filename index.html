@@ -43,14 +43,16 @@ nav{
   position:sticky;
   top:0;
   z-index:10;
-  transition: all 0.3s ease;
+  /* smooth transition for padding, border, and background */
+  transition: padding 0.3s ease, border-bottom 0.3s ease, background 0.3s ease;
 }
 
 nav .logo{
   height:100%;
-  max-height:120px; /* ensures logo fills header but not too tall */
-  transition: height 0.3s ease;
+  max-height:120px;
   object-fit:contain;
+  /* smooth transition for logo height */
+  transition: max-height 0.3s ease;
 }
 
 nav.shrink{
@@ -59,7 +61,7 @@ nav.shrink{
 }
 
 nav.shrink .logo{
-  max-height:80px; /* smaller on scroll */
+  max-height:80px;
 }
 
 .nav-links{
@@ -67,7 +69,6 @@ nav.shrink .logo{
   gap:30px;
 }
 
-/* Nav link font size (adjusted for readability) */
 nav a{
   text-decoration:none;
   color:var(--coffee);
@@ -98,7 +99,7 @@ nav a:hover{
 
 .hero-text{
   position:relative;
-  margin-right:10%; /* offset from right */
+  margin-right:10%;
   color:white;
   max-width:500px;
   text-align:right;
@@ -335,4 +336,5 @@ footer{
 
 </body>
 </html>
+
 
