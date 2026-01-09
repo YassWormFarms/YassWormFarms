@@ -36,24 +36,28 @@ body{
 nav{
   background:white;
   border-bottom:2px solid #ddd;
+  padding:15px 10%;
   display:flex;
   justify-content:space-between;
   align-items:center;
   position:sticky;
   top:0;
   z-index:10;
-  height:120px; /* fixed height to avoid jump */
-  transition: background 0.3s ease, border-bottom 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 nav .logo{
-  height:100%; /* fill the nav height */
-  object-fit:contain;
-  transition: transform 0.3s ease; /* smooth shrinking */
+  height:100px;
+  transition: height 0.3s ease;
+}
+
+nav.shrink{
+  padding:5px 10%;
+  border-bottom:1px solid #ccc;
 }
 
 nav.shrink .logo{
-  transform: scale(0.7); /* shrink logo smoothly */
+  height:60px;
 }
 
 .nav-links{
@@ -61,11 +65,12 @@ nav.shrink .logo{
   gap:30px;
 }
 
+/* UPDATED: smaller, readable nav font size */
 nav a{
   text-decoration:none;
   color:var(--coffee);
   font-weight:700;
-  font-size:22px;
+  font-size:22px; /* reduced from 40px */
 }
 
 nav a:hover{
@@ -80,7 +85,7 @@ nav a:hover{
   background:url('https://yasswormfarms.github.io/YassWormFarms/main4.png') center/cover no-repeat;
   display:flex;
   align-items:center;
-  justify-content:flex-end;
+  justify-content:flex-end; /* text aligned right */
 }
 
 .hero-overlay{
@@ -91,7 +96,7 @@ nav a:hover{
 
 .hero-text{
   position:relative;
-  margin-right:10%;
+  margin-right:10%; /* offset from right */
   color:white;
   max-width:500px;
   text-align:right;
@@ -204,15 +209,8 @@ footer{
   .hero-text p{font-size:18px;}
   .section-title{font-size:28px;}
   .product-box h2{font-size:22px;}
-  nav{
-    height:80px;
-  }
-  nav .logo{
-    height:100%;
-  }
-  nav.shrink .logo{
-    transform: scale(0.7);
-  }
+  nav .logo{height:70px;}
+  nav.shrink .logo{height:50px;}
   .hero{
     justify-content:center;
     text-align:center;
@@ -222,7 +220,7 @@ footer{
     text-align:center;
   }
   nav a{
-    font-size:18px;
+    font-size:18px; /* smaller for mobile readability */
   }
 }
 </style>
@@ -331,6 +329,3 @@ footer{
 
 </body>
 </html>
-
-
-
