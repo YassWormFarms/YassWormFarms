@@ -223,46 +223,54 @@ nav a:hover{
 }
 
 /* =========================== */
-/* BIGGER LOGO SECTION */
+/* NEW BIGGER LOGO SECTION UNDER SCROLLING BAND */
 .logo-section {
   display: flex;
   align-items: center;
+  justify-content: center;
   height: 20cm; /* height of section */
   padding: 0 5%;
-  background-color: #d8f0c8; /* light green background */
+  background-color: #e6f9e6;
 }
 
 .logo-section img {
-  width: 15cm;
+  width: 15cm; /* logo enlarged further */
   height: auto;
 }
 
 /* =========================== */
 /* PROFESSIONAL TESTIMONY SECTION */
 .testimony-section {
+  background: linear-gradient(120deg, #e6f9e6, #d8f0c8);
   padding: 60px 5%;
-  background: #f5fdf5; /* soft light background */
+}
+
+.testimony-container {
   max-width: 1200px;
   margin: auto;
-  border-radius: 15px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 50px;
 }
 
 .testimony-entry {
   display: flex;
   flex-direction: row;
+  gap: 40px;
   align-items: flex-start;
-  gap: 25px;
+  background: #ffffffcc;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
 .testimony-entry img {
-  width: 200px;
+  width: 400px; /* big photo */
   height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 15px;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 .testimony-text {
@@ -270,18 +278,19 @@ nav a:hover{
 }
 
 .testimony-text h3 {
-  margin: 0;
-  font-size: 24px;
+  font-size: 28px;
   color: var(--green);
+  margin-top: 0;
+  margin-bottom: 15px;
 }
 
 .testimony-text p {
   font-size: 18px;
-  line-height: 1.6;
-  margin-top: 8px;
+  line-height: 1.7;
+  margin-bottom: 12px;
 }
 
-/* MOBILE ADJUSTMENTS */
+/* MOBILE RESPONSIVENESS */
 @media(max-width:900px){
   .hero-text h1{font-size:40px;}
   .hero-text p{font-size:20px;}
@@ -311,17 +320,25 @@ nav a:hover{
     padding: 20px 5%;
   }
   .logo-section img {
-    width: 12cm;
+    width:12cm; /* slightly smaller for mobile */
   }
   .testimony-entry {
     flex-direction: column;
     align-items: center;
-  }
-  .testimony-entry img {
-    width: 60%;
-  }
-  .testimony-text {
     text-align: center;
+  }
+
+  .testimony-entry img {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .testimony-text h3 {
+    font-size: 24px;
+  }
+
+  .testimony-text p {
+    font-size: 16px;
   }
 }
 
@@ -412,22 +429,22 @@ footer{
 
 <!-- PROFESSIONAL TESTIMONY SECTION -->
 <section class="testimony-section">
-  <!-- Warren testimony -->
-  <div class="testimony-entry">
-    <img src="warren.jpg" alt="Warren from Mandurama">
-    <div class="testimony-text">
-      <h3>Warren from Mandurama</h3>
-      <p>Loading our worm juice fertiliser at the Yass Ampol Service Centre. Warren plans to spray his Lucerne crop.</p>
+  <div class="testimony-container">
+    <div class="testimony-entry">
+      <img src="warren.jpg" alt="Warren from Mandurama">
+      <div class="testimony-text">
+        <h3>Warren from Mandurama</h3>
+        <p>Loading our worm juice fertiliser at the Yass Ampol Service Centre. Warren plans to spray his Lucerne crop.</p>
+      </div>
     </div>
-  </div>
 
-  <!-- Andrew advice -->
-  <div class="testimony-entry">
-    <div class="testimony-text">
-      <h3>Advice from Andrew – Dairy Farmer (East Gippsland)</h3>
-      <p>Andrew, a dairy farmer friend from East Gippsland, replaced all synthetic fertilisers with worm juice. He now saves around $50,000 annually and boasts the most outstanding pasture in the district. I asked Andrew what to look for after spraying a lucerne crop with worm juice, and here’s what he said:</p>
-      <p><em>“What to look for in a couple of weeks: plants should show signs of improved health and slightly darker leaves. The roots will be longer, and plants don’t seem to get attacked by red-legged earth mite or lucerne flea. Hot or cold weather fluctuations have less impact, and plants appear better able to handle water efficiently. On lucerne, you should notice a difference when harvesting — mowing will be denser, and bales will be more solid even if the crop looks normal. I recommend another spray four weeks after the first.</em></p>
-      <p>Hope that helps,<br>- Andrew</p>
+    <div class="testimony-entry">
+      <div class="testimony-text">
+        <h3>Advice from Andrew – Dairy Farmer (East Gippsland)</h3>
+        <p>Andrew, a dairy farmer friend from East Gippsland, replaced all synthetic fertilisers with worm juice. He now saves around $50,000 annually and boasts the most outstanding pasture in the district. I asked Andrew what to look for after spraying a lucerne crop with worm juice, and here’s what he said:</p>
+        <p><em>“What to look for in a couple of weeks: plants should show signs of improved health and slightly darker leaves. The roots will be longer, and plants don’t seem to get attacked by red-legged earth mite or lucerne flea. Hot or cold weather fluctuations have less impact, and plants appear better able to handle water efficiently. On lucerne, you should notice a difference when harvesting — mowing will be denser, and bales will be more solid even if the crop looks normal. I recommend another spray four weeks after the first.</em></p>
+        <p>Hope that helps,<br>- Andrew</p>
+      </div>
     </div>
   </div>
 </section>
@@ -447,8 +464,4 @@ footer{
 
 </body>
 </html>
-
-
-
-
 
