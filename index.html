@@ -222,7 +222,55 @@ nav a:hover{
   100% { transform: translateX(-50%); }
 }
 
-/* MOBILE ADJUSTMENTS */
+/* =========================== */
+/* VIDEO + LOGO SECTION UNDER SCROLLING BAND */
+.video-logo-section {
+  display: flex;
+  align-items: flex-start;
+  padding: 40px 5%;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.video-logo-section img {
+  width: 5cm; /* logo width */
+  height: auto;
+  flex-shrink: 0;
+}
+
+.video-logo-section video {
+  max-width: 100%;
+  width: 300px; /* adjust as needed for portrait */
+  height: 500px; /* adjust as needed for portrait */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  flex-grow: 1;
+}
+
+/* =========================== */
+/* GLOBAL SECTIONS */
+section{
+  padding:60px 5%;
+}
+
+.section-title{
+  text-align:center;
+  color:var(--green);
+  font-size:36px;
+  margin-bottom:20px;
+}
+
+/* =========================== */
+/* FOOTER */
+footer{
+  background:var(--coffee);
+  color:white;
+  text-align:center;
+  padding:15px 0;
+}
+
+/* =========================== */
+/* MOBILE */
 @media(max-width:900px){
   .hero-text h1{font-size:40px;}
   .hero-text p{font-size:20px;}
@@ -246,28 +294,17 @@ nav a:hover{
   .scrolling-text {
     animation-duration:35s;
   }
-}
-
-/* =========================== */
-/* GLOBAL SECTIONS */
-section{
-  padding:60px 5%;
-}
-
-.section-title{
-  text-align:center;
-  color:var(--green);
-  font-size:36px;
-  margin-bottom:20px;
-}
-
-/* =========================== */
-/* FOOTER */
-footer{
-  background:var(--coffee);
-  color:white;
-  text-align:center;
-  padding:15px 0;
+  .video-logo-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .video-logo-section video {
+    height: 400px;
+  }
+  .video-logo-section img {
+    width: 4cm;
+  }
 }
 </style>
 </head>
@@ -326,6 +363,15 @@ footer{
       Vineyards, Orchards, Broad Acre Farms, Horticulture, Dairy, Vegetables, Pasture, Lawns, Golf Courses, University Research, Land Regeneration
     </span>
   </div>
+</section>
+
+<!-- NEW VIDEO + LOGO SECTION -->
+<section class="video-logo-section">
+  <img src="Logo.png" alt="Yass Worm Farms Logo">
+  <video controls>
+    <source src="your-video-file.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
 </section>
 
 <!-- FOOTER -->
