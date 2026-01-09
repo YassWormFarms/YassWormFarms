@@ -36,28 +36,28 @@ body{
 nav{
   background:white;
   border-bottom:2px solid #ddd;
-  padding:15px 10%; /* doubled width padding */
+  padding:15px 10%;
   display:flex;
   justify-content:space-between;
   align-items:center;
   position:sticky;
   top:0;
   z-index:10;
-  transition: all 0.3s ease; /* smooth transition */
+  transition: all 0.3s ease;
 }
 
 nav .logo{
-  height:100px; /* bigger logo */
-  transition: height 0.3s ease; /* smooth shrinking */
+  height:100px;
+  transition: height 0.3s ease;
 }
 
 nav.shrink{
-  padding:5px 10%; /* smaller padding when scrolled */
+  padding:5px 10%;
   border-bottom:1px solid #ccc;
 }
 
 nav.shrink .logo{
-  height:60px; /* smaller logo when scrolled */
+  height:60px;
 }
 
 .nav-links{
@@ -80,8 +80,247 @@ nav a:hover{
 .hero{
   position:relative;
   height:70vh;
-  background:url('https://yasswormfarms.github.io/YassWormFarms/main4.png') center/cover no-rep
+  background:url('https://yasswormfarms.github.io/YassWormFarms/main4.png') center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:flex-end; /* text aligned right */
+}
 
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to left, rgba(0,0,0,0.35) 30%, rgba(0,0,0,0) 100%);
+}
 
+.hero-text{
+  position:relative;
+  margin-right:10%; /* offset from right */
+  color:white;
+  max-width:500px;
+  text-align:right;
+}
 
+.hero-text h1{
+  font-size:52px;
+  margin:0;
+}
 
+.hero-text p{
+  font-size:22px;
+  margin:10px 0 0 0;
+}
+
+/* Brighten image using filter */
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:url('https://yasswormfarms.github.io/YassWormFarms/main4.png') center/cover no-repeat;
+  filter: brightness(1.2);
+  z-index:-2;
+}
+
+/* =========================== */
+/* GLOBAL SECTIONS */
+section{
+  padding:60px 5%;
+}
+
+.section-title{
+  text-align:center;
+  color:var(--green);
+  font-size:36px;
+  margin-bottom:20px;
+}
+
+/* =========================== */
+/* LAB RESULTS BOX */
+.lab-container{
+  text-align:center;
+}
+
+.lab-container img{
+  max-width:700px;
+  width:100%;
+  border-radius:12px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.25);
+}
+
+.lab-text{
+  max-width:900px;
+  margin:auto;
+  margin-top:25px;
+  font-weight:700;
+  color:var(--green);
+  text-transform:uppercase;
+  line-height:1.5;
+}
+
+/* =========================== */
+/* PRODUCT TEXT SECTION */
+.product-box{
+  max-width:900px;
+  margin:auto;
+  text-align:center;
+  font-size:18px;
+}
+
+.product-box h2{
+  color:var(--green);
+  font-size:28px;
+}
+
+.product-box .highlight{
+  background:#e6ffe6;
+  padding:8px 12px;
+  border-radius:8px;
+  font-weight:bold;
+  color:#004d00;
+}
+
+/* =========================== */
+/* PHOTO SECTION */
+.photo-block{
+  text-align:center;
+}
+
+.photo-block img{
+  max-width:400px;
+  width:100%;
+  border-radius:10px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.3);
+}
+
+/* =========================== */
+/* FOOTER */
+footer{
+  background:var(--coffee);
+  color:white;
+  text-align:center;
+  padding:15px 0;
+}
+
+/* =========================== */
+/* MOBILE */
+@media(max-width:900px){
+  .hero-text h1{font-size:36px;}
+  .hero-text p{font-size:18px;}
+  .section-title{font-size:28px;}
+  .product-box h2{font-size:22px;}
+  nav .logo{height:70px;}
+  nav.shrink .logo{height:50px;}
+  .hero{
+    justify-content:center;
+    text-align:center;
+  }
+  .hero-text{
+    margin-right:0;
+    text-align:center;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav id="navbar">
+  <div class="nav-left">
+    <img src="Logo.png" alt="Yass Worm Farms Logo" class="logo">
+  </div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="application-rates.html">Application Rates</a>
+    <a href="shop.html">Shop</a>
+    <a href="laboratory-results.html">Laboratory Results</a>
+    <a href="contact.html">Contact Us</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-text">
+    <h1>Yass Worm Farms</h1>
+    <p>Worm Juice Fertiliser: Nature’s Rocket Fuel for Plants</p>
+  </div>
+</section>
+
+<!-- LAB RESULTS -->
+<section>
+  <h2 class="section-title">Latest Laboratory Results</h2>
+
+  <div class="lab-container">
+    <p>Our most recent microbial laboratory report for our Worm Juice Fertiliser.</p>
+
+    <img src="https://raw.githubusercontent.com/YassWormFarms/YassWormFarms/main/goodlab.png"
+      alt="Microbiological Analysis - Latest Lab Results">
+
+    <div class="lab-text">
+      CHECK OUT OUR LATEST LAB RESULTS ABOVE <br><br>
+      OUR MAGIC TRICK IS TO HAVE VERY LOW LACTIC ACID BACTERIA (LAB) MICROBE NUMBERS AND VERY HIGH
+      MORE BENEFICIAL FUNGI, YEAST, ACTINOMYCETES AND PHOTOSYNTHETIC BACTERIA MICROBES.
+      LACTIC ACID BACTERIA (LAB) IS OK AND HAS SOME BENEFITS BUT IS VERY AGGRESSIVE AND CAN
+      EASILY DOMINATE A MIXTURE.
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCT INFORMATION -->
+<section>
+  <div class="product-box">
+
+    <h2>Vineyards, Orchards, Broad Acre Farms, Horticulture, Dairy, Vegetables, Pasture</h2>
+
+    <h2>WORM JUICE FERTILISER IS TEEMING WITH MILLIONS OF BENEFICIAL BACTERIA AND FUNGI MICROBES</h2>
+
+    <p style="color:red; font-weight:bold;">
+      Worm Juice Fertiliser will make your garden or grass GROW FASTER
+    </p>
+
+    <p>
+      There are many large companies who have been producing and selling these worm products for many years.
+      There is a growing number of new companies becoming involved. We have listed our favorites at the bottom
+      of this page. We are small in comparison to some, but we are proud of our commitment to quality, value for money
+      and sustainability.
+      <br><br>
+
+      <span class="highlight">
+        We believe we not only have the <strong>best product</strong>, we also have the <strong>cheapest prices</strong>.
+      </span>
+
+      <br><br>
+      <em>— James Brown</em>
+    </p>
+
+    <div class="photo-block">
+      <img src="https://yasswormfarms.github.io/YassWormFarms/warren.jpg"
+        alt="Warren loading worm juice fertiliser">
+      <p style="font-style: italic; color: #555;">
+        Warren from Mandurama loading our worm juice fertilizer at the Yass Ampol Service Centre.
+        Warren plans to spray his Lucerne crop.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 Yass Worm Farms. All rights reserved.</p>
+</footer>
+
+<!-- SHRINKING HEADER SCRIPT -->
+<script>
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    if(window.scrollY > 50){
+      navbar.classList.add('shrink');
+    } else {
+      navbar.classList.remove('shrink');
+    }
+  });
+</script>
+
+</body>
+</html>
