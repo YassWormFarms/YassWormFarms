@@ -190,6 +190,65 @@ nav a:hover{
 }
 
 /* =========================== */
+/* SEAMLESS SCROLLING BAND UNDER BENEFITS */
+.scrolling-band {
+  background-color: #dff2df; /* super soft gum green */
+  height: 2.5cm;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-top: 1px solid #c1e0c1;
+  border-bottom: 1px solid #c1e0c1;
+}
+
+.scrolling-text {
+  display: flex;
+  width: max-content;
+  animation: scrollText 30s linear infinite;
+}
+
+.scrolling-text span {
+  white-space: nowrap;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--green);
+  margin-right: 50px;
+}
+
+/* seamless animation */
+@keyframes scrollText {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* MOBILE ADJUSTMENTS */
+@media(max-width:900px){
+  .hero-text h1{font-size:40px;}
+  .hero-text p{font-size:20px;}
+  .section-title{font-size:28px;}
+  nav .logo{height:70px;}
+  nav.shrink .logo{height:50px;}
+  .hero{
+    justify-content:center;
+    text-align:center;
+  }
+  .hero-text{
+    margin-left:0;
+    text-align:center;
+  }
+  nav a{
+    font-size:18px;
+  }
+  .scrolling-text span {
+    font-size:16px;
+  }
+  .scrolling-text {
+    animation-duration: 35s;
+  }
+}
+
+/* =========================== */
 /* GLOBAL SECTIONS */
 section{
   padding:60px 5%;
@@ -268,27 +327,6 @@ footer{
   text-align:center;
   padding:15px 0;
 }
-
-/* =========================== */
-/* MOBILE */
-@media(max-width:900px){
-  .hero-text h1{font-size:40px;}
-  .hero-text p{font-size:20px;}
-  .section-title{font-size:28px;}
-  nav .logo{height:70px;}
-  nav.shrink .logo{height:50px;}
-  .hero{
-    justify-content:center;
-    text-align:center;
-  }
-  .hero-text{
-    margin-left:0;
-    text-align:center;
-  }
-  nav a{
-    font-size:18px;
-  }
-}
 </style>
 </head>
 
@@ -333,6 +371,18 @@ footer{
       <div class="benefit-item">Produces natural antibiotics that protect plants</div>
       <div class="benefit-item">Helps break down toxins & manures</div>
     </div>
+  </div>
+</section>
+
+<!-- SEAMLESS SCROLLING TEXT BAND -->
+<section class="scrolling-band">
+  <div class="scrolling-text">
+    <span>
+      Vineyards, Orchards, Broad Acre Farms, Horticulture, Dairy, Vegetables, Pasture, Lawns, Golf Courses, University Research, Land Regeneration
+    </span>
+    <span>
+      Vineyards, Orchards, Broad Acre Farms, Horticulture, Dairy, Vegetables, Pasture, Lawns, Golf Courses, University Research, Land Regeneration
+    </span>
   </div>
 </section>
 
@@ -410,8 +460,3 @@ footer{
 
 </body>
 </html>
-
-
-
-
-
