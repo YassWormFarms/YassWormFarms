@@ -18,7 +18,6 @@
 <style>
 /* =========================== */
 /* COLOURS + BASE DESIGN */
-/* =========================== */
 :root{
   --green:#064d28;
   --coffee:#4b3621;
@@ -34,7 +33,6 @@ body{
 
 /* =========================== */
 /* NAVIGATION + LOGO */
-/* =========================== */
 nav{
   background:white;
   border-bottom:2px solid #ddd;
@@ -45,21 +43,21 @@ nav{
   position:sticky;
   top:0;
   z-index:10;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease; /* smooth transition */
 }
 
 nav .logo{
   height:100px; /* bigger logo */
-  transition: height 0.3s ease;
+  transition: height 0.3s ease; /* smooth shrinking */
 }
 
 nav.shrink{
-  padding:5px 10%;
+  padding:5px 10%; /* smaller padding when scrolled */
   border-bottom:1px solid #ccc;
 }
 
 nav.shrink .logo{
-  height:60px;
+  height:60px; /* smaller logo when scrolled */
 }
 
 .nav-links{
@@ -79,175 +77,11 @@ nav a:hover{
 
 /* =========================== */
 /* HERO SECTION */
-/* =========================== */
 .hero{
   position:relative;
   height:70vh;
-  background:url('https://yasswormfarms.github.io/YassWormFarms/main4.png') center/cover no-repeat;
-}
+  background:url('https://yasswormfarms.github.io/YassWormFarms/main4.png') center/cover no-rep
 
-.hero-overlay{
-  position:absolute;
-  inset:0;
-  background:rgba(0,0,0,0.55);
-}
-
-.hero-text{
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%, -50%);
-  text-align:center;
-  color:white;
-}
-
-.hero-text h1{
-  font-size:52px;
-  margin:0;
-}
-
-.hero-text p{
-  font-size:22px;
-  margin:10px 0 0 0;
-}
-
-/* =========================== */
-/* GLOBAL SECTIONS */
-/* =========================== */
-section{
-  padding:60px 5%;
-}
-
-.section-title{
-  text-align:center;
-  color:var(--green);
-  font-size:36px; /* larger font for subheadings */
-  margin-bottom:20px;
-}
-
-/* =========================== */
-/* LAB RESULTS BOX */
-/* =========================== */
-.lab-container{
-  text-align:center;
-}
-
-.lab-container img{
-  max-width:700px;
-  width:100%;
-  border-radius:12px;
-  box-shadow:0 4px 12px rgba(0,0,0,0.25);
-}
-
-.lab-text{
-  max-width:900px;
-  margin:auto;
-  margin-top:25px;
-  font-weight:700;
-  color:var(--green);
-  text-transform:uppercase;
-  line-height:1.5;
-}
-
-/* =========================== */
-/* PRODUCT TEXT SECTION */
-/* =========================== */
-.product-box{
-  max-width:900px;
-  margin:auto;
-  text-align:center;
-  font-size:18px;
-}
-
-.product-box h2{
-  color:var(--green);
-  font-size:28px; /* larger font for h2 */
-}
-
-.product-box .highlight{
-  background:#e6ffe6;
-  padding:8px 12px;
-  border-radius:8px;
-  font-weight:bold;
-  color:#004d00;
-}
-
-/* =========================== */
-/* PHOTO SECTION */
-/* =========================== */
-.photo-block{
-  text-align:center;
-}
-
-.photo-block img{
-  max-width:400px;
-  width:100%;
-  border-radius:10px;
-  box-shadow:0 2px 8px rgba(0,0,0,0.3);
-}
-
-/* =========================== */
-/* FOOTER */
-/* =========================== */
-footer{
-  background:var(--coffee);
-  color:white;
-  text-align:center;
-  padding:15px 0;
-}
-
-/* =========================== */
-/* MOBILE */
-@media(max-width:900px){
-  .hero-text h1{font-size:36px;}
-  .hero-text p{font-size:18px;}
-  .section-title{font-size:28px;}
-  .product-box h2{font-size:22px;}
-  nav .logo{height:70px;}
-  nav.shrink .logo{height:50px;}
-}
-</style>
-</head>
-
-<body>
-
-<!-- NAVIGATION -->
-<nav id="navbar">
-  <div class="nav-left">
-    <img src="Logo.png" alt="Yass Worm Farms Logo" class="logo">
-  </div>
-  <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="application-rates.html">Application Rates</a>
-    <a href="shop.html">Shop</a>
-    <a href="laboratory-results.html">Laboratory Results</a>
-    <a href="contact.html">Contact Us</a>
-  </div>
-</nav>
-
-
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-overlay"></div>
-  <div class="hero-text">
-    <h1>Yass Worm Farms</h1>
-    <p>Worm Juice Fertiliser: Nature’s Rocket Fuel for Plants</p>
-  </div>
-</section>
-
-
-<!-- LAB RESULTS -->
-<section>
-  <h2 class="section-title">Latest Laboratory Results</h2>
-
-  <div class="lab-container">
-    <p>Our most recent microbial laboratory report for our Worm Juice Fertiliser.</p>
-
-    <img src="https://raw.githubusercontent.com/YassWormFarms/YassWormFarms/main/goodlab.png"
-      alt="Microbiological Analysis - Latest Lab Results">
-
-    <div class="lab-text">
-      CHECK OUT OUR LATEST LAB RESULTS ABOVE <br>
 
 
 
