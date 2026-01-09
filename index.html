@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Yass Worm Farms</title>
 
 <style>
@@ -11,22 +12,24 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Sticky Smooth Shrinking Header */
+/* --------------------------------
+HEADER (Restored Original Style)
+-------------------------------- */
 header {
   position: fixed;
   top: 0;
   width: 100%;
   background: white;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 25px 40px;
+  align-items: center;
+  padding: 18px 40px;
   transition: padding 0.35s ease, box-shadow 0.35s ease;
   z-index: 1000;
 }
 
 header.shrink {
-  padding: 10px 30px;
+  padding: 8px 30px;
   box-shadow: 0 3px 10px rgba(0,0,0,0.15);
 }
 
@@ -46,23 +49,26 @@ nav a {
   font-size: 18px;
 }
 
-/* Hero Section */
+/* --------------------------------
+HERO SECTION (Restored Original)
+-------------------------------- */
 .hero {
-  margin-top: 120px;
+  margin-top: 110px;
   position: relative;
-  text-align: right;
-  height: 420px;
-  background: linear-gradient(to left, rgba(0,0,0,0.35), rgba(0,0,0,0)),
-  url("https://images.unsplash.com/photo-1600441334468-7636a5bb5bdf?auto=format&fit=crop&w=1600&q=80");
+  height: 430px;
+  background: 
+  linear-gradient(to left, rgba(0,0,0,0.35), rgba(0,0,0,0)),
+  url("https://images.unsplash.com/photo-1600441334468-7636a5bb5bdf?auto=format&fit=crop&w=1800&q=85");
   background-size: cover;
   background-position: center;
   color: white;
+  text-align: right;
 }
 
 .hero-text {
   position: absolute;
   right: 50px;
-  top: 35%;
+  top: 38%;
   transform: translateY(-50%);
 }
 
@@ -73,16 +79,19 @@ nav a {
 }
 
 .hero-text h2 {
-  font-size: 32px;
   margin-top: 10px;
+  font-size: 34px;
   font-weight: bold;
 }
 
-/* ✨ PROFESSIONAL BENEFITS SECTION ✨ */
+/* --------------------------------
+BENEFITS SECTION (KEPT AS YOU LIKE IT)
+-------------------------------- */
 .benefits-section {
   padding: 70px 10%;
   text-align: center;
-  background: linear-gradient(rgba(230,241,234,0.92), rgba(230,241,234,0.92)),
+  background: 
+  linear-gradient(rgba(230,241,234,0.92), rgba(230,241,234,0.92)),
   url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1600&q=80");
   background-size: cover;
   background-position: center;
@@ -112,11 +121,10 @@ nav a {
   color: #213a28;
   font-weight: 600;
 }
-
-/* Smooth Header Scroll Script */
 </style>
 
 <script>
+/* Smooth Shrinking Header */
 window.addEventListener("scroll", function() {
   const header = document.querySelector("header");
   if (window.scrollY > 60) {
@@ -145,7 +153,7 @@ window.addEventListener("scroll", function() {
 </header>
 
 
-<!-- HERO IMAGE -->
+<!-- HERO IMAGE (RESTORED) -->
 <section class="hero">
   <div class="hero-text">
     <h1>Yass Worm Farms</h1>
@@ -155,7 +163,7 @@ window.addEventListener("scroll", function() {
 </section>
 
 
-<!-- ⭐ PREMIUM BENEFITS SECTION ⭐ -->
+<!-- BENEFITS SECTION (UNCHANGED) -->
 <section class="benefits-section">
 
   <div class="benefits-title">Brilliant Benefits of Worm Juice:</div>
@@ -175,7 +183,5 @@ window.addEventListener("scroll", function() {
 
 </section>
 
-
 </body>
 </html>
-
