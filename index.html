@@ -65,12 +65,11 @@ nav.shrink .logo{
   gap:30px;
 }
 
-/* UPDATED: smaller, readable nav font size */
 nav a{
   text-decoration:none;
   color:var(--coffee);
   font-weight:700;
-  font-size:22px; /* reduced from 40px */
+  font-size:22px;
 }
 
 nav a:hover{
@@ -85,31 +84,31 @@ nav a:hover{
   background:url('https://yasswormfarms.github.io/YassWormFarms/main4.png') center/cover no-repeat;
   display:flex;
   align-items:center;
-  justify-content:flex-end; /* text aligned right */
+  justify-content:flex-start; /* align text to left */
 }
 
 .hero-overlay{
   position:absolute;
   inset:0;
-  background:linear-gradient(to left, rgba(0,0,0,0.35) 30%, rgba(0,0,0,0) 100%);
+  background:linear-gradient(to right, rgba(0,0,0,0.35) 30%, rgba(0,0,0,0) 100%);
 }
 
 .hero-text{
   position:relative;
-  margin-right:10%; /* offset from right */
+  margin-left:10%; /* offset from left */
   color:white;
-  max-width:500px;
-  text-align:right;
+  max-width:600px;
+  text-align:left;
 }
 
 .hero-text h1{
-  font-size:52px;
+  font-size:72px; /* increased font size */
   margin:0;
 }
 
 .hero-text p{
-  font-size:22px;
-  margin:10px 0 0 0;
+  font-size:28px; /* increased font size */
+  margin:15px 0 0 0;
 }
 
 /* Brighten image using filter */
@@ -205,8 +204,8 @@ footer{
 /* =========================== */
 /* MOBILE */
 @media(max-width:900px){
-  .hero-text h1{font-size:36px;}
-  .hero-text p{font-size:18px;}
+  .hero-text h1{font-size:48px;}
+  .hero-text p{font-size:22px;}
   .section-title{font-size:28px;}
   .product-box h2{font-size:22px;}
   nav .logo{height:70px;}
@@ -216,11 +215,11 @@ footer{
     text-align:center;
   }
   .hero-text{
-    margin-right:0;
+    margin-left:0;
     text-align:center;
   }
   nav a{
-    font-size:18px; /* smaller for mobile readability */
+    font-size:18px;
   }
 }
 </style>
@@ -329,3 +328,4 @@ footer{
 
 </body>
 </html>
+
