@@ -43,12 +43,12 @@ nav{
   position:sticky;
   top:0;
   z-index:10;
-  transition: all 0.3s ease;
+  transition: padding 0.3s ease, border-bottom 0.3s ease; /* smooth transition */
 }
 
 nav .logo{
   height:100px;
-  transition: height 0.3s ease;
+  transition: height 0.3s ease; /* smooth logo resizing */
 }
 
 nav.shrink{
@@ -84,7 +84,7 @@ nav a:hover{
   background:url('https://yasswormfarms.github.io/YassWormFarms/main4.png') center/cover no-repeat;
   display:flex;
   align-items:center;
-  justify-content:flex-start; /* align text to left */
+  justify-content:flex-start; /* text aligned left */
 }
 
 .hero-overlay{
@@ -99,6 +99,7 @@ nav a:hover{
   color:white;
   max-width:600px;
   text-align:left;
+  transform: translateY(-1cm); /* move text up 1cm */
 }
 
 .hero-text h1{
@@ -111,6 +112,7 @@ nav a:hover{
   font-size:28px; /* paragraph larger */
   margin:15px 0 0 0;
   line-height:1.4;
+  font-weight:bold; /* bold text */
 }
 
 /* Brighten image using filter */
@@ -219,6 +221,7 @@ footer{
   .hero-text{
     margin-left:0;
     text-align:center;
+    transform: translateY(0); /* reset for mobile */
   }
   nav a{
     font-size:18px;
@@ -264,6 +267,72 @@ footer{
 
     <div class="lab-text">
       CHECK OUT OUR LATEST LAB RESULTS ABOVE <br><br>
-      OUR M
+      OUR MAGIC TRICK IS TO HAVE VERY LOW LACTIC ACID BACTERIA (LAB) MICROBE NUMBERS AND VERY HIGH
+      MORE BENEFICIAL FUNGI, YEAST, ACTINOMYCETES AND PHOTOSYNTHETIC BACTERIA MICROBES.
+      LACTIC ACID BACTERIA (LAB) IS OK AND HAS SOME BENEFITS BUT IS VERY AGGRESSIVE AND CAN
+      EASILY DOMINATE A MIXTURE.
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCT INFORMATION -->
+<section>
+  <div class="product-box">
+
+    <h2>Vineyards, Orchards, Broad Acre Farms, Horticulture, Dairy, Vegetables, Pasture</h2>
+
+    <h2>WORM JUICE FERTILISER IS TEEMING WITH MILLIONS OF BENEFICIAL BACTERIA AND FUNGI MICROBES</h2>
+
+    <p style="color:red; font-weight:bold;">
+      Worm Juice Fertiliser will make your garden or grass GROW FASTER
+    </p>
+
+    <p>
+      There are many large companies who have been producing and selling these worm products for many years.
+      There is a growing number of new companies becoming involved. We have listed our favorites at the bottom
+      of this page. We are small in comparison to some, but we are proud of our commitment to quality, value for money
+      and sustainability.
+      <br><br>
+
+      <span class="highlight">
+        We believe we not only have the <strong>best product</strong>, we also have the <strong>cheapest prices</strong>.
+      </span>
+
+      <br><br>
+      <em>— James Brown</em>
+    </p>
+
+    <div class="photo-block">
+      <img src="https://yasswormfarms.github.io/YassWormFarms/warren.jpg"
+        alt="Warren loading worm juice fertiliser">
+      <p style="font-style: italic; color: #555;">
+        Warren from Mandurama loading our worm juice fertilizer at the Yass Ampol Service Centre.
+        Warren plans to spray his Lucerne crop.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 Yass Worm Farms. All rights reserved.</p>
+</footer>
+
+<!-- SHRINKING HEADER SCRIPT -->
+<script>
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    if(window.scrollY > 50){
+      navbar.classList.add('shrink');
+    } else {
+      navbar.classList.remove('shrink');
+    }
+  });
+</script>
+
+</body>
+</html>
+
 
 
