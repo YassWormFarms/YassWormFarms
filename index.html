@@ -47,8 +47,10 @@ nav{
 }
 
 nav .logo{
-  height:100px;
+  height:100%;
+  max-height:120px; /* ensures logo fills header but not too tall */
   transition: height 0.3s ease;
+  object-fit:contain;
 }
 
 nav.shrink{
@@ -57,7 +59,7 @@ nav.shrink{
 }
 
 nav.shrink .logo{
-  height:60px;
+  max-height:80px; /* smaller on scroll */
 }
 
 .nav-links{
@@ -65,12 +67,12 @@ nav.shrink .logo{
   gap:30px;
 }
 
-/* UPDATED: smaller, readable nav font size */
+/* Nav link font size (adjusted for readability) */
 nav a{
   text-decoration:none;
   color:var(--coffee);
   font-weight:700;
-  font-size:22px; /* reduced from 40px */
+  font-size:22px;
 }
 
 nav a:hover{
@@ -209,8 +211,12 @@ footer{
   .hero-text p{font-size:18px;}
   .section-title{font-size:28px;}
   .product-box h2{font-size:22px;}
-  nav .logo{height:70px;}
-  nav.shrink .logo{height:50px;}
+  nav .logo{
+    max-height:70px;
+  }
+  nav.shrink .logo{
+    max-height:50px;
+  }
   .hero{
     justify-content:center;
     text-align:center;
@@ -220,7 +226,7 @@ footer{
     text-align:center;
   }
   nav a{
-    font-size:18px; /* smaller for mobile readability */
+    font-size:18px;
   }
 }
 </style>
@@ -329,3 +335,4 @@ footer{
 
 </body>
 </html>
+
