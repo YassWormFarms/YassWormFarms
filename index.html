@@ -102,14 +102,18 @@ nav a:hover{
 }
 
 .hero-text h1{
-  font-size:72px; /* increased font size */
+  font-size:72px; /* heading large */
   margin:0;
+  white-space:nowrap; /* keep all in one line */
 }
 
 .hero-text p{
-  font-size:28px; /* increased font size */
+  font-size:28px; /* paragraph larger */
   margin:15px 0 0 0;
+  line-height:1.4;
 }
+
+/* Use <br> in HTML for two lines of hero text */
 
 /* Brighten image using filter */
 .hero::before{
@@ -246,7 +250,7 @@ footer{
   <div class="hero-overlay"></div>
   <div class="hero-text">
     <h1>Yass Worm Farms</h1>
-    <p>Worm Juice Fertiliser: Nature’s Rocket Fuel for Plants</p>
+    <p>Worm Juice Fertiliser:<br>Nature’s Rocket Fuel for Plants!</p>
   </div>
 </section>
 
@@ -328,3 +332,4 @@ footer{
 
 </body>
 </html>
+
