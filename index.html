@@ -223,54 +223,21 @@ nav a:hover{
 }
 
 /* =========================== */
-/* VIDEO + LOGO SECTION UNDER SCROLLING BAND */
-.video-logo-section {
+/* NEW 10CM LOGO SECTION UNDER SCROLLING BAND */
+.logo-section {
   display: flex;
-  align-items: flex-start;
-  padding: 40px 5%;
-  gap: 40px;
-  flex-wrap: wrap;
+  align-items: center;
+  height: 10cm;
+  padding: 0 5%;
 }
 
-.video-logo-section img {
-  width: 5cm; /* logo width */
+.logo-section img {
+  width: 5cm;
   height: auto;
-  flex-shrink: 0;
-}
-
-.video-logo-section video {
-  max-width: 100%;
-  width: 300px; /* adjust as needed for portrait */
-  height: 500px; /* adjust as needed for portrait */
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-  flex-grow: 1;
 }
 
 /* =========================== */
-/* GLOBAL SECTIONS */
-section{
-  padding:60px 5%;
-}
-
-.section-title{
-  text-align:center;
-  color:var(--green);
-  font-size:36px;
-  margin-bottom:20px;
-}
-
-/* =========================== */
-/* FOOTER */
-footer{
-  background:var(--coffee);
-  color:white;
-  text-align:center;
-  padding:15px 0;
-}
-
-/* =========================== */
-/* MOBILE */
+/* MOBILE ADJUSTMENTS */
 @media(max-width:900px){
   .hero-text h1{font-size:40px;}
   .hero-text p{font-size:20px;}
@@ -294,17 +261,36 @@ footer{
   .scrolling-text {
     animation-duration:35s;
   }
-  .video-logo-section {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+  .logo-section {
+    justify-content: center;
+    height: auto;
+    padding: 20px 5%;
   }
-  .video-logo-section video {
-    height: 400px;
-  }
-  .video-logo-section img {
+  .logo-section img {
     width: 4cm;
   }
+}
+
+/* =========================== */
+/* GLOBAL SECTIONS */
+section{
+  padding:60px 5%;
+}
+
+.section-title{
+  text-align:center;
+  color:var(--green);
+  font-size:36px;
+  margin-bottom:20px;
+}
+
+/* =========================== */
+/* FOOTER */
+footer{
+  background:var(--coffee);
+  color:white;
+  text-align:center;
+  padding:15px 0;
 }
 </style>
 </head>
@@ -365,13 +351,9 @@ footer{
   </div>
 </section>
 
-<!-- NEW VIDEO + LOGO SECTION -->
-<section class="video-logo-section">
+<!-- NEW 10CM LOGO SECTION -->
+<section class="logo-section">
   <img src="Logo.png" alt="Yass Worm Farms Logo">
-  <video controls>
-    <source src="your-video-file.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
 </section>
 
 <!-- FOOTER -->
