@@ -91,16 +91,23 @@
       margin: auto;
     }
 
+    .about-section h2 {
+      text-align: center;
+      font-size: 36px;
+      color: var(--green);
+      margin-bottom: 40px;
+    }
+
     .about-content {
       display: flex;
       gap: 40px;
       flex-wrap: wrap;
-      align-items: flex-start;
+      align-items: center;
     }
 
     .about-content img {
       width: 100%;
-      max-width: 650px; /* image size */
+      max-width: 650px; /* increased size */
       border-radius: 12px;
       box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
       object-fit: cover;
@@ -111,18 +118,12 @@
       min-width: 280px;
     }
 
-    .about-text h2 {
-      font-size: 36px;
-      color: var(--green);
-      margin-bottom: 20px;
-    }
-
     .about-text p {
       font-size: 18px;
       margin-bottom: 20px;
     }
 
-    /* TEAM SECTION */
+    /* TEAM SECTION (Larger & Professional) */
     .team-section {
       padding: 60px 5%;
       background: var(--light);
@@ -197,10 +198,117 @@
         gap: 30px;
       }
 
-      .about-text h2 {
-        text-align: center;
-      }
-
       .team-member img {
         width: 200px;
-        height:
+        height: 200px;
+      }
+
+      .team-member h4 {
+        font-size: 22px;
+      }
+
+      .team-member p {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <img src="Logo.png" alt="Yass Worm Farms Logo" class="logo">
+    <div>
+      <a href="index.html">Home</a>
+      <a href="application-rates.html">Application Rates</a>
+      <a href="shop.html">Shop</a>
+      <a href="laboratory-results.html">Laboratory Results</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-text">
+      <h1>About Yass Worm Farms</h1>
+      <p>Our family. Our passion. Our commitment to healthy soils and plants.</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about-section">
+    <h2>Our Story</h2>
+    <div class="about-content">
+      <img src="Bonfire photo.jpg" alt="Yass Worm Farms Bonfire">
+      <div class="about-text">
+        <p>
+          Yass Worm Farms is a family-owned business producing premium worm juice and castings for farmers,
+          gardeners and soil enthusiasts across New South Wales. Our mission is to improve soil health
+          naturally, sustainably and efficiently.
+        </p>
+        <p>
+          Beginning as a small operation, we’ve grown through dedication, hard work and the support
+          of our passionate team. Every product we create reflects our care for the land and our commitment
+          to eco‑friendly farming.
+        </p>
+        <p>
+          Healthy soil leads to healthier plants and better harvests. Our philosophy is simple: nourish
+          the soil, and it will nourish you.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="team-section">
+    <h2>Meet the Team</h2>
+    <div class="team-grid">
+      <div class="team-member">
+        <img src="Brandy photo.jpg" alt="Our loyal dog Brandy">
+        <h4>Brandy</h4>
+        <p>Our loyal dog Brandy</p>
+      </div>
+      <div class="team-member">
+        <img src="Chris and Ang photo.jpg" alt="Chris and Ang">
+        <h4>Chris & Ang</h4>
+        <p>The Hard Working Duo</p>
+      </div>
+      <div class="team-member">
+        <img src="Dad photo.jpg" alt="Dad (James Brown)">
+        <h4>Dad (James Brown)</h4>
+        <p>The Entrepreneur</p>
+      </div>
+      <div class="team-member">
+        <img src="Izzy photo.jpg" alt="Izzy">
+        <h4>Izzy</h4>
+        <p>The Mum & Designer</p>
+      </div>
+      <div class="team-member">
+        <img src="Maddy photo.jpg" alt="Maddy">
+        <h4>Maddy</h4>
+        <p>Business Side Kick and Nerd</p>
+      </div>
+      <div class="team-member">
+        <img src="Mum photo .jpg" alt="Mum (Mary Burt)">
+        <h4>Mum (Mary Burt)</h4>
+        <p>Partner in Crime and Support</p>
+      </div>
+      <div class="team-member">
+        <img src="Nic Photo.jpg" alt="Nic">
+        <h4>Nic</h4>
+        <p>The All Rounder Farm Hand</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Yass Worm Farms. All Rights Reserved.</p>
+  </footer>
+
+</body>
+
+</html>
+
