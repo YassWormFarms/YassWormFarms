@@ -150,16 +150,18 @@
     }
 
     .team-member img {
-      width: 100%;
-      max-width: 180px;
+      width: 180px;          /* fixed width */
+      height: 180px;         /* fixed height */
       border-radius: 50%;
       border: 4px solid var(--green);
       box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
-      object-fit: cover;
+      object-fit: cover;     /* ensures same size, cropped evenly */
+      display: block;
+      margin: 0 auto 15px;
     }
 
     .team-member h4 {
-      margin: 15px 0 5px;
+      margin: 0 0 5px;
       color: var(--coffee);
       font-size: 20px;
       font-weight: 700;
@@ -295,6 +297,7 @@
 </body>
 
 </html>
+
 
 
 
