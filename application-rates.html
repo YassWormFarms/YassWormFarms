@@ -112,8 +112,8 @@ nav a:hover{
 /* ===== ABOUT PAGE CONTENT ===== */
 .about-section {
   padding: 60px 5%;
-  background: var(--soft-green);
-  width: 100%;
+  background: var(--soft-green); /* Soft green background */
+  width: 100%; /* Stretch background full width */
   box-sizing: border-box;
 }
 
@@ -121,12 +121,12 @@ nav a:hover{
   display: flex;
   gap: 40px;
   flex-wrap: wrap;
-  align-items: flex-start; /* Align text and image at top */
+  align-items: flex-start; /* Align top edges */
 }
 
 .about-content-wrapper img {
   width: 100%;
-  max-width: 300px; /* Reduced size of Bonfire image */
+  max-width: calc(650px - 75px); /* Reduced by ~2cm */
   border-radius: 12px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
   object-fit: cover;
@@ -139,7 +139,7 @@ nav a:hover{
 
 .about-text h2 {
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 20px; /* small spacing before paragraphs */
   color: var(--green);
   font-size: 36px;
 }
@@ -366,3 +366,4 @@ footer {
 
 </body>
 </html>
+
