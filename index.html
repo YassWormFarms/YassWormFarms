@@ -16,8 +16,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
 
 <style>
-/* =========================== */
-/* COLOURS + BASE DESIGN */
 :root{
   --green:#064d28;
   --coffee:#4b3621;
@@ -32,8 +30,6 @@ body{
   background:white;
 }
 
-/* =========================== */
-/* NAVIGATION + LOGO */
 nav{
   background:white;
   border-bottom:2px solid #ddd;
@@ -77,8 +73,6 @@ nav a:hover{
   color:var(--green);
 }
 
-/* =========================== */
-/* HERO SECTION */
 .hero{
   position:relative;
   height:70vh;
@@ -125,7 +119,6 @@ nav a:hover{
   z-index:-2;
 }
 
-/* =========================== */
 /* BENEFITS SECTION */
 .benefits-section {
   padding: 70px 5%;
@@ -187,8 +180,6 @@ nav a:hover{
   font-weight: 900;
 }
 
-/* =========================== */
-/* SCROLLING BAND */
 .scrolling-band {
   background-color: #064d28;
   height: 2cm;
@@ -219,8 +210,7 @@ nav a:hover{
   100% { transform: translateX(-50%); }
 }
 
-/* =========================== */
-/* LAB RESULTS SECTION */
+/* LAB RESULTS */
 .lab-results-section {
   display: flex;
   flex-direction: column;
@@ -267,14 +257,13 @@ nav a:hover{
   box-shadow: 0 6px 18px rgba(0,0,0,0.2);
 }
 
-/* =========================== */
 /* DIY WORM FARM SECTION */
 .diy-worm-farm-section {
   position: relative;
   width: 100%;
   max-width: 1200px;
   margin: 60px auto;
-  height: 450px;
+  height: 650px; /* increased section height */
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -282,12 +271,12 @@ nav a:hover{
 }
 
 .diy-worm-farm-section .diy-background {
-  width: calc(100% + 2cm);      /* add 2cm to width */
-  height: calc(100% + 2cm);     /* add 2cm to height */
+  width: 120%; /* bigger image width */
+  height: 120%; /* bigger image height */
   object-fit: cover;
   position: absolute;
-  top: -1cm;                    /* shift up by 1cm */
-  left: -1cm;                   /* shift left by 1cm */
+  top: -10%; /* shift to center image */
+  left: -10%;
   z-index: 1;
 }
 
@@ -320,7 +309,6 @@ nav a:hover{
   margin: 5px 0;
 }
 
-/* =========================== */
 /* TESTIMONY SECTION */
 .testimony-section {
   display: flex;
@@ -380,8 +368,6 @@ nav a:hover{
   line-height: 1.5;
 }
 
-/* =========================== */
-/* MOBILE */
 @media(max-width:900px){
   .hero-text h1{font-size:40px;}
   .hero-text p{font-size:20px;}
@@ -406,7 +392,6 @@ nav a:hover{
   .testimony-box img{width:200px;}
 }
 
-/* GLOBAL SECTIONS */
 section{padding:60px 5%;}
 .section-title{
   text-align:center;
@@ -415,7 +400,6 @@ section{padding:60px 5%;}
   margin-bottom:20px;
 }
 
-/* FOOTER */
 footer{
   background:var(--coffee);
   color:white;
@@ -427,7 +411,6 @@ footer{
 
 <body>
 
-<!-- NAVIGATION -->
 <nav id="navbar">
   <div class="nav-left">
     <img src="Logo.png" alt="Yass Worm Farms Logo" class="logo">
@@ -441,7 +424,6 @@ footer{
   </div>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-overlay"></div>
   <div class="hero-text">
@@ -451,11 +433,9 @@ footer{
   </div>
 </section>
 
-<!-- BENEFITS -->
 <section class="benefits-section">
   <div class="benefits-container">
     <h2 class="benefits-title">Brilliant Benefits of Worm Juice</h2>
-
     <div class="benefits-grid">
       <div class="benefit-item">Improved soil structure & airflow</div>
       <div class="benefit-item">Increases water holding capacity</div>
@@ -469,7 +449,6 @@ footer{
   </div>
 </section>
 
-<!-- SCROLLING BAND -->
 <section class="scrolling-band">
   <div class="scrolling-text">
     <span>
@@ -481,7 +460,6 @@ footer{
   </div>
 </section>
 
-<!-- LAB RESULTS SECTION -->
 <section class="lab-results-section">
   <h2>Our Epic Lab Results</h2>
   <div class="images-container">
@@ -491,7 +469,6 @@ footer{
   </div>
 </section>
 
-<!-- DIY WORM FARM SECTION -->
 <section class="diy-worm-farm-section">
   <img src="DIY worm Farm image.jpg" alt="DIY Worm Farm System" class="diy-background">
   <div class="diy-text">
@@ -504,7 +481,6 @@ footer{
   </div>
 </section>
 
-<!-- TESTIMONY -->
 <section class="testimony-section">
   <div class="testimony-box">
     <img src="warren.jpg" alt="Warren loading worm juice fertiliser">
@@ -523,12 +499,10 @@ footer{
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <p>© 2025 Yass Worm Farms. All rights reserved.</p>
 </footer>
 
-<!-- SHRINKING HEADER SCRIPT -->
 <script>
   const navbar = document.getElementById('navbar');
   window.addEventListener('scroll', () => {
@@ -538,6 +512,7 @@ footer{
 
 </body>
 </html>
+
 
 
 
