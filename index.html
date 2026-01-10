@@ -13,7 +13,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
 /* =========================== */
@@ -21,7 +21,6 @@
 :root{
   --green:#064d28;
   --coffee:#4b3621;
-  --lab-title:#b87333; /* copper orange color for lab title */
   --light:#f5f5f5;
 }
 
@@ -221,51 +220,79 @@ nav a:hover{
 }
 
 /* =========================== */
-/* LAB RESULTS SECTION */
-.lab-results-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 50px 5%;
-}
-
-.lab-results-section h2 {
-  font-size: 48px;
-  color: var(--lab-title); /* copper orange color */
-  margin-bottom: 30px;
-  text-align: center;
-  font-weight: 700;
-  font-family: 'Roboto Slab', serif;
-  letter-spacing: 2px;
-  border-bottom: 3px solid var(--green);
-  padding-bottom: 10px;
-}
-
-.lab-results-section .images-container {
+/* NEW IMAGE ROW SECTION UNDER SCROLLING TEXT */
+.image-row-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: nowrap;
-  gap: 20px;
-  width: 100%;
+  padding: 40px 5%;
 }
 
-.lab-results-section .images-container img {
+.image-row-section img {
+  width: 12cm;
   height: auto;
 }
 
-.lab-results-section .images-container .logo,
-.lab-results-section .images-container .soil-image {
-  width: 12cm;
+/* =========================== */
+/* DIY WORM FARM SECTION */
+.diy-worm-farm-section {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+  margin: 60px 5%;
 }
 
-.lab-results-section .images-container .lab-image {
-  width: 20cm; /* as big as possible while keeping soil image */
-  max-width: calc(100% - 24cm);
-  border: 4px solid var(--green);
-  border-radius: 12px;
-  padding: 5px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+.diy-worm-farm-section .diy-background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.diy-worm-farm-section .diy-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%; /* darken left side only */
+  height: 100%;
+  background: linear-gradient(to right, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%);
+  z-index: 2;
+}
+
+.diy-worm-farm-section .diy-text {
+  position: relative;
+  z-index: 3;
+  padding-left: 40px;
+  max-width: 45%; /* text stays only on left darkened segment */
+  color: #ffffff;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+.diy-worm-farm-section .diy-text h2 {
+  font-size: 38px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-family: 'Roboto Slab', serif;
+  color: #f4a261; /* professional accent */
+}
+
+.diy-worm-farm-section .diy-text p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.diy-worm-farm-section .diy-text .diy-details p {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 5px 0;
 }
 
 /* =========================== */
@@ -276,7 +303,7 @@ nav a:hover{
   flex-wrap: wrap;
   justify-content: center;
   margin: 60px 5%;
-  background: #f5e9e0; /* light coffee-brown tint */
+  background: #f5e9e0;
   border-radius: 12px;
   padding: 40px 5%;
   position: relative;
@@ -287,7 +314,7 @@ nav a:hover{
   content: "";
   position: absolute;
   inset: 0;
-  background: url('roots-pattern.png') center/cover no-repeat; /* replace with your roots image */
+  background: url('roots-pattern.png') center/cover no-repeat;
   opacity: 0.12;
   pointer-events: none;
   z-index: 0;
@@ -341,7 +368,16 @@ nav a:hover{
   nav a{font-size:18px;}
   .scrolling-text span{font-size:28px;}
   .scrolling-text{animation-duration:35s;}
-  .lab-results-section .images-container img{width:100%; max-width:20cm;}
+  .image-row-section img{width:100%; max-width:12cm;}
+  .diy-worm-farm-section {
+    height: auto;
+    flex-direction: column;
+  }
+  .diy-worm-farm-section .diy-overlay { width: 100%; height: 100%; }
+  .diy-worm-farm-section .diy-text { max-width: 90%; padding-left: 20px; padding-top: 20px; }
+  .diy-worm-farm-section .diy-text h2 { font-size: 28px; }
+  .diy-worm-farm-section .diy-text p { font-size: 16px; }
+  .diy-worm-farm-section .diy-text .diy-details p { font-size: 14px; }
   .testimony-box{flex-direction:column;align-items:center;}
   .testimony-box img{width:200px;}
 }
@@ -421,13 +457,23 @@ footer{
   </div>
 </section>
 
-<!-- LAB RESULTS SECTION -->
-<section class="lab-results-section">
-  <h2>Our Epic Lab Results</h2>
-  <div class="images-container">
-    <img src="Logo.png" alt="Yass Worm Farms Logo" class="logo">
-    <img src="Lab Results 2025.png" alt="Lab Results 2025" class="lab-image">
-    <img src="From our family farm to your soil - ChatGPT Image Jan 10, 2026, 12_22_19 PM.png" alt="From our family farm to your soil" class="soil-image">
+<!-- IMAGE ROW WITH LOGO, LAB RESULTS, FARM IMAGE -->
+<section class="image-row-section">
+  <img src="Lab Results 2025.png" alt="Lab Results Image">
+  <img src="From our family farm to your soil - ChatGPT Image Jan 10, 2026, 12_22_19 PM.png" alt="From our family farm to your soil">
+</section>
+
+<!-- DIY WORM FARM SECTION -->
+<section class="diy-worm-farm-section">
+  <div class="diy-overlay"></div>
+  <img src="DIY worm Farm image.jpg" alt="DIY Worm Farm System" class="diy-background">
+  <div class="diy-text">
+    <h2>DIY Worm Farm System</h2>
+    <p>With the help of James Brown you could make an On-farm Worm Fertiliser Production System. Replacing the need for synthetic fertiliser and creating huge savings annually.</p>
+    <div class="diy-details">
+      <p><strong>Production:</strong> Approx 24,000 litres High Value Fertiliser annually.</p>
+      <p><strong>Set up costs:</strong> $8k - $12k + Consultancy fee</p>
+    </div>
   </div>
 </section>
 
@@ -465,3 +511,4 @@ footer{
 
 </body>
 </html>
+
