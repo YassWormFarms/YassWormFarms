@@ -263,21 +263,25 @@ nav a:hover{
   width: 100%;
   max-width: 1200px;
   margin: 60px auto;
-  height: 650px; /* increased section height */
+  height: 650px; /* section taller */
   display: flex;
   align-items: center;
   justify-content: flex-start;
   overflow: hidden;
+  background-color: #1e3d20; /* complimentary earthy dark green */
 }
 
 .diy-worm-farm-section .diy-background {
-  width: 120%; /* bigger image width */
-  height: 120%; /* bigger image height */
+  width: 120%; 
+  height: 120%; 
   object-fit: cover;
   position: absolute;
-  top: -10%; /* shift to center image */
+  top: -10%;
   left: -10%;
   z-index: 1;
+  /* dark gradient on left side */
+  mask-image: linear-gradient(to right, rgba(0,0,0,1) 35%, rgba(0,0,0,0) 100%);
+  -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 35%, rgba(0,0,0,0) 100%);
 }
 
 .diy-worm-farm-section .diy-text {
@@ -512,6 +516,7 @@ footer{
 
 </body>
 </html>
+
 
 
 
