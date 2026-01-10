@@ -244,7 +244,7 @@ nav a:hover{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 20px;
   width: 100%;
 }
@@ -259,7 +259,7 @@ nav a:hover{
 }
 
 .lab-results-section .images-container .lab-image {
-  width: 36cm; /* doubled from previous 18cm */
+  width: 18cm; /* reduced so it fits nicely */
   max-width: 100%;
   border: 4px solid var(--green); /* professional border */
   border-radius: 12px;
@@ -340,7 +340,7 @@ nav a:hover{
   nav a{font-size:18px;}
   .scrolling-text span{font-size:28px;}
   .scrolling-text{animation-duration:35s;}
-  .lab-results-section .images-container img{width:100%; max-width:36cm;}
+  .lab-results-section .images-container img{width:100%; max-width:18cm;}
   .testimony-box{flex-direction:column;align-items:center;}
   .testimony-box img{width:200px;}
 }
@@ -464,4 +464,3 @@ footer{
 
 </body>
 </html>
-
