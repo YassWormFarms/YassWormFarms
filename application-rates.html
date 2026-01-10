@@ -91,26 +91,25 @@
       margin: auto;
     }
 
-    .about-section h2 {
-      text-align: center;
-      font-size: 36px;
-      color: var(--green);
-      margin-bottom: 40px;
-    }
-
     .about-content {
       display: flex;
       gap: 40px;
       flex-wrap: wrap;
-      align-items: center;
+      align-items: flex-start;
     }
 
-    .about-content img {
-      width: 100%;
-      max-width: 650px; /* increased size */
-      border-radius: 12px;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-      object-fit: cover;
+    /* Our Story side title */
+    .about-title {
+      flex: 0 0 200px;
+      max-width: 200px;
+    }
+
+    .about-title h2 {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      font-size: 36px;
+      color: var(--green);
+      margin: 0;
     }
 
     .about-text {
@@ -123,7 +122,14 @@
       margin-bottom: 20px;
     }
 
-    /* TEAM SECTION (Larger & Professional) */
+    .about-image {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    }
+
+    /* TEAM SECTION */
     .team-section {
       padding: 60px 5%;
       background: var(--light);
@@ -198,6 +204,13 @@
         gap: 30px;
       }
 
+      .about-title h2 {
+        writing-mode: horizontal-tb;
+        transform: rotate(0);
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
       .team-member img {
         width: 200px;
         height: 200px;
@@ -239,9 +252,14 @@
 
   <!-- About Section -->
   <section class="about-section">
-    <h2>Our Story</h2>
     <div class="about-content">
-      <img src="Bonfire photo.jpg" alt="Yass Worm Farms Bonfire">
+
+      <!-- Our Story Title -->
+      <div class="about-title">
+        <h2>Our Story</h2>
+      </div>
+
+      <!-- Text Content -->
       <div class="about-text">
         <p>
           Yass Worm Farms is a family-owned business producing premium worm juice and castings for farmers,
@@ -250,14 +268,17 @@
         </p>
         <p>
           Beginning as a small operation, we’ve grown through dedication, hard work and the support
-          of our passionate team. Every product we create reflects our care for the land and our commitment
-          to eco‑friendly farming.
+          of our passionate team. Every product we create reflects our care for the land and our commitment to eco‑friendly farming.
         </p>
         <p>
           Healthy soil leads to healthier plants and better harvests. Our philosophy is simple: nourish
           the soil, and it will nourish you.
         </p>
       </div>
+
+      <!-- Image -->
+      <img src="Bonfire photo.jpg" alt="Yass Worm Farms Bonfire" class="about-image">
+
     </div>
   </section>
 
@@ -268,7 +289,7 @@
       <div class="team-member">
         <img src="Brandy photo.jpg" alt="Our loyal dog Brandy">
         <h4>Brandy</h4>
-        <p>Our loyal dog </p>
+        <p>Our loyal dog Brandy</p>
       </div>
       <div class="team-member">
         <img src="Chris and Ang photo.jpg" alt="Chris and Ang">
@@ -276,14 +297,14 @@
         <p>The Hard Working Duo</p>
       </div>
       <div class="team-member">
-        <img src="Dad photo.jpg" alt="Dad (James Brown)">
+        <img src="Dad photo.jpg" alt="Dad">
         <h4>Dad (James Brown)</h4>
-        <p>Founder and Entrepreneur</p>
+        <p>The Entrepreneur</p>
       </div>
       <div class="team-member">
         <img src="Izzy photo.jpg" alt="Izzy">
         <h4>Izzy</h4>
-        <p>A Mum & Designer</p>
+        <p>The Mum & Designer</p>
       </div>
       <div class="team-member">
         <img src="Maddy photo.jpg" alt="Maddy">
@@ -291,9 +312,9 @@
         <p>Business Side Kick and Nerd</p>
       </div>
       <div class="team-member">
-        <img src="Mum photo .jpg" alt="Mum (Mary Burt)">
+        <img src="Mum photo .jpg" alt="Mum">
         <h4>Mum (Mary Burt)</h4>
-        <p>Partner in Crime & Support</p>
+        <p>Partner in Crime and Support</p>
       </div>
       <div class="team-member">
         <img src="Nic Photo.jpg" alt="Nic">
@@ -311,3 +332,4 @@
 </body>
 
 </html>
+
