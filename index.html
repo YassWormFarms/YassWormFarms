@@ -134,7 +134,6 @@ nav a:hover{
   overflow: hidden;
 }
 
-/* BENEFITS STYLES (unchanged) */
 .benefits-section::before {
   content:"";
   position:absolute;
@@ -222,7 +221,6 @@ nav a:hover{
 
 /* =========================== */
 /* LAB RESULTS SECTION */
-/* (unchanged) */
 .lab-results-section {
   display: flex;
   flex-direction: column;
@@ -276,7 +274,7 @@ nav a:hover{
   width: 100%;
   max-width: 1200px;
   margin: 60px auto;
-  height: 500px;
+  height: 450px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -284,29 +282,18 @@ nav a:hover{
 }
 
 .diy-worm-farm-section .diy-background {
-  width: 120%; /* larger image */
-  height: 110%; /* show more of top/bottom */
-  object-fit: cover;
-  position: absolute;
-  top: -8%;
-  left: -10%;
-  z-index: 1;
-  transform: scale(1.05);
-}
-
-.diy-worm-farm-section .diy-overlay {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* bigger image fills section */
   position: absolute;
   top: 0;
   left: 0;
-  width: 55%;
-  height: 100%;
-  background: linear-gradient(to right, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 100%);
-  z-index: 2;
+  z-index: 1;
 }
 
 .diy-worm-farm-section .diy-text {
   position: relative;
-  z-index: 3;
+  z-index: 2;
   padding-left: 40px;
   max-width: 45%;
   color: #ffffff;
@@ -335,22 +322,87 @@ nav a:hover{
 
 /* =========================== */
 /* TESTIMONY SECTION */
-/* (unchanged) */
+.testimony-section {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 60px 5%;
+  background: #f5e9e0;
+  border-radius: 12px;
+  padding: 40px 5%;
+  position: relative;
+  overflow: hidden;
+}
 
-/* GLOBAL & MOBILE */
+.testimony-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('roots-pattern.png') center/cover no-repeat;
+  opacity: 0.12;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.testimony-box {
+  background: rgba(255,255,255,0.95);
+  border-radius: 12px;
+  padding: 25px;
+  max-width: 600px;
+  flex: 1 1 450px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  position: relative;
+  z-index: 1;
+}
+
+.testimony-box img {
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.testimony-content {
+  flex: 1;
+}
+
+.testimony-content h3 {
+  font-size: 22px;
+  color: var(--green);
+  margin-bottom: 12px;
+}
+
+.testimony-content p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* =========================== */
+/* MOBILE */
 @media(max-width:900px){
   .hero-text h1{font-size:40px;}
   .hero-text p{font-size:20px;}
+  .section-title{font-size:28px;}
   nav .logo{height:70px;}
   nav.shrink .logo{height:50px;}
+  .hero{justify-content:center;text-align:center;}
+  .hero-text{margin-left:0;text-align:center;}
+  nav a{font-size:18px;}
+  .scrolling-text span{font-size:28px;}
+  .scrolling-text{animation-duration:35s;}
   .lab-results-section .images-container img{width:100%; max-width:20cm;}
   .diy-worm-farm-section{
     height:auto;
     flex-direction:column;
   }
-  .diy-worm-farm-section .diy-background{width:100%; height:auto; top:0; left:0;}
-  .diy-worm-farm-section .diy-overlay{width:100%; height:100%;}
-  .diy-worm-farm-section .diy-text{max-width:90%; padding-left:20px; padding-top:20px;}
+  .diy-worm-farm-section .diy-text { max-width:90%; padding-left:20px; padding-top:20px; }
+  .diy-worm-farm-section .diy-text h2{font-size:28px;}
+  .diy-worm-farm-section .diy-text p{font-size:16px;}
+  .diy-worm-farm-section .diy-text .diy-details p{font-size:14px;}
+  .testimony-box{flex-direction:column;align-items:center;}
   .testimony-box img{width:200px;}
 }
 
@@ -403,6 +455,7 @@ footer{
 <section class="benefits-section">
   <div class="benefits-container">
     <h2 class="benefits-title">Brilliant Benefits of Worm Juice</h2>
+
     <div class="benefits-grid">
       <div class="benefit-item">Improved soil structure & airflow</div>
       <div class="benefit-item">Increases water holding capacity</div>
@@ -416,7 +469,19 @@ footer{
   </div>
 </section>
 
-<!-- LAB RESULTS -->
+<!-- SCROLLING BAND -->
+<section class="scrolling-band">
+  <div class="scrolling-text">
+    <span>
+      Vineyards, Orchards, Broad Acre Farms, Horticulture, Dairy, Vegetables, Pasture, Lawns, Golf Courses, University Research, Land Regeneration
+    </span>
+    <span>
+      Vineyards, Orchards, Broad Acre Farms, Horticulture, Dairy, Vegetables, Pasture, Lawns, Golf Courses, University Research, Land Regeneration
+    </span>
+  </div>
+</section>
+
+<!-- LAB RESULTS SECTION -->
 <section class="lab-results-section">
   <h2>Our Epic Lab Results</h2>
   <div class="images-container">
@@ -429,7 +494,6 @@ footer{
 <!-- DIY WORM FARM SECTION -->
 <section class="diy-worm-farm-section">
   <img src="DIY worm Farm image.jpg" alt="DIY Worm Farm System" class="diy-background">
-  <div class="diy-overlay"></div>
   <div class="diy-text">
     <h2>DIY Worm Farm System</h2>
     <p>With the help of James Brown you could make an On-farm Worm Fertiliser Production System. Replacing the need for synthetic fertiliser and creating huge savings annually.</p>
@@ -449,6 +513,7 @@ footer{
       <p>Warren from Mandurama loading our worm juice fertiliser at the Yass Ampol Service Centre. Warren plans to spray his Lucerne crop.</p>
     </div>
   </div>
+
   <div class="testimony-box">
     <img src="IBC worm Juice.jpg" alt="Andrew – Dairy Farmer">
     <div class="testimony-content">
@@ -458,9 +523,19 @@ footer{
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
   <p>© 2025 Yass Worm Farms. All rights reserved.</p>
 </footer>
 
+<!-- SHRINKING HEADER SCRIPT -->
+<script>
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('shrink', window.scrollY > 50);
+  });
+</script>
+
 </body>
 </html>
+
