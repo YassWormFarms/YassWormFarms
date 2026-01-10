@@ -268,7 +268,15 @@ nav a:hover{
   align-items: center;
   justify-content: flex-start;
   overflow: hidden;
-  background: #f0f5ef; /* Complementary background color */
+  background:#eae2d3;
+}
+
+.diy-worm-farm-section::after {
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(to right, rgba(0,0,0,0.75) 45%, rgba(0,0,0,0) 90%);
+  z-index:2;
 }
 
 .diy-worm-farm-section .diy-background {
@@ -281,45 +289,35 @@ nav a:hover{
   z-index: 1;
 }
 
-/* Dark gradient overlay on left side */
-.diy-worm-farm-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 55%;
-  height: 100%;
-  background: linear-gradient(to right, rgba(0,0,0,0.75), rgba(0,0,0,0));
-  z-index: 2;
-}
-
 .diy-worm-farm-section .diy-text {
   position: relative;
-  z-index: 3; /* above gradient */
+  z-index: 3;
   padding-left: 40px;
   max-width: 45%;
   color: #ffffff;
   font-family: 'Poppins', Arial, sans-serif;
 }
 
+/* BIGGER + BOLDER TEXT */
 .diy-worm-farm-section .diy-text h2 {
-  font-size: 38px;
-  margin-bottom: 20px;
-  font-weight: 700;
+  font-size: 48px;
+  margin-bottom: 22px;
+  font-weight: 800;
   font-family: 'Roboto Slab', serif;
   color: #f4a261;
 }
 
 .diy-worm-farm-section .diy-text p {
-  font-size: 18px;
-  line-height: 1.5;
-  margin-bottom: 15px;
+  font-size: 22px;
+  line-height: 1.6;
+  margin-bottom: 18px;
+  font-weight: 700;
 }
 
 .diy-worm-farm-section .diy-text .diy-details p {
-  font-size: 16px;
-  font-weight: 600;
-  margin: 5px 0;
+  font-size: 20px;
+  font-weight: 800;
+  margin: 8px 0;
 }
 
 /* TESTIMONY SECTION */
@@ -340,7 +338,6 @@ nav a:hover{
   content: "";
   position: absolute;
   inset: 0;
-  background: url('roots-pattern.png') center/cover no-repeat;
   opacity: 0.12;
   pointer-events: none;
   z-index: 0;
@@ -525,11 +522,3 @@ footer{
 
 </body>
 </html>
-
-
-
-
-
-
-
-
