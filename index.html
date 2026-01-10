@@ -47,7 +47,7 @@ nav{
 }
 
 nav .logo{
-  height:100px;
+  height:98px;
   transition: height 0.35s ease-in-out;
 }
 
@@ -57,7 +57,7 @@ nav.shrink{
 }
 
 nav.shrink .logo{
-  height:60px;
+  height:58px;
 }
 
 .nav-links{
@@ -220,31 +220,47 @@ nav a:hover{
 }
 
 /* =========================== */
-/* LOGO SECTION - UPDATED */
+/* BIGGER LOGO SECTION */
 .logo-section {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  height: auto;
   padding: 20px 5%;
 }
 
 .logo-section img {
-  height: 10cm; /* 2cm smaller than previous 12cm */
-  width: auto;
+  width: 14cm; /* 1cm bigger than previous 13cm */
+  height: auto;
 }
 
 /* =========================== */
-/* TESTIMONY SECTION */
+/* TESTIMONY SECTION - COFFEE BROWN WITH ROOTS */
 .testimony-section {
   display: flex;
   gap: 30px;
   flex-wrap: wrap;
   justify-content: center;
   margin: 60px 5%;
+  background: #f5e9e0; /* light coffee-brown tint */
+  border-radius: 12px;
+  padding: 40px 5%;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimony-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('roots-pattern.png') center/cover no-repeat; /* replace with your roots image */
+  opacity: 0.12;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .testimony-box {
-  background: #f0f8f0;
+  background: rgba(255,255,255,0.95);
   border-radius: 12px;
   padding: 25px;
   max-width: 600px;
@@ -253,6 +269,8 @@ nav a:hover{
   gap: 20px;
   align-items: flex-start;
   box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  position: relative;
+  z-index: 1;
 }
 
 .testimony-box img {
@@ -276,6 +294,7 @@ nav a:hover{
   line-height: 1.5;
 }
 
+/* =========================== */
 /* MOBILE */
 @media(max-width:900px){
   .hero-text h1{font-size:40px;}
@@ -288,8 +307,8 @@ nav a:hover{
   nav a{font-size:18px;}
   .scrolling-text span{font-size:28px;}
   .scrolling-text{animation-duration:35s;}
-  .logo-section{flex-direction:column;align-items:center;}
-  .logo-section img{height:8cm;margin:10px 0;}
+  .logo-section{justify-content:flex-start;height:auto;padding:20px 5%;}
+  .logo-section img{width:14cm;}
   .testimony-box{flex-direction:column;align-items:center;}
   .testimony-box img{width:200px;}
 }
@@ -409,4 +428,3 @@ footer{
 
 </body>
 </html>
-
