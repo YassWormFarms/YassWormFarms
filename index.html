@@ -231,7 +231,7 @@ nav a:hover{
 
 .lab-results-section h2 {
   font-size: 48px;
-  color: var(--lab-title); /* copper orange color */
+  color: var(--lab-title);
   margin-bottom: 30px;
   text-align: center;
   font-weight: 700;
@@ -260,7 +260,7 @@ nav a:hover{
 }
 
 .lab-results-section .images-container .lab-image {
-  width: 20cm; /* as big as possible while keeping soil image */
+  width: 20cm;
   max-width: calc(100% - 24cm);
   border: 4px solid var(--green);
   border-radius: 12px;
@@ -272,22 +272,23 @@ nav a:hover{
 /* DIY WORM FARM SECTION */
 .diy-worm-farm-section {
   position: relative;
-  width: 100vw; /* full width */
-  margin: 60px 0;
-  height: 500px; /* taller to show more sky */
+  width: 100%;
+  max-width: 1200px; /* same width as other sections */
+  margin: 60px auto;
+  height: 400px; /* adjusted height */
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
   overflow: hidden;
 }
 
 .diy-worm-farm-section .diy-background {
-  width: 120%; /* wider for sides */
+  width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain; /* show full image */
   position: absolute;
-  top: -15%; /* show more sky */
-  left: -10%; /* extend left side */
+  top: 0;
+  left: 0;
   z-index: 1;
 }
 
@@ -295,7 +296,7 @@ nav a:hover{
   position: absolute;
   top: 0;
   left: 0;
-  width: 50%; /* darken left side */
+  width: 50%;
   height: 100%;
   background: linear-gradient(to right, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%);
   z-index: 2;
@@ -505,7 +506,7 @@ footer{
 <!-- DIY WORM FARM SECTION -->
 <section class="diy-worm-farm-section">
   <div class="diy-overlay"></div>
-  <img src="DIY Worm Farm photo.jpg" alt="DIY Worm Farm System" class="diy-background">
+  <img src="DIY worm Farm image.jpg" alt="DIY Worm Farm System" class="diy-background">
   <div class="diy-text">
     <h2>DIY Worm Farm System</h2>
     <p>With the help of James Brown you could make an On-farm Worm Fertiliser Production System. Replacing the need for synthetic fertiliser and creating huge savings annually.</p>
@@ -550,3 +551,4 @@ footer{
 
 </body>
 </html>
+
