@@ -74,6 +74,41 @@ nav a:hover{
   color:var(--green);
 }
 
+/* ===== HERO SECTION ===== */
+.hero {
+  position: relative;
+  height: 50vh;
+  background: url('https://yasswormfarms.github.io/YassWormFarms/main4.png') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: white;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.hero-text {
+  position: relative;
+  margin-left: 5%;
+  max-width: 600px;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.hero-text p {
+  font-size: 22px;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
 /* ===== ABOUT PAGE CONTENT ===== */
 .about-section {
   padding: 60px 5%;
@@ -124,7 +159,6 @@ nav a:hover{
   text-align: center;
   color: var(--green);
   font-size: 46px;
-  margin-bottom: 40px;
 }
 
 /* Updated grid for exactly 4 per row */
@@ -182,6 +216,14 @@ footer {
 }
 
 @media (max-width: 900px) {
+  .hero-text h1 {
+    font-size: 36px;
+  }
+
+  .hero-text p {
+    font-size: 18px;
+  }
+
   .about-content {
     flex-direction: column;
     gap: 30px;
@@ -212,7 +254,6 @@ footer {
     font-size:18px;
   }
 }
-
 </style>
 </head>
 
@@ -231,6 +272,15 @@ footer {
     <a href="contact.html">Contact Us</a>
   </div>
 </nav>
+
+<!-- HERO SECTION -->
+<section class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-text">
+    <h1>About Yass Worm Farms</h1>
+    <p>Our family. Our passion. Our commitment to healthy soils and plants.</p>
+  </div>
+</section>
 
 <!-- ABOUT SECTION -->
 <section class="about-section">
@@ -321,3 +371,4 @@ footer {
 
 </body>
 </html>
+
