@@ -127,9 +127,10 @@ nav a:hover{
   margin-bottom: 40px;
 }
 
+/* Updated grid for exactly 4 per row */
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 40px;
   justify-items: center;
   align-items: start;
@@ -174,6 +175,12 @@ footer {
 }
 
 /* RESPONSIVE */
+@media (max-width: 1200px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row on smaller screens */
+  }
+}
+
 @media (max-width: 900px) {
   .about-content {
     flex-direction: column;
@@ -253,6 +260,7 @@ footer {
 <section class="team-section">
   <h2>Meet the Team</h2>
   <div class="team-grid">
+    <!-- FIRST ROW -->
     <div class="team-member">
       <img src="Brandy photo.jpg" alt="Our loyal dog Brandy">
       <h4>Brandy</h4>
@@ -273,6 +281,8 @@ footer {
       <h4>Izzy</h4>
       <p>The Mum & Designer</p>
     </div>
+
+    <!-- SECOND ROW -->
     <div class="team-member">
       <img src="Maddy photo.jpg" alt="Maddy">
       <h4>Maddy</h4>
@@ -288,7 +298,6 @@ footer {
       <h4>Nic</h4>
       <p>The All Rounder Farm Hand</p>
     </div>
-    <!-- NEW TEAM MEMBER -->
     <div class="team-member">
       <img src="Jemma Photo.jpg" alt="Jemma">
       <h4>Jemma</h4>
