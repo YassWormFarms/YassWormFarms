@@ -229,8 +229,48 @@ nav a:hover{
 }
 
 .image-row-section img {
-  width: 12cm; /* tripled from 4cm */
+  width: 12cm; /* default width for logo and soil image */
   height: auto;
+}
+
+/* =========================== */
+/* NEW LAB RESULTS SECTION */
+.lab-results-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 5%;
+}
+
+.lab-results-section h2 {
+  font-size: 42px;
+  color: var(--green);
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.lab-results-section .images-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+}
+
+.lab-results-section .images-container img {
+  height: auto;
+}
+
+.lab-results-section .images-container .logo,
+.lab-results-section .images-container .soil-image {
+  width: 12cm;
+}
+
+.lab-results-section .images-container .lab-image {
+  width: 18cm; /* make lab results image very large */
+  max-width: 100%;
 }
 
 /* =========================== */
@@ -306,7 +346,8 @@ nav a:hover{
   nav a{font-size:18px;}
   .scrolling-text span{font-size:28px;}
   .scrolling-text{animation-duration:35s;}
-  .image-row-section img{width:100%; max-width:12cm;} /* responsive */
+  .image-row-section img{width:100%; max-width:12cm;}
+  .lab-results-section .images-container img{width:100%; max-width:18cm;}
   .testimony-box{flex-direction:column;align-items:center;}
   .testimony-box img{width:200px;}
 }
@@ -392,6 +433,16 @@ footer{
   <img src="From our family farm to your soil - ChatGPT Image Jan 10, 2026, 12_22_19 PM.png" alt="From our family farm to your soil">
 </section>
 
+<!-- NEW LAB RESULTS SECTION -->
+<section class="lab-results-section">
+  <h2>Our Epic Lab Results</h2>
+  <div class="images-container">
+    <img src="Logo.png" alt="Yass Worm Farms Logo" class="logo">
+    <img src="Lab Results 2025.png" alt="Lab Results 2025" class="lab-image">
+    <img src="From our family farm to your soil - ChatGPT Image Jan 10, 2026, 12_22_19 PM.png" alt="From our family farm to your soil" class="soil-image">
+  </div>
+</section>
+
 <!-- TESTIMONY -->
 <section class="testimony-section">
   <div class="testimony-box">
@@ -426,4 +477,5 @@ footer{
 
 </body>
 </html>
+
 
