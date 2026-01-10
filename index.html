@@ -220,6 +220,20 @@ nav a:hover{
 }
 
 /* =========================== */
+/* NEW IMAGE SECTION UNDER SCROLLING TEXT */
+.image-row-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 5%;
+}
+
+.image-row-section img {
+  width: 4cm;
+  height: auto;
+}
+
+/* =========================== */
 /* TESTIMONY SECTION - COFFEE BROWN WITH ROOTS */
 .testimony-section {
   display: flex;
@@ -296,6 +310,8 @@ nav a:hover{
   .logo-section img{width:14cm;}
   .testimony-box{flex-direction:column;align-items:center;}
   .testimony-box img{width:200px;}
+  .image-row-section{flex-direction:column; gap: 20px;}
+  .image-row-section img{width:6cm;} /* slightly bigger for mobile */
 }
 
 /* GLOBAL SECTIONS */
@@ -373,19 +389,11 @@ footer{
   </div>
 </section>
 
-/* BIGGER LOGO SECTION */
-.logo-section {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: auto;
-  padding: 20px 5%;
-}
-
-.logo-section img {
-  width: 14cm; /* both images now same size */
-  height: auto;
-}
+<!-- NEW IMAGE ROW SECTION UNDER SCROLLING TEXT -->
+<section class="image-row-section">
+  <img src="Logo.png" alt="Yass Worm Farms Logo">
+  <img src="From our family farm to your soil - ChatGPT Image Jan 10, 2026, 12_22_19 PM.png" alt="From our family farm to your soil">
+</section>
 
 <!-- TESTIMONY -->
 <section class="testimony-section">
