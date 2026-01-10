@@ -47,7 +47,7 @@ nav{
 }
 
 nav .logo{
-  height:100px;
+  height:98px;
   transition: height 0.35s ease-in-out;
 }
 
@@ -57,7 +57,7 @@ nav.shrink{
 }
 
 nav.shrink .logo{
-  height:60px;
+  height:58px;
 }
 
 .nav-links{
@@ -173,6 +173,7 @@ nav a:hover{
   box-shadow: 0 6px 18px rgba(0,0,0,0.18);
   font-weight: 600;
   line-height: 1.45;
+  position: relative;
 }
 
 .benefit-item::before {
@@ -219,17 +220,47 @@ nav a:hover{
 }
 
 /* =========================== */
-/* TESTIMONY SECTION */
+/* BIGGER LOGO SECTION */
+.logo-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: auto;
+  padding: 20px 5%;
+}
+
+.logo-section img {
+  width: 14cm; /* 1cm bigger than previous 13cm */
+  height: auto;
+}
+
+/* =========================== */
+/* TESTIMONY SECTION - COFFEE BROWN WITH ROOTS */
 .testimony-section {
   display: flex;
   gap: 30px;
   flex-wrap: wrap;
   justify-content: center;
   margin: 60px 5%;
+  background: #f5e9e0; /* light coffee-brown tint */
+  border-radius: 12px;
+  padding: 40px 5%;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimony-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('roots-pattern.png') center/cover no-repeat; /* replace with your roots image */
+  opacity: 0.12;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .testimony-box {
-  background: #f0f1ed; /* light tinted coffee brown */
+  background: rgba(255,255,255,0.95);
   border-radius: 12px;
   padding: 25px;
   max-width: 600px;
@@ -239,18 +270,7 @@ nav a:hover{
   align-items: flex-start;
   box-shadow: 0 6px 18px rgba(0,0,0,0.15);
   position: relative;
-  overflow: hidden;
-}
-
-/* Roots design overlay using pseudo-element */
-.testimony-box::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: url('https://i.imgur.com/1Yl1cZk.png') center/cover no-repeat; /* sample root texture image */
-  opacity: 0.1;
-  pointer-events: none;
-  border-radius: 12px;
+  z-index: 1;
 }
 
 .testimony-box img {
@@ -274,6 +294,7 @@ nav a:hover{
   line-height: 1.5;
 }
 
+/* =========================== */
 /* MOBILE */
 @media(max-width:900px){
   .hero-text h1{font-size:40px;}
@@ -367,11 +388,19 @@ footer{
   </div>
 </section>
 
-<!-- BIGGER LOGO SECTION -->
-<section class="logo-section">
-  <img src="Logo.png" alt="Yass Worm Farms Logo">
-  <img src="From our family farm to your soil - ChatGPT Image Jan 10, 2026, 12_22_19 PM.png" alt="From our family farm to your soil image">
-</section>
+/* BIGGER LOGO SECTION */
+.logo-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: auto;
+  padding: 20px 5%;
+}
+
+.logo-section img {
+  width: 14cm; /* both images now same size */
+  height: auto;
+}
 
 <!-- TESTIMONY -->
 <section class="testimony-section">
@@ -407,4 +436,3 @@ footer{
 
 </body>
 </html>
-
