@@ -2,181 +2,275 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Yass Worm Farms</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        /* Added custom styling */
-        .advice {
-            background-color: #e8f5e9; /* soft green */
-            border-left: 6px solid #4caf50;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Yass Worm Farms</title>
+  <style>
+    /* Root brand colours from Yass Worm Farms homepage */
+    :root {
+      --green: #064d28;
+      --coffee: #4b3621;
+      --lab-title: #b87333;
+      --light: #f5f5f5;
+    }
 
-        .advice h3 {
-            color: #2e7d32;
-            margin-top: 0;
-        }
+    body {
+      margin: 0;
+      font-family: 'Poppins', Arial, sans-serif;
+      color: var(--coffee);
+      background: white;
+      line-height: 1.6;
+    }
 
-        .advice blockquote {
-            font-style: italic;
-            background-color: #f9fff9;
-            border-left: 4px solid #a5d6a7;
-            margin: 15px 0;
-            padding: 10px 20px;
-            border-radius: 5px;
-        }
+    nav {
+      background: var(--green);
+      padding: 15px 10%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
 
-        .warning {
-            background-color: #fff8e1; /* pale yellow */
-            border-left: 6px solid #fbc02d;
-            padding: 15px 20px;
-            margin-top: 40px;
-            border-radius: 10px;
-        }
+    nav .logo {
+      height: 70px;
+    }
 
-        .warning h3 {
-            color: #e65100;
-            margin-top: 0;
-        }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 5px 10px;
+      font-weight: 700;
+    }
 
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-        }
+    nav a:hover {
+      text-decoration: underline;
+    }
 
-        nav {
-            background-color: #4caf50;
-            padding: 10px;
-            text-align: center;
-        }
+    /* Hero Section */
+    .hero {
+      position: relative;
+      height: 50vh;
+      background: url('https://yasswormfarms.github.io/YassWormFarms/main4.png') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      color: white;
+    }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
-            font-weight: bold;
-        }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+    }
 
-        nav a:hover {
-            text-decoration: underline;
-        }
+    .hero-text {
+      position: relative;
+      margin-left: 5%;
+      max-width: 600px;
+    }
 
-        main {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
+    .hero-text h1 {
+      font-size: 48px;
+      margin: 0;
+      white-space: nowrap;
+    }
 
-        footer {
-            text-align: center;
-            background-color: #f1f1f1;
-            padding: 15px;
-            margin-top: 50px;
-        }
-    </style>
+    .hero-text p {
+      font-size: 22px;
+      font-weight: 700;
+      margin-top: 10px;
+    }
+
+    /* About Section */
+    .about-section {
+      padding: 60px 5%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .about-section h2 {
+      text-align: center;
+      font-size: 36px;
+      color: var(--green);
+      margin-bottom: 40px;
+    }
+
+    .about-content {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .about-content img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    }
+
+    .about-text {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .about-text p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    /* Team Section */
+    .team-section {
+      padding: 60px 5%;
+      background: var(--light);
+      border-radius: 12px;
+      margin-top: 40px;
+    }
+
+    .team-section h2 {
+      text-align: center;
+      color: var(--green);
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      justify-items: center;
+    }
+
+    .team-member {
+      text-align: center;
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    }
+
+    .team-member img {
+      width: 100%;
+      max-width: 200px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+    }
+
+    .team-member h4 {
+      color: var(--green);
+      margin-bottom: 5px;
+    }
+
+    .team-member p {
+      color: var(--coffee);
+      font-size: 16px;
+    }
+
+    footer {
+      background: var(--coffee);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 900px) {
+      .hero-text h1 {
+        font-size: 36px;
+      }
+
+      .hero-text p {
+        font-size: 18px;
+      }
+
+      .about-content {
+        flex-direction: column;
+        gap: 30px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="application-rates.html">Application Rates</a>
-        <a href="shop.html">Shop</a>
-        <a href="laboratory-results.html">Laboratory Results</a>
-        <a href="contact.html">Contact Us</a>
-    </nav>
+  <!-- Navigation -->
+  <nav>
+    <img src="Logo.png" alt="Yass Worm Farms Logo" class="logo">
+    <div>
+      <a href="index.html">Home</a>
+      <a href="application-rates.html">Application Rates</a>
+      <a href="shop.html">Shop</a>
+      <a href="laboratory-results.html">Laboratory Results</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+  </nav>
 
-    <main class="product-section">
-        <h1 style="color:brown;">Application Rates for Our Products</h1>
-        <h2>Yass Worm Farms Premium Worm Juice</h2>
-        <br>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-text">
+      <h1>About Yass Worm Farms</h1>
+      <p>Our family. Our passion. Our commitment to healthy soils and plants.</p>
+    </div>
+  </section>
 
-        <!-- Updated section -->
-        <div class="advice">
-            <h3>Advice from Andrew – Dairy Farmer (East Gippsland)</h3>
-            <p>
-                Andrew, a dairy farmer friend from East Gippsland, replaced all synthetic fertilisers with worm juice. 
-                He now saves around <strong>$50,000 annually</strong> and boasts the most outstanding pasture in the district. 
-                I asked Andrew what to look for after spraying a lucerne crop with worm juice, and here’s what he said:
-            </p>
-            <blockquote>
-                “What to look for in a couple of weeks: plants should show signs of improved health and slightly darker leaves. 
-                The roots will be longer, and plants don’t seem to get attacked by red-legged earth mite or lucerne flea. 
-                Hot or cold weather fluctuations have less impact, and plants appear better able to handle water efficiently. 
-                On lucerne, you should notice a difference when harvesting — mowing will be denser, and bales will be more solid 
-                even if the crop looks normal. I recommend another spray four weeks after the first.
-                <br><br>
-                Hope that helps,  
-                <br>— James 👍
-            </blockquote>
-        </div>
+  <!-- About Section -->
+  <section class="about-section">
+    <h2>Our Story</h2>
+    <div class="about-content">
+      <img src="farm-photo.jpg" alt="Yass Worm Farms">
+      <div class="about-text">
+        <p>
+          Yass Worm Farms is a family-owned business producing premium worm juice and castings for farmers,
+          gardeners, and soil enthusiasts across New South Wales. Our mission is to improve soil health
+          naturally, sustainably, and efficiently.
+        </p>
+        <p>
+          Beginning as a small backyard operation, we’ve grown through dedication, hard work, and the support
+          of our passionate team. Every product we create reflects our care for the land and our commitment
+          to eco-friendly, sustainable farming practices.
+        </p>
+        <p>
+          We believe in the power of healthy soil — it leads to healthier plants, better harvests, and a
+          thriving environment. Our philosophy is simple: nourish the soil, and it will nourish you.
+        </p>
+      </div>
+    </div>
+  </section>
 
-        <br>
-        <h3>Application Rates</h3>
-        <br>
+  <!-- Team Section -->
+  <section class="team-section">
+    <h2>Meet the Team</h2>
+    <div class="team-grid">
+      <div class="team-member">
+        <img src="team1.jpg" alt="James Brown">
+        <h4>James Brown</h4>
+        <p>Founder & Soil Enthusiast</p>
+      </div>
+      <div class="team-member">
+        <img src="team2.jpg" alt="Anna Brown">
+        <h4>Anna Brown</h4>
+        <p>Operations Manager</p>
+      </div>
+      <div class="team-member">
+        <img src="team3.jpg" alt="Tom Harris">
+        <h4>Tom Harris</h4>
+        <p>Farm Supervisor</p>
+      </div>
+    </div>
+  </section>
 
-        <h4>On Pasture:</h4>
-        <ul>
-            <li>Foliar spray Worm Juice 5-15 L/Ha during growth periods. Apply best when plants are damp or dewy.</li>
-            <li>@ 5L/Ha: $10 per hectare</li>
-            <li>@ 15L/Ha: $30 per hectare</li>
-        </ul>
-        <br>
-
-        <h4>On Crops:</h4>
-        <ul>
-            <li>Inoculate seed: 5 liters per ton.</li>
-            <li>Liquid inject systems: 5-15 L/Ha.</li>
-            <li>Apply Worm Juice at 5-15 L/Ha when the plants reach the 3-leaf stage.</li>
-            <li>@ 5L/Ha: $10 per hectare</li>
-            <li>@ 15L/Ha: $30 per hectare</li>
-            <li>Topdressing: 5-15 L/Ha when required.</li>
-        </ul>
-        <br>
-        
-        <h4>Horticulture / Viticulture / Orchard:</h4>
-        <ul>
-            <li>Apply Worm Juice at 5-15 L/Ha, 3 to 4 times a year until harvest (best when plants are damp or dewy).</li>
-        </ul>
-        <br>
-        
-        <h4>Home Garden Use:</h4>
-        <ul>
-            <li>5-15 Liters per hectare.</li>
-            <li>50/50 dilution for trees, flowers, plants, and vegetables.</li>
-            <li>30% Juice / 70% water for delicate plants.</li>
-        </ul>
-        <br>
-
-        <h4>Lawn:</h4>
-        <ul>
-            <li>50/50 dilution: 5-15 L/Ha.</li>
-        </ul>
-        <br>
-
-        <!-- New town water warning at the bottom -->
-        <div class="warning">
-            <h3>Important Note About Town Water</h3>
-            <p>
-                If diluting with town water (which normally contains chlorine that can kill valuable microbes), 
-                please leave the water standing for <strong>24 hours</strong> before mixing. 
-                Use immediately after mixing—do not store. 
-                Keep in a cool place and make sure the container is vented to allow exchange of air.
-            </p>
-        </div>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Yass Worm Farms. All Rights Reserved.</p>
-    </footer>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Yass Worm Farms. All Rights Reserved.</p>
+  </footer>
 
 </body>
+
 </html>
+
 
 
