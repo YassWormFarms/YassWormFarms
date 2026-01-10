@@ -100,8 +100,8 @@
 
     .about-content {
       display: flex;
-      gap: 50px;
       align-items: flex-start;
+      gap: 50px;
       flex-wrap: wrap;
     }
 
@@ -112,13 +112,13 @@
       box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
       object-fit: cover;
       flex: 1 1 50%;
-      order: 1; /* image first on left */
+      order: 1; /* image on left */
     }
 
     .about-text {
       flex: 1 1 50%;
       min-width: 280px;
-      order: 2;
+      order: 2; /* text on right */
     }
 
     .about-text p {
@@ -251,10 +251,10 @@
 
   <!-- About Section -->
   <section class="about-section">
-    <h2>Our Story</h2>
     <div class="about-content">
       <img src="Bonfire photo.jpg" alt="Yass Worm Farms Bonfire">
       <div class="about-text">
+        <h2>Our Story</h2>
         <p>
           Yass Worm Farms is a family-owned business producing premium worm juice and castings for farmers,
           gardeners and soil enthusiasts across New South Wales. Our mission is to improve soil health
@@ -323,6 +323,7 @@
 </body>
 
 </html>
+
 
 
 
