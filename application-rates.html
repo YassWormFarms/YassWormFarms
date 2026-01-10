@@ -20,7 +20,7 @@
   --green:#064d28;
   --coffee:#4b3621;
   --light:#f5f5f5;
-  --soft-green:#e6f0e8; /* Soft green for Our Story */
+  --soft-green:#e6f0e8; /* Soft green for Our Story background */
 }
 
 body{
@@ -114,21 +114,14 @@ nav a:hover{
   padding: 60px 5%;
   background: var(--soft-green); /* Soft green background */
   width: 100%; /* Stretch background full width */
-  box-sizing: border-box; /* Ensure padding doesn’t affect width */
+  box-sizing: border-box;
 }
 
-.about-section h2 {
-  text-align: left; /* Align with text */
-  font-size: 36px;
-  color: var(--green);
-  margin-bottom: 20px; /* Reduce margin to keep it close to content */
-}
-
-.about-content {
+.about-content-wrapper {
   display: flex;
   gap: 40px;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start; /* Align top edges */
 }
 
 .about-content img {
@@ -142,6 +135,13 @@ nav a:hover{
 .about-text {
   flex: 1;
   min-width: 280px;
+}
+
+.about-text h2 {
+  margin-top: 0;
+  margin-bottom: 20px; /* small spacing before paragraphs */
+  color: var(--green);
+  font-size: 36px;
 }
 
 .about-text p {
@@ -218,7 +218,7 @@ footer {
 }
 
 @media (max-width: 900px) {
-  .about-content {
+  .about-content-wrapper {
     flex-direction: column;
     gap: 30px;
   }
@@ -279,10 +279,10 @@ footer {
 
 <!-- ABOUT SECTION -->
 <section class="about-section">
-  <h2>Our Story</h2>
-  <div class="about-content">
+  <div class="about-content-wrapper">
     <img src="Bonfire photo.jpg" alt="Yass Worm Farms Bonfire">
     <div class="about-text">
+      <h2>Our Story</h2>
       <p>
         Yass Worm Farms is a family-owned business producing premium worm juice and castings for farmers,
         gardeners and soil enthusiasts across New South Wales. Our mission is to improve soil health
@@ -366,3 +366,5 @@ footer {
 
 </body>
 </html>
+
+
