@@ -220,7 +220,7 @@ nav a:hover{
 }
 
 /* =========================== */
-/* NEW IMAGE SECTION UNDER SCROLLING TEXT */
+/* NEW IMAGE ROW SECTION UNDER SCROLLING TEXT */
 .image-row-section {
   display: flex;
   justify-content: space-between;
@@ -229,7 +229,7 @@ nav a:hover{
 }
 
 .image-row-section img {
-  width: 4cm;
+  width: 12cm; /* tripled from 4cm */
   height: auto;
 }
 
@@ -306,12 +306,9 @@ nav a:hover{
   nav a{font-size:18px;}
   .scrolling-text span{font-size:28px;}
   .scrolling-text{animation-duration:35s;}
-  .logo-section{justify-content:flex-start;height:auto;padding:20px 5%;}
-  .logo-section img{width:14cm;}
+  .image-row-section img{width:100%; max-width:12cm;} /* responsive */
   .testimony-box{flex-direction:column;align-items:center;}
   .testimony-box img{width:200px;}
-  .image-row-section{flex-direction:column; gap: 20px;}
-  .image-row-section img{width:6cm;} /* slightly bigger for mobile */
 }
 
 /* GLOBAL SECTIONS */
@@ -429,3 +426,4 @@ footer{
 
 </body>
 </html>
+
