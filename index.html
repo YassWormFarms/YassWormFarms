@@ -272,23 +272,22 @@ nav a:hover{
 /* DIY WORM FARM SECTION */
 .diy-worm-farm-section {
   position: relative;
-  width: 100%;
-  max-width: 1200px; /* same width as the rest of website content */
-  margin: 60px auto; /* centered like other sections */
-  height: 350px; /* standard section height */
+  width: 100vw; /* full width */
+  margin: 60px 0;
+  height: 500px; /* taller to show more sky */
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
   overflow: hidden;
 }
 
 .diy-worm-farm-section .diy-background {
-  width: 100%;
+  width: 120%; /* wider for sides */
   height: 100%;
   object-fit: cover;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -15%; /* show more sky */
+  left: -10%; /* extend left side */
   z-index: 1;
 }
 
@@ -296,7 +295,7 @@ nav a:hover{
   position: absolute;
   top: 0;
   left: 0;
-  width: 50%; /* darken left side only */
+  width: 50%; /* darken left side */
   height: 100%;
   background: linear-gradient(to right, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%);
   z-index: 2;
@@ -306,7 +305,7 @@ nav a:hover{
   position: relative;
   z-index: 3;
   padding-left: 40px;
-  max-width: 45%; /* text stays only on left darkened segment */
+  max-width: 45%;
   color: #ffffff;
   font-family: 'Poppins', Arial, sans-serif;
 }
@@ -316,7 +315,7 @@ nav a:hover{
   margin-bottom: 20px;
   font-weight: 700;
   font-family: 'Roboto Slab', serif;
-  color: #f4a261; /* professional accent color */
+  color: #f4a261;
 }
 
 .diy-worm-farm-section .diy-text p {
@@ -332,14 +331,14 @@ nav a:hover{
 }
 
 /* =========================== */
-/* TESTIMONY SECTION - COFFEE BROWN WITH ROOTS */
+/* TESTIMONY SECTION */
 .testimony-section {
   display: flex;
   gap: 30px;
   flex-wrap: wrap;
   justify-content: center;
   margin: 60px 5%;
-  background: #f5e9e0; /* light coffee-brown tint */
+  background: #f5e9e0;
   border-radius: 12px;
   padding: 40px 5%;
   position: relative;
@@ -350,7 +349,7 @@ nav a:hover{
   content: "";
   position: absolute;
   inset: 0;
-  background: url('roots-pattern.png') center/cover no-repeat; /* replace with your roots image */
+  background: url('roots-pattern.png') center/cover no-repeat;
   opacity: 0.12;
   pointer-events: none;
   z-index: 0;
@@ -544,4 +543,10 @@ footer{
 <!-- SHRINKING HEADER SCRIPT -->
 <script>
   const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', ()
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('shrink', window.scrollY > 50);
+  });
+</script>
+
+</body>
+</html>
