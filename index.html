@@ -126,7 +126,7 @@ nav a:hover{
 }
 
 /* =========================== */
-/* BENEFITS SECTION - SUPER SOFT GUM GREEN + DIM LEAF */
+/* BENEFITS SECTION */
 .benefits-section {
   padding: 70px 5%;
   background: #e8f3e8;
@@ -134,7 +134,6 @@ nav a:hover{
   overflow: hidden;
 }
 
-/* faint gum leaf behind content */
 .benefits-section::before {
   content:"";
   position:absolute;
@@ -177,7 +176,6 @@ nav a:hover{
   position: relative;
 }
 
-/* Professional Tick Style */
 .benefit-item::before {
   content: "✔";
   position: absolute;
@@ -190,9 +188,9 @@ nav a:hover{
 }
 
 /* =========================== */
-/* SEAMLESS SCROLLING BAND UNDER BENEFITS */
+/* SCROLLING BAND */
 .scrolling-band {
-  background-color: #064d28; /* dark green */
+  background-color: #064d28;
   height: 2cm;
   overflow: hidden;
   display: flex;
@@ -210,23 +208,15 @@ nav a:hover{
 
 .scrolling-text span {
   white-space: nowrap;
-  font-size: 32px; /* larger text */
+  font-size: 32px;
   font-weight: 600;
-  color: #e8f3e8; /* light text for contrast */
+  color: #e8f3e8;
   margin-right: 50px;
 }
 
-/* seamless animation */
 @keyframes scrollText {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
-}
-
-/* =========================== */
-<!-- BIGGER LOGO SECTION -->
-<section class="logo-section">
-  <img src="Logo.png" alt="Yass Worm Farms Logo">
-</section>
 }
 
 /* =========================== */
@@ -252,7 +242,7 @@ nav a:hover{
 }
 
 .testimony-box img {
-  width: 250px; /* larger image */
+  width: 250px;
   height: auto;
   border-radius: 10px;
 }
@@ -272,54 +262,26 @@ nav a:hover{
   line-height: 1.5;
 }
 
-/* =========================== */
-/* MOBILE ADJUSTMENTS */
+/* MOBILE */
 @media(max-width:900px){
   .hero-text h1{font-size:40px;}
   .hero-text p{font-size:20px;}
   .section-title{font-size:28px;}
   nav .logo{height:70px;}
   nav.shrink .logo{height:50px;}
-  .hero{
-    justify-content:center;
-    text-align:center;
-  }
-  .hero-text{
-    margin-left:0;
-    text-align:center;
-  }
-  nav a{
-    font-size:18px;
-  }
-  .scrolling-text span {
-    font-size:28px;
-  }
-  .scrolling-text {
-    animation-duration:35s;
-  }
-  .logo-section {
-    justify-content: flex-start;
-    height: auto;
-    padding: 20px 5%;
-  }
-  .logo-section img {
-    width: 12cm;
-  }
-  .testimony-box {
-    flex-direction: column;
-    align-items: center;
-  }
-  .testimony-box img {
-    width: 200px;
-  }
+  .hero{justify-content:center;text-align:center;}
+  .hero-text{margin-left:0;text-align:center;}
+  nav a{font-size:18px;}
+  .scrolling-text span{font-size:28px;}
+  .scrolling-text{animation-duration:35s;}
+  .logo-section{justify-content:flex-start;height:auto;padding:20px 5%;}
+  .logo-section img{width:12cm;}
+  .testimony-box{flex-direction:column;align-items:center;}
+  .testimony-box img{width:200px;}
 }
 
-/* =========================== */
 /* GLOBAL SECTIONS */
-section{
-  padding:60px 5%;
-}
-
+section{padding:60px 5%;}
 .section-title{
   text-align:center;
   color:var(--green);
@@ -327,7 +289,6 @@ section{
   margin-bottom:20px;
 }
 
-/* =========================== */
 /* FOOTER */
 footer{
   background:var(--coffee);
@@ -364,7 +325,7 @@ footer{
   </div>
 </section>
 
-<!-- BENEFITS SECTION -->
+<!-- BENEFITS -->
 <section class="benefits-section">
   <div class="benefits-container">
     <h2 class="benefits-title">Brilliant Benefits of Worm Juice</h2>
@@ -382,7 +343,7 @@ footer{
   </div>
 </section>
 
-<!-- SEAMLESS SCROLLING TEXT BAND -->
+<!-- SCROLLING BAND -->
 <section class="scrolling-band">
   <div class="scrolling-text">
     <span>
@@ -394,13 +355,13 @@ footer{
   </div>
 </section>
 
-<!-- BIGGER LOGO SECTION -->
+<!-- BIGGER LOGO SECTION (UPDATED AS REQUESTED) -->
 <section class="logo-section">
-  <img src="From our family farm to your soil - ChatGPT Image Jan 10, 2026, 12_22_19 PM.png" alt="From our family farm to your soil image">
   <img src="Logo.png" alt="Yass Worm Farms Logo">
+  <img src="From our family farm to your soil - ChatGPT Image Jan 10, 2026, 12_22_19 PM.png" alt="From our family farm to your soil image">
 </section>
 
-<!-- TESTIMONY SECTION -->
+<!-- TESTIMONY -->
 <section class="testimony-section">
   <div class="testimony-box">
     <img src="warren.jpg" alt="Warren loading worm juice fertiliser">
