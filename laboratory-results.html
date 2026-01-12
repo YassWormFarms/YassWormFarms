@@ -1,32 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Laboratory Results | Yass Worm Farms</title>
+<title>Application Rates | Yass Worm Farms</title>
 
-<!-- GOOGLE FONTS -->
+<!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
 
 <style>
 :root {
-  --green:#064d28;
-  --coffee:#4b3621;
-  --light:#f5f5f5;
+  --green: #064d28;
+  --coffee: #4b3621;
+  --light: #f5f5f5;
+  --accent: #b87333;
+  --bg-section: #f7fff7;
 }
 
 /* BODY */
 body {
-  margin:0;
-  font-family:'Poppins', Arial, sans-serif;
-  color:var(--coffee);
-  background:white;
+  margin: 0;
+  font-family: 'Poppins', Arial, sans-serif;
+  color: var(--coffee);
+  background: white;
+  line-height: 1.6;
 }
 
-/* HEADER (already matched earlier) */
+/* HEADER */
 nav {
   background:white;
   border-bottom:2px solid #ddd;
@@ -48,7 +50,79 @@ nav.shrink .logo { height:58px; }
 nav a { text-decoration:none; color:var(--coffee); font-weight:700; font-size:22px; }
 nav a:hover { color:var(--green); }
 
-/* NEW FOOTER STYLES MATCHING CONTACT PAGE */
+/* HERO */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('9c9d8747-1675-4409-9549-0aa1002344f2.png') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: auto;
+}
+
+/* SECTION STYLING */
+section {
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 0 25px;
+}
+
+section h2 {
+  color: var(--green);
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.advice {
+  background: var(--bg-section);
+  padding: 25px 30px;
+  border-left: 5px solid var(--accent);
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+.advice p {
+  margin: 15px 0;
+}
+
+.application-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.card h3 {
+  color: var(--green);
+  margin-bottom: 15px;
+}
+
+.card ul {
+  padding-left: 20px;
+}
+
+.card ul li {
+  margin-bottom: 8px;
+}
+
+/* FOOTER */
 footer {
   background: var(--coffee);
   color: white;
@@ -56,11 +130,17 @@ footer {
   padding: 18px;
   margin-top: 70px;
 }
+
+/* MOBILE */
+@media(max-width:768px){
+  .hero h1 { font-size:32px; }
+  .hero p { font-size:16px; }
+}
 </style>
 </head>
-
 <body>
 
+<!-- HEADER -->
 <nav id="navbar">
   <div class="nav-left">
     <img src="Logo.png" alt="Yass Worm Farms Logo" class="logo">
@@ -75,80 +155,79 @@ footer {
   </div>
 </nav>
 
-<main style="padding: 20px; max-width: 1100px; margin:auto;">
+<!-- HERO -->
+<section class="hero">
+  <h1>Application Rates for Our Products</h1>
+  <p>Yass Worm Farms Premium Worm Juice – advice from farmers and detailed application guidance for maximum soil health.</p>
+</section>
 
-  <h1 style="text-align:center; color:#006400;">Latest Laboratory Results</h1>
-  <p style="text-align:center;">Our most recent microbial laboratory report for our Worm Juice Fertiliser.</p>
+<!-- ADVICE -->
+<section class="advice">
+  <h2>Advice from Andrew – Dairy Farmer (East Gippsland)</h2>
+  <p>Andrew, a dairy farmer friend from East Gippsland, replaced all synthetic fertilisers with worm juice. He now saves around <strong>$50,000 annually</strong> and boasts the most outstanding pasture in the district.</p>
+  <p>I asked Andrew what to look for after spraying a lucerne crop with worm juice, and here’s what he said:</p>
+  <p><em>“What to look for in a couple of weeks: plants should show signs of improved health and slightly darker leaves. The roots will be longer, and plants don’t seem to get attacked by red-legged earth mite or lucerne flea. Hot or cold weather fluctuations have less impact, and plants appear better able to handle water efficiently. On lucerne, you should notice a difference when harvesting — mowing will be denser, and bales will be more solid even if the crop looks normal. I recommend another spray four weeks after the first.”</em></p>
+  <p>Hope that helps,<br>— James 👍</p>
+</section>
 
-  <div style="text-align:center; margin: 30px 0;">
-    <img src="https://raw.githubusercontent.com/YassWormFarms/YassWormFarms/main/goodlab.png"
-         alt="Microbiological Analysis - Latest Lab Results"
-         style="max-width: 700px; width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.25);">
+<!-- APPLICATION RATES -->
+<section>
+  <h2>Application Rates</h2>
+  <div class="application-cards">
+    
+    <div class="card">
+      <h3>On Pasture</h3>
+      <ul>
+        <li>Foliar spray Worm Juice 5-15 L/Ha during growth periods. Apply best when plants are damp or dewy.</li>
+        <li>@ 5L/Ha: $10 per hectare</li>
+        <li>@ 15L/Ha: $30 per hectare</li>
+      </ul>
+    </div>
+    
+    <div class="card">
+      <h3>On Crops</h3>
+      <ul>
+        <li>Inoculate seed: 5 liters per ton.</li>
+        <li>Liquid inject systems: 5-15 L/Ha.</li>
+        <li>Apply Worm Juice at 5-15 L/Ha when the plants reach the 3-leaf stage.</li>
+        <li>@ 5L/Ha: $10 per hectare</li>
+        <li>@ 15L/Ha: $30 per hectare</li>
+        <li>Topdressing: 5-15 L/Ha when required.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Horticulture / Viticulture / Orchard</h3>
+      <ul>
+        <li>Apply Worm Juice at 5-15 L/Ha, 3 to 4 times a year until harvest (best when plants are damp or dewy).</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Home Garden Use</h3>
+      <ul>
+        <li>5-15 Liters per hectare.</li>
+        <li>50/50 dilution for trees, flowers, plants, and vegetables.</li>
+        <li>30% Juice / 70% water for delicate plants.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Lawn</h3>
+      <ul>
+        <li>50/50 dilution: 5-15 L/Ha.</li>
+      </ul>
+    </div>
+
   </div>
 
-  <section style="background:#f7fff7; border:2px solid #b4e6b4; padding:25px; border-radius:12px;">
+  <div class="advice" style="margin-top:30px;">
+    <h3>Important Note About Town Water</h3>
+    <p>If diluting with town water (which normally contains chlorine that can kill valuable microbes), please leave the water standing for 24 hours before mixing. Use immediately after mixing—do not store. Keep in a cool place and make sure the container is vented to allow exchange of air.</p>
+  </div>
+</section>
 
-    <h2 style="text-align:center; color:#006400; font-size:28px;">🌱 BENEFITS BY MICROBIAL GROUP</h2>
-
-    <h3>1️⃣ Active Fungi (25,000 cfu/g + total fungi 32,000 cfu/g)</h3>
-    <strong>In Soil</strong>
-    <ul>
-      <li>Build stable soil aggregates → improved structure & airflow</li>
-      <li>Increase water holding capacity & reduce compaction</li>
-      <li>Decompose organic matter & release nutrients steadily</li>
-    </ul>
-    <strong>For Pasture & Crops</strong>
-    <ul>
-      <li>Boost root growth & nutrient uptake</li>
-      <li>Strengthen natural disease resistance</li>
-    </ul>
-    <hr>
-
-    <h3>2️⃣ Cellulose Utilisers (7,000 cfu/g)</h3>
-    <ul>
-      <li>Break down plant residues & woody fibres</li>
-      <li>Speed up composting & carbon cycling</li>
-    </ul>
-    <hr>
-
-    <h3>3️⃣ Yeasts (10,000 cfu/g)</h3>
-    <ul>
-      <li>Produce natural B vitamins & growth stimulants</li>
-      <li>Fuel the microbial food web in the root zone</li>
-    </ul>
-    <hr>
-
-    <h3>4️⃣ Active Lactic Acid Bacteria (1,000 cfu/g)</h3>
-    <ul>
-      <li>Suppress harmful pathogens & improve soil immunity</li>
-      <li>Help break down toxins & manures</li>
-    </ul>
-    <hr>
-
-    <h3>5️⃣ Actinomycetes (2,000 cfu/g)</h3>
-    <ul>
-      <li>Break down lignin & woody carbon → humus</li>
-      <li>Produce natural antibiotics that protect plants</li>
-    </ul>
-    <hr>
-
-    <h3>6️⃣ Photosynthetic Bacteria (14,000 cfu/g)</h3>
-    <ul>
-      <li>Fix nitrogen from the air → plant available</li>
-      <li>Increase chlorophyll → greener pasture</li>
-    </ul>
-
-    <hr style="margin: 25px 0;">
-
-    <h3>⭐ TOTAL ACTIVE POPULATION: <strong>59,000 cfu/g</strong></h3>
-    <p><strong>High competition = weeds & pathogens struggle.</strong></p>
-    <p><strong>Faster soil regeneration & carbon building.</strong></p>
-
-  </section>
-
-</main>
-
-<!-- ✔ EXACT CONTACT PAGE FOOTER -->
+<!-- FOOTER -->
 <footer>
   <p>&copy; 2026 Yass Worm Farms. All Rights Reserved.</p>
 </footer>
