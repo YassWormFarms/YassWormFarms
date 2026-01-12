@@ -1,203 +1,329 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laboratory Results | Yass Worm Farms</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #fefefc;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      background: #006400;
+      padding: 12px 20px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 12px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a.active,
+    nav a:hover {
+      color: #a3ff9b;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #006400;
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      color: #006400;
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    h3 {
+      color: #004d00;
+      margin-top: 20px;
+    }
+
+    p {
+      margin-bottom: 20px;
+    }
+
+    .lab-image {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .lab-image img {
+      max-width: 800px;
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .section-card {
+      background: #f7fff7;
+      border: 2px solid #b4e6b4;
+      border-radius: 12px;
+      padding: 30px;
+      margin-bottom: 40px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s;
+    }
+
+    .section-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .benefit-icon {
+      font-weight: bold;
+      color: #006400;
+      margin-right: 8px;
+    }
+
+    ul {
+      margin-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    blockquote {
+      border-left: 4px solid #006400;
+      padding-left: 15px;
+      font-style: italic;
+      color: #333;
+      margin: 15px 0 25px;
+      background: #e6f7e6;
+      border-radius: 8px;
+      padding: 20px;
+    }
+
+    .application-section table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 25px;
+    }
+
+    .application-section th,
+    .application-section td {
+      border: 1px solid #b4e6b4;
+      padding: 10px 12px;
+      text-align: left;
+    }
+
+    .application-section th {
+      background: #dff6d8;
+      color: #006400;
+    }
+
+    .section-subheading {
+      color: #004d00;
+      font-weight: bold;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background: #006400;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    @media screen and (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.6rem;
+      }
+
+      nav a {
+        display: block;
+        margin: 8px 0;
+      }
+
+      .lab-image img {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER / NAVIGATION -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="application-rates.html">About Us</a>
+    <a href="shop.html">Shop</a>
+    <a href="laboratory-results.html" class="active">Laboratory Results</a>
+    <a href="diy.html">DIY</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+
+  <main>
+    <!-- PAGE TITLE -->
+    <h1>Latest Laboratory Results</h1>
+    <p style="text-align:center; margin-bottom:30px;">Our most recent microbial laboratory report for our Worm Juice Fertiliser.</p>
+
+    <!-- LAB RESULTS IMAGE -->
+    <div class="lab-image">
+      <img src="Lab Results 2025.png" alt="Microbiological Analysis - Latest Lab Results">
+    </div>
+
+    <!-- BENEFITS SECTION -->
+    <section class="section-card">
+      <h2>Benefits by Microbial Group</h2>
+
+      <h3><span class="benefit-icon">1️⃣</span>Active Fungi (25,000 cfu/g + total fungi 32,000 cfu/g)</h3>
+      <div class="section-subheading">In Soil</div>
+      <ul>
+        <li>Build stable soil aggregates → improved structure & airflow</li>
+        <li>Increase water holding capacity & reduce compaction</li>
+        <li>Decompose organic matter & release nutrients steadily</li>
+      </ul>
+      <div class="section-subheading">For Pasture & Crops</div>
+      <ul>
+        <li>Boost root growth & nutrient uptake</li>
+        <li>Strengthen natural disease resistance</li>
+      </ul>
+
+      <h3><span class="benefit-icon">2️⃣</span>Cellulose Utilisers (7,000 cfu/g)</h3>
+      <ul>
+        <li>Break down plant residues & woody fibres</li>
+        <li>Speed up composting & carbon cycling</li>
+      </ul>
+
+      <h3><span class="benefit-icon">3️⃣</span>Yeasts (10,000 cfu/g)</h3>
+      <ul>
+        <li>Produce natural B vitamins & growth stimulants</li>
+        <li>Fuel the microbial food web in the root zone</li>
+      </ul>
+
+      <h3><span class="benefit-icon">4️⃣</span>Active Lactic Acid Bacteria (1,000 cfu/g)</h3>
+      <ul>
+        <li>Suppress harmful pathogens & improve soil immunity</li>
+        <li>Help break down toxins & manures</li>
+      </ul>
+
+      <h3><span class="benefit-icon">5️⃣</span>Actinomycetes (2,000 cfu/g)</h3>
+      <ul>
+        <li>Break down lignin & woody carbon → humus</li>
+        <li>Produce natural antibiotics that protect plants</li>
+      </ul>
+
+      <h3><span class="benefit-icon">6️⃣</span>Photosynthetic Bacteria (14,000 cfu/g)</h3>
+      <ul>
+        <li>Fix nitrogen from the air → plant available</li>
+        <li>Increase chlorophyll → greener pasture</li>
+      </ul>
+
+      <h3>Total Active Population: <strong>59,000 cfu/g</strong></h3>
+      <p><strong>High competition = weeds & pathogens struggle.</strong></p>
+      <p><strong>Faster soil regeneration & carbon building.</strong></p>
+    </section>
+
+    <!-- APPLICATION RATES & ADVICE -->
+    <section class="section-card application-section">
+      <h2>Application Rates for Our Products</h2>
+
+      <h3>Advice from Andrew – Dairy Farmer (East Gippsland)</h3>
+      <blockquote>
+        Andrew, a dairy farmer friend from East Gippsland, replaced all synthetic fertilisers with worm juice. He now
+        saves around $50,000 annually and boasts the most outstanding pasture in the district. I asked Andrew what to
+        look for after spraying a lucerne crop with worm juice, and here’s what he said:<br><br>
+        “What to look for in a couple of weeks: plants should show signs of improved health and slightly darker
+        leaves. The roots will be longer, and plants don’t seem to get attacked by red-legged earth mite or lucerne
+        flea. Hot or cold weather fluctuations have less impact, and plants appear better able to handle water
+        efficiently. On lucerne, you should notice a difference when harvesting — mowing will be denser, and bales
+        will be more solid even if the crop looks normal. I recommend another spray four weeks after the first.<br><br>
+        Hope that helps,<br>- Andrew
+      </blockquote>
+
+      <h3>On Pasture:</h3>
+      <table>
+        <tr>
+          <th>Application</th>
+          <th>Rate</th>
+          <th>Cost</th>
+        </tr>
+        <tr>
+          <td>Foliar Spray</td>
+          <td>5-15 L/Ha</td>
+          <td>$10 - $30 /Ha</td>
+        </tr>
+      </table>
+
+      <h3>On Crops:</h3>
+      <table>
+        <tr>
+          <th>Method</th>
+          <th>Rate</th>
+          <th>Cost</th>
+        </tr>
+        <tr>
+          <td>Inoculate seed</td>
+          <td>5 L/ton</td>
+          <td>$10 - $30 /Ha</td>
+        </tr>
+        <tr>
+          <td>Liquid Inject / Foliar Spray</td>
+          <td>5-15 L/Ha</td>
+          <td>$10 - $30 /Ha</td>
+        </tr>
+        <tr>
+          <td>Topdressing</td>
+          <td>5-15 L/Ha</td>
+          <td>$10 - $30 /Ha</td>
+        </tr>
+      </table>
+
+      <h3>Horticulture / Viticulture / Orchard:</h3>
+      <p>Apply Worm Juice at 5-15 L/Ha, 3-4 times a year until harvest (best when plants are damp or dewy).</p>
+
+      <h3>Home Garden Use:</h3>
+      <ul>
+        <li>5-15 Liters per hectare</li>
+        <li>50/50 dilution for trees, flowers, plants, and vegetables</li>
+        <li>30% Juice / 70% water for delicate plants</li>
+      </ul>
+
+      <h3>Lawn:</h3>
+      <ul>
+        <li>50/50 dilution: 5-15 L/Ha</li>
+      </ul>
+
+      <h3>Important Note About Town Water:</h3>
+      <p>If diluting with town water (which normally contains chlorine that can kill valuable microbes), please leave
+        the water standing for 24 hours before mixing. Use immediately after mixing—do not store. Keep in a cool place
+        and ensure the container is vented to allow air exchange.</p>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Yass Worm Farms. All Rights Reserved.</p>
+  </footer>
+
+</body>
+
+</html>
 
-<html lang="en"> 
-
-  
-
-<head> 
-
-  <meta charset="UTF-8"> 
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-
-  <title>Laboratory Results | Yass Worm Farms</title> 
-
-  <link rel="stylesheet" href="style.css"> 
-
-</head> 
-
-  
-
-<body> 
-
-  
-
-  <nav> 
-
-    <a href="index.html">Home</a> 
-
-    <a href="application-rates.html">About Us</a> 
-
-    <a href="shop.html">Shop</a> 
-
-    <a href="laboratory-results.html" class="active">Laboratory Results</a> 
-
-    <a href="diy.html">DIY</a> 
-
-    <a href="contact.html">Contact Us</a> 
-
-  </nav> 
-
-  
-
-  <main style="padding: 20px; max-width: 1100px; margin:auto;"> 
-
-  
-
-    <h1 style="text-align:center; color:#006400;">Latest Laboratory Results</h1> 
-
-    <p style="text-align:center;">Our most recent microbial laboratory report for our Worm Juice Fertiliser.</p> 
-
-  
-
-    <!-- 📸 LATEST LAB REPORT IMAGE ONLY --> 
-
-    <div style="text-align:center; margin: 30px 0;"> 
-
-      <img src="https://raw.githubusercontent.com/YassWormFarms/YassWormFarms/main/goodlab.png" 
-
-           alt="Microbiological Analysis - Latest Lab Results" 
-
-           style="max-width: 700px; width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.25);"> 
-
-    </div> 
-
-  
-
-    <!-- 🌱 BENEFITS SECTION --> 
-
-    <section style="background:#f7fff7; border:2px solid #b4e6b4; padding:25px; border-radius:12px;"> 
-
-  
-
-      <h2 style="text-align:center; color:#006400; font-size:28px;">🌱 BENEFITS BY MICROBIAL GROUP</h2> 
-
-  
-
-      <h3>1️⃣ Active Fungi (25,000 cfu/g + total fungi 32,000 cfu/g)</h3> 
-
-      <strong>In Soil</strong> 
-
-      <ul> 
-
-        <li>Build stable soil aggregates → improved structure & airflow</li> 
-
-        <li>Increase water holding capacity & reduce compaction</li> 
-
-        <li>Decompose organic matter & release nutrients steadily</li> 
-
-      </ul> 
-
-      <strong>For Pasture & Crops</strong> 
-
-      <ul> 
-
-        <li>Boost root growth & nutrient uptake</li> 
-
-        <li>Strengthen natural disease resistance</li> 
-
-      </ul> 
-
-      <hr> 
-
-  
-
-      <h3>2️⃣ Cellulose Utilisers (7,000 cfu/g)</h3> 
-
-      <ul> 
-
-        <li>Break down plant residues & woody fibres</li> 
-
-        <li>Speed up composting & carbon cycling</li> 
-
-      </ul> 
-
-      <hr> 
-
-  
-
-      <h3>3️⃣ Yeasts (10,000 cfu/g)</h3> 
-
-      <ul> 
-
-        <li>Produce natural B vitamins & growth stimulants</li> 
-
-        <li>Fuel the microbial food web in the root zone</li> 
-
-      </ul> 
-
-      <hr> 
-
-  
-
-      <h3>4️⃣ Active Lactic Acid Bacteria (1,000 cfu/g)</h3> 
-
-      <ul> 
-
-        <li>Suppress harmful pathogens & improve soil immunity</li> 
-
-        <li>Help break down toxins & manures</li> 
-
-      </ul> 
-
-      <hr> 
-
-  
-
-      <h3>5️⃣ Actinomycetes (2,000 cfu/g)</h3> 
-
-      <ul> 
-
-        <li>Break down lignin & woody carbon → humus</li> 
-
-        <li>Produce natural antibiotics that protect plants</li> 
-
-      </ul> 
-
-      <hr> 
-
-  
-
-      <h3>6️⃣ Photosynthetic Bacteria (14,000 cfu/g)</h3> 
-
-      <ul> 
-
-        <li>Fix nitrogen from the air → plant available</li> 
-
-        <li>Increase chlorophyll → greener pasture</li> 
-
-      </ul> 
-
-  
-
-      <hr style="margin: 25px 0;"> 
-
-  
-
-      <h3>⭐ TOTAL ACTIVE POPULATION: <strong>59,000 cfu/g</strong></h3> 
-
-      <p><strong>High competition = weeds & pathogens struggle.</strong></p> 
-
-      <p><strong>Faster soil regeneration & carbon building.</strong></p> 
-
-  
-
-    </section> 
-
-  
-
-  </main> 
-
-  
-
-  <footer> 
-
-    <p>&copy; 2025 Yass Worm Farms. All Rights Reserved.</p> 
-
-  </footer> 
-
-  
-
-</body> 
-
-</html> 
