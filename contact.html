@@ -65,7 +65,7 @@ nav a:hover{
 }
         /* HERO BANNER */ 
 
-        .hero { 
+                .hero { 
 
             width: 100%; 
 
@@ -413,35 +413,73 @@ nav a:hover{
 
   
 
-        /* MOBILE */
-@media(max-width:900px){
-  nav .logo{height:70px;}
-  nav.shrink .logo{height:50px;}
-  nav a{font-size:18px;}
-}
-</style>
+        /* MOBILE */ 
 
-<nav id="navbar">
-  <div class="nav-left">
-    <img src="Logo.png" alt="Yass Worm Farms Logo" class="logo">
-  </div>
+        @media(max-width: 850px) { 
 
-  <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="application-rates.html">About Us</a>
-    <a href="shop.html">Shop</a>
-    <a href="laboratory-results.html">Laboratory Results</a>
-    <a href="diy.html">DIY</a>
-    <a href="contact.html">Contact Us</a>
-  </div>
-</nav>
+            .contact-wrapper { 
 
-<script>
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-  navbar.classList.toggle('shrink', window.scrollY > 50);
-});
-</script>
+                grid-template-columns: 1fr; 
+
+            } 
+
+  
+
+            .hero h1 { 
+
+                font-size: 34px; 
+
+            } 
+
+        } 
+
+    </style> 
+
+</head> 
+
+  
+
+<body> 
+
+  
+
+    <nav> 
+
+        <a href="index.html">Home</a> 
+
+        <a href="application-rates.html">About Us</a> 
+
+        <a href="shop.html">Shop</a> 
+
+        <a href="laboratory-results.html">Laboratory Results</a> 
+
+        <a href="diy.html">DIY</a> 
+
+        <a href="contact.html">Contact Us</a> 
+
+    </nav> 
+
+  
+
+    <section class="hero"> 
+
+        <div> 
+
+            <h1>Contact Yass Worm Farms</h1> 
+
+            <p>We proudly support Australian farmers, gardeners and growers with premium worm fertiliser and natural soil 
+
+                health solutions. Reach out anytime — we’re here to help.</p> 
+
+        </div> 
+
+    </section> 
+
+  
+
+    <main class="contact-wrapper"> 
+
+  
 
         <!-- CONTACT DETAILS --> 
 
@@ -530,5 +568,7 @@ window.addEventListener('scroll', () => {
 </body> 
 
   
+
+</html> 
 
 </html> 
