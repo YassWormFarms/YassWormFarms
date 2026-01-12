@@ -6,32 +6,100 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Laboratory Results | Yass Worm Farms</title>
   <link rel="stylesheet" href="style.css">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --green:#064d28;
+  --coffee:#4b3621;
+}
+
+/* BODY */
+body {
+  margin:0;
+  font-family:'Poppins', Arial, sans-serif;
+  color:var(--coffee);
+  background:white;
+}
+
+/* EXACT HEADER STYLES */
+nav {
+  background:white;
+  border-bottom:2px solid #ddd;
+  padding:15px 10%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:sticky;
+  top:0;
+  z-index:10;
+  transition: all 0.35s ease-in-out;
+}
+
+nav .logo {
+  height:98px;
+  transition: height 0.35s ease-in-out;
+}
+
+nav.shrink {
+  padding:5px 10%;
+  border-bottom:1px solid #ccc;
+}
+
+nav.shrink .logo {
+  height:58px;
+}
+
+.nav-links {
+  display:flex;
+  gap:30px;
+}
+
+nav a {
+  text-decoration:none;
+  color:var(--coffee);
+  font-weight:700;
+  font-size:22px;
+}
+
+nav a:hover {
+  color:var(--green);
+}
+</style>
 </head>
 
 <body>
 
-  <nav>
+<!-- EXACT SAME HEADER -->
+<nav id="navbar">
+  <div class="nav-left">
+    <img src="Logo.png" alt="Yass Worm Farms Logo" class="logo">
+  </div>
+  <div class="nav-links">
     <a href="index.html">Home</a>
     <a href="application-rates.html">About Us</a>
     <a href="shop.html">Shop</a>
-    <a href="laboratory-results.html" class="active">Laboratory Results</a>
+    <a href="laboratory-results.html">Laboratory Results</a>
     <a href="diy.html">DIY</a>
     <a href="contact.html">Contact Us</a>
-  </nav>
+  </div>
+</nav>
 
   <main style="padding: 20px; max-width: 1100px; margin:auto;">
 
     <h1 style="text-align:center; color:#006400;">Latest Laboratory Results</h1>
     <p style="text-align:center;">Our most recent microbial laboratory report for our Worm Juice Fertiliser.</p>
 
-    <!-- 📸 LATEST LAB REPORT IMAGE ONLY -->
     <div style="text-align:center; margin: 30px 0;">
       <img src="https://raw.githubusercontent.com/YassWormFarms/YassWormFarms/main/goodlab.png"
            alt="Microbiological Analysis - Latest Lab Results"
            style="max-width: 700px; width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.25);">
     </div>
 
-    <!-- 🌱 BENEFITS SECTION -->
     <section style="background:#f7fff7; border:2px solid #b4e6b4; padding:25px; border-radius:12px;">
 
       <h2 style="text-align:center; color:#006400; font-size:28px;">🌱 BENEFITS BY MICROBIAL GROUP</h2>
@@ -98,7 +166,12 @@
     <p>&copy; 2025 Yass Worm Farms. All Rights Reserved.</p>
   </footer>
 
+<script>
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('shrink', window.scrollY > 50);
+  });
+</script>
+
 </body>
 </html>
-
-
