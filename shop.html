@@ -5,8 +5,72 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Shop - Yass Worm Farms</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css" />
+
   <style>
+    :root {
+      --green:#064d28;
+      --coffee:#4b3621;
+    }
+
+    body {
+      margin:0;
+      font-family:'Poppins', Arial, sans-serif;
+      color:var(--coffee);
+      background:white;
+    }
+
+    /* EXACT HEADER */
+    nav {
+      background:white;
+      border-bottom:2px solid #ddd;
+      padding:15px 10%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:sticky;
+      top:0;
+      z-index:10;
+      transition: all 0.35s ease-in-out;
+    }
+
+    nav .logo {
+      height:98px;
+      transition: height 0.35s ease-in-out;
+    }
+
+    nav.shrink {
+      padding:5px 10%;
+      border-bottom:1px solid #ccc;
+    }
+
+    nav.shrink .logo {
+      height:58px;
+    }
+
+    .nav-links {
+      display:flex;
+      gap:30px;
+    }
+
+    nav a {
+      text-decoration:none;
+      color:var(--coffee);
+      font-weight:700;
+      font-size:22px;
+    }
+
+    nav a:hover {
+      color:var(--green);
+    }
+
+    /* SHOP PRODUCT STYLES (unchanged) */
     .product img {
       max-width: 100%;
       height: auto;
@@ -35,13 +99,20 @@
 </head>
 
 <body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="application-rates.html">About Us</a>
-    <a href="shop.html">Shop</a>
-    <a href="laboratory-results.html">Laboratory Results</a>
-    <a href="diy.html">DIY</a>
-    <a href="contact.html">Contact Us</a>
+
+  <!-- EXACT SAME HEADER -->
+  <nav id="navbar">
+    <div class="nav-left">
+      <img src="Logo.png" alt="Yass Worm Farms Logo" class="logo">
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="application-rates.html">About Us</a>
+      <a href="shop.html">Shop</a>
+      <a href="laboratory-results.html">Laboratory Results</a>
+      <a href="diy.html">DIY</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
   </nav>
 
   <main class="product-section">
@@ -95,8 +166,15 @@
       <a href="https://buy.stripe.com/fZu14n476cjq9zbfilbAs0d" class="buy-button" target="_blank" rel="noopener">Buy Now</a>
     </div>
   </main>
+
+  <script>
+    // HEADER SHRINK ON SCROLL
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('shrink', window.scrollY > 50);
+    });
+  </script>
+
 </body>
 
 </html>
-
-
