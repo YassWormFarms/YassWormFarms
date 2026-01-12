@@ -82,6 +82,7 @@ nav a:hover {
   text-align:center;
   color:white;
   padding:20px;
+  margin:0; /* Remove any default spacing */
 }
 
 /* HERO TEXT */
@@ -101,7 +102,7 @@ nav a:hover {
 /* CONTACT WRAPPER */
 .contact-wrapper {
   max-width: 1150px;
-  margin: 70px auto;
+  margin: 70px auto 0 auto; /* Remove bottom margin */
   padding: 0 25px;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -243,7 +244,7 @@ footer {
   color: white;
   text-align: center;
   padding: 18px;
-  margin-top: 70px;
+  margin:0; /* Remove white space above footer */
 }
 
 /* MOBILE */
@@ -321,7 +322,7 @@ footer {
 </main>
 
 <!-- NEW HERO IMAGE ABOVE FOOTER WITHOUT TEXT -->
-<section class="hero" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.45)), url('ducks.JPG') center/cover no-repeat;">
+<section class="hero" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.45)), url('ducks.JPG') center/cover no-repeat; margin:0; height:400px;">
 </section>
 
 <footer>
@@ -338,3 +339,4 @@ footer {
 
 </body>
 </html>
+
