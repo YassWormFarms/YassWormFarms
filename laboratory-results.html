@@ -5,9 +5,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Laboratory Results | Yass Worm Farms</title>
-<link rel="stylesheet" href="style.css">
 
-<!-- GOOGLE FONTS (EXACT SAME) -->
+<!-- GOOGLE FONTS (EXACT SAME AS CONTACT PAGE) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
@@ -16,9 +15,11 @@
 :root {
   --green:#064d28;
   --coffee:#4b3621;
+  --lab-title:#b87333;
+  --light:#f5f5f5;
 }
 
-/* BODY (SAME FONT AS CONTACT HEADER USES) */
+/* BODY */
 body {
   margin:0;
   font-family:'Poppins', Arial, sans-serif;
@@ -26,7 +27,7 @@ body {
   background:white;
 }
 
-/* 🔥 EXACT SAME HEADER CSS 🔥 */
+/* ---------- IDENTICAL HEADER ---------- */
 nav {
   background:white;
   border-bottom:2px solid #ddd;
@@ -69,12 +70,13 @@ nav a {
 nav a:hover {
   color:var(--green);
 }
+/* -------------------------------------- */
 </style>
 </head>
 
 <body>
 
-<!-- 🔥 EXACT SAME HEADER HTML 🔥 -->
+<!-- ---------- IDENTICAL HEADER HTML ---------- -->
 <nav id="navbar">
   <div class="nav-left">
     <img src="Logo.png" alt="Yass Worm Farms Logo" class="logo">
@@ -89,9 +91,8 @@ nav a:hover {
     <a href="contact.html">Contact Us</a>
   </div>
 </nav>
+<!-- ------------------------------------------- -->
 
-
-<!-- ⭐ NOTHING BELOW THIS HAS BEEN CHANGED ⭐ -->
 <main style="padding: 20px; max-width: 1100px; margin:auto;">
 
   <h1 style="text-align:center; color:#006400;">Latest Laboratory Results</h1>
@@ -170,7 +171,7 @@ nav a:hover {
 </footer>
 
 <script>
-// EXACT SAME HEADER SHRINK SCRIPT
+// IDENTICAL SHRINK SCRIPT
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
   navbar.classList.toggle('shrink', window.scrollY > 50);
