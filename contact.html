@@ -1,235 +1,257 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Yass Worm Farms</title>
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Contact Us - Yass Worm Farms</title> 
     <link rel="stylesheet" href="style.css">
 
-<style>
+    <!-- Header Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
 
-/* ==== STICKY SHRINKING HEADER FROM HOME PAGE ==== */
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: #254424;
-  color: white;
-  transition: all 0.3s ease;
-  z-index: 1000;
-}
+    <style> 
+        :root { 
+            --primary: #1e3d24; 
+            --primary-dark: #295b34; 
+            --light-bg: #f6f6f6;
+            --green:#064d28;
+            --coffee:#4b3621;
+        } 
 
-.header-content {
-  display: flex;
-  align-items: center;
-  padding: 18px 30px;
-  transition: padding 0.3s ease;
-}
+        body { 
+            margin: 0; 
+            color: #333; 
+            font-family: 'Poppins', Arial, sans-serif; 
+            background: #ffffff; 
+        }
 
-header.shrink .header-content {
-  padding: 6px 30px;
-}
+        /* ================= HEADER ================= */
+        nav{
+          background:white;
+          border-bottom:2px solid #ddd;
+          padding:15px 10%;
+          display:flex;
+          justify-content:space-between;
+          align-items:center;
+          position:sticky;
+          top:0;
+          z-index:10;
+          transition: all 0.35s ease-in-out;
+        }
 
-.logo-container {
-  display: flex;
-  align-items: center;
-}
+        nav .logo{
+          height:98px;
+          transition: height 0.35s ease-in-out;
+        }
 
-.logo-container img {
-  height: 50px;
-  width: auto;
-  margin-right: 12px;
-  transition: height 0.3s ease;
-}
+        nav.shrink{
+          padding:5px 10%;
+          border-bottom:1px solid #ccc;
+        }
 
-header.shrink .logo-container img {
-  height: 35px;
-}
+        nav.shrink .logo{
+          height:58px;
+        }
 
-/* NAV STYLING */
-nav {
-  margin-left: auto;
-}
+        .nav-links{
+          display:flex;
+          gap:30px;
+        }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 14px;
-  font-weight: 600;
-}
+        nav a{
+          text-decoration:none;
+          color:var(--coffee);
+          font-weight:700;
+          font-size:22px;
+        }
 
-nav a:hover {
-  text-decoration: underline;
-}
+        nav a:hover{
+          color:var(--green);
+        }
 
-/* Push page content down because header is fixed */
-body {
-  margin: 0;
-  padding-top: 105px;
-}
+        @media(max-width:900px){
+          nav .logo{height:70px;}
+          nav.shrink .logo{height:50px;}
+          nav a{font-size:18px;}
+        }
 
+        /* ================= CONTACT PAGE STYLING ================= */
 
+        .hero { 
+            width: 100%; 
+            height: 400px; 
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.45)), url("ducks.JPG") center/cover no-repeat; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            text-align: center; 
+            color: white; 
+            padding: 20px; 
+        } 
 
-/* ==== YOUR EXISTING CONTACT PAGE DESIGN ==== */
+        .hero h1 { 
+            font-size: 46px; 
+            margin-bottom: 10px; 
+            letter-spacing: 0.5px; 
+        } 
 
-:root {
-    --primary: #1e3d24;
-    --primary-dark: #295b34;
-    --light-bg: #f7f7f7;
-}
+        .hero p { 
+            font-size: 18px; 
+            max-width: 720px; 
+            margin: auto; 
+            line-height: 1.5; 
+        } 
 
-.hero {
-    width: 100%;
-    height: 420px;
-    background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.5)),
-    url("ducks.JPG") center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color:white;
-    padding:20px;
-}
+        .contact-wrapper { 
+            max-width: 1150px; 
+            margin: 70px auto; 
+            padding: 0 25px; 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 45px; 
+        } 
 
-.hero h1{
-    font-size:46px;
-    margin-bottom:10px;
-}
+        .contact-card { 
+            background: white; 
+            padding: 35px; 
+            border-radius: 14px; 
+            border: 1px solid #e5e5e5; 
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.07); 
+        } 
 
-.hero p{
-    font-size:18px;
-    max-width:760px;
-    margin:auto;
-}
+        .contact-card h2 { 
+            margin-top: 0; 
+            color: var(--primary); 
+            font-weight: 700; 
+        } 
 
-.contact-wrapper{
-    max-width:1150px;
-    margin:80px auto;
-    padding:0 25px;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:45px;
-}
+        .contact-info a { 
+            color: var(--primary); 
+            text-decoration: none; 
+            font-weight: bold; 
+        } 
 
-.contact-card,
-.contact-form{
-    border-radius:14px;
-    border:1px solid #e6e6e6;
-    box-shadow:0 10px 30px rgba(0,0,0,0.06);
-}
+        .cta-buttons a { 
+            display: inline-block; 
+            padding: 12px 18px; 
+            margin-right: 10px; 
+            background: var(--primary); 
+            color: white; 
+            border-radius: 6px; 
+            text-decoration: none; 
+            font-size: 15px; 
+            font-weight: 600; 
+        } 
 
-.contact-card{
-    background:white;
-    padding:35px;
-}
+        .social-links a { 
+            display: inline-block; 
+            margin-right: 12px; 
+            padding: 10px 16px; 
+            border-radius: 6px; 
+            text-decoration: none; 
+            font-size: 15px; 
+            font-weight: 600; 
+            color: white; 
+        } 
 
-.contact-form{
-    background:#f7f7f7;
-    padding:35px;
-}
+        .facebook-btn { background: #4267B2; } 
+        .instagram-btn { background: #E1306C; } 
 
-.social-links a{
-    color:white;
-    padding:10px 16px;
-    border-radius:6px;
-    text-decoration:none;
-    font-weight:600;
-}
+        .contact-form { 
+            background: var(--light-bg); 
+            padding: 35px; 
+            border-radius: 14px; 
+            border: 1px solid #e5e5e5; 
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); 
+        } 
 
-.facebook-btn{background:#4267B2;}
-.instagram-btn{background:#E1306C;}
+        footer { 
+            background: var(--primary); 
+            color: white; 
+            text-align: center; 
+            padding: 18px; 
+            margin-top: 70px; 
+        } 
 
-footer{
-    background:#1e3d24;
-    color:white;
-    text-align:center;
-    padding:18px;
-    margin-top:70px;
-}
-
-@media(max-width:900px){
-    .contact-wrapper{grid-template-columns:1fr;}
-    .hero h1{font-size:34px;}
-}
-</style>
-
-</head>
+        @media(max-width: 850px) { 
+            .contact-wrapper { grid-template-columns: 1fr; } 
+            .hero h1 { font-size: 34px; } 
+        } 
+    </style> 
+</head> 
 
 <body>
 
-<header id="header">
-  <div class="header-content">
-    <div class="logo-container">
-      <img src="Logo.png" alt="Yass Worm Farms Logo">
-      <h2>Yass Worm Farms</h2>
-    </div>
-
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="application-rates.html">About Us</a>
-      <a href="shop.html">Shop</a>
-      <a href="laboratory-results.html">Laboratory Results</a>
-      <a href="diy.html">DIY</a>
-      <a href="contact.html">Contact Us</a>
-    </nav>
+<!-- NEW MATCHING HEADER -->
+<nav id="navbar">
+  <div class="nav-left">
+    <img src="Logo.png" alt="Yass Worm Farms Logo" class="logo">
   </div>
-</header>
 
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="application-rates.html">About Us</a>
+    <a href="shop.html">Shop</a>
+    <a href="laboratory-results.html">Laboratory Results</a>
+    <a href="diy.html">DIY</a>
+    <a href="contact.html">Contact Us</a>
+  </div>
+</nav>
 
 <script>
-window.addEventListener("scroll", function(){
-  const header = document.getElementById("header");
-  if(window.scrollY > 100){
-    header.classList.add("shrink");
-  } else {
-    header.classList.remove("shrink");
-  }
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('shrink', window.scrollY > 50);
 });
 </script>
+<!-- END HEADER -->
 
+<section class="hero"> 
+    <div> 
+        <h1>Contact Yass Worm Farms</h1> 
+        <p>We proudly support Australian farmers, gardeners and growers with premium worm fertiliser and natural soil health solutions. Reach out anytime — we’re here to help.</p> 
+    </div> 
+</section> 
 
+<main class="contact-wrapper"> 
+    <div class="contact-card"> 
+        <h2>Get in Touch</h2> 
+        <p>Whether you’re a hobby gardener or running a large farming operation, we’re always happy to answer questions, provide guidance or help with orders.</p> 
 
-<section class="hero">
-    <div>
-        <h1>Contact Yass Worm Farms</h1>
-        <p>We support Australian farmers, home gardeners and growers with premium organic worm fertiliser and natural soil health solutions. Reach out anytime — we’re always happy to help.</p>
-    </div>
-</section>
+        <div class="contact-info"> 
+            <p><strong>Business:</strong> Yass Worm Farms</p> 
+            <p><strong>Email:</strong> <a href="mailto:admin@yasswormfarms.com.au">admin@yasswormfarms.com.au</a></p> 
+            <p><strong>Phone (James Brown):</strong> <a href="tel:+61415259436">+61 415 259 436</a></p> 
+            <p><strong>Location:</strong> Yass, NSW Australia</p> 
+        </div> 
 
-<main class="contact-wrapper">
+        <div class="cta-buttons"> 
+            <a href="mailto:admin@yasswormfarms.com.au">Send Email</a> 
+            <a href="tel:+61415259436">Call Now</a> 
+        </div> 
 
-    <div class="contact-card">
-        <h2>Get in Touch</h2>
-        <p>If you’d like product advice, help with application rates, or have any questions, we’d love to hear from you.</p>
+        <div class="social-links"> 
+            <a class="facebook-btn" href="https://www.facebook.com/YassWormFarms" target="_blank">Facebook</a> 
+            <a class="instagram-btn" href="https://www.instagram.com/yasswormfarms" target="_blank">Instagram</a> 
+        </div> 
+    </div> 
 
-        <p><strong>Business:</strong> Yass Worm Farms</p>
-        <p><strong>Email:</strong> <a href="mailto:admin@yasswormfarms.com.au">admin@yasswormfarms.com.au</a></p>
-        <p><strong>Phone (James Brown):</strong> <a href="tel:+61415259436">+61 415 259 436</a></p>
-        <p><strong>Location:</strong> Yass, NSW Australia</p>
+    <div class="contact-form"> 
+        <h3>Send Us a Message</h3> 
+        <form> 
+            <input type="text" placeholder="Your Name" required> 
+            <input type="email" placeholder="Your Email" required> 
+            <textarea rows="6" placeholder="Your Message" required></textarea> 
+            <button type="submit">Submit Enquiry</button> 
+        </form> 
+    </div> 
+</main> 
 
-        <div class="social-links">
-            <a class="facebook-btn" href="https://www.facebook.com/YassWormFarms" target="_blank">Facebook</a>
-            <a class="instagram-btn" href="https://www.instagram.com/yasswormfarms" target="_blank">Instagram</a>
-        </div>
-    </div>
+<footer> 
+    <p>&copy; 2026 Yass Worm Farms. All Rights Reserved.</p> 
+</footer> 
 
-    <div class="contact-form">
-        <h3>Send Us a Message</h3>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea rows="6" placeholder="Your Message" required></textarea>
-            <button type="submit">Submit Enquiry</button>
-        </form>
-    </div>
-
-</main>
-
-<footer>
-    <p>&copy; 2026 Yass Worm Farms. All Rights Reserved.</p>
-</footer>
-
-</body>
+</body> 
 </html>
-
