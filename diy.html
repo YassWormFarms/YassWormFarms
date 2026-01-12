@@ -98,9 +98,56 @@ nav a:hover {
   line-height:1.5;
 }
 
+/* DIY PAGE STYLING */
+.diy-container {
+  max-width:1150px;
+  margin:70px auto;
+  padding:0 25px;
+}
+
+.diy-section {
+  margin-bottom:60px;
+  background:#f9f9f9;
+  border-radius:14px;
+  padding:30px;
+  border:1px solid #e5e5e5;
+  box-shadow:0 10px 25px rgba(0,0,0,0.04);
+}
+
+.diy-section h2 {
+  margin-top:0;
+  color:var(--green);
+  font-size:28px;
+}
+
+.diy-section p {
+  line-height:1.7;
+}
+
+.video-wrapper {
+  margin-top:20px;
+}
+
+.video-wrapper iframe {
+  width:100%;
+  max-width:900px;
+  height:420px;
+  border-radius:12px;
+}
+
+.tip-box {
+  background:#ffffff;
+  border-left:6px solid var(--green);
+  padding:18px;
+  margin-top:18px;
+  border-radius:8px;
+  font-size:16px;
+}
+
 /* MOBILE */
 @media(max-width:850px) {
   .hero h1 { font-size:34px; }
+  .video-wrapper iframe { height:260px; }
 }
 </style>
 </head>
@@ -129,14 +176,53 @@ nav a:hover {
   </div>
 </section>
 
-<main style="max-width:1150px; margin:70px auto; padding:0 25px;">
+<main class="diy-container">
 
-<!-- DIY CONTENT -->
-<iframe width="640" height="360" src="https://www.youtube.com/embed/9B4BzIq40W0" 
-        title="Video" frameborder="0" allowfullscreen></iframe>
+<!-- SECTION 1 -->
+<div class="diy-section">
+  <h2>Why Build a Worm Farm?</h2>
+  <p>
+    Building a worm farm is one of the easiest and most rewarding ways to improve soil health, reduce food waste
+    and produce natural, nutrient-rich fertiliser for your garden or farm. Follow along with James Brown as he
+    walks you through how to set one up and how to get the best results.
+  </p>
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/5x2yWGps52w" 
-        title="Video" frameborder="0" allowfullscreen></iframe>
+  <div class="tip-box">
+    ✅ Tip: Worm farms are great for home gardeners, hobby farmers and large-scale agriculture.
+  </div>
+</div>
+
+<!-- SECTION 2 WITH FIRST VIDEO -->
+<div class="diy-section">
+  <h2>Getting Started</h2>
+  <p>
+    Learn what you need to begin, how to set up your worm farm correctly and how to give your worms the best
+    environment to thrive.
+  </p>
+
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube.com/embed/9B4BzIq40W0"
+            title="Video" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+
+<!-- SECTION 3 WITH SECOND VIDEO -->
+<div class="diy-section">
+  <h2>Maintaining Your Worm Farm</h2>
+  <p>
+    Once your worm farm is running, it’s important to maintain it properly to get the best worm juice and worm
+    castings. This guide walks you through caring, feeding and long-term success.
+  </p>
+
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube.com/embed/5x2yWGps52w"
+            title="Video" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+  <div class="tip-box">
+    💡 Keep your worms cool, moist and well fed — and they’ll do the hard work for you.
+  </div>
+</div>
 
 </main>
 
@@ -150,4 +236,5 @@ nav a:hover {
 
 </body>
 </html>
+
 
