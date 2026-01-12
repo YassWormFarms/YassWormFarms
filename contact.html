@@ -4,84 +4,65 @@
 
   
 
-<head> 
+<!-- ======= HEADER (NAVBAR) ======= -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
 
-    <meta charset="UTF-8"> 
+<style>
+:root{
+  --green:#064d28;
+  --coffee:#4b3621;
+}
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+body{
+  margin:0;
+  font-family:'Poppins', Arial, sans-serif;
+}
 
-    <title>Contact Us - Yass Worm Farms</title> 
+/* NAVBAR */
+nav{
+  background:white;
+  border-bottom:2px solid #ddd;
+  padding:15px 10%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:sticky;
+  top:0;
+  z-index:10;
+  transition: all 0.35s ease-in-out;
+}
 
-    <link rel="stylesheet" href="style.css"> 
+nav .logo{
+  height:98px;
+  transition: height 0.35s ease-in-out;
+}
 
-  
+nav.shrink{
+  padding:5px 10%;
+  border-bottom:1px solid #ccc;
+}
 
-    <style> 
+nav.shrink .logo{
+  height:58px;
+}
 
-        :root { 
+.nav-links{
+  display:flex;
+  gap:30px;
+}
 
-            /* Uses your existing brand tone. If your main site has CSS variables, 
+nav a{
+  text-decoration:none;
+  color:var(--coffee);
+  font-weight:700;
+  font-size:22px;
+}
 
-               this will respect them automatically */ 
-
-            --primary: #1e3d24; 
-
-            --primary-dark: #295b34; 
-
-            --light-bg: #f6f6f6; 
-
-        } 
-
-  
-
-        body { 
-
-            margin: 0; 
-
-            color: #333; 
-
-            font-family: inherit; /* inherits your site's main font */ 
-
-            background: #ffffff; 
-
-        } 
-
-  
-
-        nav { 
-
-            background: var(--primary); 
-
-            padding: 12px 25px; 
-
-            text-align: center; 
-
-        } 
-
-  
-
-        nav a { 
-
-            color: #fff; 
-
-            text-decoration: none; 
-
-            margin: 0 12px; 
-
-            font-weight: 600; 
-
-        } 
-
-  
-
-        nav a:hover { 
-
-            text-decoration: underline; 
-
-        } 
-
-  
-
+nav a:hover{
+  color:var(--green);
+}
         /* HERO BANNER */ 
 
         .hero { 
@@ -432,73 +413,35 @@
 
   
 
-        /* MOBILE */ 
+        /* MOBILE */
+@media(max-width:900px){
+  nav .logo{height:70px;}
+  nav.shrink .logo{height:50px;}
+  nav a{font-size:18px;}
+}
+</style>
 
-        @media(max-width: 850px) { 
+<nav id="navbar">
+  <div class="nav-left">
+    <img src="Logo.png" alt="Yass Worm Farms Logo" class="logo">
+  </div>
 
-            .contact-wrapper { 
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="application-rates.html">About Us</a>
+    <a href="shop.html">Shop</a>
+    <a href="laboratory-results.html">Laboratory Results</a>
+    <a href="diy.html">DIY</a>
+    <a href="contact.html">Contact Us</a>
+  </div>
+</nav>
 
-                grid-template-columns: 1fr; 
-
-            } 
-
-  
-
-            .hero h1 { 
-
-                font-size: 34px; 
-
-            } 
-
-        } 
-
-    </style> 
-
-</head> 
-
-  
-
-<body> 
-
-  
-
-    <nav> 
-
-        <a href="index.html">Home</a> 
-
-        <a href="application-rates.html">About Us</a> 
-
-        <a href="shop.html">Shop</a> 
-
-        <a href="laboratory-results.html">Laboratory Results</a> 
-
-        <a href="diy.html">DIY</a> 
-
-        <a href="contact.html">Contact Us</a> 
-
-    </nav> 
-
-  
-
-    <section class="hero"> 
-
-        <div> 
-
-            <h1>Contact Yass Worm Farms</h1> 
-
-            <p>We proudly support Australian farmers, gardeners and growers with premium worm fertiliser and natural soil 
-
-                health solutions. Reach out anytime — we’re here to help.</p> 
-
-        </div> 
-
-    </section> 
-
-  
-
-    <main class="contact-wrapper"> 
-
-  
+<script>
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('shrink', window.scrollY > 50);
+});
+</script>
 
         <!-- CONTACT DETAILS --> 
 
