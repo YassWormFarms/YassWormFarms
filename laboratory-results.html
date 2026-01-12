@@ -2,318 +2,270 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Laboratory Results | Yass Worm Farms</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    /* Body and typography */
-    body {
-      font-family: 'Arial', sans-serif;
-      line-height: 1.7;
-      color: #333;
-      background-color: #fdfdf7;
-      margin: 0;
-      padding: 0;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Laboratory Results | Yass Worm Farms</title>
 
-    /* Navigation */
-    nav {
-      background: #006400;
-      padding: 12px 20px;
-      text-align: center;
-    }
+<!-- GOOGLE FONTS -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
 
-    nav a {
-      color: #fff;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s;
-    }
+<style>
+:root {
+  --green: #064d28;
+  --coffee: #4b3621;
+  --accent: #b87333;
+  --light: #f5f5f5;
+  --bg-section: #f7fff7;
+}
 
-    nav a.active,
-    nav a:hover {
-      color: #a3ff9b;
-    }
+/* BODY */
+body {
+  margin: 0;
+  font-family: 'Poppins', Arial, sans-serif;
+  color: var(--coffee);
+  background: white;
+  line-height: 1.6;
+}
 
-    /* Main content container */
-    main {
-      max-width: 1200px;
-      margin: auto;
-      padding: 30px 20px;
-    }
+/* HEADER */
+nav {
+  background:white;
+  border-bottom:2px solid #ddd;
+  padding:15px 10%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:sticky;
+  top:0;
+  z-index:10;
+  transition: all 0.35s ease-in-out;
+}
 
-    h1 {
-      text-align: center;
-      font-size: 3rem;
-      color: #006400;
-      margin-bottom: 15px;
-    }
+nav .logo { height:98px; transition: height 0.35s ease-in-out; }
+nav.shrink { padding:5px 10%; border-bottom:1px solid #ccc; }
+nav.shrink .logo { height:58px; }
 
-    h2 {
-      text-align: center;
-      color: #006400;
-      font-size: 2.2rem;
-      margin-bottom: 25px;
-    }
+.nav-links { display:flex; gap:30px; }
+nav a { text-decoration:none; color:var(--coffee); font-weight:700; font-size:22px; }
+nav a:hover, nav a.active { color:var(--green); }
 
-    h3 {
-      color: #004d00;
-      margin-top: 20px;
-    }
+/* HERO SECTION */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url('Lab Results 2025.png') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 140px 20px;
+}
 
-    p {
-      margin-bottom: 20px;
-    }
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
 
-    /* Lab image section */
-    .lab-hero {
-      text-align: center;
-      margin: 40px 0;
-    }
+.hero p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: auto;
+}
 
-    .lab-hero img {
-      width: 100%;
-      max-width: 900px;
-      border-radius: 12px;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
-    }
+/* SECTIONS */
+section {
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 0 25px;
+}
 
-    /* Section cards */
-    .section-card {
-      background: #f7fff7;
-      border: 2px solid #b4e6b4;
-      border-radius: 12px;
-      padding: 30px;
-      margin-bottom: 50px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-      transition: transform 0.3s;
-    }
+section h2 {
+  color: var(--green);
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-align: center;
+}
 
-    .section-card:hover {
-      transform: translateY(-4px);
-    }
+/* BENEFITS CARDS */
+.benefits-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
 
-    /* Benefit icon */
-    .benefit-icon {
-      font-weight: bold;
-      color: #006400;
-      margin-right: 10px;
-    }
+.card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
 
-    /* Blockquote for advice */
-    blockquote {
-      border-left: 5px solid #006400;
-      background-color: #e6f7e6;
-      padding: 20px 25px;
-      margin: 20px 0;
-      font-style: italic;
-      border-radius: 8px;
-      color: #333;
-    }
+.card h3 {
+  color: var(--green);
+  margin-bottom: 15px;
+}
 
-    /* Tables for application rates */
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-bottom: 25px;
-    }
+.card ul {
+  padding-left: 20px;
+}
 
-    table th,
-    table td {
-      border: 1px solid #b4e6b4;
-      padding: 12px 15px;
-      text-align: left;
-    }
+.card ul li {
+  margin-bottom: 8px;
+}
 
-    table th {
-      background: #dff6d8;
-      color: #006400;
-      font-weight: 600;
-    }
+/* ADVICE BOX */
+.advice {
+  background: var(--bg-section);
+  padding: 25px 30px;
+  border-left: 5px solid var(--accent);
+  border-radius: 10px;
+  margin-bottom: 40px;
+  font-size: 16px;
+}
 
-    /* Subsection headings */
-    .subheading {
-      color: #004d00;
-      font-weight: bold;
-      margin-top: 20px;
-      margin-bottom: 10px;
-    }
+.advice p {
+  margin: 12px 0;
+}
 
-    /* Footer */
-    footer {
-      background: #006400;
-      color: #fff;
-      text-align: center;
-      padding: 25px;
-      margin-top: 50px;
-    }
+/* TOTAL ACTIVE POPULATION */
+.total-pop {
+  text-align:center;
+  font-size:20px;
+  background:#e6f7e6;
+  padding:20px;
+  border-radius:10px;
+  border:2px solid var(--green);
+  margin-bottom:40px;
+}
 
-    /* Responsive */
-    @media screen and (max-width: 768px) {
-      h1 {
-        font-size: 2rem;
-      }
+/* FOOTER */
+footer {
+  background: var(--coffee);
+  color: white;
+  text-align: center;
+  padding: 18px;
+  margin-top: 70px;
+}
 
-      h2 {
-        font-size: 1.6rem;
-      }
-
-      nav a {
-        display: block;
-        margin: 8px 0;
-      }
-
-      .lab-hero img {
-        max-width: 100%;
-      }
-    }
-  </style>
+/* MOBILE */
+@media(max-width:768px){
+  .hero h1 { font-size:32px; }
+  .hero p { font-size:16px; }
+}
+</style>
 </head>
 
 <body>
 
-  <!-- HEADER / NAVIGATION -->
-  <nav>
+<!-- HEADER -->
+<nav id="navbar">
+  <div class="nav-left">
+    <img src="Logo.png" alt="Yass Worm Farms Logo" class="logo">
+  </div>
+  <div class="nav-links">
     <a href="index.html">Home</a>
     <a href="application-rates.html">About Us</a>
     <a href="shop.html">Shop</a>
     <a href="laboratory-results.html" class="active">Laboratory Results</a>
     <a href="diy.html">DIY</a>
     <a href="contact.html">Contact Us</a>
-  </nav>
+  </div>
+</nav>
 
-  <main>
+<!-- HERO -->
+<section class="hero">
+  <h1>Laboratory Results</h1>
+  <p>Explore our most recent microbial laboratory analysis of Yass Worm Farms Worm Juice – data and benefits for soil and crops.</p>
+</section>
 
-    <!-- HERO / LAB IMAGE -->
-    <div class="lab-hero">
-      <img src="Lab Results 2025.png" alt="Microbiological Analysis - Latest Lab Results">
-    </div>
+<!-- BENEFITS BY MICROBIAL GROUP -->
+<section>
+  <h2>🌱 Benefits by Microbial Group</h2>
+  <div class="benefits-cards">
 
-    <!-- BENEFITS SECTION -->
-    <section class="section-card">
-      <h2>Benefits by Microbial Group</h2>
-
-      <h3><span class="benefit-icon">1️⃣</span>Active Fungi (25,000 cfu/g + total fungi 32,000 cfu/g)</h3>
-      <div class="subheading">In Soil</div>
+    <div class="card">
+      <h3>1️⃣ Active Fungi (25,000 cfu/g + total fungi 32,000 cfu/g)</h3>
+      <strong>In Soil</strong>
       <ul>
         <li>Build stable soil aggregates → improved structure & airflow</li>
         <li>Increase water holding capacity & reduce compaction</li>
         <li>Decompose organic matter & release nutrients steadily</li>
       </ul>
-      <div class="subheading">For Pasture & Crops</div>
+      <strong>For Pasture & Crops</strong>
       <ul>
         <li>Boost root growth & nutrient uptake</li>
         <li>Strengthen natural disease resistance</li>
       </ul>
+    </div>
 
-      <h3><span class="benefit-icon">2️⃣</span>Cellulose Utilisers (7,000 cfu/g)</h3>
+    <div class="card">
+      <h3>2️⃣ Cellulose Utilisers (7,000 cfu/g)</h3>
       <ul>
         <li>Break down plant residues & woody fibres</li>
         <li>Speed up composting & carbon cycling</li>
       </ul>
+    </div>
 
-      <h3><span class="benefit-icon">3️⃣</span>Yeasts (10,000 cfu/g)</h3>
+    <div class="card">
+      <h3>3️⃣ Yeasts (10,000 cfu/g)</h3>
       <ul>
         <li>Produce natural B vitamins & growth stimulants</li>
         <li>Fuel the microbial food web in the root zone</li>
       </ul>
+    </div>
 
-      <h3><span class="benefit-icon">4️⃣</span>Active Lactic Acid Bacteria (1,000 cfu/g)</h3>
+    <div class="card">
+      <h3>4️⃣ Active Lactic Acid Bacteria (1,000 cfu/g)</h3>
       <ul>
         <li>Suppress harmful pathogens & improve soil immunity</li>
         <li>Help break down toxins & manures</li>
       </ul>
+    </div>
 
-      <h3><span class="benefit-icon">5️⃣</span>Actinomycetes (2,000 cfu/g)</h3>
+    <div class="card">
+      <h3>5️⃣ Actinomycetes (2,000 cfu/g)</h3>
       <ul>
         <li>Break down lignin & woody carbon → humus</li>
         <li>Produce natural antibiotics that protect plants</li>
       </ul>
+    </div>
 
-      <h3><span class="benefit-icon">6️⃣</span>Photosynthetic Bacteria (14,000 cfu/g)</h3>
+    <div class="card">
+      <h3>6️⃣ Photosynthetic Bacteria (14,000 cfu/g)</h3>
       <ul>
         <li>Fix nitrogen from the air → plant available</li>
         <li>Increase chlorophyll → greener pasture</li>
       </ul>
+    </div>
 
-      <h3>⭐ Total Active Population: <strong>59,000 cfu/g</strong></h3>
-      <p><strong>High competition = weeds & pathogens struggle.</strong></p>
-      <p><strong>Faster soil regeneration & carbon building.</strong></p>
-    </section>
+  </div>
 
-    <!-- APPLICATION RATES & ADVICE -->
-    <section class="section-card">
-      <h2>Application Rates for Our Products</h2>
+  <div class="total-pop">
+    ⭐ Total Active Population: <strong>59,000 cfu/g</strong><br>
+    High competition = weeds & pathogens struggle.<br>
+    Faster soil regeneration & carbon building.
+  </div>
+</section>
 
-      <div style="background:#e6f7e6; border-left:5px solid #006400; padding:20px; border-radius:8px; margin-bottom:30px;">
-        <h3>Advice from Andrew – Dairy Farmer (East Gippsland)</h3>
-        <blockquote>
-          “What to look for in a couple of weeks: plants should show signs of improved health and slightly darker
-          leaves. The roots will be longer, and plants don’t seem to get attacked by red-legged earth mite or lucerne
-          flea. Hot or cold weather fluctuations have less impact, and plants appear better able to handle water
-          efficiently. On lucerne, you should notice a difference when harvesting — mowing will be denser, and bales
-          will be more solid even if the crop looks normal. I recommend another spray four weeks after the first.<br><br>
-          Hope that helps,<br>- Andrew
-        </blockquote>
-      </div>
+<!-- ADVICE FROM FARMER -->
+<section class="advice">
+  <h2>Advice from Andrew – Dairy Farmer (East Gippsland)</h2>
+  <p>Andrew, a dairy farmer friend from East Gippsland, replaced all synthetic fertilisers with worm juice. He now saves around <strong>$50,000 annually</strong> and boasts the most outstanding pasture in the district.</p>
+  <p>I asked Andrew what to look for after spraying a lucerne crop with worm juice, and here’s what he said:</p>
+  <p><em>“What to look for in a couple of weeks: plants should show signs of improved health and slightly darker leaves. The roots will be longer, and plants don’t seem to get attacked by red-legged earth mite or lucerne flea. Hot or cold weather fluctuations have less impact, and plants appear better able to handle water efficiently. On lucerne, you should notice a difference when harvesting — mowing will be denser, and bales will be more solid even if the crop looks normal. I recommend another spray four weeks after the first.”</em></p>
+  <p>Hope that helps,<br>— Andrew</p>
+</section>
 
-      <h3>On Pasture:</h3>
-      <table>
-        <tr>
-          <th>Application</th>
-          <th>Rate</th>
-          <th>Cost</th>
-        </tr>
-        <tr>
-          <td>Foliar Spray</td>
-          <td>5-15 L/Ha</td>
-          <td>$10 - $30 /Ha</td>
-        </tr>
-      </table>
+<!-- FOOTER -->
+<footer>
+  <p>&copy; 2026 Yass Worm Farms. All Rights Reserved.</p>
+</footer>
 
-      <h3>On Crops:</h3>
-      <table>
-        <tr>
-          <th>Method</th>
-          <th>Rate</th>
-          <th>Cost</th>
-        </tr>
-        <tr>
-          <td>Inoculate seed</td>
-          <td>5 L/ton</td>
-          <td>$10 - $30 /Ha</td>
-        </tr>
-        <tr>
-          <td>Liquid Inject / Foliar Spray</td>
-          <td>5-15 L/Ha</td>
-          <td>$10 - $30 /Ha</td>
-        </tr>
-        <tr>
-          <td>Topdressing</td>
-          <td>5-15 L/Ha</td>
-          <td>$10 - $30 /Ha</td>
-        </tr>
-      </table>
+<script>
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('shrink', window.scrollY > 50);
+});
+</script>
 
-      <h3>Horticulture / Viticulture / Orchard:</h3>
-      <p>Apply Worm Juice at 5-15 L/Ha, 3-4 times a year until harvest (best when plants are damp or dewy).</p>
-
-      <h3>Home Garden Use:</h3>
-      <ul>
-        <li>5-15 Liters per hectare</li>
-        <li>50/50 dilution for trees, flowers, plants, and vegetables</li>
-        <li>30% Juice / 70% water for delicate plants</li>
-      </ul>
-
-      <h3>Lawn:</h3>
-      <ul>
-        <li>50/50 dilution: 5-15 L/Ha</li>
-      </ul>
-
-      <h3>Important Note About Town Water:</h3>
-      <p>If diluting with town water (which normally contains chlorine that can kill valuable microbes), please leave
-        the water standing for 24 hours before mixing. Use immediately after mixing—do not store. Keep in a cool place
-        and ensure the con
-
+</body>
+</html>
