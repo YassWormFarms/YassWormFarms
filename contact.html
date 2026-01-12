@@ -74,15 +74,16 @@ nav a:hover {
 .hero {
   width: 100%;
   height: 400px;
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.45)),
-              url("lorikeet film.JPG") center/cover no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   display:flex;
   align-items:center;
   justify-content:center;
   text-align:center;
   color:white;
   padding:20px;
-  margin:0; /* Remove any default spacing */
+  margin:0;
 }
 
 /* HERO TEXT */
@@ -102,7 +103,7 @@ nav a:hover {
 /* CONTACT WRAPPER */
 .contact-wrapper {
   max-width: 1150px;
-  margin: 70px auto 0 auto; /* Remove bottom margin */
+  margin: 70px auto 0 auto;
   padding: 0 25px;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -244,7 +245,7 @@ footer {
   color: white;
   text-align: center;
   padding: 18px;
-  margin:0; /* Remove white space above footer */
+  margin:0;
 }
 
 /* MOBILE */
@@ -274,7 +275,8 @@ footer {
   </div>
 </nav>
 
-<section class="hero">
+<!-- TOP HERO IMAGE (Lorikeet) -->
+<section class="hero" style="background-image:url('lorikeet film.JPG');">
   <div>
     <h1>Contact Yass Worm Farms</h1>
     <p>We proudly support Australian farmers, gardeners and growers with premium worm fertiliser and natural soil 
@@ -321,8 +323,8 @@ footer {
 
 </main>
 
-<!-- NEW HERO IMAGE ABOVE FOOTER WITHOUT TEXT -->
-<section class="hero" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.45)), url('ducks.JPG') center/cover no-repeat; margin:0; height:400px;">
+<!-- BOTTOM HERO IMAGE (Duck) WITHOUT TEXT -->
+<section class="hero" style="background-image:url('ducks.JPG'); height:400px;">
 </section>
 
 <footer>
@@ -339,4 +341,5 @@ footer {
 
 </body>
 </html>
+
 
