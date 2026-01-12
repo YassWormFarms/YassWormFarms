@@ -51,6 +51,73 @@ nav.shrink .logo { height:58px; }
 nav a { text-decoration:none; color:var(--coffee); font-weight:700; font-size:22px; }
 nav a:hover, nav a.active { color:var(--green); }
 
+/* HERO SECTION */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://raw.githubusercontent.com/YassWormFarms/YassWormFarms/main/goodlab.png') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: auto;
+}
+
+/* MAIN SECTIONS */
+main {
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 0 25px;
+}
+
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  padding: 25px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  color: var(--green);
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.card p, .card ul {
+  font-size: 16px;
+}
+
+.card ul { padding-left: 20px; }
+.card ul li { margin-bottom: 8px; }
+
+/* SECTION HEADINGS */
+section h2 {
+  text-align: center;
+  color: var(--green);
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
 /* FOOTER */
 footer {
   background: var(--coffee);
@@ -62,10 +129,11 @@ footer {
 
 /* MOBILE */
 @media(max-width:768px){
+  .hero h1 { font-size:32px; }
+  .hero p { font-size:16px; }
   nav a { font-size:18px; }
 }
 </style>
-
 </head>
 
 <body>
@@ -85,9 +153,48 @@ footer {
   </div>
 </nav>
 
-<!-- MAIN CONTENT CAN BE ADDED HERE -->
+<!-- HERO -->
+<section class="hero">
+  <h1>Laboratory Results</h1>
+  <p>See the latest microbiological analysis of our premium Worm Juice Fertiliser and understand the benefits for your soil, crops, and pasture.</p>
+</section>
+
+<!-- MAIN CONTENT -->
 <main>
-  <!-- Content will go here -->
+  <section>
+    <h2>Our Microbial Analysis</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Active Fungi</h3>
+        <p><strong>25,000 cfu/g</strong> – Builds stable soil aggregates, improves structure & airflow, increases water retention.</p>
+      </div>
+      <div class="card">
+        <h3>Cellulose Utilisers</h3>
+        <p><strong>7,000 cfu/g</strong> – Breaks down plant residues and woody fibres, speeds up composting and carbon cycling.</p>
+      </div>
+      <div class="card">
+        <h3>Yeasts</h3>
+        <p><strong>10,000 cfu/g</strong> – Produces B vitamins, fuels microbial food web in the root zone.</p>
+      </div>
+      <div class="card">
+        <h3>Lactic Acid Bacteria</h3>
+        <p><strong>1,000 cfu/g</strong> – Suppresses pathogens and improves soil immunity.</p>
+      </div>
+      <div class="card">
+        <h3>Actinomycetes</h3>
+        <p><strong>2,000 cfu/g</strong> – Breaks down lignin to form humus, produces natural antibiotics.</p>
+      </div>
+      <div class="card">
+        <h3>Photosynthetic Bacteria</h3>
+        <p><strong>14,000 cfu/g</strong> – Fixes nitrogen from air, increases chlorophyll, and promotes greener pastures.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Benefits for Your Soil & Crops</h2>
+    <p>Our worm juice is packed with beneficial microbes that enhance soil fertility, boost crop growth, and improve pasture health. Using our products regularly encourages faster soil regeneration and stronger, healthier plants.</p>
+  </section>
 </main>
 
 <!-- FOOTER -->
@@ -104,5 +211,6 @@ window.addEventListener('scroll', () => {
 
 </body>
 </html>
+
 
 
