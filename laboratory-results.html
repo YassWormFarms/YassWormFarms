@@ -1,162 +1,288 @@
-<!DOCTYPE html> 
-<html lang="en"> 
-<head> 
-  <meta charset="UTF-8"> 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <title>Laboratory Results | Yass Worm Farms</title> 
-  <link rel="stylesheet" href="style.css">
+<!DOCTYPE html>
+<html lang="en">
 
-  <style>
-/* ---- MOBILE ONLY STYLING (does NOT affect desktop) ---- */
-@media(max-width: 900px){
+<head>
 
-  /* NAV MENU MOBILE FRIENDLY */
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Laboratory Results | Yass Worm Farms</title>
+
+<!-- GOOGLE FONTS -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+
+<style>
+
+:root {
+  --green: #064d28;
+  --coffee: #4b3621;
+  --accent: #b87333;
+  --light: #f5f5f5;
+  --bg-section: #f7fff7;
+  --bg-microbial: #e0f0ff;
+  --advice-bg: linear-gradient(135deg, #e6fae6, #d4f3d4);
+  --note-bg: #D18C8C;
+  --note-pattern: url('worm-pattern.png');
+}
+
+/* BODY */
+body {
+  margin: 0;
+  font-family: 'Poppins', Arial, sans-serif;
+  color: var(--coffee);
+  background: white;
+  line-height: 1.6;
+}
+
+/* HEADER */
+nav {
+  background:white;
+  border-bottom:2px solid #ddd;
+  padding:15px 10%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:sticky;
+  top:0;
+  z-index:10;
+  transition: all 0.35s ease-in-out;
+}
+
+nav .logo { height:98px; transition: height 0.35s ease-in-out; }
+nav.shrink { padding:5px 10%; border-bottom:1px solid #ccc; }
+nav.shrink .logo { height:58px; }
+
+.nav-links { display:flex; gap:30px; }
+nav a { text-decoration:none; color:var(--coffee); font-weight:700; font-size:22px; }
+nav a:hover, nav a.active { color:var(--green); }
+
+/* HERO */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('Chat gbt Lab Image.png') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 180px 20px;
+}
+
+.hero h1 { font-size: 42px; margin-bottom: 15px; }
+.hero p { font-size: 18px; max-width: 700px; margin: auto; font-weight: bold; }
+
+/* MAIN */
+main {
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 0 25px;
+}
+
+/* IMAGE ABOVE MICROBIAL */
+.main-image {
+  width: 100%;
+  max-width: 1100px;
+  margin: 50px auto;
+  display: block;
+  border-radius: 12px;
+}
+
+/* MICROBIAL CARDS */
+.microbial-section {
+  background: var(--bg-microbial);
+  padding: 50px 25px;
+  border-radius: 12px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  padding: 25px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover { transform: translateY(-5px); }
+.card h3 { color: var(--green); margin-bottom: 15px; font-size: 20px; }
+.card p, .card ul { font-size: 16px; }
+.card ul { padding-left: 20px; }
+.card ul li { margin-bottom: 8px; }
+
+/* SECTION TITLES */
+section h2 {
+  text-align: center;
+  color: var(--green);
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+/* APPLICATION SECTION */
+.application-section {
+  background: var(--bg-section);
+  padding: 50px 25px;
+  border-radius: 12px;
+  margin-top: 50px;
+}
+
+/* ADVICE */
+.advice-section {
+  background: var(--advice-bg);
+  padding: 50px 35px;
+  border-radius: 12px;
+  margin-top: 50px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  font-size: 18px;
+  line-height: 1.7;
+  border-left: 6px solid var(--green);
+}
+
+.advice-section h3 {
+  color: var(--green);
+  font-size: 28px;
+  margin-bottom: 25px;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* TOWN WATER NOTE */
+.town-water-note {
+  background-color: var(--note-bg);
+  background-image: var(--note-pattern);
+  background-repeat: repeat;
+  background-size: contain;
+  border-left: 6px solid var(--green);
+  padding: 40px 30px;
+  border-radius: 12px;
+  font-size: 18px;
+  line-height: 1.7;
+  margin-top: 50px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  color: white;
+}
+
+.town-water-note h3 {
+  color: white;
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* FOOTER */
+footer {
+  background: var(--coffee);
+  color: white;
+  text-align: center;
+  padding: 18px;
+  margin-top: 70px;
+}
+
+/* ---------- MOBILE RESPONSIVE SAME AS CONTACT PAGE ---------- */
+@media(max-width:900px){
   nav {
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:10px;
-    text-align:center;
-    padding:15px 10px;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .logo {
+    height:80px!important;
+    margin-bottom:10px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
   }
 
   nav a {
-    display:inline-block;
-    padding:10px 12px;
-    font-size:16px;
-  }
-
-  /* MAIN CONTENT */
-  main {
-    padding:15px !important;
-  }
-
-  h1 {
-    font-size:24px !important;
-    line-height:1.3;
-  }
-
-  p {
-    font-size:15px;
-  }
-
-  /* IMAGE RESPONSIVE ALREADY BUT ADD SAFE GUARD */
-  img {
-    width:100% !important;
-    height:auto;
-  }
-
-  /* BENEFITS SECTION */
-  section {
-    padding:15px !important;
-  }
-
-  section h2 {
-    font-size:22px !important;
-  }
-
-  h3 {
     font-size:18px;
   }
 
-  ul {
-    padding-left:18px;
+  .hero {
+    padding:120px 20px;
   }
 
-  footer {
-    text-align:center;
-    padding:20px;
-  }
+  .hero h1 { font-size:30px; }
+  .hero p { font-size:15px; }
 }
-  </style>
+</style>
+</head>
 
-</head> 
+<body>
 
-<body> 
+<nav id="navbar">
+  <div class="nav-left">
+    <img src="Logo.png" alt="Yass Worm Farms Logo" class="logo">
+  </div>
 
-  <nav> 
-    <a href="index.html">Home</a> 
-    <a href="application-rates.html">About Us</a> 
-    <a href="shop.html">Shop</a> 
-    <a href="laboratory-results.html" class="active">Laboratory Results</a> 
-    <a href="diy.html">DIY</a> 
-    <a href="contact.html">Contact Us</a> 
-  </nav> 
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="application-rates.html">About Us</a>
+    <a href="shop.html">Shop</a>
+    <a href="laboratory-results.html" class="active">Laboratory Results</a>
+    <a href="diy.html">DIY</a>
+    <a href="contact.html">Contact Us</a>
+  </div>
+</nav>
 
-  <main style="padding: 20px; max-width: 1100px; margin:auto;"> 
+<section class="hero">
+  <h1>Laboratory Results</h1>
+  <p>Explore the microbial analysis of our premium Worm Juice and understand how it improves soil, crops, and pasture.</p>
+</section>
 
-    <h1 style="text-align:center; color:#006400;">Latest Laboratory Results</h1> 
-    <p style="text-align:center;">Our most recent microbial laboratory report for our Worm Juice Fertiliser.</p> 
+<main>
 
-    <div style="text-align:center; margin: 30px 0;"> 
-      <img src="https://raw.githubusercontent.com/YassWormFarms/YassWormFarms/main/goodlab.png"
-           alt="Microbiological Analysis - Latest Lab Results"
-           style="max-width: 700px; width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.25);"> 
-    </div> 
+<img src="Lab Results 2025.png" class="main-image">
 
-    <section style="background:#f7fff7; border:2px solid #b4e6b4; padding:25px; border-radius:12px;"> 
-      <h2 style="text-align:center; color:#006400; font-size:28px;">🌱 BENEFITS BY MICROBIAL GROUP</h2> 
+<section class="microbial-section">
+<h2>Our Microbial Analysis (breakdown)</h2>
 
-      <h3>1️⃣ Active Fungi (25,000 cfu/g + total fungi 32,000 cfu/g)</h3> 
-      <strong>In Soil</strong> 
-      <ul> 
-        <li>Build stable soil aggregates → improved structure & airflow</li> 
-        <li>Increase water holding capacity & reduce compaction</li> 
-        <li>Decompose organic matter & release nutrients steadily</li> 
-      </ul> 
-      <strong>For Pasture & Crops</strong> 
-      <ul> 
-        <li>Boost root growth & nutrient uptake</li> 
-        <li>Strengthen natural disease resistance</li> 
-      </ul> 
-      <hr> 
+<div class="cards">
+<div class="card"><h3>Active Fungi</h3><p><strong>25,000 cfu/g</strong></p></div>
+<div class="card"><h3>Cellulose Utilisers</h3><p><strong>7,000 cfu/g</strong></p></div>
+<div class="card"><h3>Yeasts</h3><p><strong>10,000 cfu/g</strong></p></div>
+<div class="card"><h3>Lactic Acid Bacteria</h3><p><strong>1,000 cfu/g</strong></p></div>
+<div class="card"><h3>Actinomycetes</h3><p><strong>2,000 cfu/g</strong></p></div>
+<div class="card"><h3>Photosynthetic Bacteria</h3><p><strong>14,000 cfu/g</strong></p></div>
+</div>
+</section>
 
-      <h3>2️⃣ Cellulose Utilisers (7,000 cfu/g)</h3> 
-      <ul> 
-        <li>Break down plant residues & woody fibres</li> 
-        <li>Speed up composting & carbon cycling</li> 
-      </ul> 
-      <hr> 
+<section class="application-section">
+<h2>Application Rates for Our Products</h2>
+<!-- Content unchanged -->
+</section>
 
-      <h3>3️⃣ Yeasts (10,000 cfu/g)</h3> 
-      <ul> 
-        <li>Produce natural B vitamins & growth stimulants</li> 
-        <li>Fuel the microbial food web in the root zone</li> 
-      </ul> 
-      <hr> 
+<section class="advice-section">
+<h3>Advice from Anthony – Dairy Farmer</h3>
+<p>Content unchanged</p>
+</section>
 
-      <h3>4️⃣ Active Lactic Acid Bacteria (1,000 cfu/g)</h3> 
-      <ul> 
-        <li>Suppress harmful pathogens & improve soil immunity</li> 
-        <li>Help break down toxins & manures</li> 
-      </ul> 
-      <hr> 
+<section class="town-water-note">
+<h3>Important Note About Town Water</h3>
+<p>Content unchanged</p>
+</section>
 
-      <h3>5️⃣ Actinomycetes (2,000 cfu/g)</h3> 
-      <ul> 
-        <li>Break down lignin & woody carbon → humus</li> 
-        <li>Produce natural antibiotics that protect plants</li> 
-      </ul> 
-      <hr> 
+</main>
 
-      <h3>6️⃣ Photosynthetic Bacteria (14,000 cfu/g)</h3> 
-      <ul> 
-        <li>Fix nitrogen from the air → plant available</li> 
-        <li>Increase chlorophyll → greener pasture</li> 
-      </ul> 
+<section class="hero" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.45)), url('worms and ladders.png') center/cover no-repeat;">
+</section>
 
-      <hr style="margin: 25px 0;"> 
+<footer>
+<p>&copy; 2026 Yass Worm Farms. All Rights Reserved.</p>
+</footer>
 
-      <h3>⭐ TOTAL ACTIVE POPULATION: <strong>59,000 cfu/g</strong></h3> 
-      <p><strong>High competition = weeds & pathogens struggle.</strong></p> 
-      <p><strong>Faster soil regeneration & carbon building.</strong></p> 
-    </section> 
+<script>
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('shrink', window.scrollY > 50);
+});
+</script>
 
-  </main> 
-
-  <footer> 
-    <p>&copy; 2025 Yass Worm Farms. All Rights Reserved.</p> 
-  </footer> 
-
-</body> 
+</body>
 </html>
