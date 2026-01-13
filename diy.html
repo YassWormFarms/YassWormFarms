@@ -26,7 +26,7 @@ body {
   font-family:'Poppins', Arial, sans-serif;
   color:var(--coffee);
   background:white;
-  text-align:center; /* Center everything */
+  text-align:center;
 }
 
 /* NAVIGATION */
@@ -126,7 +126,7 @@ nav a:hover {
   max-width:1150px;
   margin:70px auto;
   padding:0 25px;
-  text-align:center; /* Center section content */
+  text-align:center;
 }
 
 .section h2 {
@@ -144,7 +144,7 @@ nav a:hover {
 .video-block {
   margin-bottom:40px;
   display:flex;
-  justify-content:center; /* Center videos */
+  justify-content:center;
 }
 
 /* DIY INFO SECTION */
@@ -173,7 +173,7 @@ nav a:hover {
 }
 
 .info-section ul li:first-child {
-  list-style:none; /* Remove dot from first line */
+  list-style:none;
 }
 
 .info-section p {
@@ -216,11 +216,73 @@ footer {
   margin-top: 70px;
 }
 
-/* MOBILE */
-@media(max-width:850px) {
-  .hero h1 { font-size:34px; }
-  .info-section { padding:20px 15px; }
-  .bottom-cta a { padding:16px 40px; font-size:18px; }
+/* ---------------- MOBILE RESPONSIVE ONLY ---------------- */
+@media(max-width:850px){
+
+  nav {
+    padding:10px 5%;
+    flex-direction:column;
+    gap:10px;
+  }
+
+  .nav-links {
+    flex-wrap:wrap;
+    gap:12px;
+  }
+
+  nav a {
+    font-size:16px;
+  }
+
+  .hero {
+    height:auto;
+    padding:50px 20px;
+  }
+
+  .hero h1 {
+    font-size:30px;
+  }
+
+  .hero p {
+    font-size:16px;
+    max-width:100%;
+  }
+
+  .section {
+    padding:0 15px;
+  }
+
+  .section h2 {
+    font-size:26px;
+  }
+
+  .section p {
+    font-size:16px;
+  }
+
+  .video-block iframe {
+    width:100%;
+    height:auto;
+    aspect-ratio:16/9;
+  }
+
+  .info-section {
+    padding:20px 15px;
+  }
+
+  .info-section h3 {
+    font-size:22px;
+  }
+
+  .info-section p,
+  .info-section ul {
+    font-size:16px;
+  }
+
+  .bottom-cta a {
+    padding:16px 30px;
+    font-size:18px;
+  }
 }
 </style>
 </head>
@@ -274,7 +336,6 @@ footer {
 </div>
 </section>
 
-<!-- NEW DIY INFO SECTION -->
 <section class="info-section">
   <h3>Rough Estimated Cost of Setting Up Your Own Worm Juice Production</h3>
   <p><strong>Requirements:</strong></p>
@@ -307,12 +368,10 @@ footer {
   <p>Contact James Brown for further information and to get started.</p>
 </section>
 
-<!-- CTA BUTTON ABOVE FOOTER -->
 <div class="bottom-cta">
   <a href="contact.html">Start Building your Worm Farm – Contact Us</a>
 </div>
 
-<!-- FOOTER -->
 <footer>
   <p>&copy; 2026 Yass Worm Farms. All Rights Reserved.</p>
 </footer>
@@ -326,4 +385,3 @@ footer {
 
 </body>
 </html>
-
