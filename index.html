@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Yass Worm Farms</title>
@@ -24,6 +24,7 @@ content="worm juice, worm castings, organic fertiliser, soil health, eco-friendl
   --light:#f5f5f5;
 }
 
+/* base */
 body{
   margin:0;
   font-family:'Poppins', Arial, sans-serif;
@@ -32,7 +33,7 @@ body{
   line-height:1.6;
 }
 
-/* ===== NAV ===== */
+/* NAV */
 nav{
   background:white;
   border-bottom:2px solid #ddd;
@@ -45,38 +46,32 @@ nav{
   z-index:10;
   transition:all 0.35s ease-in-out;
 }
-
 nav .logo{
   height:98px;
   transition:height 0.35s ease-in-out;
 }
-
 nav.shrink{
   padding:6px 10%;
   border-bottom:1px solid #ccc;
 }
-
 nav.shrink .logo{
   height:58px;
 }
-
 .nav-links{
   display:flex;
   gap:30px;
 }
-
 nav a{
   text-decoration:none;
   color:var(--coffee);
   font-weight:700;
   font-size:22px;
 }
-
 nav a:hover{
   color:var(--green);
 }
 
-/* ===== HERO ===== */
+/* HERO */
 .hero{
   position:relative;
   min-height:70vh;
@@ -84,38 +79,33 @@ nav a:hover{
   display:flex;
   align-items:center;
 }
-
 .hero-overlay{
   position:absolute;
   inset:0;
   background:linear-gradient(to right, rgba(0,0,0,0.45) 30%, rgba(0,0,0,0) 100%);
 }
-
 .hero-text{
   position:relative;
   margin-left:8%;
   color:white;
   max-width:560px;
 }
-
 .hero-text h1{
   font-size:58px;
   margin:0;
 }
-
 .hero-text p{
   font-size:26px;
   margin-top:12px;
   font-weight:700;
 }
 
-/* ===== BENEFITS ===== */
+/* BENEFITS */
 .benefits-section{
   padding:70px 5%;
   background:#e8f3e8;
   position:relative;
 }
-
 .benefits-section::before{
   content:"";
   position:absolute;
@@ -123,26 +113,22 @@ nav a:hover{
   background:url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1300&q=60") center/60% no-repeat;
   opacity:0.16;
 }
-
 .benefits-container{
   max-width:1200px;
   margin:auto;
   position:relative;
 }
-
 .benefits-title{
   text-align:center;
   font-size:38px;
   color:var(--green);
   margin-bottom:35px;
 }
-
 .benefits-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
   gap:28px;
 }
-
 .benefit-item{
   background:rgba(255,255,255,0.97);
   border-radius:12px;
@@ -152,7 +138,6 @@ nav a:hover{
   position:relative;
   box-shadow:0 6px 18px rgba(0,0,0,0.18);
 }
-
 .benefit-item::before{
   content:"✔";
   position:absolute;
@@ -163,7 +148,7 @@ nav a:hover{
   color:#0b7a33;
 }
 
-/* ===== SCROLLING BAND ===== */
+/* SCROLLING BAND */
 .scrolling-band{
   background:#064d28;
   height:2cm;
@@ -171,13 +156,11 @@ nav a:hover{
   display:flex;
   align-items:center;
 }
-
 .scrolling-text{
   display:flex;
   width:max-content;
   animation:scrollText 30s linear infinite;
 }
-
 .scrolling-text span{
   white-space:nowrap;
   font-size:32px;
@@ -185,18 +168,18 @@ nav a:hover{
   color:#e8f3e8;
   margin-right:50px;
 }
-
 @keyframes scrollText{
   from{transform:translateX(0);}
   to{transform:translateX(-50%);}
 }
 
-/* ===== LAB RESULTS ===== */
+/* LAB RESULTS */
+/* Desktop: show three images side-by-side */
+/* Mobile: images stack (controlled in media query) */
 .lab-results-section{
   padding:50px 5%;
   text-align:center;
 }
-
 .lab-results-section h2{
   font-size:48px;
   color:var(--lab-title);
@@ -205,83 +188,94 @@ nav a:hover{
   border-bottom:3px solid var(--green);
   display:inline-block;
 }
-
 .images-container{
   display:flex;
   gap:25px;
   justify-content:center;
   align-items:center;
-  flex-wrap:wrap;
+  /* force side-by-side on wide screens */
+  flex-wrap:nowrap;
+  max-width:1100px;
+  margin:0 auto;
 }
 
+/* make each image take one third of available space (desktop) */
 .images-container img{
-  max-width:100%;
+  flex:0 0 calc((100% - 50px) / 3);
+  max-width: calc((100% - 50px) / 3);
   height:auto;
+  display:block;
 }
 
+/* accent styling for the lab image */
 .lab-image{
   border:4px solid var(--green);
   border-radius:12px;
   padding:5px;
+  box-sizing:border-box;
 }
-* ===== DIY WORM FARM SECTION ===== */
+
+/* ===== DIY WORM FARM SECTION =====
+   Changed so image displays first, text sits underneath (stacked)
+   — no overlay, no absolute positioning. */
 .diy-worm-farm-section {
-  position: relative;
-  max-width: 1200px;
-  margin: 60px auto;
-  background: #eae2d3;
-  overflow: hidden;
+  position:relative;
+  max-width:1200px;
+  margin:60px auto;
+  background:#eae2d3;
+  overflow:hidden;
+  padding:0; /* keep controls tight */
+  box-sizing:border-box;
 }
 
-.diy-worm-farm-section::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  /* keep the gradient removed so background image shows clearly */
+/* full-width photo at top */
+.diy-worm-farm-section .diy-background {
+  width:100%;
+  height:auto;
+  display:block;
+  object-fit:cover;
 }
 
-.diy-background {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
+/* text block under the image */
 .diy-worm-farm-section .diy-text {
-  position: absolute;
-  top: 50%;
-  left: 40px;
-  transform: translateY(-50%);
-  max-width: 45%;
-  color: black; /* Only the text in this section is black */
+  position:relative;
+  color:black;
+  max-width:1100px;
+  margin:22px auto 40px;
+  padding:20px 28px;
+  box-sizing:border-box;
 }
 
+/* type scale inside text block */
 .diy-worm-farm-section .diy-text h2 {
-  font-size: 48px;
-  color: #f4a261;
+  font-size:36px;
+  color:#f4a261;
+  margin-top:0;
+  margin-bottom:12px;
 }
-
 .diy-worm-farm-section .diy-text p {
-  font-size: 22px;
-  font-weight: 700;
+  font-size:18px;
+  font-weight:700;
+  margin:0 0 12px 0;
 }
-
-.diy-details p {
-  font-size: 20px;
+.diy-worm-farm-section .diy-details p {
+  font-size:16px;
+  margin:6px 0;
 }
 
 .build-button {
-  display: inline-block;
-  margin-top: 25px;
-  padding: 14px 26px;
-  background: #007BFF;
-  color: white;
-  font-size: 20px;
-  font-weight: 700;
-  border-radius: 10px;
-  text-decoration: none;
+  display:inline-block;
+  margin-top:16px;
+  padding:12px 20px;
+  background:#007BFF;
+  color:white;
+  font-size:16px;
+  font-weight:700;
+  border-radius:8px;
+  text-decoration:none;
 }
 
-/* ===== TESTIMONY ===== */
+/* TESTIMONIALS */
 .testimony-section{
   margin:60px 5%;
   padding:40px 5%;
@@ -292,7 +286,6 @@ nav a:hover{
   flex-wrap:wrap;
   justify-content:center;
 }
-
 .testimony-box{
   background:white;
   border-radius:12px;
@@ -302,13 +295,12 @@ nav a:hover{
   gap:20px;
   box-shadow:0 6px 18px rgba(0,0,0,0.15);
 }
-
 .testimony-box img{
   width:250px;
   border-radius:10px;
 }
 
-/* ===== FOOTER ===== */
+/* FOOTER */
 footer{
   background:var(--coffee);
   color:white;
@@ -316,57 +308,56 @@ footer{
   padding:15px 0;
 }
 
-/* ===== MOBILE ===== */
-@media(max-width:900px){
+/* MOBILE — stack lab images and adjust DIY text scale */
+@media (max-width: 900px) {
   nav{
     padding:10px 5%;
     flex-wrap:wrap;
     justify-content:center;
     gap:10px;
   }
-
   .nav-links{
     flex-wrap:wrap;
     justify-content:center;
     gap:15px;
   }
-
   nav a{font-size:18px;}
-
   .hero-text{
     margin-left:0;
     text-align:center;
     padding:0 15px;
   }
-
   .hero-text h1{font-size:36px;}
   .hero-text p{font-size:20px;}
-
   .scrolling-text span{font-size:24px;}
 
-  .diy-text{
-    position:relative;
-    transform:none;
-    max-width:90%;
-    left:auto;
-    padding:30px;
+  /* LAB images stack on small screens */
+  .images-container{
+    flex-wrap:wrap;
+  }
+  .images-container img{
+    flex:1 1 100%;
+    max-width:100%;
   }
 
-  .diy-text h2{font-size:30px;}
-  .diy-text p{font-size:16px;}
-  .diy-details p{font-size:15px;}
+  /* DIY text block is already stacked; make it slightly larger spacing on mobile */
+  .diy-worm-farm-section .diy-text{
+    padding:24px 18px;
+  }
+
+  .diy-worm-farm-section .diy-text h2{font-size:28px;}
+  .diy-worm-farm-section .diy-text p{font-size:16px;}
+  .diy-worm-farm-section .diy-details p{font-size:15px;}
 
   .testimony-box{
     flex-direction:column;
     align-items:center;
     text-align:center;
   }
-
   .testimony-box img{width:200px;}
 }
 </style>
 </head>
-
 <body>
 
 <nav id="navbar">
@@ -421,6 +412,7 @@ footer{
   </div>
 </section>
 
+<!-- DIY: image first, text underneath (stacked) -->
 <section class="diy-worm-farm-section">
   <img src="DIY worm Farm image.jpg" alt="DIY Worm Farm System" class="diy-background">
   <div class="diy-text">
