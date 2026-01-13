@@ -23,6 +23,7 @@
   --note-pattern:url('worm-pattern.png');
 }
 
+/* BODY */
 body{
   margin:0;
   font-family:'Poppins',Arial,sans-serif;
@@ -31,7 +32,7 @@ body{
   line-height:1.6;
 }
 
-/* HEADER – desktop remains unchanged */
+/* HEADER */
 nav{
   background:white;
   border-bottom:2px solid #ddd;
@@ -63,8 +64,14 @@ nav a:hover,nav a.active{color:var(--green);}
 .hero h1{font-size:42px;margin-bottom:15px;}
 .hero p{font-size:18px;max-width:700px;margin:auto;font-weight:bold;}
 
-main{max-width:1100px;margin:50px auto;padding:0 25px;}
+/* MAIN */
+main{
+  max-width:1100px;
+  margin:50px auto;
+  padding:0 25px;
+}
 
+/* IMAGE */
 .main-image{
   width:100%;
   max-width:1100px;
@@ -73,7 +80,7 @@ main{max-width:1100px;margin:50px auto;padding:0 25px;}
   border-radius:12px;
 }
 
-/* MICROBIAL SECTION */
+/* MICROBIAL */
 .microbial-section{
   background:var(--bg-microbial);
   padding:50px 25px;
@@ -87,6 +94,7 @@ main{max-width:1100px;margin:50px auto;padding:0 25px;}
   gap:25px;
   margin-top:30px;
 }
+
 .card{
   background:#fff;
   border-radius:12px;
@@ -94,12 +102,14 @@ main{max-width:1100px;margin:50px auto;padding:0 25px;}
   padding:25px;
   transition:.3s;
 }
+
 .card:hover{transform:translateY(-5px);}
 .card h3{color:var(--green);margin-bottom:15px;font-size:20px;}
 .card p,.card ul{font-size:16px;}
 .card ul{padding-left:20px;}
 .card ul li{margin-bottom:8px;}
 
+/* HEADINGS */
 section h2{
   text-align:center;
   color:var(--green);
@@ -107,7 +117,7 @@ section h2{
   margin-bottom:20px;
 }
 
-/* APPLICATION SECTION */
+/* APPLICATION */
 .application-section{
   background:var(--bg-section);
   padding:50px 25px;
@@ -115,7 +125,7 @@ section h2{
   margin-top:50px;
 }
 
-/* ADVICE SECTION */
+/* ADVICE */
 .advice-section{
   background:var(--advice-bg);
   padding:50px 35px;
@@ -133,9 +143,8 @@ section h2{
   text-align:center;
   font-weight:700;
 }
-.advice-section em{display:block;margin:10px 0;}
 
-/* TOWN WATER NOTE */
+/* TOWN WATER */
 .town-water-note{
   background-color:var(--note-bg);
   background-image:var(--note-pattern);
@@ -158,6 +167,7 @@ section h2{
   font-weight:700;
 }
 
+/* FOOTER */
 footer{
   background:var(--coffee);
   color:white;
@@ -166,8 +176,9 @@ footer{
   margin-top:70px;
 }
 
-/* ---------------- MOBILE HEADER (MATCH CONTACT PAGE) ---------------- */
+/* ---------------- MOBILE ---------------- */
 @media(max-width:900px){
+
   nav{
     flex-direction:column;
     text-align:center;
@@ -195,6 +206,20 @@ footer{
 
   .hero h1{font-size:30px;}
   .hero p{font-size:15px;}
+
+  section h2{
+    font-size:26px;
+  }
+
+  .cards{
+    grid-template-columns:1fr;
+  }
+
+  .advice-section,
+  .town-water-note{
+    padding:25px 18px;
+    font-size:16px;
+  }
 }
 </style>
 </head>
@@ -202,9 +227,7 @@ footer{
 <body>
 
 <nav id="navbar">
-  <div class="nav-left">
-    <img src="Logo.png" alt="Yass Worm Farms Logo" class="logo">
-  </div>
+  <img src="Logo.png" alt="Yass Worm Farms Logo" class="logo">
   <div class="nav-links">
     <a href="index.html">Home</a>
     <a href="application-rates.html">About Us</a>
@@ -227,7 +250,6 @@ footer{
 <section class="microbial-section">
   <h2>Our Microbial Analysis (breakdown)</h2>
   <div class="cards">
-    <!-- All your cards unchanged -->
     <div class="card"><h3>Active Fungi</h3><p><strong>25,000 cfu/g</strong> – Builds stable soil aggregates, improves structure & airflow, increases water retention.</p></div>
     <div class="card"><h3>Cellulose Utilisers</h3><p><strong>7,000 cfu/g</strong> – Breaks down plant residues and woody fibres, speeds up composting and carbon cycling.</p></div>
     <div class="card"><h3>Yeasts</h3><p><strong>10,000 cfu/g</strong> – Produces B vitamins, fuels microbial food web in the root zone.</p></div>
@@ -240,16 +262,23 @@ footer{
 <section class="application-section">
   <h2>Application Rates for Our Products</h2>
   <div class="cards">
-    <!-- unchanged content -->
+    <div class="card"><h3>On Pasture</h3><ul><li>Foliar spray Worm Juice 5-15 L/Ha during growth periods. Apply best when plants are damp or dewy.</li><li>@ 5L/Ha: $10 per hectare</li><li>@ 15L/Ha: $30 per hectare</li></ul></div>
+    <div class="card"><h3>On Crops</h3><ul><li>Inoculate seed: 5 liters per ton.</li><li>Liquid inject systems: 5-15 L/Ha.</li><li>Apply Worm Juice at 5-15 L/Ha when plants reach the 3-leaf stage.</li><li>Topdressing: 5-15 L/Ha when required.</li></ul></div>
+    <div class="card"><h3>Home Garden Use</h3><ul><li>5-15 Liters per hectare.</li><li>50/50 dilution for trees, flowers, plants, and vegetables.</li><li>30% Juice / 70% water for delicate plants.</li></ul></div>
+    <div class="card"><h3>Lawn</h3><ul><li>50/50 dilution: 5-15 L/Ha.</li></ul></div>
+    <div class="card"><h3>Horticulture / Viticulture / Orchard</h3><ul><li>Apply Worm Juice at 5-15 L/Ha, 3 to 4 times a year until harvest (best when plants are damp or dewy).</li></ul></div>
   </div>
 </section>
 
 <section class="advice-section">
-  <!-- unchanged -->
+  <h3>Advice from Anthony – Dairy Farmer (East Gippsland)</h3>
+  <p>Andrew, a dairy farmer friend from East Gippsland, replaced all synthetic fertilisers with worm juice. He now saves around <strong>$50,000 annually</strong> and boasts the most outstanding pasture in the district...</p>
 </section>
 
 <section class="town-water-note">
-  <!-- unchanged -->
+  <h3>Important Note About Town Water</h3>
+  <p>If diluting with town water... leave for 24 hours.</p>
+  <p>Use immediately after mixing...</p>
 </section>
 
 </main>
@@ -267,3 +296,4 @@ window.addEventListener('scroll',()=>{navbar.classList.toggle('shrink',window.sc
 
 </body>
 </html>
+
