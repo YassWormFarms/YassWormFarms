@@ -224,56 +224,61 @@ nav a:hover{
   border-radius:12px;
   padding:5px;
 }
-
-/* ===== DIY ===== */
-.diy-worm-farm-section{
-  position:relative;
-  max-width:1200px;
-  margin:60px auto;
-  background:#eae2d3;
-  overflow:hidden;
+* ===== DIY WORM FARM SECTION ===== */
+.diy-worm-farm-section {
+  position: relative;
+  max-width: 1200px;
+  margin: 60px auto;
+  background: #eae2d3;
+  overflow: hidden;
 }
 
-
-.diy-background{
-  width:100%;
-  height:auto;
-  display:block;
+.diy-worm-farm-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* keep the gradient removed so background image shows clearly */
 }
 
-.diy-text{
-  position:absolute;
-  top:50%;
-  left:40px;
-  transform:translateY(-50%);
-  max-width:45%;
-  color:white;
+.diy-background {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
-.diy-text h2{
-  font-size:48px;
-  color:#f4a261;
+.diy-worm-farm-section .diy-text {
+  position: absolute;
+  top: 50%;
+  left: 40px;
+  transform: translateY(-50%);
+  max-width: 45%;
+  color: black; /* Only the text in this section is black */
 }
 
-.diy-text p{
-  font-size:22px;
-  font-weight:700;
+.diy-worm-farm-section .diy-text h2 {
+  font-size: 48px;
+  color: #f4a261;
 }
 
-.diy-details p{
-  font-size:20px;
+.diy-worm-farm-section .diy-text p {
+  font-size: 22px;
+  font-weight: 700;
 }
 
-.build-button{
-  display:inline-block;
-  margin-top:25px;
-  padding:14px 26px;
-  background:#007BFF;
-  color:white;
-  font-size:20px;
-  font-weight:700;
-  border-radius:10px;
-  text-decoration:none;
+.diy-details p {
+  font-size: 20px;
+}
+
+.build-button {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 14px 26px;
+  background: #007BFF;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 10px;
+  text-decoration: none;
 }
 
 /* ===== TESTIMONY ===== */
