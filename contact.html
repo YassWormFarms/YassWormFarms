@@ -74,7 +74,7 @@ nav a:hover {
 .hero {
   width: 100%;
   height: 400px;
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.45)),
+  background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),
               url("ducks.JPG") center/cover no-repeat;
   display:flex;
   align-items:center;
@@ -246,19 +246,71 @@ footer {
   margin-top: 70px;
 }
 
-/* MOBILE */
+/* 📱 FULL MOBILE IMPROVEMENTS */
 @media(max-width:850px) {
+  nav {
+    padding:10px 20px;
+    flex-wrap:wrap;
+  }
+
+  .logo {
+    height:70px;
+  }
+
+  .nav-links {
+    width:100%;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+    margin-top:10px;
+  }
+
+  nav a {
+    font-size:16px;
+  }
+
+  .hero {
+    height: 260px;
+    padding: 30px 10px;
+    background-position:center;
+  }
+
+  .hero h1 {
+    font-size:28px;
+  }
+
+  .hero p {
+    font-size:14px;
+  }
+
   .contact-wrapper {
     grid-template-columns: 1fr;
+    margin: 40px auto;
+    padding: 0 15px;
+    gap:25px;
   }
-  .hero h1 { font-size: 34px; }
+
+  .contact-card,
+  .contact-form {
+    padding:22px;
+  }
+
+  .contact-info p {
+    font-size:14px;
+  }
+
+  footer {
+    margin-top:40px;
+    padding:16px;
+    font-size:14px;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<!-- EXACT HEADER -->
 <nav id="navbar">
   <div class="nav-left">
     <img src="Logo.png" alt="Yass Worm Farms Logo" class="logo">
@@ -283,7 +335,6 @@ footer {
 
 <main class="contact-wrapper">
 
-<!-- CONTACT DETAILS -->
 <div class="contact-card">
   <h2>Get in Touch</h2>
   <p>Whether you’re a hobby gardener or running a large farming operation, we’re always happy to answer 
@@ -307,7 +358,6 @@ footer {
   </div>
 </div>
 
-<!-- CONTACT FORM -->
 <div class="contact-form">
   <h3>Send Us a Message</h3>
   <form>
@@ -325,12 +375,12 @@ footer {
 </footer>
 
 <script>
-  // HEADER SHRINK ON SCROLL
-  const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => {
-    navbar.classList.toggle('shrink', window.scrollY > 50);
-  });
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('shrink', window.scrollY > 50);
+});
 </script>
 
 </body>
 </html>
+
