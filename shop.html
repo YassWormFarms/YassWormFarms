@@ -1,222 +1,382 @@
+
 <!DOCTYPE html> 
+
 <html lang="en"> 
+
 <head> 
+
 <meta charset="UTF-8"> 
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
 <title>DIY - Yass Worm Farms</title> 
 
+  
+
 <!-- Google Fonts --> 
+
 <link rel="preconnect" href="https://fonts.googleapis.com"> 
+
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet"> 
 
+  
+
 <style> 
+
 :root { 
+
   --green:#064d28; 
+
   --coffee:#4b3621; 
+
   --lab-title:#b87333; 
+
   --light:#f5f5f5; 
+
 } 
+
+  
 
 /* BODY */ 
+
 body { 
+
   margin:0; 
+
   font-family:'Poppins', Arial, sans-serif; 
+
   color:var(--coffee); 
+
   background:white; 
+
 } 
+
+  
 
 /* NAVIGATION */ 
+
 nav { 
+
   background:white; 
+
   border-bottom:2px solid #ddd; 
+
   padding:15px 10%; 
+
   display:flex; 
+
   justify-content:space-between; 
+
   align-items:center; 
+
   position:sticky; 
+
   top:0; 
+
   z-index:10; 
+
   transition: all 0.35s ease-in-out; 
+
 } 
+
+  
 
 nav .logo { 
+
   height:98px; 
+
   transition: height 0.35s ease-in-out; 
+
 } 
+
+  
 
 nav.shrink { 
+
   padding:5px 10%; 
+
   border-bottom:1px solid #ccc; 
+
 } 
+
+  
 
 nav.shrink .logo { 
+
   height:58px; 
+
 } 
+
+  
 
 .nav-links { 
+
   display:flex; 
+
   gap:30px; 
+
 } 
+
+  
 
 nav a { 
+
   text-decoration:none; 
+
   color:var(--coffee); 
+
   font-weight:700; 
+
   font-size:22px; 
+
 } 
+
+  
 
 nav a:hover { 
+
   color:var(--green); 
+
 } 
+
+  
+
+  
 
 /* SHOP PRODUCTS (unchanged) */ 
+
 .product img {  
+
   max-width: 100%;  
+
   height: auto;  
+
   border-radius: 5px;  
+
   margin-bottom: 1rem;  
+
 } 
+
+  
 
 .product {  
+
   margin-bottom: 3rem;  
+
 } 
+
+  
 
 .buy-button {  
+
   display: inline-block;  
+
   padding: 0.5rem 1rem;  
+
   background-color: #0070f3;  
+
   color: white;  
+
   text-decoration: none;  
+
   border-radius: 4px;  
+
   font-weight: bold;  
+
 } 
+
+  
 
 .buy-button:hover {  
+
   background-color: #005bb5;  
+
 } 
+
+  
 
 main.product-section { 
+
   max-width:1150px; 
+
   margin:70px auto; 
+
   padding:0 25px; 
+
 } 
+
+  
 
 main.product-section h1 { 
+
   margin-bottom:40px; 
+
   color:var(--green); 
+
 } 
 
-/* ---------- MOBILE HEADER (like Contact page) ---------- */
-@media (max-width: 768px) {
-  /* Stack logo and nav links vertically */
-  nav {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 10px 5%;
-  }
-
-  /* Resize the logo for mobile */
-  nav .logo {
-    height: 65px;
-    margin-bottom: 10px;
-  }
-
-  /* Stack nav links vertically and add spacing */
-  .nav-links {
-    flex-direction: column;
-    gap: 8px;
-    width: 100%;
-  }
-
-  /* Nav links full width for easier tapping */
-  nav a {
-    display: block;
-    width: 100%;
-    font-size: 16px;
-    padding: 8px 0;
-  }
-}
 </style> 
+
 </head> 
 
 <body> 
 
+  
+
 <!-- EXACT HEADER --> 
+
 <nav id="navbar"> 
+
   <div class="nav-left"> 
+
     <img src="Logo.png" alt="Yass Worm Farms Logo" class="logo"> 
+
   </div> 
+
   <div class="nav-links"> 
+
     <a href="index.html">Home</a> 
+
     <a href="application-rates.html">About Us</a> 
+
     <a href="shop.html">Shop</a> 
+
     <a href="laboratory-results.html">Laboratory Results</a> 
+
     <a href="diy.html">DIY</a> 
+
     <a href="contact.html">Contact Us</a> 
+
   </div> 
+
 </nav> 
 
+  
+
 <main class="product-section"> 
+
   <h1>Shop</h1> 
 
+  
+
   <!-- Product: IBC 1000L --> 
+
   <div class="product"> 
+
     <img src="https://d1wqzb5bdbcre6.cloudfront.net/9c1f52878596aedad098e19569b56baea48e42035c813af05827ba6ba0b8b96b/68747470733a2f2f66696c65732e7374726970652e636f6d2f6c696e6b732f4d44423859574e6a64463878536a5a52634735495355784e4e457070596b647466475a7358327870646d56665754644665555a42576d78684d44426e6246563357485234513146585257467a303045496939614a7666/6d65726368616e745f69643d616363745f314a3651706e48494c4d344a6962476d26636c69656e743d50524f445543545f415049" alt="IBC 1000L Worm Juice Fertiliser" /> 
+
     <h3>IBC 1000L Worm Juice Fertiliser – $1275.00 AUD</h3> 
+
     <p>Includes GST and FREE freight to 100km radius from Yass Town. Microbiometer Certificate issued with each IBC. Contact <a href="mailto:admin@yasswormfarms.com.au">admin@yasswormfarms.com.au</a> for other destinations.</p> 
+
     <a href="https://buy.stripe.com/eVq9ATcDC4QYaDf7PTbAs08" class="buy-button" target="_blank" rel="noopener">Buy Now</a> 
+
   </div> 
+
+  
 
   <!-- Product: 220L --> 
+
   <div class="product"> 
+
     <img src="https://stripe-camo.global.ssl.fastly.net/d58879a52f356e1903da2d4453b73a064e3e769ac65c29abca2a3b23854752da/68747470733a2f2f66696c65732e7374726970652e636f6d2f6c696e6b732f4d44423859574e6a64463878536a5a52634735495355784e4e457070596b647466475a7358327870646d56665556525a546d787562584671623046425a444177596c463455457473656d4e30303079324f386f436b55/6d65726368616e745f69643d616363745f314a3651706e48494c4d344a6962476d26636c69656e743d50524f445543545f415049" alt="220L Worm Juice Fertiliser" /> 
+
     <h3>220L Worm Juice Fertiliser – $360.00 AUD</h3> 
+
     <p>Price includes GST and FREE delivery to Yass Valley and Canberra regions. Microbiometer Certificate included. Contact <a href="mailto:admin@yasswormfarms.com.au">admin@yasswormfarms.com.au</a> for other freight quotes.</p> 
+
     <a href="https://buy.stripe.com/14AfZh6feabi7r35HLbAs09" class="buy-button" target="_blank" rel="noopener">Buy Now</a> 
+
   </div> 
+
+  
 
   <!-- Product: 20L --> 
+
   <div class="product"> 
+
     <img src="https://stripe-camo.global.ssl.fastly.net/45eef72b2b5199ec49053e2b22363d6cc44a4c4c34595a21b949a3420f93dc47/68747470733a2f2f66696c65732e7374726970652e636f6d2f6c696e6b732f4d44423859574e6a64463878536a5a52634735495355784e4e457070596b647466475a7358327870646d5666576e683061554d34516b747a5a47687255484e475a584e68544468695748464d30305041633868317941/6d65726368616e745f69643d616363745f314a3651706e48494c4d344a6962476d26636c69656e743d50524f445543545f415049" alt="20L Worm Juice Fertiliser" /> 
+
     <h3>20L Worm Juice Fertiliser – $68.00 AUD</h3> 
+
     <p>Perfect for medium-sized gardens and small farms. Includes GST. Easy to apply and packed with nutrients.</p> 
+
     <a href="https://buy.stripe.com/fZu28r6fe2IQ5iVgmpbAs0h" class="buy-button" target="_blank" rel="noopener">Buy Now</a> 
+
   </div> 
+
+  
 
   <!-- Product: 5L --> 
+
   <div class="product"> 
+
     <img src="https://stripe-camo.global.ssl.fastly.net/09fdc2ce6a481e6f988cda89e6c5591c65f73467982fa5b4f927ce8de48c9efa/68747470733a2f2f66696c65732e7374726970652e636f6d2f6c696e6b732f4d44423859574e6a64463878536a5a52634735495355784e4e457070596b647466475a7358327870646d5666526e4a4d5645746c656c52425645387a6258423364444e6c556e4e50536e6f323030666577585a643375/6d65726368616e745f69643d616363745f314a3651706e48494c4d344a6962476d26636c69656e743d50524f445543545f415049" alt="5L Worm Juice Fertiliser" /> 
+
     <h3>5L Worm Juice Fertiliser – $28.00 AUD</h3> 
+
     <p>Concentrated Worm Juice Fertiliser for your plants. Price includes GST. Great for small to medium garden use.</p> 
+
     <a href="https://buy.stripe.com/fZuaEXbzydnu7r39Y1bAs0i" class="buy-button" target="_blank" rel="noopener">Buy Now</a> 
+
   </div> 
+
+  
 
   <!-- Product: Bulka Bag --> 
+
   <div class="product"> 
+
     <img src="https://stripe-camo.global.ssl.fastly.net/96cd458dc27a6fd6153ca4bd246b70354010e458925ad0c6a580c41de7894991/68747470733a2f2f66696c65732e7374726970652e636f6d2f6c696e6b732f4d44423859574e6a64463878536a5a52634735495355784e4e457070596b647466475a7358327870646d566665464a5052444e71593238344d6b4a7152305a536148423152454e5561334e76303062784a5344645377/6d65726368616e745f69643d616363745f314a3651706e48494c4d344a6962476d26636c69656e743d50524f445543545f415049" alt="Bulka Bag 700-750 Kgs Worm Castings" /> 
+
     <h3>Bulka Bag 700–750 Kg Worm Castings – $400.00 AUD</h3> 
+
     <p>Black Gold Worm Castings – High quality (see Laboratory Report). Price includes GST. Contact <a href="mailto:admin@yasswormfarms.com.au">admin@yasswormfarms.com.au</a> for freight quote.</p> 
+
     <a href="https://buy.stripe.com/8x2bJ18nm97e3aNb25bAs07" class="buy-button" target="_blank" rel="noopener">Buy Now</a> 
+
   </div> 
+
+  
 
   <!-- Product: 12.5kg Castings --> 
+
   <div class="product"> 
+
     <img src="https://stripe-camo.global.ssl.fastly.net/4b924042626b79aa38930c2504450652c47ef740dace0f7e40f812143dd3b524/68747470733a2f2f66696c65732e7374726970652e636f6d2f6c696e6b732f4d44423859574e6a64463878536a5a52634735495355784e4e457070596b647466475a7358327870646d566662305a7052473933526a5653595745335555646a4d464a774d327377536c4a4b30306d54576f4b6a4644/6d65726368616e745f69643d616363745f314a3651706e48494c4d344a6962476d26636c69656e743d50524f445543545f415049" alt="12.5kg Black Gold Worm Castings" /> 
+
     <h3>12.5kg Black Gold Worm Castings – $35.00 AUD</h3> 
+
     <p>High-quality Worm Castings (see Laboratory Report at <a href="https://www.yasswormfarms.com.au" target="_blank" rel="noopener">yasswormfarms.com.au</a>). Available at CANTURF in Fyshwick.</p> 
+
     <a href="https://buy.stripe.com/fZu14n476cjq9zbfilbAs0d" class="buy-button" target="_blank" rel="noopener">Buy Now</a> 
+
   </div> 
+
+  
+
 </main> 
 
+  
+
 <script> 
+
   // HEADER SHRINK ON SCROLL 
+
   const navbar = document.getElementById('navbar'); 
+
   window.addEventListener('scroll', () => { 
+
     navbar.classList.toggle('shrink', window.scrollY > 50); 
+
   }); 
+
 </script> 
 
+  
+
 </body> 
-</html>
+
+</html> 
