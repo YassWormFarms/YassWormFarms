@@ -1,220 +1,200 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DIY - Yass Worm Farms</title>
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>DIY - Yass Worm Farms</title> 
 
-<!-- Google Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+<!-- Google Fonts --> 
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet"> 
 
-<style>
-:root {
-  --green:#064d28;
-  --coffee:#4b3621;
-  --lab-title:#b87333;
-  --light:#f5f5f5;
-}
+<style> 
+:root { 
+  --green:#064d28; 
+  --coffee:#4b3621; 
+  --lab-title:#b87333; 
+  --light:#f5f5f5; 
+} 
 
-/* BODY */
-body {
-  margin:0;
-  font-family:'Poppins', Arial, sans-serif;
-  color:var(--coffee);
-  background:white;
-}
+/* BODY */ 
+body { 
+  margin:0; 
+  font-family:'Poppins', Arial, sans-serif; 
+  color:var(--coffee); 
+  background:white; 
+} 
 
-/* NAVIGATION */
-nav {
-  background:white;
-  border-bottom:2px solid #ddd;
-  padding:15px 10%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  position:sticky;
-  top:0;
-  z-index:10;
-  transition: all 0.35s ease-in-out;
-}
+/* NAVIGATION */ 
+nav { 
+  background:white; 
+  border-bottom:2px solid #ddd; 
+  padding:15px 10%; 
+  display:flex; 
+  justify-content:space-between; 
+  align-items:center; 
+  position:sticky; 
+  top:0; 
+  z-index:10; 
+  transition: all 0.35s ease-in-out; 
+} 
 
-nav .logo {
-  height:98px;
-  transition: height 0.35s ease-in-out;
-}
+nav .logo { 
+  height:98px; 
+  transition: height 0.35s ease-in-out; 
+} 
 
-nav.shrink {
-  padding:5px 10%;
-  border-bottom:1px solid #ccc;
-}
+nav.shrink { 
+  padding:5px 10%; 
+  border-bottom:1px solid #ccc; 
+} 
 
-nav.shrink .logo {
-  height:58px;
-}
+nav.shrink .logo { 
+  height:58px; 
+} 
 
-.nav-links {
-  display:flex;
-  gap:30px;
-}
+.nav-links { 
+  display:flex; 
+  gap:30px; 
+} 
 
-nav a {
-  text-decoration:none;
-  color:var(--coffee);
-  font-weight:700;
-  font-size:22px;
-}
+nav a { 
+  text-decoration:none; 
+  color:var(--coffee); 
+  font-weight:700; 
+  font-size:22px; 
+} 
 
-nav a:hover {
-  color:var(--green);
-}
+nav a:hover { 
+  color:var(--green); 
+} 
 
+/* SHOP PRODUCTS (unchanged) */ 
+.product img {  
+  max-width: 100%;  
+  height: auto;  
+  border-radius: 5px;  
+  margin-bottom: 1rem;  
+} 
 
-/* SHOP PRODUCTS (unchanged) */
-.product img { 
-  max-width: 100%; 
-  height: auto; 
-  border-radius: 5px; 
-  margin-bottom: 1rem; 
-}
+.product {  
+  margin-bottom: 3rem;  
+} 
 
-.product { 
-  margin-bottom: 3rem; 
-}
+.buy-button {  
+  display: inline-block;  
+  padding: 0.5rem 1rem;  
+  background-color: #0070f3;  
+  color: white;  
+  text-decoration: none;  
+  border-radius: 4px;  
+  font-weight: bold;  
+} 
 
-.buy-button { 
-  display: inline-block; 
-  padding: 0.5rem 1rem; 
-  background-color: #0070f3; 
-  color: white; 
-  text-decoration: none; 
-  border-radius: 4px; 
-  font-weight: bold; 
-}
+.buy-button:hover {  
+  background-color: #005bb5;  
+} 
 
-.buy-button:hover { 
-  background-color: #005bb5; 
-}
+main.product-section { 
+  max-width:1150px; 
+  margin:70px auto; 
+  padding:0 25px; 
+} 
 
-main.product-section {
-  max-width:1150px;
-  margin:70px auto;
-  padding:0 25px;
-}
+main.product-section h1 { 
+  margin-bottom:40px; 
+  color:var(--green); 
+} 
 
-main.product-section h1 {
-  margin-bottom:40px;
-  color:var(--green);
-}
-
-/* -------------------- MOBILE ONLY -------------------- */
+/* -------------------- MOBILE FRIENDLY -------------------- */
 @media (max-width: 900px) {
-
   nav {
-    padding:10px 5%;
+    padding:12px 5%;
   }
-
   nav .logo {
     height:70px;
   }
-
   .nav-links {
     gap:15px;
+    flex-wrap:wrap;
+    justify-content:center;
   }
-
   nav a {
-    font-size:16px;
+    font-size:18px;
+  }
+  main.product-section {
+    margin:50px auto;
+    padding:0 15px;
   }
 }
 
 @media (max-width: 600px) {
-
-  /* Stack header for small phones */
   nav {
-    padding:10px 5%;
     flex-direction:column;
     align-items:center;
     text-align:center;
+    padding:10px 5%;
   }
-
   nav .logo {
     height:65px;
     margin-bottom:10px;
   }
-
   .nav-links {
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:12px;
+    gap:10px;
   }
-
   nav a {
-    font-size:15px;
+    font-size:16px;
   }
-
-  /* Content readability */
-  main.product-section {
-    margin:40px auto;
-    padding:0 12px;
-  }
-
-  h1 {
+  main.product-section h1 {
     font-size:26px;
     text-align:center;
   }
-
   .product h3 {
     font-size:18px;
   }
-
   .product p {
     font-size:14px;
     line-height:1.6;
   }
-
   .buy-button {
-    padding:10px 14px;
     font-size:14px;
+    padding:8px 12px;
   }
 }
+</style> 
+</head> 
+<body> 
 
-</style>
-</head>
-<body>
+<!-- EXACT HEADER --> 
+<nav id="navbar"> 
+  <div class="nav-left"> 
+    <img src="Logo.png" alt="Yass Worm Farms Logo" class="logo"> 
+  </div> 
+  <div class="nav-links"> 
+    <a href="index.html">Home</a> 
+    <a href="application-rates.html">About Us</a> 
+    <a href="shop.html">Shop</a> 
+    <a href="laboratory-results.html">Laboratory Results</a> 
+    <a href="diy.html">DIY</a> 
+    <a href="contact.html">Contact Us</a> 
+  </div> 
+</nav> 
 
-<!-- EXACT HEADER -->
-<nav id="navbar">
-  <div class="nav-left">
-    <img src="Logo.png" alt="Yass Worm Farms Logo" class="logo">
-  </div>
-  <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="application-rates.html">About Us</a>
-    <a href="shop.html">Shop</a>
-    <a href="laboratory-results.html">Laboratory Results</a>
-    <a href="diy.html">DIY</a>
-    <a href="contact.html">Contact Us</a>
-  </div>
-</nav>
+<main class="product-section"> 
+  <h1>Shop</h1> 
 
-<main class="product-section">
-  <h1>Shop</h1>
+  <!-- Products remain EXACTLY the same as original content --> 
+  <!-- Your existing product blocks go here unchanged --> 
 
-  <!-- Product sections remain EXACTLY the same -->
-  <!-- (unchanged content below this line) -->
-  <!-- YOUR PRODUCTS HERE (unchanged) -->
-  
-  <!-- your existing product blocks remain here exactly as provided -->
-  
-</main>
+</main> 
 
-<script>
-  const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => {
-    navbar.classList.toggle('shrink', window.scrollY > 50);
-  });
-</script>
+<script> 
+  const navbar = document.getElementById('navbar'); 
+  window.addEventListener('scroll', () => { 
+    navbar.classList.toggle('shrink', window.scrollY > 50); 
+  }); 
+</script> 
 
-</body>
+</body> 
 </html>
