@@ -3,7 +3,7 @@
 <head> 
 <meta charset="UTF-8"> 
 <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-<title>Laboratory Results | Yass Worm Farms</title> 
+<title>Laboratory Results | Yass Worm Farms</title>
 
 <!-- GOOGLE FONTS --> 
 <link rel="preconnect" href="https://fonts.googleapis.com"> 
@@ -11,249 +11,259 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet"> 
 
 <style> 
-:root { 
-  --green: #064d28; 
-  --coffee: #4b3621; 
-  --accent: #b87333; 
-  --light: #f5f5f5; 
-  --bg-section: #f7fff7; 
-  --bg-microbial: #e0f0ff; 
-  --advice-bg: linear-gradient(135deg, #e6fae6, #d4f3d4); 
-  --note-bg: #D18C8C; 
-  --note-pattern: url('worm-pattern.png'); 
-} 
+:root {
+  --green:#064d28;
+  --coffee:#4b3621;
+  --accent:#b87333;
+  --light:#f5f5f5;
+  --bg-section:#f7fff7;
+  --bg-microbial:#e0f0ff;
+  --advice-bg:linear-gradient(135deg,#e6fae6,#d4f3d4);
+  --note-bg:#D18C8C;
+  --note-pattern:url('worm-pattern.png');
+}
 
-body { 
-  margin: 0; 
-  font-family: 'Poppins', Arial, sans-serif; 
-  color: var(--coffee); 
-  background: white; 
-  line-height: 1.6; 
-} 
+body{
+  margin:0;
+  font-family:'Poppins',Arial,sans-serif;
+  color:var(--coffee);
+  background:white;
+  line-height:1.6;
+}
 
-/* HEADER */ 
-nav { 
-  background:white; 
-  border-bottom:2px solid #ddd; 
-  padding:15px 10%; 
-  display:flex; 
-  justify-content:space-between; 
-  align-items:center; 
-  position:sticky; 
-  top:0; 
-  z-index:10; 
-  transition: all 0.35s ease-in-out; 
-} 
+/* HEADER – desktop remains unchanged */
+nav{
+  background:white;
+  border-bottom:2px solid #ddd;
+  padding:15px 10%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:sticky;
+  top:0;
+  z-index:10;
+  transition:all .35s ease-in-out;
+}
 
-nav .logo { height:98px; transition: height 0.35s ease-in-out; } 
-nav.shrink { padding:5px 10%; border-bottom:1px solid #ccc; } 
-nav.shrink .logo { height:58px; } 
+nav .logo{height:98px;transition:height .35s ease-in-out;}
+nav.shrink{padding:5px 10%;border-bottom:1px solid #ccc;}
+nav.shrink .logo{height:58px;}
 
-.nav-links { display:flex; gap:30px; } 
-nav a { text-decoration:none; color:var(--coffee); font-weight:700; font-size:22px; } 
-nav a:hover, nav a.active { color:var(--green); } 
+.nav-links{display:flex;gap:30px;}
+nav a{text-decoration:none;color:var(--coffee);font-weight:700;font-size:22px;}
+nav a:hover,nav a.active{color:var(--green);}
 
-/* HERO */ 
-.hero { 
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('Chat gbt Lab Image.png') center/cover no-repeat; 
-  color: white; 
-  text-align: center; 
-  padding: 180px 20px; 
-} 
-.hero h1 { font-size: 42px; margin-bottom: 15px; } 
-.hero p { font-size: 18px; max-width: 700px; margin: auto; font-weight: bold; } 
+/* HERO */
+.hero{
+  background:linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),url('Chat gbt Lab Image.png') center/cover no-repeat;
+  color:white;
+  text-align:center;
+  padding:180px 20px;
+}
+.hero h1{font-size:42px;margin-bottom:15px;}
+.hero p{font-size:18px;max-width:700px;margin:auto;font-weight:bold;}
 
-main { 
-  max-width: 1100px; 
-  margin: 50px auto; 
-  padding: 0 25px; 
-} 
+main{max-width:1100px;margin:50px auto;padding:0 25px;}
 
-.main-image { 
-  width: 100%; 
-  max-width: 1100px; 
-  margin: 50px auto; 
-  display: block; 
-  border-radius: 12px; 
-} 
+.main-image{
+  width:100%;
+  max-width:1100px;
+  margin:50px auto;
+  display:block;
+  border-radius:12px;
+}
 
-.microbial-section { 
-  background: var(--bg-microbial); 
-  padding: 50px 25px; 
-  border-radius: 12px; 
-} 
+/* MICROBIAL SECTION */
+.microbial-section{
+  background:var(--bg-microbial);
+  padding:50px 25px;
+  border-radius:12px;
+}
 
-.cards { 
-  display: grid; 
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-  gap: 25px; 
-  margin-top: 30px; 
-} 
+/* CARDS */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
+  margin-top:30px;
+}
+.card{
+  background:#fff;
+  border-radius:12px;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+  padding:25px;
+  transition:.3s;
+}
+.card:hover{transform:translateY(-5px);}
+.card h3{color:var(--green);margin-bottom:15px;font-size:20px;}
+.card p,.card ul{font-size:16px;}
+.card ul{padding-left:20px;}
+.card ul li{margin-bottom:8px;}
 
-.card { 
-  background: #fff; 
-  border-radius: 12px; 
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08); 
-  padding: 25px; 
-  transition: transform 0.3s ease; 
-} 
-.card:hover { transform: translateY(-5px); } 
-.card h3 { color: var(--green); margin-bottom: 15px; font-size: 20px; } 
-.card p, .card ul { font-size: 16px; } 
-.card ul { padding-left: 20px; } 
-.card ul li { margin-bottom: 8px; } 
+section h2{
+  text-align:center;
+  color:var(--green);
+  font-size:32px;
+  margin-bottom:20px;
+}
 
-section h2 { 
-  text-align: center; 
-  color: var(--green); 
-  font-size: 32px; 
-  margin-bottom: 20px; 
-} 
+/* APPLICATION SECTION */
+.application-section{
+  background:var(--bg-section);
+  padding:50px 25px;
+  border-radius:12px;
+  margin-top:50px;
+}
 
-.application-section { 
-  background: var(--bg-section); 
-  padding: 50px 25px; 
-  border-radius: 12px; 
-  margin-top: 50px; 
-} 
+/* ADVICE SECTION */
+.advice-section{
+  background:var(--advice-bg);
+  padding:50px 35px;
+  border-radius:12px;
+  margin-top:50px;
+  box-shadow:0 10px 30px rgba(0,0,0,.1);
+  font-size:18px;
+  line-height:1.7;
+  border-left:6px solid var(--green);
+}
+.advice-section h3{
+  color:var(--green);
+  font-size:28px;
+  margin-bottom:25px;
+  text-align:center;
+  font-weight:700;
+}
+.advice-section em{display:block;margin:10px 0;}
 
-.advice-section { 
-  background: var(--advice-bg); 
-  padding: 50px 35px; 
-  border-radius: 12px; 
-  margin-top: 50px; 
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
-  font-size: 18px; 
-  line-height: 1.7; 
-  border-left: 6px solid var(--green); 
-} 
+/* TOWN WATER NOTE */
+.town-water-note{
+  background-color:var(--note-bg);
+  background-image:var(--note-pattern);
+  background-repeat:repeat;
+  background-size:contain;
+  border-left:6px solid var(--green);
+  padding:40px 30px;
+  border-radius:12px;
+  font-size:18px;
+  line-height:1.7;
+  margin-top:50px;
+  box-shadow:0 8px 20px rgba(0,0,0,.08);
+  color:white;
+}
+.town-water-note h3{
+  color:white;
+  font-size:28px;
+  margin-bottom:20px;
+  text-align:center;
+  font-weight:700;
+}
 
-.advice-section h3 { 
-  color: var(--green); 
-  font-size: 28px; 
-  margin-bottom: 25px; 
-  text-align: center; 
-  font-weight: 700; 
-} 
+footer{
+  background:var(--coffee);
+  color:white;
+  text-align:center;
+  padding:18px;
+  margin-top:70px;
+}
 
-.advice-section p { margin-bottom: 20px; } 
+/* ---------------- MOBILE HEADER (MATCH CONTACT PAGE) ---------------- */
+@media(max-width:900px){
+  nav{
+    flex-direction:column;
+    text-align:center;
+    padding:10px 0;
+  }
 
-.town-water-note { 
-  background-color: var(--note-bg); 
-  background-image: var(--note-pattern); 
-  background-repeat: repeat; 
-  background-size: contain; 
-  border-left: 6px solid var(--green); 
-  padding: 40px 30px; 
-  border-radius: 12px; 
-  font-size: 18px; 
-  line-height: 1.7; 
-  margin-top: 50px; 
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08); 
-  color: white; 
-} 
+  .logo{
+    height:80px!important;
+    margin-bottom:10px;
+  }
 
-footer { 
-  background: var(--coffee); 
-  color: white; 
-  text-align: center; 
-  padding: 18px; 
-  margin-top: 70px; 
-} 
+  .nav-links{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+  }
 
-/* ---------------- MOBILE LIKE CONTACT PAGE ---------------- */ 
-@media(max-width:900px){ 
-  nav { 
-    flex-direction: column; 
-    text-align: center; 
-    padding: 10px 0; 
-  } 
+  nav a{
+    font-size:18px;
+  }
 
-  .logo { 
-    height:80px !important; 
-    margin-bottom:10px; 
-  } 
+  .hero{
+    padding:120px 20px;
+  }
 
-  .nav-links { 
-    flex-wrap: wrap; 
-    justify-content: center; 
-    gap: 15px; 
-  } 
+  .hero h1{font-size:30px;}
+  .hero p{font-size:15px;}
+}
+</style>
+</head>
 
-  nav a { 
-    font-size:18px; 
-  } 
+<body>
 
-  .hero { 
-    padding:120px 20px; 
-  } 
+<nav id="navbar">
+  <div class="nav-left">
+    <img src="Logo.png" alt="Yass Worm Farms Logo" class="logo">
+  </div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="application-rates.html">About Us</a>
+    <a href="shop.html">Shop</a>
+    <a href="laboratory-results.html" class="active">Laboratory Results</a>
+    <a href="diy.html">DIY</a>
+    <a href="contact.html">Contact Us</a>
+  </div>
+</nav>
 
-  .hero h1 { font-size:30px; } 
-  .hero p { font-size:15px; } 
-} 
-</style> 
-</head> 
+<section class="hero">
+  <h1>Laboratory Results</h1>
+  <p>Explore the microbial analysis of our premium Worm Juice and understand how it improves soil, crops, and pasture.</p>
+</section>
 
-<body> 
+<main>
 
-<nav id="navbar"> 
-  <div class="nav-left"> 
-    <img src="Logo.png" alt="Yass Worm Farms Logo" class="logo"> 
-  </div> 
-  <div class="nav-links"> 
-    <a href="index.html">Home</a> 
-    <a href="application-rates.html">About Us</a> 
-    <a href="shop.html">Shop</a> 
-    <a href="laboratory-results.html" class="active">Laboratory Results</a> 
-    <a href="diy.html">DIY</a> 
-    <a href="contact.html">Contact Us</a> 
-  </div> 
-</nav> 
+<img src="Lab Results 2025.png" alt="Lab Results 2025" class="main-image">
 
-<section class="hero"> 
-  <h1>Laboratory Results</h1> 
-  <p>Explore the microbial analysis of our premium Worm Juice and understand how it improves soil, crops, and pasture.</p> 
-</section> 
+<section class="microbial-section">
+  <h2>Our Microbial Analysis (breakdown)</h2>
+  <div class="cards">
+    <!-- All your cards unchanged -->
+    <div class="card"><h3>Active Fungi</h3><p><strong>25,000 cfu/g</strong> – Builds stable soil aggregates, improves structure & airflow, increases water retention.</p></div>
+    <div class="card"><h3>Cellulose Utilisers</h3><p><strong>7,000 cfu/g</strong> – Breaks down plant residues and woody fibres, speeds up composting and carbon cycling.</p></div>
+    <div class="card"><h3>Yeasts</h3><p><strong>10,000 cfu/g</strong> – Produces B vitamins, fuels microbial food web in the root zone.</p></div>
+    <div class="card"><h3>Lactic Acid Bacteria</h3><p><strong>1,000 cfu/g</strong> – Suppresses pathogens and improves soil immunity.</p></div>
+    <div class="card"><h3>Actinomycetes</h3><p><strong>2,000 cfu/g</strong> – Breaks down lignin to form humus, produces natural antibiotics.</p></div>
+    <div class="card"><h3>Photosynthetic Bacteria</h3><p><strong>14,000 cfu/g</strong> – Fixes nitrogen from air, increases chlorophyll, and promotes greener pastures.</p></div>
+  </div>
+</section>
 
-<main> 
-<img src="Lab Results 2025.png" alt="Lab Results 2025" class="main-image"> 
+<section class="application-section">
+  <h2>Application Rates for Our Products</h2>
+  <div class="cards">
+    <!-- unchanged content -->
+  </div>
+</section>
 
-<section class="microbial-section"> 
-  <h2>Our Microbial Analysis (breakdown)</h2> 
-  <div class="cards"> 
-    <!-- content unchanged --> 
-    <!-- (keeping all your cards exactly as you supplied) --> 
-  </div> 
-</section> 
+<section class="advice-section">
+  <!-- unchanged -->
+</section>
 
-<section class="application-section"> 
-  <h2>Application Rates for Our Products</h2> 
-  <div class="cards"> 
-    <!-- unchanged --> 
-  </div> 
-</section> 
+<section class="town-water-note">
+  <!-- unchanged -->
+</section>
 
-<section class="advice-section"> 
-  <!-- unchanged --> 
-</section> 
+</main>
 
-<section class="town-water-note"> 
-  <!-- unchanged --> 
-</section> 
-</main> 
+<section class="hero" style="background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.45)),url('worms and ladders.png') center/cover no-repeat;"></section>
 
-<section class="hero" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.45)), url('worms and ladders.png') center/cover no-repeat;"></section> 
+<footer>
+  <p>&copy; 2026 Yass Worm Farms. All Rights Reserved.</p>
+</footer>
 
-<footer> 
-  <p>&copy; 2026 Yass Worm Farms. All Rights Reserved.</p> 
-</footer> 
+<script>
+const navbar=document.getElementById('navbar');
+window.addEventListener('scroll',()=>{navbar.classList.toggle('shrink',window.scrollY>50);});
+</script>
 
-<script> 
-const navbar = document.getElementById('navbar'); 
-window.addEventListener('scroll', () => { 
-  navbar.classList.toggle('shrink', window.scrollY > 50); 
-}); 
-</script> 
-
-</body> 
+</body>
 </html>
