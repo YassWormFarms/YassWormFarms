@@ -80,6 +80,7 @@ nav a:hover {
   background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.45)),
               url("DIY cropped.jpg") center center/cover no-repeat;
   display:flex;
+  flex-direction: column;
   align-items:center;
   justify-content:center;
   text-align:center;
@@ -98,6 +99,27 @@ nav a:hover {
   max-width:720px;
   margin:auto;
   line-height:1.5;
+  margin-bottom:20px;
+}
+
+/* HERO BUTTON */
+.hero .hero-cta a {
+  display:inline-block;
+  background: linear-gradient(90deg, #00aaff, var(--blue));
+  color:white;
+  padding:16px 40px;
+  border-radius:10px;
+  font-size:18px;
+  font-weight:700;
+  text-decoration:none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition:0.3s;
+}
+
+.hero .hero-cta a:hover {
+  background: linear-gradient(90deg, #0088cc, var(--blue-hover));
+  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+  transform: translateY(-2px);
 }
 
 /* SECTION LAYOUT */
@@ -194,6 +216,7 @@ footer {
 /* MOBILE */
 @media(max-width:850px) {
   .hero h1 { font-size:34px; }
+  .hero .hero-cta a { padding:14px 32px; font-size:16px; }
   .info-section { padding:20px 15px; }
   .bottom-cta a { padding:16px 40px; font-size:18px; }
 }
@@ -221,6 +244,9 @@ footer {
   <div>
     <h1>DIY with Yass Worm Farms</h1>
     <p>Create a worm farm with James Brown</p>
+    <div class="hero-cta">
+      <a href="contact.html">Start Building your Worm Farm – Contact Us</a>
+    </div>
   </div>
 </section>
 
@@ -299,6 +325,7 @@ footer {
 
 </body>
 </html>
+
 
 
 
