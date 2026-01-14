@@ -23,11 +23,13 @@
   --light:#f5f5f5;
 }
 
+/* BODY */
 body{
   margin:0;
   font-family:'Poppins', Arial, sans-serif;
   color:var(--coffee);
   background:white;
+  overflow-x:hidden;
 }
 
 /* NAVIGATION */
@@ -73,6 +75,21 @@ nav a{
 
 nav a:hover{
   color:var(--green);
+}
+
+/* HAMBURGER */
+.hamburger{
+  display:none;
+  flex-direction:column;
+  gap:6px;
+  cursor:pointer;
+}
+
+.hamburger span{
+  width:28px;
+  height:3px;
+  background:#064d28;
+  border-radius:5px;
 }
 
 /* HERO SECTION */
@@ -405,31 +422,42 @@ nav a:hover{
 /* MOBILE RESPONSIVENESS */
 @media(max-width:900px){
 
-  /* --- HEADER MATCH SHOP TAB --- */
+  /* HAMBURGER MENU */
+  .hamburger{
+    display:flex;
+  }
+
+  .nav-links{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    background:white;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:25px;
+    transform:translateY(-100%);
+    transition:0.4s ease;
+    z-index:999;
+  }
+
+  .nav-links a{
+    font-size:26px;
+  }
+
+  .nav-links.active{
+    transform:translateY(0);
+  }
+
+  /* Other mobile adjustments */
   nav{
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
     padding:10px 5%;
   }
-  nav .nav-links{
-    display:flex;
-    flex-direction:row;
-    gap:20px;
-  }
-  nav .logo{
-    height:60px;
-  }
-
-  /* --- HERO IMAGE CROP BOTTOM 1CM --- */
-  .hero{
-    height:calc(70vh - 1cm);
-    overflow:hidden;
-  }
-
-  /* OTHER MOBILE STYLES */
   nav a{font-size:18px;}
-  .hero{justify-content:center;text-align:center;}
+  nav .logo{height:60px;}
+  .hero{height:calc(70vh - 1cm); justify-content:center; text-align:center;}
   .hero-text{margin-left:0;text-align:center;}
   .hero-text h1{font-size:40px;}
   .hero-text p{font-size:20px;}
@@ -476,10 +504,19 @@ footer{
 
 <body>
 
+<!-- NAVIGATION WITH HAMBURGER -->
 <nav id="navbar">
   <div class="nav-left">
     <img src="Logo.png" alt="Yass Worm Farms Logo" class="logo">
   </div>
+
+  <!-- Hamburger for mobile -->
+  <div class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
   <div class="nav-links">
     <a href="index.html">Home</a>
     <a href="application-rates.html">About Us</a>
@@ -490,6 +527,7 @@ footer{
   </div>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
   <div class="hero-overlay"></div>
   <div class="hero-text">
@@ -499,6 +537,7 @@ footer{
   </div>
 </section>
 
+<!-- BENEFITS -->
 <section class="benefits-section">
   <div class="benefits-container">
     <h2 class="benefits-title">Brilliant Benefits of Worm Juice</h2>
@@ -515,6 +554,7 @@ footer{
   </div>
 </section>
 
+<!-- SCROLLING BAND -->
 <section class="scrolling-band">
   <div class="scrolling-text">
     <span>
@@ -526,15 +566,17 @@ footer{
   </div>
 </section>
 
+<!-- LAB RESULTS -->
 <section class="lab-results-section">
   <h2>Our Epic Lab Results</h2>
   <div class="images-container">
     <img src="Logo.png" alt="Yass Worm Farms Logo" class="logo">
     <img src="Lab Results 2025.png" alt="Lab Results 2025" class="lab-image">
-    <img src="From our family farm to your soil - ChatGPT Image Jan 10, 2026, 12_22_19 PM.png" alt="From our family farm to your soil" class="soil-image">
+    <img src="From our family farm to your soil.png" alt="From our family farm to your soil" class="soil-image">
   </div>
 </section>
 
+<!-- DIY WORM FARM -->
 <section class="diy-worm-farm-section">
   <img src="DIY worm Farm image.jpg" alt="DIY Worm Farm System" class="diy-background">
   <div class="diy-text">
@@ -542,33 +584,5 @@ footer{
     <p>With the help of James Brown you could make an On-farm Worm Fertiliser Production System. Replacing the need for synthetic fertiliser and creating huge savings annually.</p>
     <div class="diy-details">
       <p><strong>Production:</strong> Approx 24,000 litres High Value Fertiliser annually.</p>
-      <p><strong>Set up costs:</strong> $10k - $13k + Consultancy fee</p>
-    </div>
-    <a href="contact.html" class="build-button">Build your Worm Farm</a>
-  </div>
-</section>
+      <p><strong>Set up costs:</strong> $10k - $13k + Con
 
-<section class="testimony-section">
-  <div class="testimony-box">
-    <img src="warren.jpg" alt="Warren loading worm juice fertiliser">
-    <div class="testimony-content">
-      <h3>Warren from Mandurama</h3>
-      <p>Warren from Mandurama loading our worm juice fertiliser at the Yass Ampol Service Centre. Warren plans to spray his Lucerne crop.</p>
-    </div>
-  </div>
-
-  <div class="testimony-box">
-    <img src="IBC worm Juice.jpg" alt="Anthony – Dairy Farmer">
-    <div class="testimony-content">
-      <h3>Anthony – Dairy Farmer (East Gippsland)</h3>
-      <p>Anthony, a dairy farmer friend from East Gippsland, replaced all synthetic fertilisers with worm juice. He now saves around <strong>$50,000</strong> annually and boasts the most outstanding pasture in the district.</p>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <p>© 2025 Yass Worm Farms. All rights reserved.</p>
-</footer>
-
-<script>
-const navbar = document.getElementById
