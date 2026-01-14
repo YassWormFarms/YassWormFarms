@@ -404,23 +404,23 @@ nav a:hover{
 
 /* MOBILE RESPONSIVENESS */
 @media(max-width:900px){
-  /* --- MOBILE HEADER CHANGE --- */
-  nav {
-    flex-direction: column;
+  /* --- MOBILE HEADER MATCH SHOP PAGE --- */
+  nav{
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    gap: 15px;
+    padding:10px 5%;
   }
-  nav .nav-links {
-    flex-direction: column;
-    gap: 15px;
-    text-align: center;
+  nav .nav-links{
+    display:flex;
+    flex-direction:row;
+    gap:20px;
   }
-  nav .logo {
-    height: 70px;
+  nav .logo{
+    height:60px;
   }
-  nav.shrink .logo {
-    height: 50px;
-  }
+
+  /* OTHER MOBILE STYLES SAME AS BEFORE */
   nav a { font-size: 18px; }
   .hero{justify-content:center;text-align:center;}
   .hero-text{margin-left:0;text-align:center;}
@@ -562,6 +562,3 @@ footer{
 <footer>
   <p>© 2025 Yass Worm Farms. All rights reserved.</p>
 </footer>
-
-<script>
-const navbar = document.getElementById
