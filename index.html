@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -405,9 +404,24 @@ nav a:hover{
 
 /* MOBILE RESPONSIVENESS */
 @media(max-width:900px){
-  nav .logo{height:70px;}
-  nav.shrink .logo{height:50px;}
-  nav a{font-size:18px;}
+  /* --- MOBILE HEADER CHANGE --- */
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  nav .nav-links {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  nav .logo {
+    height: 70px;
+  }
+  nav.shrink .logo {
+    height: 50px;
+  }
+  nav a { font-size: 18px; }
   .hero{justify-content:center;text-align:center;}
   .hero-text{margin-left:0;text-align:center;}
   .hero-text h1{font-size:40px;}
@@ -550,6 +564,4 @@ footer{
 </footer>
 
 <script>
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-  navbar.classList.toggle('shrink',
+const navbar = document.getElementById
