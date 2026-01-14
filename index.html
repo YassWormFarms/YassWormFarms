@@ -89,28 +89,21 @@ nav a:hover{
   width:100%;
   background:white;
   border-top:1px solid #ddd;
-  box-shadow:0 4px 15px rgba(0,0,0,0.08);
   text-align:center;
-  padding:10px 0 15px 0;
-  animation: fadeDown .35s ease-in-out;
   position:absolute;
   top:100%;
   left:0;
   z-index:999;
 }
 
-@keyframes fadeDown{
-  from{opacity:0; transform:translateY(-10px);}
-  to{opacity:1; transform:translateY(0);}
-}
-
 .mobile-menu a{
   display:block;
-  padding:12px 0;
-  font-size:18px;
+  padding:15px 0;
+  font-size:20px;
   font-weight:700;
   color:var(--coffee);
   text-decoration:none;
+  border-bottom:1px solid #eee;
 }
 
 .mobile-menu a:hover{
@@ -119,7 +112,404 @@ nav a:hover{
 
 .mobile-menu.show{
   display:block;
+  animation: slideDown 0.35s ease-in-out forwards;
 }
+
+@keyframes slideDown{
+  0%{opacity:0; transform:translateY(-15px);}
+  100%{opacity:1; transform:translateY(0);}
+}
+
+/* ================= HERO SECTION ================= */
+.hero{
+  position:relative;
+  height:70vh;
+  background:url('Home Page Main image Clear.jpg') center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+}
+
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to right, rgba(0,0,0,0.45) 30%, rgba(0,0,0,0) 100%);
+}
+
+.hero-text{
+  position:relative;
+  margin-left:8%;
+  margin-top:-40px;
+  color:white;
+  max-width:560px;
+  text-align:left;
+}
+
+.hero-text h1{
+  font-size:58px;
+  margin:0;
+  white-space:nowrap;
+}
+
+.hero-text p{
+  font-size:26px;
+  margin:10px 0 0 0;
+  font-weight:700;
+  line-height:1.3;
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:url('Home Page Main image Clear.jpg') center/cover no-repeat;
+  filter: brightness(1.2);
+  z-index:-2;
+}
+
+/* ================= BENEFITS SECTION ================= */
+.benefits-section{
+  padding: 70px 5%;
+  background: #e8f3e8;
+  position: relative;
+  overflow: hidden;
+}
+
+.benefits-section::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1300&q=60") center/60% no-repeat;
+  opacity:0.16;
+  filter: blur(1px);
+}
+
+.benefits-container{
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+  position: relative;
+}
+
+.benefits-title{
+  font-size: 38px;
+  color: var(--green);
+  margin-bottom: 35px;
+  font-weight: 700;
+}
+
+.benefits-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+  margin-top: 10px;
+}
+
+.benefit-item{
+  background: rgba(255,255,255,0.97);
+  border-radius: 12px;
+  padding: 22px 18px 22px 50px;
+  font-size: 20px;
+  color: var(--coffee);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+  font-weight: 600;
+  line-height: 1.45;
+  position: relative;
+}
+
+.benefit-item::before{
+  content: "✔";
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 26px;
+  color: #0b7a33;
+  font-weight: 900;
+}
+
+/* ================= SCROLLING TEXT ================= */
+.scrolling-band{
+  background-color: #064d28;
+  height: 2cm;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-top: 1px solid #08381b;
+  border-bottom: 1px solid #08381b;
+}
+
+.scrolling-text{
+  display: flex;
+  width: max-content;
+  animation: scrollText 30s linear infinite;
+}
+
+.scrolling-text span{
+  white-space: nowrap;
+  font-size: 32px;
+  font-weight: 600;
+  color: #e8f3e8;
+  margin-right: 50px;
+}
+
+@keyframes scrollText{
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ================= LAB RESULTS ================= */
+.lab-results-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 5%;
+}
+
+.lab-results-section h2{
+  font-size: 48px;
+  color: var(--lab-title);
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: 700;
+  font-family: 'Roboto Slab', serif;
+  letter-spacing: 2px;
+  border-bottom: 3px solid var(--green);
+  padding-bottom: 10px;
+}
+
+.lab-results-section .images-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 20px;
+  width: 100%;
+}
+
+.lab-results-section .images-container img{
+  height: auto;
+}
+
+.lab-results-section .images-container .logo,
+.lab-results-section .images-container .soil-image{
+  width: 12cm;
+}
+
+.lab-results-section .images-container .lab-image{
+  width: 20cm;
+  max-width: calc(100% - 24cm);
+  border: 4px solid var(--green);
+  border-radius: 12px;
+  padding: 5px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+/* ================= DIY WORM FARM ================= */
+.diy-worm-farm-section{
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 60px auto;
+  height: 650px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+  background:#eae2d3;
+}
+
+.diy-worm-farm-section::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(to right, rgba(0,0,0,0.75) 45%, rgba(0,0,0,0) 90%);
+  z-index:2;
+}
+
+.diy-worm-farm-section .diy-background{
+  width: 120%;
+  height: 120%;
+  object-fit: cover;
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  z-index: 1;
+}
+
+.diy-worm-farm-section .diy-text{
+  position: relative;
+  z-index: 3;
+  padding-left: 40px;
+  max-width: 45%;
+  color: #ffffff;
+  font-family: 'Poppins', Arial, sans-serif;
+  margin-top: -25px;
+}
+
+.diy-worm-farm-section .diy-text h2{
+  font-size: 48px;
+  margin-bottom: 22px;
+  font-weight: 800;
+  font-family: 'Roboto Slab', serif;
+  color: #f4a261;
+}
+
+.diy-worm-farm-section .diy-text p{
+  font-size: 22px;
+  line-height: 1.6;
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+
+.diy-worm-farm-section .diy-text .diy-details p{
+  font-size: 20px;
+  font-weight: 800;
+  margin: 8px 0;
+}
+
+/* CTA BUTTON */
+.build-button{
+  display: inline-block;
+  margin-top: 25px;
+  padding: 14px 26px;
+  background: #007BFF;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  transition: 0.3s ease-in-out;
+}
+
+.build-button:hover{
+  background:#005ad6;
+  transform: scale(1.05);
+}
+
+/* ================= TESTIMONY ================= */
+.testimony-section{
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 60px 5%;
+  background: #f5e9e0;
+  border-radius: 12px;
+  padding: 40px 5%;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimony-section::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.12;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.testimony-box{
+  background: rgba(255,255,255,0.95);
+  border-radius: 12px;
+  padding: 25px;
+  max-width: 600px;
+  flex: 1 1 450px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  position: relative;
+  z-index: 1;
+}
+
+.testimony-box img{
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.testimony-content{
+  flex: 1;
+}
+
+.testimony-content h3{
+  font-size: 22px;
+  color: var(--green);
+  margin-bottom: 12px;
+}
+
+.testimony-content p{
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* ================= FOOTER ================= */
+footer{
+  background:var(--coffee);
+  color:white;
+  text-align:center;
+  padding:15px 0;
+}
+
+/* ================= MOBILE RESPONSIVENESS ================= */
+@media(max-width:900px){
+  .hamburger { display: block; }
+  .nav-links { display: none; }
+  nav { padding: 10px 5%; flex-wrap: nowrap; }
+  .logo { height: 60px; }
+
+  /* HERO MOBILE ADJUSTMENTS */
+  .hero{justify-content:center;text-align:center;height:auto;}
+  .hero-text{margin-left:0;text-align:center;}
+  .hero-text h1{font-size:40px;}
+  .hero-text p{font-size:20px;}
+
+  .benefits-title{font-size:28px;}
+  .benefit-item{font-size:16px;padding:18px 15px 18px 40px;}
+  .benefit-item::before{font-size:22px;}
+  .scrolling-text span{font-size:28px;}
+  .scrolling-text{animation-duration:35s;}
+  .lab-results-section .images-container{flex-direction:column;align-items:center;}
+  .lab-results-section .images-container img{width:90%; max-width:300px;}
+  .diy-worm-farm-section{height:auto; flex-direction:column;}
+  .diy-worm-farm-section .diy-text{max-width:90%; padding-left:20px; padding-top:20px;}
+  .diy-worm-farm-section .diy-text h2{font-size:28px;}
+  .diy-worm-farm-section .diy-text p{font-size:16px;}
+  .diy-worm-farm-section .diy-text .diy-details p{font-size:14px;}
+  .testimony-box{flex-direction:column;align-items:center;}
+  .testimony-box img{width:200px;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<nav id="navbar">
+  <img src="Logo.png" alt="Yass Worm Farms Logo" class="logo">
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="application-rates.html">About Us</a>
+    <a href="shop.html">Shop</a>
+    <a href="laboratory-results.html">Laboratory Results</a>
+    <a href="diy.html">DIY</a>
+    <a href="contact.html">Contact Us</a>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="application-rates.html">About Us</a>
+  <a href="shop.html">Shop</a>
+  <a href="laboratory-results.html">Laboratory Results</a>
+  <a href="diy.html">DIY</a>
+  <a href="contact.html">Contact Us</a>
+</div>
 
 /* ================= HERO SECTION ================= */
 .hero{
