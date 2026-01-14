@@ -44,9 +44,21 @@
 
 /* BODY */ 
 
-body { 
+html, body { 
 
   margin:0; 
+
+  padding:0; 
+
+  max-width:100%; 
+
+  overflow-x:hidden; /* 🔥 Fix phone right overflow */ 
+
+} 
+
+  
+
+body { 
 
   font-family:'Poppins', Arial, sans-serif; 
 
@@ -148,13 +160,13 @@ nav a:hover {
 
   
 
-/* HERO BANNER */ 
+/* HERO */ 
 
 .hero { 
 
-  width: 100%; 
+  width:100%; 
 
-  height: 400px; 
+  height:400px; 
 
   background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), 
 
@@ -174,6 +186,8 @@ nav a:hover {
 
   padding:20px; 
 
+  box-sizing:border-box; 
+
 } 
 
   
@@ -183,8 +197,6 @@ nav a:hover {
   font-size:46px; 
 
   margin-bottom:10px; 
-
-  letter-spacing:0.5px; 
 
 } 
 
@@ -244,7 +256,7 @@ nav a:hover {
 
   
 
-/* SECTION LAYOUT */ 
+/* SECTION */ 
 
 .section { 
 
@@ -366,7 +378,7 @@ nav a:hover {
 
   
 
-/* CTA BUTTON AT BOTTOM */ 
+/* CTA BUTTON */ 
 
 .bottom-cta { 
 
@@ -434,19 +446,39 @@ footer {
 
   
 
-/* ---------------- MOBILE RESPONSIVE ONLY ---------------- */ 
+/* ================= MOBILE ================= */ 
 
-@media(max-width:850px){ 
+@media(max-width:850px) { 
+
+  
+
+  .hero { 
+
+    height:auto; 
+
+    padding:60px 20px; 
+
+    width:100%;            /* 🔥 Ensures hero cannot exceed phone width */ 
+
+    background-size:cover; 
+
+    background-position:center; 
+
+  } 
+
+  
+
+  .hero h1 { font-size:34px; } 
+
+  .hero p { font-size:16px; } 
 
   
 
   nav { 
 
+    flex-wrap:wrap; 
+
     padding:10px 5%; 
-
-    flex-direction:column; 
-
-    gap:10px; 
 
   } 
 
@@ -454,7 +486,11 @@ footer {
 
   .nav-links { 
 
+    width:100%; 
+
     flex-wrap:wrap; 
+
+    justify-content:center; 
 
     gap:12px; 
 
@@ -470,55 +506,7 @@ footer {
 
   
 
-  .hero { 
-
-    height:auto; 
-
-    padding:50px 20px; 
-
-  } 
-
-  
-
-  .hero h1 { 
-
-    font-size:30px; 
-
-  } 
-
-  
-
-  .hero p { 
-
-    font-size:16px; 
-
-    max-width:100%; 
-
-  } 
-
-  
-
-  .section { 
-
-    padding:0 15px; 
-
-  } 
-
-  
-
-  .section h2 { 
-
-    font-size:26px; 
-
-  } 
-
-  
-
-  .section p { 
-
-    font-size:16px; 
-
-  } 
+  .section { padding:0 15px; } 
 
   
 
@@ -526,47 +514,31 @@ footer {
 
     width:100%; 
 
+    max-width:100%; 
+
     height:auto; 
 
     aspect-ratio:16/9; 
 
   } 
 
-  
-
-  .info-section { 
-
-    padding:20px 15px; 
-
-  } 
+} 
 
   
 
-  .info-section h3 { 
+/* EXTRA SMALL PHONES */ 
 
-    font-size:22px; 
+@media(max-width:600px){ 
 
-  } 
+  .hero h1{font-size:28px;} 
 
-  
+  .hero p{font-size:15px;} 
 
-  .info-section p, 
+  nav .logo{height:70px;} 
 
-  .info-section ul { 
+  .info-section h3 {font-size:22px;} 
 
-    font-size:16px; 
-
-  } 
-
-  
-
-  .bottom-cta a { 
-
-    padding:16px 30px; 
-
-    font-size:18px; 
-
-  } 
+  .section h2{font-size:26px;} 
 
 } 
 
@@ -635,8 +607,6 @@ footer {
   <h2>Getting Started with Your Worm Farm</h2> 
 
   <p>Learn the basics of setting up a worm farm and making the most out of organic waste. Watch the video below to get started.</p> 
-
-  
 
   <p><strong>Tip: Worm farms are great for hobby farmers, large-scale agriculture and research projects.</strong></p> 
 
