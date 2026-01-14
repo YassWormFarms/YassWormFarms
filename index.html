@@ -79,43 +79,36 @@ nav a:hover{
   user-select:none;
 }
 
+/* Full-screen mobile menu overlay */
 .mobile-menu {
   display:none;
-  flex-direction: column;
-  align-items: center;
-  position:absolute;
-  top:100%;
+  position: fixed;
+  top:0;
   left:0;
   width:100%;
+  height:100%;
   background:white;
-  border-top:2px solid #ddd;
   z-index:999;
-}
-
-.mobile-menu a {
-  display:block;
-  width:100%;
-  text-align:center;
-  padding:15px 0;
-  font-size:18px;
-  font-weight:700;
-  text-decoration:none;
-  color:var(--coffee);
-  border-bottom:1px solid #eee;
-}
-
-.mobile-menu a:hover {
-  color:var(--green);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
 }
 
 .mobile-menu.show {
   display:flex;
-  animation: slideDown 0.3s ease forwards;
 }
 
-@keyframes slideDown {
-  0% { transform: translateY(-20px); opacity:0; }
-  100% { transform: translateY(0); opacity:1; }
+.mobile-menu a {
+  font-size:28px;
+  font-weight:700;
+  text-decoration:none;
+  color:var(--coffee);
+  margin:15px 0;
+}
+
+.mobile-menu a:hover {
+  color:var(--green);
 }
 
 /* ----------------- HERO ----------------- */
@@ -509,7 +502,7 @@ footer{
   </div>
 </nav>
 
-<!-- Mobile dropdown menu -->
+<!-- Full-screen mobile menu -->
 <div class="mobile-menu" id="mobileMenu">
   <a href="index.html" onclick="closeMobileMenu()">Home</a>
   <a href="application-rates.html" onclick="closeMobileMenu()">About Us</a>
@@ -520,7 +513,6 @@ footer{
 </div>
 
 <!-- ================== PAGE SECTIONS ================== -->
-
 <section class="hero">
   <div class="hero-overlay"></div>
   <div class="hero-text">
@@ -608,12 +600,10 @@ window.addEventListener('scroll', () => {
   navbar.classList.toggle('shrink', window.scrollY > 50);
 });
 
-// Toggle mobile menu
+// Mobile menu toggle
 function toggleMobileMenu() {
   document.getElementById("mobileMenu").classList.toggle("show");
 }
-
-// Close mobile menu on link click
 function closeMobileMenu() {
   document.getElementById("mobileMenu").classList.remove("show");
 }
@@ -621,4 +611,3 @@ function closeMobileMenu() {
 
 </body>
 </html>
-
