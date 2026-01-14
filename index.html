@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,9 +13,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link
-  href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Slab:wght@700&display=swap"
-  rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
 
 <style>
 :root{
@@ -64,6 +61,7 @@ nav.shrink .logo{
 .nav-links{
   display:flex;
   gap:30px;
+  flex-wrap: wrap;
 }
 
 nav a{
@@ -406,87 +404,43 @@ nav a:hover{
 
 /* MOBILE RESPONSIVENESS */
 @media(max-width:900px){
-  nav{
-    padding:10px 5%;
-  }
-  .nav-links{
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content:center;
-  }
-  nav a{
-    font-size:16px;
-  }
-  .hero-text h1{font-size:36px;}
-  .hero-text p{font-size:18px;}
-  .hero{
-    justify-content:center;
-    text-align:center;
-  }
-  .hero-text{
-    margin-left:0;
-    text-align:center;
-    max-width:90%;
-  }
-  .benefits-section {
-    padding: 50px 5%;
-  }
-  .benefits-title{
-    font-size:28px;
-  }
-  .benefit-item{
-    font-size:16px;
-    padding: 18px 15px 18px 40px;
-  }
-  .benefit-item::before{
-    font-size:22px;
-  }
-  .scrolling-text span{
-    font-size:20px;
-  }
+  nav .logo{height:70px;}
+  nav.shrink .logo{height:50px;}
+  nav a{font-size:18px;}
+  .hero{justify-content:center;text-align:center;}
+  .hero-text{margin-left:0;text-align:center;}
+  .hero-text h1{font-size:40px;}
+  .hero-text p{font-size:20px;}
+  .benefits-title{font-size:28px;}
+  .benefit-item{font-size:16px;padding:18px 15px 18px 40px;}
+  .benefit-item::before{font-size:22px;}
+  .scrolling-text span{font-size:28px;}
+  .scrolling-text{animation-duration:35s;}
   .lab-results-section .images-container{
     flex-direction:column;
     align-items:center;
   }
-  .lab-results-section .images-container .logo,
-  .lab-results-section .images-container .soil-image,
-  .lab-results-section .images-container .lab-image{
+  .lab-results-section .images-container img{
     width:90%;
     max-width:300px;
   }
   .diy-worm-farm-section{
-    flex-direction:column;
     height:auto;
+    flex-direction:column;
   }
   .diy-worm-farm-section .diy-text{
     max-width:90%;
     padding-left:20px;
     padding-top:20px;
-    margin-top:0;
   }
   .diy-worm-farm-section .diy-text h2{font-size:28px;}
   .diy-worm-farm-section .diy-text p{font-size:16px;}
   .diy-worm-farm-section .diy-text .diy-details p{font-size:14px;}
-  .testimony-box{
-    flex-direction:column;
-    align-items:center;
-    max-width:90%;
-  }
-  .testimony-box img{
-    width:200px;
-  }
+  .testimony-box{flex-direction:column;align-items:center;}
+  .testimony-box img{width:200px;}
 }
 
-section{
-  padding:60px 5%;
-}
-
-.section-title{
-  text-align:center;
-  color:var(--green);
-  font-size:36px;
-  margin-bottom:20px;
-}
+section{padding:60px 5%;}
 
 footer{
   background:var(--coffee);
@@ -494,8 +448,8 @@ footer{
   text-align:center;
   padding:15px 0;
 }
-</style>
 
+</style>
 </head>
 
 <body>
@@ -580,9 +534,24 @@ footer{
       <p>Warren from Mandurama loading our worm juice fertiliser at the Yass Ampol Service Centre. Warren plans to spray his Lucerne crop.</p>
     </div>
   </div>
+
   <div class="testimony-box">
     <img src="IBC worm Juice.jpg" alt="Anthony – Dairy Farmer">
     <div class="testimony-content">
-      <h3>Anthony – Dairy Farmer (East Gipps
+      <h3>Anthony – Dairy Farmer (East Gippsland)</h3>
+      <p>Anthony, a dairy farmer friend from East Gippsland, replaced all synthetic fertilisers with worm juice. He now saves around <strong>$50,000</strong> annually and boasts the most outstanding pasture in the district.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Yass Worm Farms. All rights reserved.</p>
+</footer>
+
+<script>
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('shrink',
+
 
 
