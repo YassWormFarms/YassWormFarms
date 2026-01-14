@@ -18,6 +18,8 @@
   --coffee:#4b3621;
   --lab-title:#b87333;
   --light:#f5f5f5;
+  --blue:#007bff;
+  --blue-hover:#0056b3;
 }
 
 /* ----------------- BODY ----------------- */
@@ -26,6 +28,7 @@ body{
   font-family:'Poppins', Arial, sans-serif;
   color:var(--coffee);
   background:white;
+  text-align:center;
 }
 
 /* ----------------- NAVIGATION ----------------- */
@@ -72,7 +75,7 @@ nav a:hover{
   color:var(--green);
 }
 
-/* ================= MOBILE OVERLAY MENU ================= */
+/* ================= MOBILE OVERLAY MENU (DIY style) ================= */
 
 /* Hamburger icon */
 .hamburger {
@@ -121,9 +124,7 @@ nav a:hover{
   color:var(--green);
 }
 
-/* ---------------- OTHER STYLES ---------------- */
-/* (rest of your original CSS continues unchanged...) */
-
+/* ----------------- REST OF HOME PAGE STYLES ----------------- */
 /* HERO SECTION */
 .hero{
   position:relative;
@@ -160,15 +161,6 @@ nav a:hover{
   margin:10px 0 0 0;
   font-weight:700;
   line-height:1.3;
-}
-
-.hero::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:url('Home Page Main image Clear.jpg') center/cover no-repeat;
-  filter: brightness(1.2);
-  z-index:-2;
 }
 
 /* BENEFITS SECTION */
@@ -281,33 +273,6 @@ nav a:hover{
   letter-spacing: 2px;
   border-bottom: 3px solid var(--green);
   padding-bottom: 10px;
-}
-
-.lab-results-section .images-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: nowrap;
-  gap: 20px;
-  width: 100%;
-}
-
-.lab-results-section .images-container img {
-  height: auto;
-}
-
-.lab-results-section .images-container .logo,
-.lab-results-section .images-container .soil-image {
-  width: 12cm;
-}
-
-.lab-results-section .images-container .lab-image {
-  width: 20cm;
-  max-width: calc(100% - 24cm);
-  border: 4px solid var(--green);
-  border-radius: 12px;
-  padding: 5px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
 }
 
 /* DIY WORM FARM */
@@ -466,31 +431,18 @@ footer{
   nav { padding:10px 5%; }
   .logo { height:60px; }
 
+  /* Hero adjustments */
   .hero{justify-content:center;text-align:center;height:calc(70vh - 1cm);}
   .hero-text{margin-left:0;text-align:center;}
   .hero-text h1{font-size:40px;}
   .hero-text p{font-size:20px;}
-  .benefits-title{font-size:28px;}
-  .benefit-item{font-size:16px;padding:18px 15px 18px 40px;}
-  .benefit-item::before{font-size:22px;}
-  .scrolling-text span{font-size:28px;}
-  .scrolling-text{animation-duration:35s;}
-  .lab-results-section .images-container{flex-direction:column;align-items:center;}
-  .lab-results-section .images-container img{width:90%;max-width:300px;}
-  .diy-worm-farm-section{height:auto;flex-direction:column;}
-  .diy-worm-farm-section .diy-text{max-width:90%;padding-left:20px;padding-top:20px;}
-  .diy-worm-farm-section .diy-text h2{font-size:28px;}
-  .diy-worm-farm-section .diy-text p{font-size:16px;}
-  .diy-worm-farm-section .diy-text .diy-details p{font-size:14px;}
-  .testimony-box{flex-direction:column;align-items:center;}
-  .testimony-box img{width:200px;}
 }
 </style>
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
+<!-- ================= HEADER (DIY MOBILE STYLE) ================= -->
 <nav id="navbar">
   <img src="Logo.png" alt="Yass Worm Farms Logo" class="logo">
 
@@ -519,8 +471,7 @@ footer{
 </div>
 
 <!-- ================= PAGE CONTENT ================= -->
-<!-- Hero, benefits, scrolling-band, lab-results, diy, testimony, footer -->
-<!-- Paste your homepage content sections exactly as in your original code -->
+<!-- Paste your homepage content sections exactly as in your original code (hero, benefits, scrolling-band, lab-results, diy, testimony, footer) -->
 
 <script>
 // Mobile overlay toggle
@@ -535,8 +486,13 @@ hamburgerBtn.addEventListener("click", () => {
 function closeMenu() {
   mobileMenu.classList.remove("open");
 }
+
+// Shrink navbar on scroll (same as DIY page)
+const navbar = document.getElementById('navbar'); 
+window.addEventListener('scroll', () => { 
+  navbar.classList.toggle('shrink', window.scrollY > 50); 
+});
 </script>
 
 </body>
 </html>
-
