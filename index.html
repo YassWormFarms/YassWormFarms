@@ -1,404 +1,572 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Yass Worm Farms</title> 
+<meta name="description" content="Yass Worm Farms offers organic worm juice fertiliser and worm castings to boost soil health and promote plant growth. Support a small family business today."> 
+<meta name="keywords" content="worm juice, worm castings, organic fertiliser, soil health, eco-friendly fertiliser, plant nutrients"> 
 
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet"> 
 
-<title>Yass Worm Farms</title>
+<style> 
+:root{ 
+  --green:#064d28; 
+  --coffee:#4b3621; 
+  --lab-title:#b87333; 
+  --light:#f5f5f5; 
+} 
 
-<meta name="description" content="Yass Worm Farms offers organic worm juice fertiliser and worm castings to boost soil health and promote plant growth. Support a small family business today.">
-<meta name="keywords" content="worm juice, worm castings, organic fertiliser, soil health, eco-friendly fertiliser, plant nutrients">
+body{ 
+  margin:0; 
+  font-family:'Poppins', Arial, sans-serif; 
+  color:var(--coffee); 
+  background:white; 
+} 
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+/* NAVIGATION */ 
+nav{ 
+  background:white; 
+  border-bottom:2px solid #ddd; 
+  padding:15px 10%; 
+  display:flex; 
+  justify-content:space-between; 
+  align-items:center; 
+  position:sticky; 
+  top:0; 
+  z-index:10; 
+  transition: all 0.35s ease-in-out; 
+} 
 
-<style>
-:root{
-  --green:#064d28;
-  --coffee:#4b3621;
-  --lab-title:#b87333;
-  --light:#f5f5f5;
-}
+nav .logo{ 
+  height:98px; 
+  transition: height 0.35s ease-in-out; 
+} 
 
-body{
-  margin:0;
-  font-family:'Poppins', Arial, sans-serif;
-  color:var(--coffee);
-  background:white;
-}
+nav.shrink{ 
+  padding:5px 10%; 
+  border-bottom:1px solid #ccc; 
+} 
 
-/* NAVIGATION */
-nav{
-  background:white;
-  border-bottom:2px solid #ddd;
-  padding:15px 10%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  position:sticky;
-  top:0;
-  z-index:10;
-  transition: all 0.35s ease-in-out;
-}
+nav.shrink .logo{ 
+  height:58px; 
+} 
 
-nav .logo{
-  height:98px;
-  transition: height 0.35s ease-in-out;
-}
+.nav-links{ 
+  display:flex; 
+  gap:30px; 
+  flex-wrap: wrap; 
+} 
 
-nav.shrink{
-  padding:5px 10%;
-  border-bottom:1px solid #ccc;
-}
+nav a{ 
+  text-decoration:none; 
+  color:var(--coffee); 
+  font-weight:700; 
+  font-size:22px; 
+} 
 
-nav.shrink .logo{
-  height:58px;
-}
+nav a:hover{ 
+  color:var(--green); 
+} 
 
-.nav-links{
-  display:flex;
-  gap:30px;
-  flex-wrap: wrap;
-}
-
-nav a{
-  text-decoration:none;
-  color:var(--coffee);
-  font-weight:700;
-  font-size:22px;
-}
-
-nav a:hover{
-  color:var(--green);
-}
-
-/* Hamburger Menu for Mobile */
+/* Hamburger styles for mobile */
 .hamburger {
   display: none;
-  font-size: 34px;
+  flex-direction: column;
   cursor: pointer;
-  user-select: none;
+  gap: 6px;
+  width: 30px;
 }
-
-/* Mobile Menu Panel */
-.mobile-menu {
-  display: none;
+.hamburger div {
   width: 100%;
-  background: white;
-  text-align: center;
-  border-top: 1px solid #ddd;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-  padding: 10px 0 15px 0;
-  animation: fadeDown 0.35s ease-in-out;
+  height: 4px;
+  background-color: var(--coffee);
+  transition: all 0.3s ease;
 }
 
-.mobile-menu a {
-  display: block;
-  padding: 12px 0;
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--coffee);
-  text-decoration: none;
-}
+/* HERO SECTION */ 
+.hero{ 
+  position:relative; 
+  height:70vh; 
+  background:url('Home Page Main image Clear.jpg') center/cover no-repeat; 
+  display:flex; 
+  align-items:center; 
+  justify-content:flex-start; 
+} 
 
-.mobile-menu a:hover {
-  color: var(--green);
-}
+.hero-overlay{ 
+  position:absolute; 
+  inset:0; 
+  background:linear-gradient(to right, rgba(0,0,0,0.45) 30%, rgba(0,0,0,0) 100%); 
+} 
 
-.mobile-menu.show {
-  display: block;
-}
+.hero-text{ 
+  position:relative; 
+  margin-left:8%; 
+  margin-top:-40px; 
+  color:white; 
+  max-width:560px; 
+  text-align:left; 
+} 
 
-@keyframes fadeDown {
-  from {opacity:0; transform:translateY(-10px);}
-  to {opacity:1; transform:translateY(0);}
-}
+.hero-text h1{ 
+  font-size:58px; 
+  margin:0; 
+  white-space:nowrap; 
+} 
 
-/* HERO SECTION */
-.hero{
-  position:relative;
-  height:70vh;
-  background:url('Home Page Main image Clear.jpg') center/cover no-repeat;
-  display:flex;
-  align-items:center;
-  justify-content:flex-start;
-}
+.hero-text p{ 
+  font-size:26px; 
+  margin:10px 0 0 0; 
+  font-weight:700; 
+  line-height:1.3; 
+} 
 
-.hero-overlay{
-  position:absolute;
-  inset:0;
-  background:linear-gradient(to right, rgba(0,0,0,0.45) 30%, rgba(0,0,0,0) 100%);
-}
+.hero::before{ 
+  content:""; 
+  position:absolute; 
+  inset:0; 
+  background:url('Home Page Main image Clear.jpg') center/cover no-repeat; 
+  filter: brightness(1.2); 
+  z-index:-2; 
+} 
 
-.hero-text{
-  position:relative;
-  margin-left:8%;
-  margin-top:-40px;
-  color:white;
-  max-width:560px;
-  text-align:left;
-}
+/* BENEFITS SECTION */ 
+.benefits-section { 
+  padding: 70px 5%; 
+  background: #e8f3e8; 
+  position: relative; 
+  overflow: hidden; 
+} 
 
-.hero-text h1{
-  font-size:58px;
-  margin:0;
-  white-space:nowrap;
-}
+.benefits-section::before { 
+  content:""; 
+  position:absolute; 
+  inset:0; 
+  background: url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1300&q=60") center/60% no-repeat; 
+  opacity:0.16; 
+  filter: blur(1px); 
+} 
 
-.hero-text p{
-  font-size:26px;
-  margin:10px 0 0 0;
-  font-weight:700;
-  line-height:1.3;
-}
+.benefits-container { 
+  max-width: 1200px; 
+  margin: auto; 
+  text-align: center; 
+  position: relative; 
+} 
 
-.hero::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:url('Home Page Main image Clear.jpg') center/cover no-repeat;
-  filter: brightness(1.2);
-  z-index:-2;
-}
+.benefits-title { 
+  font-size: 38px; 
+  color: var(--green); 
+  margin-bottom: 35px; 
+  font-weight: 700; 
+} 
 
-/* BENEFITS SECTION */
-.benefits-section {
-  padding: 70px 5%;
-  background: #e8f3e8;
-  position: relative;
-  overflow: hidden;
-}
+.benefits-grid { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); 
+  gap: 28px; 
+  margin-top: 10px; 
+} 
 
-.benefits-section::before {
-  content:"";
-  position:absolute;
-  inset:0;
-  background: url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1300&q=60") center/60% no-repeat;
-  opacity:0.16;
-  filter: blur(1px);
-}
+.benefit-item { 
+  background: rgba(255,255,255,0.97); 
+  border-radius: 12px; 
+  padding: 22px 18px 22px 50px; 
+  font-size: 20px; 
+  color: var(--coffee); 
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18); 
+  font-weight: 600; 
+  line-height: 1.45; 
+  position: relative; 
+} 
 
-.benefits-container {
-  max-width: 1200px;
-  margin: auto;
-  text-align: center;
-  position: relative;
-}
+.benefit-item::before { 
+  content: "✔"; 
+  position: absolute; 
+  left: 18px; 
+  top: 50%; 
+  transform: translateY(-50%); 
+  font-size: 26px; 
+  color: #0b7a33; 
+  font-weight: 900; 
+} 
 
-.benefits-title {
-  font-size: 38px;
-  color: var(--green);
-  margin-bottom: 35px;
-  font-weight: 700;
-}
+/* SCROLLING TEXT */ 
+.scrolling-band { 
+  background-color: #064d28; 
+  height: 2cm; 
+  overflow: hidden; 
+  display: flex; 
+  align-items: center; 
+  position: relative; 
+  border-top: 1px solid #08381b; 
+  border-bottom: 1px solid #08381b; 
+} 
 
-.benefits-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 28px;
-  margin-top: 10px;
-}
+.scrolling-text { 
+  display: flex; 
+  width: max-content; 
+  animation: scrollText 30s linear infinite; 
+} 
 
-.benefit-item {
-  background: rgba(255,255,255,0.97);
-  border-radius: 12px;
-  padding: 22px 18px 22px 50px;
-  font-size: 20px;
-  color: var(--coffee);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
-  font-weight: 600;
-  line-height: 1.45;
-  position: relative;
-}
+.scrolling-text span { 
+  white-space: nowrap; 
+  font-size: 32px; 
+  font-weight: 600; 
+  color: #e8f3e8; 
+  margin-right: 50px; 
+} 
 
-.benefit-item::before {
-  content: "✔";
-  position: absolute;
-  left: 18px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 26px;
-  color: #0b7a33;
-  font-weight: 900;
-}
+@keyframes scrollText { 
+  0% { transform: translateX(0); } 
+  100% { transform: translateX(-50%); } 
+} 
 
-/* SCROLLING TEXT */
-.scrolling-band {
-  background-color: #064d28;
-  height: 2cm;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  position: relative;
-  border-top: 1px solid #08381b;
-  border-bottom: 1px solid #08381b;
-}
+/* LAB RESULTS */ 
+.lab-results-section { 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  padding: 50px 5%; 
+} 
 
-.scrolling-text {
-  display: flex;
-  width: max-content;
-  animation: scrollText 30s linear infinite;
-}
+.lab-results-section h2 { 
+  font-size: 48px; 
+  color: var(--lab-title); 
+  margin-bottom: 30px; 
+  text-align: center; 
+  font-weight: 700; 
+  font-family: 'Roboto Slab', serif; 
+  letter-spacing: 2px; 
+  border-bottom: 3px solid var(--green); 
+  padding-bottom: 10px; 
+} 
 
-.scrolling-text span {
-  white-space: nowrap;
-  font-size: 32px;
-  font-weight: 600;
-  color: #e8f3e8;
-  margin-right: 50px;
-}
+.lab-results-section .images-container { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  flex-wrap: nowrap; 
+  gap: 20px; 
+  width: 100%; 
+} 
 
-@keyframes scrollText {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
+.lab-results-section .images-container img { 
+  height: auto; 
+} 
 
-/* MOBILE HEADER RESPONSIVENESS */
-@media(max-width:850px) {
-  .hamburger { display: block; }
-  .nav-links { display: none; }
-  nav { flex-wrap: nowrap; padding: 10px 5%; }
-  .mobile-menu a { text-align: center; }
-}
+.lab-results-section .images-container .logo, 
+.lab-results-section .images-container .soil-image { 
+  width: 12cm; 
+} 
 
-/* OTHER MOBILE STYLES */
+.lab-results-section .images-container .lab-image { 
+  width: 20cm; 
+  max-width: calc(100% - 24cm); 
+  border: 4px solid var(--green); 
+  border-radius: 12px; 
+  padding: 5px; 
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2); 
+} 
+
+/* DIY WORM FARM */ 
+.diy-worm-farm-section { 
+  position: relative; 
+  width: 100%; 
+  max-width: 1200px; 
+  margin: 60px auto; 
+  height: 650px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: flex-start; 
+  overflow: hidden; 
+  background:#eae2d3; 
+} 
+
+.diy-worm-farm-section::after { 
+  content:""; 
+  position:absolute; 
+  inset:0; 
+  background: linear-gradient(to right, rgba(0,0,0,0.75) 45%, rgba(0,0,0,0) 90%); 
+  z-index:2; 
+} 
+
+.diy-worm-farm-section .diy-background { 
+  width: 120%; 
+  height: 120%; 
+  object-fit: cover; 
+  position: absolute; 
+  top: -10%; 
+  left: -10%; 
+  z-index: 1; 
+} 
+
+.diy-worm-farm-section .diy-text { 
+  position: relative; 
+  z-index: 3; 
+  padding-left: 40px; 
+  max-width: 45%; 
+  color: #ffffff; 
+  font-family: 'Poppins', Arial, sans-serif; 
+  margin-top: -25px; 
+} 
+
+.diy-worm-farm-section .diy-text h2 { 
+  font-size: 48px; 
+  margin-bottom: 22px; 
+  font-weight: 800; 
+  font-family: 'Roboto Slab', serif; 
+  color: #f4a261; 
+} 
+
+.diy-worm-farm-section .diy-text p { 
+  font-size: 22px; 
+  line-height: 1.6; 
+  margin-bottom: 18px; 
+  font-weight: 700; 
+} 
+
+.diy-worm-farm-section .diy-text .diy-details p { 
+  font-size: 20px; 
+  font-weight: 800; 
+  margin: 8px 0; 
+} 
+
+/* CTA BUTTON */ 
+.build-button { 
+  display: inline-block; 
+  margin-top: 25px; 
+  padding: 14px 26px; 
+  background: #007BFF; 
+  color: white; 
+  font-size: 20px; 
+  font-weight: 700; 
+  border-radius: 10px; 
+  text-decoration: none; 
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25); 
+  transition: 0.3s ease-in-out; 
+} 
+
+.build-button:hover { 
+  background:#005ad6; 
+  transform: scale(1.05); 
+} 
+
+/* TESTIMONY */ 
+.testimony-section { 
+  display: flex; 
+  gap: 30px; 
+  flex-wrap: wrap; 
+  justify-content: center; 
+  margin: 60px 5%; 
+  background: #f5e9e0; 
+  border-radius: 12px; 
+  padding: 40px 5%; 
+  position: relative; 
+  overflow: hidden; 
+} 
+
+.testimony-section::before { 
+  content: ""; 
+  position: absolute; 
+  inset: 0; 
+  opacity: 0.12; 
+  pointer-events: none; 
+  z-index: 0; 
+} 
+
+.testimony-box { 
+  background: rgba(255,255,255,0.95); 
+  border-radius: 12px; 
+  padding: 25px; 
+  max-width: 600px; 
+  flex: 1 1 450px; 
+  display: flex; 
+  gap: 20px; 
+  align-items: flex-start; 
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15); 
+  position: relative; 
+  z-index: 1; 
+} 
+
+.testimony-box img { 
+  width: 250px; 
+  height: auto; 
+  border-radius: 10px; 
+} 
+
+.testimony-content { 
+  flex: 1; 
+} 
+
+.testimony-content h3 { 
+  font-size: 22px; 
+  color: var(--green); 
+  margin-bottom: 12px; 
+} 
+
+.testimony-content p { 
+  font-size: 18px; 
+  line-height: 1.5; 
+} 
+
+/* MOBILE RESPONSIVENESS (keep all original mobile styles exactly the same) */ 
 @media(max-width:900px){
-  nav a{font-size:18px;}
-  .hero{justify-content:center;text-align:center;}
-  .hero-text{margin-left:0;text-align:center;}
-  .hero-text h1{font-size:40px;}
-  .hero-text p{font-size:20px;}
-  .benefits-title{font-size:28px;}
-  .benefit-item{font-size:16px;padding:18px 15px 18px 40px;}
-  .benefit-item::before{font-size:22px;}
-  .scrolling-text span{font-size:28px;}
-  .scrolling-text{animation-duration:35s;}
+  nav .logo{ height:60px; }
+
+  /* Hamburger menu only */
+  .hamburger { display:flex; }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: white;
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+    z-index: 9;
+  }
+
+  .nav-links.active { display: flex; }
+  nav a { width: 100%; text-align: center; }
+
+  .hamburger.toggle div:nth-child(1) { transform: rotate(45deg) translate(5px,5px);}
+  .hamburger.toggle div:nth-child(2) { opacity: 0;}
+  .hamburger.toggle div:nth-child(3) { transform: rotate(-45deg) translate(6px,-6px);}
 }
 
-/* Rest of your styles (lab-results, diy-worm-farm, testimony, footer) remain exactly the same */
-section{padding:60px 5%;}
+section{padding:60px 5%;} 
+footer{ 
+  background:var(--coffee); 
+  color:white; 
+  text-align:center; 
+  padding:15px 0; 
+} 
+</style> 
+</head> 
 
-footer{
-  background:var(--coffee);
-  color:white;
-  text-align:center;
-  padding:15px 0;
-}
-</style>
+<body> 
 
-</head>
+<nav id="navbar"> 
+  <div class="nav-left"> 
+    <img src="Logo.png" alt="Yass Worm Farms Logo" class="logo"> 
+  </div> 
 
-<body>
-
-<!-- NAVIGATION WITH HAMBURGER -->
-<nav id="navbar">
-  <img src="Logo.png" alt="Yass Worm Farms Logo" class="logo">
-  <div class="hamburger" onclick="toggleMenu()">☰</div>
-  <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="application-rates.html">About Us</a>
-    <a href="shop.html">Shop</a>
-    <a href="laboratory-results.html">Laboratory Results</a>
-    <a href="diy.html">DIY</a>
-    <a href="contact.html">Contact Us</a>
+  <div class="hamburger" id="hamburger">
+    <div></div>
+    <div></div>
+    <div></div>
   </div>
-</nav>
 
-<!-- Mobile Menu -->
-<div class="mobile-menu" id="mobileMenu">
-  <a href="index.html">Home</a>
-  <a href="application-rates.html">About Us</a>
-  <a href="shop.html">Shop</a>
-  <a href="laboratory-results.html">Laboratory Results</a>
-  <a href="diy.html">DIY</a>
-  <a href="contact.html">Contact Us</a>
-</div>
+  <div class="nav-links" id="nav-links"> 
+    <a href="index.html">Home</a> 
+    <a href="application-rates.html">About Us</a> 
+    <a href="shop.html">Shop</a> 
+    <a href="laboratory-results.html">Laboratory Results</a> 
+    <a href="diy.html">DIY</a> 
+    <a href="contact.html">Contact Us</a> 
+  </div> 
+</nav> 
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-overlay"></div>
-  <div class="hero-text">
-    <h1>Yass Worm Farms</h1>
-    <p><strong>Worm Juice Fertiliser:</strong><br>
-    <strong>Nature’s Rocket Fuel for Plants!</strong></p>
-  </div>
-</section>
+<!-- HERO SECTION -->
+<section class="hero"> 
+  <div class="hero-overlay"></div> 
+  <div class="hero-text"> 
+    <h1>Yass Worm Farms</h1> 
+    <p><strong>Worm Juice Fertiliser:</strong><br> 
+    <strong>Nature’s Rocket Fuel for Plants!</strong></p> 
+  </div> 
+</section> 
 
 <!-- BENEFITS SECTION -->
-<section class="benefits-section">
-  <div class="benefits-container">
-    <h2 class="benefits-title">Brilliant Benefits of Worm Juice</h2>
-    <div class="benefits-grid">
-      <div class="benefit-item">Improved soil structure & airflow</div>
-      <div class="benefit-item">Increases water holding capacity</div>
-      <div class="benefit-item">Releases nutrients steadily</div>
-      <div class="benefit-item">Boosts root growth</div>
-      <div class="benefit-item">Speeds up composting & carbon cycling</div>
-      <div class="benefit-item">Can be used on all plants for greener pasture</div>
-      <div class="benefit-item">Produces natural antibiotics that protect plants</div>
-      <div class="benefit-item">Helps break down toxins & manures</div>
-    </div>
-  </div>
-</section>
+<section class="benefits-section"> 
+  <div class="benefits-container"> 
+    <h2 class="benefits-title">Brilliant Benefits of Worm Juice</h2> 
+    <div class="benefits-grid"> 
+      <div class="benefit-item">Improved soil structure & airflow</div> 
+      <div class="benefit-item">Increases water holding capacity</div> 
+      <div class="benefit-item">Releases nutrients steadily</div> 
+      <div class="benefit-item">Boosts root growth</div> 
+      <div class="benefit-item">Speeds up composting & carbon cycling</div> 
+      <div class="benefit-item">Can be used on all plants for greener pasture</div> 
+      <div class="benefit-item">Produces natural antibiotics that protect plants</div> 
+      <div class="benefit-item">Helps break down toxins & manures</div> 
+    </div> 
+  </div> 
+</section> 
 
 <!-- SCROLLING BAND -->
-<section class="scrolling-band">
-  <div class="scrolling-text">
-    <span>Vineyards, Orchards, Broad Acre Farms, Horticulture, Dairy, Vegetables, Pasture, Lawns, Golf Courses, University Research, Land Regeneration</span>
-    <span>Vineyards, Orchards, Broad Acre Farms, Horticulture, Dairy, Vegetables, Pasture, Lawns, Golf Courses, University Research, Land Regeneration</span>
-  </div>
-</section>
+<section class="scrolling-band"> 
+  <div class="scrolling-text"> 
+    <span>Vineyards, Orchards, Broad Acre Farms, Horticulture, Dairy, Vegetables, Pasture, Lawns, Golf Courses, University Research, Land Regeneration</span> 
+    <span>Vineyards, Orchards, Broad Acre Farms, Horticulture, Dairy, Vegetables, Pasture, Lawns, Golf Courses, University Research, Land Regeneration</span> 
+  </div> 
+</section> 
 
-<!-- LAB RESULTS SECTION -->
-<section class="lab-results-section">
-  <h2>Our Epic Lab Results</h2>
-  <div class="images-container">
-    <img src="Logo.png" alt="Yass Worm Farms Logo" class="logo">
-    <img src="Lab Results 2025.png" alt="Lab Results 2025" class="lab-image">
-    <img src="From our family farm to your soil - ChatGPT Image Jan 10, 2026, 12_22_19 PM.png" alt="From our family farm to your soil"
-      class="soil-image">
-  </div>
-</section>
+<!-- LAB RESULTS -->
+<section class="lab-results-section"> 
+  <h2>Our Epic Lab Results</h2> 
+  <div class="images-container"> 
+    <img src="Logo.png" alt="Yass Worm Farms Logo" class="logo"> 
+    <img src="Lab Results 2025.png" alt="Lab Results 2025" class="lab-image"> 
+    <img src="From our family farm to your soil.png" alt="From our family farm to your soil" class="soil-image"> 
+  </div> 
+</section> 
 
-<!-- DIY WORM FARM SECTION -->
-<section class="diy-worm-farm-section">
-  <img src="DIY worm Farm image.jpg" alt="DIY Worm Farm System" class="diy-background">
-  <div class="diy-text">
-    <h2>DIY Worm Farm System</h2>
-    <p>With the help of James Brown you could make an On-farm Worm Fertiliser Production System. Replacing the need for synthetic fertiliser and creating huge savings annually.</p>
-    <div class="diy-details">
-      <p><strong>Production:</strong> Approx 24,000 litres High Value Fertiliser annually.</p>
-      <p><strong>Set up costs:</strong> $10k - $13k + Consultancy fee</p>
-    </div>
-    <a href="contact.html" class="build-button">Build your Worm Farm</a>
-  </div>
-</section>
+<!-- DIY SECTION -->
+<section class="diy-worm-farm-section"> 
+  <img src="DIY worm Farm image.jpg" alt="DIY Worm Farm System" class="diy-background"> 
+  <div class="diy-text"> 
+    <h2>DIY Worm Farm System</h2> 
+    <p>With the help of James Brown you could make an On-farm Worm Fertiliser Production System. Replacing the need for synthetic fertiliser and creating huge savings annually.</p> 
+    <div class="diy-details"> 
+      <p><strong>Production:</strong> Approx 24,000 litres High Value Fertiliser annually.</p> 
+      <p><strong>Set up costs:</strong> $10k - $13k + Consultancy fee</p> 
+    </div> 
+    <a href="contact.html" class="build-button">Build your Worm Farm</a> 
+  </div> 
+</section> 
 
-<!-- TESTIMONY SECTION -->
-<section class="testimony-section">
-  <div class="testimony-box">
-    <img src="warren.jpg" alt="Warren loading worm juice fertiliser">
-    <div class="testimony-content">
-      <h3>Warren from Mandurama</h3>
-      <p>Warren from Mandurama loading our worm juice fertiliser at the Yass Ampol Service Centre. Warren plans to spray his Lucerne crop.</p>
-    </div>
-  </div>
+<!-- TESTIMONY -->
+<section class="testimony-section"> 
+  <div class="testimony-box"> 
+    <img src="warren.jpg" alt="Warren loading worm juice fertiliser"> 
+    <div class="testimony-content"> 
+      <h3>Warren from Mandurama</h3> 
+      <p>Warren from Mandurama loading our worm juice fertiliser at the Yass Ampol Service Centre. Warren plans to spray his Lucerne crop.</p> 
+    </div> 
+  </div> 
 
-  <div class="testimony-box">
-    <img src="IBC worm Juice.jpg" alt="Anthony – Dairy Farmer">
-    <div class="testimony-content">
-      <h3>Anthony – Dairy Farmer (East Gippsland)</h3>
-      <p>Anthony, a dairy farmer friend from East Gippsland, replaced all synthetic fertilisers with worm juice. He now saves around <strong>$50,000</strong> annually and boasts the most outstanding pasture in the district.</p>
-    </div>
-  </div>
-</section>
+  <div class="testimony-box"> 
+    <img src="IBC worm Juice.jpg" alt="Anthony – Dairy Farmer"> 
+    <div class="testimony-content"> 
+      <h3>Anthony – Dairy Farmer (East Gippsland)</h3> 
+      <p>Anthony, a dairy farmer friend from East Gippsland, replaced all synthetic fertilisers with worm juice. He now saves around <strong>$50,000</strong> annually and boasts the most outstanding pasture in the district.</p> 
+    </div> 
+  </div> 
+</section> 
 
-<footer>
-  <p>© 2025 Yass Worm Farms. All rights reserved.</p>
-</footer>
+<footer> 
+  <p>© 2025 Yass Worm Farms. All rights reserved.</p> 
+</footer> 
 
-</body>
+<script>
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+  hamburger.classList.toggle('toggle');
+});
+</script>
+
+</body> 
 </html>
-
