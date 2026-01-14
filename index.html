@@ -421,14 +421,10 @@ nav a:hover{
     height:60px;
   }
 
-  /* --- HERO IMAGE CROP BOTTOM --- */
-  .hero {
-    height:50vh;
+  /* --- HERO IMAGE CROP BOTTOM 1CM --- */
+  .hero{
+    height:calc(70vh - 1cm);
     overflow:hidden;
-  }
-  .hero::before {
-    height:100%;
-    object-fit:cover;
   }
 
   /* OTHER MOBILE STYLES */
@@ -583,5 +579,6 @@ window.addEventListener('scroll', () => {
 
 </body>
 </html>
+
 
 
