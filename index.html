@@ -406,30 +406,17 @@ nav a:hover {
 }
 
 /* ================= MOBILE HEADER UPDATE ONLY ================= */
-@media(max-width:900px) {
+@media(max-width:850px) {
+
+  /* Show hamburger, hide desktop links */
+  .hamburger { display:block; }
+  .nav-links { display:none; }
+
   nav {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 5%;
+    flex-wrap:nowrap;
+    padding:10px 5%;
   }
 
-  nav .nav-links {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-  }
-
-  nav a {
-    font-size: 18px;
-  }
-
-  nav .logo {
-    height: 60px;
-  }
-}
 
 /* OTHER MOBILE STYLES (unchanged) */
 @media(max-width:900px) {
