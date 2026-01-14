@@ -463,9 +463,10 @@ footer { background:var(--coffee); color:white; text-align:center; padding:15px 
 
 <!-- HEADER -->
 <nav id="navbar">
-  <div class="nav-left">
-    <img src="Logo.png" alt="Yass Worm Farms Logo" class="logo">
-  </div>
+  <img src="Logo.png" alt="Yass Worm Farms Logo" class="logo">
+
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+
   <div class="nav-links">
     <a href="index.html">Home</a>
     <a href="application-rates.html">About Us</a>
@@ -475,6 +476,15 @@ footer { background:var(--coffee); color:white; text-align:center; padding:15px 
     <a href="contact.html">Contact Us</a>
   </div>
 </nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="application-rates.html">About Us</a>
+  <a href="shop.html">Shop</a>
+  <a href="laboratory-results.html">Laboratory Results</a>
+  <a href="diy.html">DIY</a>
+  <a href="contact.html">Contact Us</a>
+</div>
 
 <!-- HERO SECTION -->
 <section class="hero">
