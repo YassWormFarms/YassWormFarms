@@ -1,11 +1,54 @@
-/* Hide hamburger on desktop */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>DIY with Yass Worm Farms</title>
+
+<style>
+
+/* ---------------- DESKTOP DEFAULT STYLES (UNCHANGED) ---------------- */
+header {
+  width: 100%;
+  background: #1a4d2e;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.header-container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  max-height: 60px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 17px;
+}
+
+/* Hide hamburger default on desktop */
 .hamburger {
   display: none;
   font-size: 32px;
   cursor: pointer;
 }
 
-/* Mobile dropdown menu (hidden by default) */
+/* Mobile menu (initially hidden) */
 .mobile-menu {
   display: none;
   background: #1a4d2e;
@@ -15,8 +58,8 @@
 
 .mobile-menu ul {
   list-style: none;
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
 .mobile-menu ul li {
@@ -30,24 +73,83 @@
   font-weight: 600;
 }
 
-/* Mobile view rules */
+
+/* --------------------- MOBILE HEADER CHANGE ONLY --------------------- */
 @media (max-width: 768px) {
+
+  /* Hide desktop nav */
   nav ul {
-    display: none; /* hide desktop menu */
+    display: none;
   }
 
+  /* Show hamburger icon */
   .hamburger {
-    display: block; /* show hamburger */
+    display: block;
     color: white;
   }
 
+  /* Ensure header layout stays clean */
   .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
+  /* Mobile dropdown list centered */
   .mobile-menu.show {
     display: block;
   }
 }
+</style>
+
+</head>
+
+<body>
+
+<header>
+  <div class="header-container">
+
+    <div class="logo">
+      <img src="images/yasswormfarms-logo.png" alt="Yass Worm Farms">
+    </div>
+
+    <!-- Hamburger Icon -->
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+    <!-- Desktop Navigation (unchanged) -->
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/shop.html">Shop</a></li>
+        <li><a href="/application-rates.html">Application Rates</a></li>
+        <li><a href="/laboratory-results.html">Laboratory Results</a></li>
+        <li><a href="/diy.html">DIY</a></li>
+        <li><a href="/contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+
+  </div>
+
+  <!-- MOBILE MENU DROPDOWN -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/shop.html">Shop</a></li>
+      <li><a href="/application-rates.html">Application Rates</a></li>
+      <li><a href="/laboratory-results.html">Laboratory Results</a></li>
+      <li><a href="/diy.html">DIY</a></li>
+      <li><a href="/contact.html">Contact Us</a></li>
+    </ul>
+  </div>
+
+</header>
+
+
+<script>
+function toggleMenu() {
+  document.getElementById("mobileMenu").classList.toggle("show");
+}
+</script>
+
+</body>
+</html>
