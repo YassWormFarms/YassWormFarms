@@ -1,10 +1,11 @@
-<!DOCTYPE html>  
-<html lang="en">  
-<head>  
-<meta charset="UTF-8">  
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Yass Worm Farms</title>  
+<title>Yass Worm Farms</title>
 
 <meta name="description"
   content="Yass Worm Farms offers organic worm juice fertiliser and worm castings to boost soil health and promote plant growth. Support a small family business today.">
@@ -13,7 +14,9 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+<link
+  href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Slab:wght@700&display=swap"
+  rel="stylesheet">
 
 <style>
 :root{
@@ -30,6 +33,7 @@ body{
   background:white;
 }
 
+/* NAVIGATION */
 nav{
   background:white;
   border-bottom:2px solid #ddd;
@@ -73,7 +77,7 @@ nav a:hover{
   color:var(--green);
 }
 
-/* HERO */
+/* HERO SECTION */
 .hero{
   position:relative;
   height:70vh;
@@ -181,7 +185,7 @@ nav a:hover{
   font-weight: 900;
 }
 
-/* SCROLL BAR */
+/* SCROLLING TEXT */
 .scrolling-band {
   background-color: #064d28;
   height: 2cm;
@@ -245,7 +249,6 @@ nav a:hover{
   height: auto;
 }
 
-/* Sizing */
 .lab-results-section .images-container .logo,
 .lab-results-section .images-container .soil-image {
   width: 12cm;
@@ -253,13 +256,14 @@ nav a:hover{
 
 .lab-results-section .images-container .lab-image {
   width: 20cm;
+  max-width: calc(100% - 24cm);
   border: 4px solid var(--green);
   border-radius: 12px;
   padding: 5px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.2);
 }
 
-/* DIY SECTION */
+/* DIY WORM FARM */
 .diy-worm-farm-section {
   position: relative;
   width: 100%;
@@ -322,7 +326,7 @@ nav a:hover{
   margin: 8px 0;
 }
 
-/* BUTTON */
+/* CTA BUTTON */
 .build-button {
   display: inline-block;
   margin-top: 25px;
@@ -342,7 +346,7 @@ nav a:hover{
   transform: scale(1.05);
 }
 
-/* TESTIMONIALS */
+/* TESTIMONY */
 .testimony-section {
   display: flex;
   gap: 30px;
@@ -356,6 +360,15 @@ nav a:hover{
   overflow: hidden;
 }
 
+.testimony-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.12;
+  pointer-events: none;
+  z-index: 0;
+}
+
 .testimony-box {
   background: rgba(255,255,255,0.95);
   border-radius: 12px;
@@ -366,11 +379,106 @@ nav a:hover{
   gap: 20px;
   align-items: flex-start;
   box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  position: relative;
+  z-index: 1;
 }
 
 .testimony-box img {
   width: 250px;
+  height: auto;
   border-radius: 10px;
+}
+
+.testimony-content {
+  flex: 1;
+}
+
+.testimony-content h3 {
+  font-size: 22px;
+  color: var(--green);
+  margin-bottom: 12px;
+}
+
+.testimony-content p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media(max-width:900px){
+  nav{
+    padding:10px 5%;
+  }
+  .nav-links{
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content:center;
+  }
+  nav a{
+    font-size:16px;
+  }
+  .hero-text h1{font-size:36px;}
+  .hero-text p{font-size:18px;}
+  .hero{
+    justify-content:center;
+    text-align:center;
+  }
+  .hero-text{
+    margin-left:0;
+    text-align:center;
+    max-width:90%;
+  }
+  .benefits-section {
+    padding: 50px 5%;
+  }
+  .benefits-title{
+    font-size:28px;
+  }
+  .benefit-item{
+    font-size:16px;
+    padding: 18px 15px 18px 40px;
+  }
+  .benefit-item::before{
+    font-size:22px;
+  }
+  .scrolling-text span{
+    font-size:20px;
+  }
+  .lab-results-section .images-container{
+    flex-direction:column;
+    align-items:center;
+  }
+  .lab-results-section .images-container .logo,
+  .lab-results-section .images-container .soil-image,
+  .lab-results-section .images-container .lab-image{
+    width:90%;
+    max-width:300px;
+  }
+  .diy-worm-farm-section{
+    flex-direction:column;
+    height:auto;
+  }
+  .diy-worm-farm-section .diy-text{
+    max-width:90%;
+    padding-left:20px;
+    padding-top:20px;
+    margin-top:0;
+  }
+  .diy-worm-farm-section .diy-text h2{font-size:28px;}
+  .diy-worm-farm-section .diy-text p{font-size:16px;}
+  .diy-worm-farm-section .diy-text .diy-details p{font-size:14px;}
+  .testimony-box{
+    flex-direction:column;
+    align-items:center;
+    max-width:90%;
+  }
+  .testimony-box img{
+    width:200px;
+  }
+}
+
+section{
+  padding:60px 5%;
 }
 
 .section-title{
@@ -386,88 +494,8 @@ footer{
   text-align:center;
   padding:15px 0;
 }
-
-/* =============================
-    MOBILE FIX — DOES NOT
-    CHANGE DESKTOP
-============================= */
-@media(max-width:900px){
-  html, body{
-    max-width:100%;
-    overflow-x:hidden;
-  }
-
-  nav{
-    padding:10px 4%;
-  }
-
-  .nav-links{
-    flex-wrap:wrap;
-    gap:12px;
-    justify-content:center;
-  }
-
-  nav a{
-    font-size:15px;
-  }
-
-  .logo{
-    height:70px;
-  }
-
-  .hero{
-    height:auto;
-    padding:60px 0;
-    justify-content:center;
-  }
-
-  .hero-text{
-    margin:0;
-    text-align:center;
-  }
-
-  .hero-text h1{
-    white-space:normal;
-    font-size:36px;
-  }
-
-  .hero-text p{
-    font-size:18px;
-  }
-
-  .lab-results-section .images-container{
-    flex-direction:column;
-  }
-
-  .lab-results-section .images-container img{
-    width:100%;
-    max-width:420px;
-  }
-
-  .diy-worm-farm-section{
-    height:auto;
-    flex-direction:column;
-  }
-
-  .diy-text{
-    max-width:90%;
-    padding:20px;
-  }
-
-  .testimony-box{
-    flex-direction:column;
-    text-align:center;
-  }
-
-  .testimony-box img{
-    width:200px;
-  }
-
-  .scrolling-text span{
-    font-size:22px;
-  }
-}
 </style>
+
 </head>
 
 <body>
@@ -476,7 +504,6 @@ footer{
   <div class="nav-left">
     <img src="Logo.png" alt="Yass Worm Farms Logo" class="logo">
   </div>
-
   <div class="nav-links">
     <a href="index.html">Home</a>
     <a href="application-rates.html">About Us</a>
@@ -487,17 +514,75 @@ footer{
   </div>
 </nav>
 
-<!-- ALL YOUR SAME CONTENT BELOW (unchanged) -->
-<!-- ... (content remains exactly as you posted) ... -->
+<section class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-text">
+    <h1>Yass Worm Farms</h1>
+    <p><strong>Worm Juice Fertiliser:</strong><br>
+    <strong>Nature’s Rocket Fuel for Plants!</strong></p>
+  </div>
+</section>
 
-<!-- scroll shrink -->
-<script>
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-  navbar.classList.toggle('shrink', window.scrollY > 50);
-});
-</script>
+<section class="benefits-section">
+  <div class="benefits-container">
+    <h2 class="benefits-title">Brilliant Benefits of Worm Juice</h2>
+    <div class="benefits-grid">
+      <div class="benefit-item">Improved soil structure & airflow</div>
+      <div class="benefit-item">Increases water holding capacity</div>
+      <div class="benefit-item">Releases nutrients steadily</div>
+      <div class="benefit-item">Boosts root growth</div>
+      <div class="benefit-item">Speeds up composting & carbon cycling</div>
+      <div class="benefit-item">Can be used on all plants for greener pasture</div>
+      <div class="benefit-item">Produces natural antibiotics that protect plants</div>
+      <div class="benefit-item">Helps break down toxins & manures</div>
+    </div>
+  </div>
+</section>
 
-</body>
-</html>
+<section class="scrolling-band">
+  <div class="scrolling-text">
+    <span>
+      Vineyards, Orchards, Broad Acre Farms, Horticulture, Dairy, Vegetables, Pasture, Lawns, Golf Courses, University Research, Land Regeneration
+    </span>
+    <span>
+      Vineyards, Orchards, Broad Acre Farms, Horticulture, Dairy, Vegetables, Pasture, Lawns, Golf Courses, University Research, Land Regeneration
+    </span>
+  </div>
+</section>
+
+<section class="lab-results-section">
+  <h2>Our Epic Lab Results</h2>
+  <div class="images-container">
+    <img src="Logo.png" alt="Yass Worm Farms Logo" class="logo">
+    <img src="Lab Results 2025.png" alt="Lab Results 2025" class="lab-image">
+    <img src="From our family farm to your soil - ChatGPT Image Jan 10, 2026, 12_22_19 PM.png" alt="From our family farm to your soil" class="soil-image">
+  </div>
+</section>
+
+<section class="diy-worm-farm-section">
+  <img src="DIY worm Farm image.jpg" alt="DIY Worm Farm System" class="diy-background">
+  <div class="diy-text">
+    <h2>DIY Worm Farm System</h2>
+    <p>With the help of James Brown you could make an On-farm Worm Fertiliser Production System. Replacing the need for synthetic fertiliser and creating huge savings annually.</p>
+    <div class="diy-details">
+      <p><strong>Production:</strong> Approx 24,000 litres High Value Fertiliser annually.</p>
+      <p><strong>Set up costs:</strong> $10k - $13k + Consultancy fee</p>
+    </div>
+    <a href="contact.html" class="build-button">Build your Worm Farm</a>
+  </div>
+</section>
+
+<section class="testimony-section">
+  <div class="testimony-box">
+    <img src="warren.jpg" alt="Warren loading worm juice fertiliser">
+    <div class="testimony-content">
+      <h3>Warren from Mandurama</h3>
+      <p>Warren from Mandurama loading our worm juice fertiliser at the Yass Ampol Service Centre. Warren plans to spray his Lucerne crop.</p>
+    </div>
+  </div>
+  <div class="testimony-box">
+    <img src="IBC worm Juice.jpg" alt="Anthony – Dairy Farmer">
+    <div class="testimony-content">
+      <h3>Anthony – Dairy Farmer (East Gipps
+
 
