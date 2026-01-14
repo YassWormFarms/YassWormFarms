@@ -21,8 +21,14 @@
 }
 
 /* BODY */
-body {
+html, body {
   margin:0;
+  padding:0;
+  max-width:100%;
+  overflow-x:hidden; /* 🔥 Fix phone right overflow */
+}
+
+body {
   font-family:'Poppins', Arial, sans-serif;
   color:var(--coffee);
   background:white;
@@ -75,8 +81,8 @@ nav a:hover {
 
 /* HERO */
 .hero {
-  width: 100%;
-  height: 400px;
+  width:100%;
+  height:400px;
   background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
               url("DIY cropped.jpg") center center/cover no-repeat;
   display:flex;
@@ -86,6 +92,7 @@ nav a:hover {
   text-align:center;
   color:white;
   padding:20px;
+  box-sizing:border-box;
 }
 
 .hero h1 {
@@ -215,19 +222,20 @@ footer {
   margin-top: 70px;
 }
 
-/* ================= MOBILE RESPONSIVE ================= */
+/* ================= MOBILE ================= */
 @media(max-width:850px) {
-  .hero { height:auto; padding:60px 20px; }
+
+  .hero {
+    height:auto;
+    padding:60px 20px;
+    width:100%;            /* 🔥 Ensures hero cannot exceed phone width */
+    background-size:cover;
+    background-position:center;
+  }
+
   .hero h1 { font-size:34px; }
   .hero p { font-size:16px; }
 
-  .section { padding:0 15px; }
-
-  .info-section { padding:20px 15px; }
-
-  .bottom-cta a { padding:16px 40px; font-size:18px; }
-
-  /* Prevent nav overlay */
   nav {
     flex-wrap:wrap;
     padding:10px 5%;
@@ -244,7 +252,8 @@ footer {
     font-size:16px;
   }
 
-  /* Videos responsive */
+  .section { padding:0 15px; }
+
   .video-block iframe {
     width:100%;
     max-width:100%;
@@ -253,13 +262,11 @@ footer {
   }
 }
 
-/* Extra Phone Tightening */
+/* EXTRA SMALL PHONES */
 @media(max-width:600px){
   .hero h1{font-size:28px;}
   .hero p{font-size:15px;}
-
   nav .logo{height:70px;}
-
   .info-section h3 {font-size:22px;}
   .section h2{font-size:26px;}
 }
@@ -296,7 +303,6 @@ footer {
 <section class="section">
   <h2>Getting Started with Your Worm Farm</h2>
   <p>Learn the basics of setting up a worm farm and making the most out of organic waste. Watch the video below to get started.</p>
-
   <p><strong>Tip: Worm farms are great for hobby farmers, large-scale agriculture and research projects.</strong></p>
 
   <div class="video-block">
