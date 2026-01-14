@@ -1,373 +1,773 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DIY - Yass Worm Farms</title>
+<!DOCTYPE html> 
 
-<!-- Google Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+<html lang="en"> 
 
-<style>
-:root {
-  --green:#064d28;
-  --coffee:#4b3621;
-  --lab-title:#b87333;
-  --light:#f5f5f5;
-  --blue:#007bff;
-  --blue-hover:#0056b3;
-}
+<head> 
 
-/* BODY */
-html, body {
-  margin:0;
-  padding:0;
-  max-width:100%;
-  overflow-x:hidden; /* 🔥 Fix phone right overflow */
-}
+<meta charset="UTF-8"> 
 
-body {
-  font-family:'Poppins', Arial, sans-serif;
-  color:var(--coffee);
-  background:white;
-  text-align:center;
-}
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
-/* NAVIGATION */
-nav {
-  background:white;
-  border-bottom:2px solid #ddd;
-  padding:15px 10%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  position:sticky;
-  top:0;
-  z-index:10;
-  transition: all 0.35s ease-in-out;
-}
+<title>DIY - Yass Worm Farms</title> 
 
-nav .logo {
-  height:98px;
-  transition: height 0.35s ease-in-out;
-}
+  
 
-nav.shrink {
-  padding:5px 10%;
-  border-bottom:1px solid #ccc;
-}
+<!-- Google Fonts --> 
 
-nav.shrink .logo {
-  height:58px;
-}
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
 
-.nav-links {
-  display:flex;
-  gap:30px;
-}
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
 
-nav a {
-  text-decoration:none;
-  color:var(--coffee);
-  font-weight:700;
-  font-size:22px;
-}
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet"> 
 
-nav a:hover {
-  color:var(--green);
-}
+  
 
-/* HERO */
-.hero {
-  width:100%;
-  height:400px;
-  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
-              url("DIY cropped.jpg") center center/cover no-repeat;
-  display:flex;
-  flex-direction: column;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  color:white;
-  padding:20px;
-  box-sizing:border-box;
-}
+<style> 
 
-.hero h1 {
-  font-size:46px;
-  margin-bottom:10px;
-}
+:root { 
 
-.hero p {
-  font-size:18px;
-  max-width:720px;
-  margin:auto 0 20px 0;
-  line-height:1.5;
-}
+  --green:#064d28; 
 
-/* HERO BUTTON */
-.hero .hero-cta a {
-  display:inline-block;
-  background: linear-gradient(90deg, #00aaff, var(--blue));
-  color:white;
-  padding:16px 36px;
-  border-radius:10px;
-  font-size:18px;
-  font-weight:700;
-  text-decoration:none;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  transition:0.3s;
-}
+  --coffee:#4b3621; 
 
-.hero .hero-cta a:hover {
-  background: linear-gradient(90deg, #0088cc, var(--blue-hover));
-  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
-  transform: translateY(-2px);
-}
+  --lab-title:#b87333; 
 
-/* SECTION */
-.section {
-  max-width:1150px;
-  margin:70px auto;
-  padding:0 25px;
-  text-align:center;
-}
+  --light:#f5f5f5; 
 
-.section h2 {
-  font-size:36px;
-  color:var(--green);
-  margin-bottom:10px;
-}
+  --blue:#007bff; 
 
-.section p {
-  font-size:17px;
-  line-height:1.6;
-  margin-bottom:25px;
-}
+  --blue-hover:#0056b3; 
 
-.video-block {
-  margin-bottom:40px;
-  display:flex;
-  justify-content:center;
-}
+} 
 
-/* DIY INFO SECTION */
-.info-section {
-  max-width:900px;
-  margin:60px auto;
-  padding:30px 25px;
-  text-align:left;
-  border:1px solid #ddd;
-  border-radius:10px;
-  background:#f8f8f8;
-  box-shadow:0 4px 12px rgba(0,0,0,0.05);
-}
+  
 
-.info-section h3 {
-  color:var(--green);
-  font-size:28px;
-  margin-bottom:20px;
-  text-align:center;
-}
+/* BODY */ 
 
-.info-section ul {
-  list-style: disc inside;
-  line-height:1.7;
-  margin-bottom:20px;
-}
+body { 
 
-.info-section ul li:first-child {
-  list-style:none;
-}
+  margin:0; 
 
-.info-section p {
-  font-size:16px;
-  line-height:1.7;
-  margin-bottom:15px;
-}
+  font-family:'Poppins', Arial, sans-serif; 
 
-/* CTA BUTTON */
-.bottom-cta {
-  text-align:center;
-  margin:50px 0;
-}
+  color:var(--coffee); 
 
-.bottom-cta a {
-  display:inline-block;
-  background: linear-gradient(90deg, #00aaff, var(--blue));
-  color:white;
-  padding:20px 50px;
-  border-radius:12px;
-  font-size:20px;
-  font-weight:700;
-  text-decoration:none;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
-  transition:0.4s;
-}
+  background:white; 
 
-.bottom-cta a:hover {
-  background: linear-gradient(90deg, #0088cc, var(--blue-hover));
-  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
-  transform: translateY(-3px) scale(1.05);
-}
+  text-align:center; 
 
-/* FOOTER */
-footer {
-  background: var(--coffee);
-  color: white;
-  text-align: center;
-  padding: 18px;
-  margin-top: 70px;
-}
+} 
 
-/* ================= MOBILE ================= */
-@media(max-width:850px) {
+  
 
-  .hero {
-    height:auto;
-    padding:60px 20px;
-    width:100%;            /* 🔥 Ensures hero cannot exceed phone width */
-    background-size:cover;
-    background-position:center;
-  }
+/* NAVIGATION */ 
 
-  .hero h1 { font-size:34px; }
-  .hero p { font-size:16px; }
+nav { 
 
-  nav {
-    flex-wrap:wrap;
-    padding:10px 5%;
-  }
+  background:white; 
 
-  .nav-links {
-    width:100%;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:12px;
-  }
+  border-bottom:2px solid #ddd; 
 
-  nav a {
-    font-size:16px;
-  }
+  padding:15px 10%; 
 
-  .section { padding:0 15px; }
+  display:flex; 
 
-  .video-block iframe {
-    width:100%;
-    max-width:100%;
-    height:auto;
-    aspect-ratio:16/9;
-  }
-}
+  justify-content:space-between; 
 
-/* EXTRA SMALL PHONES */
-@media(max-width:600px){
-  .hero h1{font-size:28px;}
-  .hero p{font-size:15px;}
-  nav .logo{height:70px;}
-  .info-section h3 {font-size:22px;}
-  .section h2{font-size:26px;}
-}
-</style>
-</head>
+  align-items:center; 
 
-<body>
+  position:sticky; 
 
-<!-- HEADER -->
-<nav id="navbar">
-  <div class="nav-left">
-    <img src="Logo.png" alt="Yass Worm Farms Logo" class="logo">
-  </div>
-  <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="application-rates.html">About Us</a>
-    <a href="shop.html">Shop</a>
-    <a href="laboratory-results.html">Laboratory Results</a>
-    <a href="diy.html">DIY</a>
-    <a href="contact.html">Contact Us</a>
-  </div>
-</nav>
+  top:0; 
 
-<section class="hero">
-  <div>
-    <h1>DIY with Yass Worm Farms</h1>
-    <p>Create a worm farm with James Brown</p>
-    <div class="hero-cta">
-      <a href="contact.html">Start Building your Worm Farm – Contact Us</a>
-    </div>
-  </div>
-</section>
+  z-index:10; 
 
-<section class="section">
-  <h2>Getting Started with Your Worm Farm</h2>
-  <p>Learn the basics of setting up a worm farm and making the most out of organic waste. Watch the video below to get started.</p>
-  <p><strong>Tip: Worm farms are great for hobby farmers, large-scale agriculture and research projects.</strong></p>
+  transition: all 0.35s ease-in-out; 
 
-  <div class="video-block">
-    <iframe width="960" height="540" src="https://www.youtube.com/embed/9B4BzIq40W0"
-      title="Video" frameborder="0" allowfullscreen></iframe>
-  </div>
-</section>
+} 
 
-<section class="section">
-  <h2>More depth - with James Brown</h2>
-  <p>a deeper insight into the operations of Yass worm farms and how all the magic happens</p>
+  
 
-  <div class="video-block">
-    <iframe width="960" height="540" src="https://www.youtube.com/embed/5x2yWGps52w"
-      title="Video" frameborder="0" allowfullscreen></iframe>
-</div>
-</section>
+nav .logo { 
 
-<section class="info-section">
-  <h3>Rough Estimated Cost of Setting Up Your Own Worm Juice Production</h3>
-  <p><strong>Requirements:</strong></p>
+  height:98px; 
 
-  <ul>
-    <li>The following are rough costs depending on your location and what items you already have or can purchase locally:</li>
-    <li>Need slope minimum 3.5 to 4 Degrees.</li>
-    <li>Access to non-town water (no chlorine)</li>
-    <li>Front end loader (or ability to hire one)</li>
-    <li>7 IBC's x $150 each</li>
-    <li>Roll of high impact plastic $140</li>
-    <li>Rhino board $1500</li>
-    <li>High impact tape $100</li>
-    <li>Drip lines $100</li>
-    <li>Collection pipe and poly $400</li>
-    <li>Petrol pump $150</li>
-    <li>Compressor and pump for fermentation tank $500</li>
-    <li>Truck load stable waste (50 ton)</li>
-    <li>Truckload (10 cubic) of worm windrow containing millions of worms from Yass Worm Farms $3500</li>
-    <li>Coffee grinds collection containers $100</li>
-    <li>55 micron filter $250</li>
-    <li>Various fittings $200</li>
-    <li>Consulting fees *see below for more details.</li>
-    <li>Freight $2000</li>
-    <li>Humic Acid $80</li>
-  </ul>
+  transition: height 0.35s ease-in-out; 
 
-  <p><strong>Total Average Cost:</strong> $10,000 to $12,000 + Consultancy fee @ $3500 up to 10hours. Then per hour fee for further advice.</p>
-  <p>This would produce around 25,000 litres of worm fertiliser per year. The stable waste is available from Canberra Racing Club; however, if there is a local racecourse you could self-source.</p>
-  <p>Contact James Brown for further information and to get started.</p>
-</section>
+} 
 
-<div class="bottom-cta">
-  <a href="contact.html">Start Building your Worm Farm – Contact Us</a>
-</div>
+  
 
-<footer>
-  <p>&copy; 2026 Yass Worm Farms. All Rights Reserved.</p>
-</footer>
+nav.shrink { 
 
-<script>
-  const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => {
-    navbar.classList.toggle('shrink', window.scrollY > 50);
-  });
-</script>
+  padding:5px 10%; 
 
-</body>
-</html>
+  border-bottom:1px solid #ccc; 
 
+} 
+
+  
+
+nav.shrink .logo { 
+
+  height:58px; 
+
+} 
+
+  
+
+.nav-links { 
+
+  display:flex; 
+
+  gap:30px; 
+
+} 
+
+  
+
+nav a { 
+
+  text-decoration:none; 
+
+  color:var(--coffee); 
+
+  font-weight:700; 
+
+  font-size:22px; 
+
+} 
+
+  
+
+nav a:hover { 
+
+  color:var(--green); 
+
+} 
+
+  
+
+/* HERO BANNER */ 
+
+.hero { 
+
+  width: 100%; 
+
+  height: 400px; 
+
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), 
+
+              url("DIY cropped.jpg") center center/cover no-repeat; 
+
+  display:flex; 
+
+  flex-direction: column; 
+
+  align-items:center; 
+
+  justify-content:center; 
+
+  text-align:center; 
+
+  color:white; 
+
+  padding:20px; 
+
+} 
+
+  
+
+.hero h1 { 
+
+  font-size:46px; 
+
+  margin-bottom:10px; 
+
+  letter-spacing:0.5px; 
+
+} 
+
+  
+
+.hero p { 
+
+  font-size:18px; 
+
+  max-width:720px; 
+
+  margin:auto 0 20px 0; 
+
+  line-height:1.5; 
+
+} 
+
+  
+
+/* HERO BUTTON */ 
+
+.hero .hero-cta a { 
+
+  display:inline-block; 
+
+  background: linear-gradient(90deg, #00aaff, var(--blue)); 
+
+  color:white; 
+
+  padding:16px 36px; 
+
+  border-radius:10px; 
+
+  font-size:18px; 
+
+  font-weight:700; 
+
+  text-decoration:none; 
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2); 
+
+  transition:0.3s; 
+
+} 
+
+  
+
+.hero .hero-cta a:hover { 
+
+  background: linear-gradient(90deg, #0088cc, var(--blue-hover)); 
+
+  box-shadow: 0 6px 16px rgba(0,0,0,0.3); 
+
+  transform: translateY(-2px); 
+
+} 
+
+  
+
+/* SECTION LAYOUT */ 
+
+.section { 
+
+  max-width:1150px; 
+
+  margin:70px auto; 
+
+  padding:0 25px; 
+
+  text-align:center; 
+
+} 
+
+  
+
+.section h2 { 
+
+  font-size:36px; 
+
+  color:var(--green); 
+
+  margin-bottom:10px; 
+
+} 
+
+  
+
+.section p { 
+
+  font-size:17px; 
+
+  line-height:1.6; 
+
+  margin-bottom:25px; 
+
+} 
+
+  
+
+.video-block { 
+
+  margin-bottom:40px; 
+
+  display:flex; 
+
+  justify-content:center; 
+
+} 
+
+  
+
+/* DIY INFO SECTION */ 
+
+.info-section { 
+
+  max-width:900px; 
+
+  margin:60px auto; 
+
+  padding:30px 25px; 
+
+  text-align:left; 
+
+  border:1px solid #ddd; 
+
+  border-radius:10px; 
+
+  background:#f8f8f8; 
+
+  box-shadow:0 4px 12px rgba(0,0,0,0.05); 
+
+} 
+
+  
+
+.info-section h3 { 
+
+  color:var(--green); 
+
+  font-size:28px; 
+
+  margin-bottom:20px; 
+
+  text-align:center; 
+
+} 
+
+  
+
+.info-section ul { 
+
+  list-style: disc inside; 
+
+  line-height:1.7; 
+
+  margin-bottom:20px; 
+
+} 
+
+  
+
+.info-section ul li:first-child { 
+
+  list-style:none; 
+
+} 
+
+  
+
+.info-section p { 
+
+  font-size:16px; 
+
+  line-height:1.7; 
+
+  margin-bottom:15px; 
+
+} 
+
+  
+
+/* CTA BUTTON AT BOTTOM */ 
+
+.bottom-cta { 
+
+  text-align:center; 
+
+  margin:50px 0; 
+
+} 
+
+  
+
+.bottom-cta a { 
+
+  display:inline-block; 
+
+  background: linear-gradient(90deg, #00aaff, var(--blue)); 
+
+  color:white; 
+
+  padding:20px 50px; 
+
+  border-radius:12px; 
+
+  font-size:20px; 
+
+  font-weight:700; 
+
+  text-decoration:none; 
+
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25); 
+
+  transition:0.4s; 
+
+} 
+
+  
+
+.bottom-cta a:hover { 
+
+  background: linear-gradient(90deg, #0088cc, var(--blue-hover)); 
+
+  box-shadow: 0 8px 24px rgba(0,0,0,0.35); 
+
+  transform: translateY(-3px) scale(1.05); 
+
+} 
+
+  
+
+/* FOOTER */ 
+
+footer { 
+
+  background: var(--coffee); 
+
+  color: white; 
+
+  text-align: center; 
+
+  padding: 18px; 
+
+  margin-top: 70px; 
+
+} 
+
+  
+
+/* ---------------- MOBILE RESPONSIVE ONLY ---------------- */ 
+
+@media(max-width:850px){ 
+
+  
+
+  nav { 
+
+    padding:10px 5%; 
+
+    flex-direction:column; 
+
+    gap:10px; 
+
+  } 
+
+  
+
+  .nav-links { 
+
+    flex-wrap:wrap; 
+
+    gap:12px; 
+
+  } 
+
+  
+
+  nav a { 
+
+    font-size:16px; 
+
+  } 
+
+  
+
+  .hero { 
+
+    height:auto; 
+
+    padding:50px 20px; 
+
+  } 
+
+  
+
+  .hero h1 { 
+
+    font-size:30px; 
+
+  } 
+
+  
+
+  .hero p { 
+
+    font-size:16px; 
+
+    max-width:100%; 
+
+  } 
+
+  
+
+  .section { 
+
+    padding:0 15px; 
+
+  } 
+
+  
+
+  .section h2 { 
+
+    font-size:26px; 
+
+  } 
+
+  
+
+  .section p { 
+
+    font-size:16px; 
+
+  } 
+
+  
+
+  .video-block iframe { 
+
+    width:100%; 
+
+    height:auto; 
+
+    aspect-ratio:16/9; 
+
+  } 
+
+  
+
+  .info-section { 
+
+    padding:20px 15px; 
+
+  } 
+
+  
+
+  .info-section h3 { 
+
+    font-size:22px; 
+
+  } 
+
+  
+
+  .info-section p, 
+
+  .info-section ul { 
+
+    font-size:16px; 
+
+  } 
+
+  
+
+  .bottom-cta a { 
+
+    padding:16px 30px; 
+
+    font-size:18px; 
+
+  } 
+
+} 
+
+</style> 
+
+</head> 
+
+  
+
+<body> 
+
+  
+
+<!-- HEADER --> 
+
+<nav id="navbar"> 
+
+  <div class="nav-left"> 
+
+    <img src="Logo.png" alt="Yass Worm Farms Logo" class="logo"> 
+
+  </div> 
+
+  <div class="nav-links"> 
+
+    <a href="index.html">Home</a> 
+
+    <a href="application-rates.html">About Us</a> 
+
+    <a href="shop.html">Shop</a> 
+
+    <a href="laboratory-results.html">Laboratory Results</a> 
+
+    <a href="diy.html">DIY</a> 
+
+    <a href="contact.html">Contact Us</a> 
+
+  </div> 
+
+</nav> 
+
+  
+
+<section class="hero"> 
+
+  <div> 
+
+    <h1>DIY with Yass Worm Farms</h1> 
+
+    <p>Create a worm farm with James Brown</p> 
+
+    <div class="hero-cta"> 
+
+      <a href="contact.html">Start Building your Worm Farm – Contact Us</a> 
+
+    </div> 
+
+  </div> 
+
+</section> 
+
+  
+
+<section class="section"> 
+
+  <h2>Getting Started with Your Worm Farm</h2> 
+
+  <p>Learn the basics of setting up a worm farm and making the most out of organic waste. Watch the video below to get started.</p> 
+
+  
+
+  <p><strong>Tip: Worm farms are great for hobby farmers, large-scale agriculture and research projects.</strong></p> 
+
+  
+
+  <div class="video-block"> 
+
+    <iframe width="960" height="540" src="https://www.youtube.com/embed/9B4BzIq40W0" 
+
+      title="Video" frameborder="0" allowfullscreen></iframe> 
+
+  </div> 
+
+</section> 
+
+  
+
+<section class="section"> 
+
+  <h2>More depth - with James Brown</h2> 
+
+  <p>a deeper insight into the operations of Yass worm farms and how all the magic happens</p> 
+
+  
+
+  <div class="video-block"> 
+
+    <iframe width="960" height="540" src="https://www.youtube.com/embed/5x2yWGps52w" 
+
+      title="Video" frameborder="0" allowfullscreen></iframe> 
+
+</div> 
+
+</section> 
+
+  
+
+<section class="info-section"> 
+
+  <h3>Rough Estimated Cost of Setting Up Your Own Worm Juice Production</h3> 
+
+  <p><strong>Requirements:</strong></p> 
+
+  
+
+  <ul> 
+
+    <li>The following are rough costs depending on your location and what items you already have or can purchase locally:</li> 
+
+    <li>Need slope minimum 3.5 to 4 Degrees.</li> 
+
+    <li>Access to non-town water (no chlorine)</li> 
+
+    <li>Front end loader (or ability to hire one)</li> 
+
+    <li>7 IBC's x $150 each</li> 
+
+    <li>Roll of high impact plastic $140</li> 
+
+    <li>Rhino board $1500</li> 
+
+    <li>High impact tape $100</li> 
+
+    <li>Drip lines $100</li> 
+
+    <li>Collection pipe and poly $400</li> 
+
+    <li>Petrol pump $150</li> 
+
+    <li>Compressor and pump for fermentation tank $500</li> 
+
+    <li>Truck load stable waste (50 ton)</li> 
+
+    <li>Truckload (10 cubic) of worm windrow containing millions of worms from Yass Worm Farms $3500</li> 
+
+    <li>Coffee grinds collection containers $100</li> 
+
+    <li>55 micron filter $250</li> 
+
+    <li>Various fittings $200</li> 
+
+    <li>Consulting fees *see below for more details.</li> 
+
+    <li>Freight $2000</li> 
+
+    <li>Humic Acid $80</li> 
+
+  </ul> 
+
+  
+
+  <p><strong>Total Average Cost:</strong> $10,000 to $12,000 + Consultancy fee @ $3500 up to 10hours. Then per hour fee for further advice.</p> 
+
+  <p>This would produce around 25,000 litres of worm fertiliser per year. The stable waste is available from Canberra Racing Club; however, if there is a local racecourse you could self-source.</p> 
+
+  <p>Contact James Brown for further information and to get started.</p> 
+
+</section> 
+
+  
+
+<div class="bottom-cta"> 
+
+  <a href="contact.html">Start Building your Worm Farm – Contact Us</a> 
+
+</div> 
+
+  
+
+<footer> 
+
+  <p>&copy; 2026 Yass Worm Farms. All Rights Reserved.</p> 
+
+</footer> 
+
+  
+
+<script> 
+
+  const navbar = document.getElementById('navbar'); 
+
+  window.addEventListener('scroll', () => { 
+
+    navbar.classList.toggle('shrink', window.scrollY > 50); 
+
+  }); 
+
+</script> 
+
+  
+
+</body> 
+
+</html> 
