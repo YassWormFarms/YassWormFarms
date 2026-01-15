@@ -401,7 +401,7 @@ footer{
 /* MOBILE RESPONSIVENESS */
 @media(max-width:900px){
 
-  /* --- HEADER MATCH CONTACT MOBILE --- */
+  /* --- HEADER --- */
   nav{
     flex-direction: column;
     align-items: center;
@@ -429,12 +429,17 @@ footer{
     text-align:center;
   }
 
-  /* HERO IMAGE */
-  .hero{
-    height:calc(70vh - 1cm);
+  /* --- HERO IMAGE FIX --- */
+  .hero, .hero::before, .hero-overlay {
+    width:100%;
+    max-width:100%;
     overflow:hidden;
-    justify-content:center;
-    text-align:center;
+    left:0;
+    right:0;
+  }
+  .hero::before {
+    background-size: cover;
+    background-position: center;
   }
   .hero-text{
     margin-left:0;
@@ -459,6 +464,12 @@ footer{
   .diy-worm-farm-section{
     height:auto;
     flex-direction:column;
+  }
+  .diy-worm-farm-section .diy-background{
+    width:100%;
+    max-width:100%;
+    left:0;
+    top:0;
   }
   .diy-worm-farm-section .diy-text{
     max-width:90%;
@@ -575,4 +586,3 @@ section{padding:60px 5%;}
 
 </body>
 </html>
-
