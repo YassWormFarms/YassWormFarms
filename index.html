@@ -25,6 +25,7 @@ body{
   font-family:'Poppins', Arial, sans-serif;
   color:var(--coffee);
   background:white;
+  overflow-x:hidden; /* Prevent horizontal scroll */
 }
 
 /* NAVIGATION */
@@ -407,6 +408,10 @@ footer{
 /* MOBILE RESPONSIVENESS */
 @media(max-width:900px){
 
+  body{
+    overflow-x:hidden;
+  }
+
   nav{
     flex-direction: column;
     align-items: center;
@@ -444,7 +449,7 @@ footer{
     background-position: center;
   }
   .hero-text{
-    margin-left:0;
+    margin:0 auto;
     text-align:center;
   }
   .hero-text h1{font-size:40px;}
@@ -466,22 +471,26 @@ footer{
   .diy-worm-farm-section{
     height:auto;
     flex-direction:column;
+    align-items:center;
+    justify-content:center;
   }
   .diy-worm-farm-section .diy-background{
     width:100%;
     max-width:100%;
     left:0;
     top:0;
+    position:relative;
   }
   .diy-worm-farm-section .diy-text{
     max-width:90%;
-    padding-left:20px;
+    padding-left:0;
     padding-top:20px;
+    text-align:center;
   }
   .diy-worm-farm-section .diy-text h2{font-size:28px;}
   .diy-worm-farm-section .diy-text p{font-size:16px;}
   .diy-worm-farm-section .diy-text .diy-details p{font-size:14px;}
-  .testimony-box{flex-direction:column;align-items:center;}
+  .testimony-box{flex-direction:column;align-items:center;text-align:center;}
   .testimony-box img{width:200px;}
 }
 
@@ -580,19 +589,18 @@ section{padding:60px 5%;}
   </div>
 
   <div class="testimony-box">
-    <img src="vines.jpg" alt="Vineyard owner testimonial">
+    <img src="IBC worm Juice.jpg" alt="Anthony – Dairy Farmer">
     <div class="testimony-content">
-      <h3>Vineyard Owner</h3>
-      <p>This is some example text of a vineyard owner using worm juice on grapes for better yields and soil health.</p>
+      <h3>Anthony – Dairy Farmer (East Gippsland)</h3>
+      <p>Anthony, a dairy farmer friend from East Gippsland, replaced all synthetic fertilisers with worm juice. He now saves around <strong>$50,000</strong> annually and boasts the most outstanding pasture in the district.</p>
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  &copy; 2026 Yass Worm Farms. All Rights Reserved.
+  <p>© 2026 Yass Worm Farms. All rights reserved.</p>
 </footer>
 
 </body>
 </html>
-
