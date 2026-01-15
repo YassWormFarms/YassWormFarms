@@ -233,10 +233,6 @@ nav a:hover {
   font-weight: 600;
 }
 
-.contact-form button:hover {
-  background: #043215;
-}
-
 /* FOOTER */
 footer {
   background: var(--coffee);
@@ -250,11 +246,14 @@ footer {
 @media(max-width:850px) {
   nav {
     padding:10px 20px;
-    flex-wrap:wrap;
+    flex-direction: column; /* stack items vertically */
+    align-items: center; /* center everything */
   }
 
   .logo {
     height:70px;
+    order: 0; /* ensures logo is on top and centered */
+    margin-bottom:10px;
   }
 
   .nav-links {
@@ -263,7 +262,7 @@ footer {
     flex-wrap:wrap;
     justify-content:center;
     gap:15px;
-    margin-top:10px;
+    margin-top:0;
   }
 
   nav a {
@@ -383,4 +382,5 @@ window.addEventListener('scroll', () => {
 
 </body>
 </html>
+
 
