@@ -7,7 +7,6 @@
 <title>Yass Worm Farms</title>
 
 <meta name="description" content="Yass Worm Farms offers organic worm juice fertiliser and worm castings to boost soil health and promote plant growth. Support a small family business today.">
-<meta name="keywords" content="worm juice, worm castings, organic fertiliser, soil health, eco-friendly fertiliser">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +16,7 @@
 :root{
   --green:#064d28;
   --coffee:#4b3621;
-  --lab-title:#b87333;
+  --accent:#f4a261;
 }
 
 body{
@@ -30,7 +29,7 @@ body{
 nav{
   background:#fff;
   border-bottom:2px solid #ddd;
-  padding:15px 10%;
+  padding:15px 8%;
   display:flex;
   justify-content:space-between;
   align-items:center;
@@ -39,11 +38,11 @@ nav{
   z-index:10;
 }
 
-.logo{height:98px;}
+.logo{height:95px;}
 
 .nav-links{
   display:flex;
-  gap:30px;
+  gap:28px;
   flex-wrap:wrap;
 }
 
@@ -65,22 +64,31 @@ nav a:hover{color:var(--green);}
   align-items:center;
 }
 
-.hero-overlay{
+.hero::after{
+  content:"";
   position:absolute;
   inset:0;
-  background:linear-gradient(to right, rgba(0,0,0,0.45) 30%, rgba(0,0,0,0) 100%);
+  background:linear-gradient(to right, rgba(0,0,0,0.5) 35%, rgba(0,0,0,0) 100%);
 }
 
 .hero-text{
   position:relative;
+  z-index:2;
   margin-left:8%;
   color:white;
 }
 
-.hero-text h1{font-size:58px;margin:0;}
-.hero-text p{font-size:26px;font-weight:700;}
+.hero-text h1{
+  font-size:58px;
+  margin:0;
+}
 
-/* INSERT */
+.hero-text p{
+  font-size:26px;
+  font-weight:700;
+}
+
+/* LAB CALLOUT */
 .lab-callout{
   background:#f1f7f1;
   padding:40px 8%;
@@ -110,7 +118,7 @@ nav a:hover{color:var(--green);}
 
 /* BENEFITS */
 .benefits-section{
-  padding:70px 5%;
+  padding:70px 6%;
   background:#e8f3e8;
 }
 
@@ -118,7 +126,7 @@ nav a:hover{color:var(--green);}
   text-align:center;
   font-size:38px;
   color:var(--green);
-  margin-bottom:35px;
+  margin-bottom:40px;
 }
 
 .benefits-grid{
@@ -129,8 +137,8 @@ nav a:hover{color:var(--green);}
 
 .benefit-item{
   background:#fff;
-  border-radius:12px;
-  padding:22px 18px 22px 50px;
+  border-radius:14px;
+  padding:22px 20px 22px 50px;
   font-size:20px;
   font-weight:600;
   position:relative;
@@ -158,7 +166,7 @@ nav a:hover{color:var(--green);}
 
 .scrolling-text{
   display:flex;
-  animation:scrollText 30s linear infinite;
+  animation:scroll 28s linear infinite;
 }
 
 .scrolling-text span{
@@ -166,71 +174,71 @@ nav a:hover{color:var(--green);}
   font-size:32px;
   font-weight:600;
   color:#e8f3e8;
-  margin-right:50px;
+  margin-right:60px;
 }
 
-@keyframes scrollText{
-  0%{transform:translateX(0);}
-  100%{transform:translateX(-50%);}
+@keyframes scroll{
+  from{transform:translateX(0);}
+  to{transform:translateX(-50%);}
 }
 
 /* LAB RESULTS */
-.lab-results-section{
-  padding:50px 5%;
+.lab-results{
+  padding:55px 6%;
   text-align:center;
 }
 
-.lab-results-section h2{
-  font-size:48px;
-  color:var(--lab-title);
+.lab-results h2{
+  font-size:46px;
+  color:#b87333;
   font-family:'Roboto Slab', serif;
   border-bottom:3px solid var(--green);
   display:inline-block;
-  margin-bottom:30px;
+  margin-bottom:35px;
 }
 
-.images-container{
+.lab-images{
   display:flex;
   justify-content:center;
-  gap:20px;
+  gap:22px;
   flex-wrap:wrap;
 }
 
-.images-container img{
+.lab-images img{
   width:300px;
   border-radius:12px;
 }
 
-.lab-image{
+.lab-highlight{
   border:4px solid var(--green);
   padding:5px;
 }
 
-/* DIY */
-.diy-worm-farm-section{
+/* DIY SECTION */
+.diy-section{
   position:relative;
   height:650px;
+  background:#000;
   display:flex;
   align-items:center;
-  background:#eae2d3;
   overflow:hidden;
 }
 
-.diy-background{
+.diy-section img{
   position:absolute;
   width:120%;
   height:120%;
   object-fit:cover;
 }
 
-.diy-worm-farm-section::after{
+.diy-section::after{
   content:"";
   position:absolute;
   inset:0;
-  background:linear-gradient(to right, rgba(0,0,0,0.75) 45%, rgba(0,0,0,0) 90%);
+  background:linear-gradient(to right, rgba(0,0,0,0.78) 45%, rgba(0,0,0,0) 90%);
 }
 
-.diy-text{
+.diy-content{
   position:relative;
   z-index:2;
   color:white;
@@ -238,39 +246,43 @@ nav a:hover{color:var(--green);}
   max-width:45%;
 }
 
-.diy-text h2{
+.diy-content h2{
   font-size:48px;
-  color:#f4a261;
+  color:var(--accent);
   font-family:'Roboto Slab', serif;
 }
 
-.diy-text p{font-size:22px;font-weight:700;}
+.diy-content p{
+  font-size:22px;
+  font-weight:700;
+}
 
 .build-button{
   display:inline-block;
   margin-top:25px;
-  padding:14px 26px;
+  padding:14px 30px;
   background:#007BFF;
   color:white;
   font-weight:700;
-  border-radius:10px;
+  border-radius:12px;
   text-decoration:none;
+  font-size:20px;
 }
 
-/* TESTIMONIES */
+/* TESTIMONIALS */
 .testimony-section{
-  padding:60px 5%;
+  padding:60px 6%;
   background:#f5e9e0;
   display:flex;
-  flex-wrap:wrap;
   gap:30px;
   justify-content:center;
+  flex-wrap:wrap;
 }
 
 .testimony-box{
   background:#fff;
   padding:25px;
-  border-radius:12px;
+  border-radius:14px;
   display:flex;
   gap:20px;
   max-width:600px;
@@ -286,7 +298,7 @@ footer{
   background:var(--coffee);
   color:white;
   text-align:center;
-  padding:15px 0;
+  padding:18px 0;
 }
 
 /* MOBILE */
@@ -295,7 +307,7 @@ footer{
   .hero-text h1{font-size:40px;}
   .hero-text p{font-size:20px;}
   .lab-callout p{font-size:18px;}
-  .diy-text{max-width:90%;}
+  .diy-content{max-width:90%;}
 }
 </style>
 </head>
@@ -315,7 +327,6 @@ footer{
 </nav>
 
 <section class="hero">
-  <div class="hero-overlay"></div>
   <div class="hero-text">
     <h1>Yass Worm Farms</h1>
     <p>Nature’s Rocket Fuel for Plants</p>
@@ -339,35 +350,34 @@ footer{
     <div class="benefit-item">Increases water holding capacity</div>
     <div class="benefit-item">Releases nutrients steadily</div>
     <div class="benefit-item">Boosts root growth</div>
-    <div class="benefit-item">Speeds up composting & carbon cycling</div>
-    <div class="benefit-item">Can be used on all plants</div>
-    <div class="benefit-item">Produces natural antibiotics</div>
-    <div class="benefit-item">Helps break down toxins & manures</div>
+    <div class="benefit-item">Improves nutrient cycling</div>
+    <div class="benefit-item">Safe for all plants</div>
   </div>
 </section>
 
 <section class="scrolling-band">
   <div class="scrolling-text">
-    <span>Vineyards • Orchards • Broad Acre • Dairy • Vegetables • Pasture • Lawns • Golf Courses • Land Regeneration</span>
-    <span>Vineyards • Orchards • Broad Acre • Dairy • Vegetables • Pasture • Lawns • Golf Courses • Land Regeneration</span>
+    <span>Vineyards • Orchards • Broad Acre • Dairy • Vegetables • Pasture • Lawns • Golf Courses • Regeneration</span>
+    <span>Vineyards • Orchards • Broad Acre • Dairy • Vegetables • Pasture • Lawns • Golf Courses • Regeneration</span>
   </div>
 </section>
 
-<section class="lab-results-section">
+<section class="lab-results">
   <h2>Our Epic Lab Results</h2>
-  <div class="images-container">
+  <div class="lab-images">
     <img src="Logo.png" alt="Logo">
-    <img src="Lab Results 2025.png" class="lab-image" alt="Lab Results">
-    <img src="From our family farm to your soil.png" alt="Farm to Soil">
+    <img src="Lab Results 2025.png" class="lab-highlight" alt="Lab Results">
+    <img src="From our family farm to your soil.png" alt="Family Farm">
   </div>
 </section>
 
-<section class="diy-worm-farm-section">
-  <img src="DIY worm Farm image.jpg" class="diy-background" alt="DIY Worm Farm">
-  <div class="diy-text">
+<section class="diy-section">
+  <img src="DIY worm Farm image.jpg" alt="DIY Worm Farm">
+  <div class="diy-content">
     <h2>DIY Worm Farm System</h2>
     <p>Replace synthetic fertilisers and save thousands annually.</p>
-    <a href="diy.html" class="build-button">Build your Worm Farm</a>
+    <a href="diy.html" class="build-button">Build Your Worm Farm</a>
+  </div>
 </section>
 
 <section class="testimony-section">
@@ -377,7 +387,7 @@ footer{
   </div>
   <div class="testimony-box">
     <img src="IBC worm Juice.jpg" alt="Anthony">
-    <p>Anthony saved $50,000 annually after switching.</p>
+    <p>Anthony saved over $50,000 annually after switching.</p>
   </div>
 </section>
 
@@ -387,6 +397,7 @@ footer{
 
 </body>
 </html>
+
 
 
 
