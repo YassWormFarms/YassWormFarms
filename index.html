@@ -19,15 +19,17 @@
   --green:#064d28;
   --coffee:#4b3621;
   --lab-title:#b87333;
+  --light:#f5f5f5;
 }
 
 body{
   margin:0;
   font-family:'Poppins', Arial, sans-serif;
   color:var(--coffee);
+  background:white;
 }
 
-/* NAV */
+/* NAVIGATION */
 nav{
   background:white;
   border-bottom:2px solid #ddd;
@@ -40,7 +42,9 @@ nav{
   z-index:10;
 }
 
-.logo{height:98px;}
+nav .logo{
+  height:98px;
+}
 
 .nav-links{
   display:flex;
@@ -55,7 +59,9 @@ nav a{
   font-size:22px;
 }
 
-nav a:hover{color:var(--green);}
+nav a:hover{
+  color:var(--green);
+}
 
 /* HERO */
 .hero{
@@ -76,12 +82,21 @@ nav a:hover{color:var(--green);}
   position:relative;
   margin-left:8%;
   color:white;
+  max-width:560px;
 }
 
-.hero-text h1{font-size:58px;margin:0;}
-.hero-text p{font-size:26px;font-weight:700;}
+.hero-text h1{
+  font-size:58px;
+  margin:0;
+}
 
-/* 🔥 LAB CALLOUT */
+.hero-text p{
+  font-size:26px;
+  margin-top:10px;
+  font-weight:700;
+}
+
+/* ✅ INSERTED LAB PARAGRAPH */
 .lab-callout{
   background:#f1f7f1;
   padding:40px 8%;
@@ -92,6 +107,7 @@ nav a:hover{color:var(--green);}
   font-size:24px;
   font-weight:700;
   color:var(--green);
+  line-height:1.5;
   max-width:1100px;
   margin:auto;
 }
@@ -99,6 +115,7 @@ nav a:hover{color:var(--green);}
 .lab-callout a{
   color:#007BFF;
   font-weight:800;
+  text-decoration:underline;
 }
 
 .lab-callout .rocket{
@@ -116,22 +133,24 @@ nav a:hover{color:var(--green);}
 .benefits-title{
   font-size:38px;
   color:var(--green);
+  margin-bottom:35px;
   text-align:center;
 }
 
 .benefits-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
   gap:28px;
 }
 
 .benefit-item{
   background:white;
-  padding:22px 18px 22px 50px;
   border-radius:12px;
-  position:relative;
+  padding:22px 18px 22px 50px;
   font-size:20px;
   font-weight:600;
+  position:relative;
+  box-shadow:0 6px 18px rgba(0,0,0,0.18);
 }
 
 .benefit-item::before{
@@ -140,76 +159,91 @@ nav a:hover{color:var(--green);}
   left:18px;
   top:50%;
   transform:translateY(-50%);
+  font-size:26px;
   color:#0b7a33;
 }
 
-/* SCROLLING */
+/* SCROLLING BAND */
 .scrolling-band{
-  background:#064d28;
+  background-color:#064d28;
   height:2cm;
+  overflow:hidden;
   display:flex;
   align-items:center;
-  overflow:hidden;
 }
 
 .scrolling-text{
   display:flex;
-  animation:scroll 30s linear infinite;
+  width:max-content;
+  animation:scrollText 30s linear infinite;
 }
 
 .scrolling-text span{
-  color:#e8f3e8;
+  white-space:nowrap;
   font-size:32px;
   font-weight:600;
-  white-space:nowrap;
+  color:#e8f3e8;
   margin-right:50px;
 }
 
-@keyframes scroll{
+@keyframes scrollText{
   0%{transform:translateX(0);}
   100%{transform:translateX(-50%);}
 }
 
 /* LAB RESULTS */
 .lab-results-section{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
   padding:50px 5%;
-  text-align:center;
 }
 
 .lab-results-section h2{
   font-size:48px;
   color:var(--lab-title);
+  margin-bottom:30px;
+  font-family:'Roboto Slab', serif;
   border-bottom:3px solid var(--green);
-  display:inline-block;
+  padding-bottom:10px;
 }
 
 .images-container{
   display:flex;
-  justify-content:center;
+  justify-content:space-between;
+  align-items:center;
   gap:20px;
+  width:100%;
   flex-wrap:wrap;
 }
 
+.images-container img{
+  height:auto;
+}
+
+.logo,
+.soil-image{
+  width:12cm;
+}
+
 .lab-image{
-  width:420px;
+  width:20cm;
   border:4px solid var(--green);
   border-radius:12px;
+  padding:5px;
 }
 
 /* DIY */
 .diy-worm-farm-section{
   position:relative;
+  width:100%;
+  max-width:1200px;
+  margin:60px auto;
   height:650px;
   display:flex;
   align-items:center;
   background:#eae2d3;
-}
-
-.diy-background{
-  position:absolute;
-  width:120%;
-  height:120%;
-  object-fit:cover;
+  overflow:hidden;
 }
 
 .diy-worm-farm-section::after{
@@ -219,11 +253,32 @@ nav a:hover{color:var(--green);}
   background:linear-gradient(to right, rgba(0,0,0,0.75) 45%, rgba(0,0,0,0) 90%);
 }
 
+.diy-background{
+  width:120%;
+  height:120%;
+  object-fit:cover;
+  position:absolute;
+  top:-10%;
+  left:-10%;
+}
+
 .diy-text{
   position:relative;
-  color:white;
+  z-index:3;
   padding-left:40px;
   max-width:45%;
+  color:white;
+}
+
+.diy-text h2{
+  font-size:48px;
+  color:#f4a261;
+  font-family:'Roboto Slab', serif;
+}
+
+.diy-text p{
+  font-size:22px;
+  font-weight:700;
 }
 
 .build-button{
@@ -232,6 +287,7 @@ nav a:hover{color:var(--green);}
   padding:14px 26px;
   background:#007BFF;
   color:white;
+  font-size:20px;
   font-weight:700;
   border-radius:10px;
   text-decoration:none;
@@ -239,21 +295,28 @@ nav a:hover{color:var(--green);}
 
 /* TESTIMONY */
 .testimony-section{
-  padding:60px 5%;
-  background:#f5e9e0;
   display:flex;
   gap:30px;
-  justify-content:center;
   flex-wrap:wrap;
+  justify-content:center;
+  margin:60px 5%;
+  background:#f5e9e0;
+  border-radius:12px;
+  padding:40px 5%;
 }
 
 .testimony-box{
   background:white;
-  padding:25px;
   border-radius:12px;
+  padding:25px;
+  max-width:600px;
   display:flex;
   gap:20px;
-  max-width:600px;
+}
+
+.testimony-box img{
+  width:250px;
+  border-radius:10px;
 }
 
 footer{
@@ -265,8 +328,11 @@ footer{
 
 /* MOBILE */
 @media(max-width:900px){
+  nav a{font-size:16px;}
   .hero-text h1{font-size:40px;}
+  .hero-text p{font-size:20px;}
   .lab-callout p{font-size:18px;}
+  .images-container{flex-direction:column;}
   .diy-text{max-width:90%;}
 }
 </style>
@@ -275,7 +341,7 @@ footer{
 <body>
 
 <nav>
-  <img src="Logo.png" class="logo">
+  <img src="Logo.png" alt="Yass Worm Farms Logo" class="logo">
   <div class="nav-links">
     <a href="index.html">Home</a>
     <a href="application-rates.html">About Us</a>
@@ -290,7 +356,7 @@ footer{
   <div class="hero-overlay"></div>
   <div class="hero-text">
     <h1>Yass Worm Farms</h1>
-    <p>Nature’s Rocket Fuel for Plants</p>
+    <p><strong>Worm Juice Fertiliser:</strong><br>Nature’s Rocket Fuel for Plants</p>
   </div>
 </section>
 
@@ -298,13 +364,13 @@ footer{
   <p>
     VISITORS PLEASE CHECK OUT OUR LATEST OUTSTANDING LAB RESULTS
     <a href="laboratory-results.html">HERE</a><br><br>
-    WE HAVE MANAGED TO DRAMATICALLY LOWER THE LACTIC ACID BACTERIA (LAB) MICROBE COMMUNITIES ENABLING FUNGI, YEAST,
-    ACTINOMYCETES AND PHOTOSYNTHETIC BACTERIA MICROBES TO DOMINATE THE MIXTURE.
+    WE HAVE MANAGED TO DRAMATICALLY LOWER THE LACTIC ACID BACTERIA (LAB) MICROBE COMMUNITIES
+    ENABLING FUNGI, YEAST, ACTINOMYCETES AND PHOTOSYNTHETIC BACTERIA MICROBES TO DOMINATE THE MIXTURE.
     <span class="rocket">🚀 ROCKET FUEL FOR PLANTS 🚀</span>
   </p>
 </section>
 
-<!-- ALL OTHER SECTIONS CONTINUE AS BEFORE -->
+<!-- REMAINING SECTIONS CONTINUE -->
 
 </body>
 </html>
