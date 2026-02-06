@@ -156,33 +156,6 @@ nav a:hover{color:var(--green);}
   font-size:26px;
 }
 
-/* SCROLL BAND */
-.scrolling-band{
-  background:#064d28;
-  height:2cm;
-  display:flex;
-  align-items:center;
-  overflow:hidden;
-}
-
-.scrolling-text{
-  display:flex;
-  animation:scroll 28s linear infinite;
-}
-
-.scrolling-text span{
-  white-space:nowrap;
-  font-size:32px;
-  font-weight:600;
-  color:#e8f3e8;
-  margin-right:60px;
-}
-
-@keyframes scroll{
-  from{transform:translateX(0);}
-  to{transform:translateX(-50%);}
-}
-
 /* LAB RESULTS */
 .lab-results{
   padding:55px 6%;
@@ -198,22 +171,11 @@ nav a:hover{color:var(--green);}
   margin-bottom:35px;
 }
 
-.lab-images{
-  display:flex;
-  justify-content:center;
-  gap:22px;
-  flex-wrap:wrap;
-}
-
 .lab-images img{
   max-width:100%;
   height:auto;
   border-radius:12px;
-}
-
-.lab-highlight{
   border:4px solid var(--green);
-  padding:5px;
 }
 
 /* DIY SECTION */
@@ -271,28 +233,19 @@ nav a:hover{color:var(--green);}
   font-size:20px;
 }
 
-/* TESTIMONIALS */
-.testimony-section{
-  padding:60px 6%;
-  background:#f5e9e0;
-  display:flex;
-  gap:30px;
-  justify-content:center;
-  flex-wrap:wrap;
+/* FAMILY FARM IMAGE (NEW & LARGE) */
+.family-farm-section{
+  padding:70px 6%;
+  text-align:center;
+  background:#f5f5f5;
 }
 
-.testimony-box{
-  background:#fff;
-  padding:25px;
-  border-radius:14px;
-  display:flex;
-  gap:20px;
-  max-width:600px;
-}
-
-.testimony-box img{
-  width:220px;
-  border-radius:10px;
+.family-farm-section img{
+  width:100%;
+  max-width:900px;
+  height:auto;
+  border-radius:18px;
+  box-shadow:0 10px 28px rgba(0,0,0,0.25);
 }
 
 /* FOOTER */
@@ -340,38 +293,15 @@ footer{
     VISITORS PLEASE CHECK OUT OUR LATEST OUTSTANDING LAB RESULTS
     <a href="laboratory-results.html">HERE</a><br><br>
     WE HAVE MANAGED TO DRAMATICALLY LOWER THE LACTIC ACID BACTERIA (LAB) MICROBE COMMUNITIES
-    ENABLING FUNGI, YEAST, ACTINOMYCETES AND PHOTOSYNTHETIC BACTERIA MICROBES TO DOMINATE THE MIXTURE
-    MAKING FOR AN EVEN MORE POWERFUL FERTILISER
+    ENABLING FUNGI, YEAST, ACTINOMYCETES AND PHOTOSYNTHETIC BACTERIA MICROBES TO DOMINATE THE MIXTURE.
     <span class="rocket">🚀 ROCKET FUEL FOR PLANTS 🚀</span>
   </p>
 </section>
 
-<section class="benefits-section">
-  <h2 class="benefits-title">Brilliant Benefits of Worm Juice</h2>
-  <div class="benefits-grid">
-    <div class="benefit-item">Improved soil structure & airflow</div>
-    <div class="benefit-item">Increases water holding capacity</div>
-    <div class="benefit-item">Releases nutrients steadily</div>
-    <div class="benefit-item">Boosts root growth</div>
-    <div class="benefit-item">Speeds up composting & carbon cycling</div>
-    <div class="benefit-item">Can be used on all plants for greener pasture</div>
-    <div class="benefit-item">Produces natural antibiotics that protect plants</div>
-    <div class="benefit-item">Helps break down toxins & manures</div>
-  </div>
-</section>
-
-<section class="scrolling-band">
-  <div class="scrolling-text">
-    <span>Vineyards • Orchards • Broad Acre • Dairy • Vegetables • Pasture • Lawns • Golf Courses • Land Regeneration</span>
-    <span>Vineyards • Orchards • Broad Acre • Dairy • Vegetables • Pasture • Lawns • Golf Courses • Land Regeneration</span>
-  </div>
-</section>
-
 <section class="lab-results">
   <h2>Our Epic Lab Results</h2>
-
   <div class="lab-images">
-    <img src="Lab Results 2025.png" class="lab-highlight" alt="Microbial Analysis">
+    <img src="Lab Results 2025.png" alt="Microbial Analysis">
   </div>
 </section>
 
@@ -384,24 +314,11 @@ footer{
   </div>
 </section>
 
-<!-- NEW IMAGE UNDER DIY SECTION -->
-<section style="padding:60px 6%; text-align:center; background:#f1f7f1;">
+<!-- NEW LARGE IMAGE UNDER DIY -->
+<section class="family-farm-section">
   <img
     src="https://raw.githubusercontent.com/YassWormFarms/YassWormFarms/main/From%20our%20family%20farm%20to%20your%20soil%20-%20ChatGPT%20Image%20Jan%2010%2C%202026%2C%2012_22_19%20PM.png"
-    alt="From our family farm to your soil"
-    loading="lazy"
-    style="max-width:420px;width:100%;border-radius:14px;box-shadow:0 8px 22px rgba(0,0,0,0.25);">
-</section>
-
-<section class="testimony-section">
-  <div class="testimony-box">
-    <img src="warren.jpg" alt="Warren">
-    <p>Warren loading worm juice fertiliser at Yass.</p>
-  </div>
-  <div class="testimony-box">
-    <img src="IBC worm Juice.jpg" alt="Anthony">
-    <p>Anthony saved over $50,000 annually after switching.</p>
-  </div>
+    alt="From our family farm to your soil">
 </section>
 
 <footer>
@@ -410,6 +327,7 @@ footer{
 
 </body>
 </html>
+
 
 
 
