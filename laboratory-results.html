@@ -97,12 +97,12 @@ nav a.active {
 
 /* MAIN */
 main {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 50px auto;
   padding: 0 25px;
 }
 
-/* LAB IMAGE (REPLACES PDF) */
+/* LAB IMAGE (NEW LARGER IMAGE) */
 .lab-container {
   margin: 50px auto;
   text-align: center;
@@ -110,7 +110,7 @@ main {
 
 .lab-container img {
   width: 100%;
-  max-width: 1100px;
+  max-width: 1400px; /* increased for larger display */
   height: auto;
   border-radius: 12px;
   border: 4px solid var(--green);
@@ -125,6 +125,7 @@ main {
   text-decoration: none;
   font-weight: 700;
   border-radius: 10px;
+  font-size: 18px;
 }
 
 /* SECTION STYLES */
@@ -132,6 +133,7 @@ main {
   background: var(--bg-microbial);
   padding: 50px 25px;
   border-radius: 12px;
+  margin-top: 50px;
 }
 
 section h2 {
@@ -165,12 +167,21 @@ section h2 {
   margin-bottom: 15px;
 }
 
+/* FOOTER */
 footer {
   background: var(--coffee);
   color: white;
   text-align: center;
   padding: 18px;
   margin-top: 70px;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media(max-width:900px){
+  nav a { font-size: 16px; }
+  .hero h1 { font-size: 32px; }
+  .hero p { font-size: 16px; }
+  .view-full { padding: 12px 24px; font-size: 16px; }
 }
 </style>
 </head>
@@ -198,8 +209,7 @@ footer {
 
 <!-- LAB IMAGE EMBEDDED -->
 <div class="lab-container">
-  <img src="https://raw.githubusercontent.com/YassWormFarms/YassWormFarms/main/Lab%20Test%20Latest.jpg" 
-       alt="Latest Lab Report">
+  <img src="https://raw.githubusercontent.com/YassWormFarms/YassWormFarms/main/Lab%20Test%20Latest.jpg" alt="Latest Lab Report">
   <br>
   <a class="view-full"
      href="https://raw.githubusercontent.com/YassWormFarms/YassWormFarms/main/Lab%20Report%20Latest.pdf"
@@ -219,6 +229,10 @@ footer {
       <h3>Yeasts</h3>
       <p><strong>10,000 cfu/g</strong> – Fuels microbial food web in the root zone.</p>
     </div>
+    <div class="card">
+      <h3>Lactic Acid Bacteria</h3>
+      <p><strong>470,000 cfu/g</strong> – Helps nutrient availability and plant growth.</p>
+    </div>
   </div>
 </section>
 
@@ -237,5 +251,4 @@ window.addEventListener('scroll', () => {
 
 </body>
 </html>
-
 
