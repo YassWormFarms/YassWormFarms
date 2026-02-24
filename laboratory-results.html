@@ -5,15 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Laboratory Results | Yass Worm Farms</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
 <style>
 
 :root {
-  --green:#0b5d1e;
-  --dark:#0f1720;
-  --accent:#c89b3c;
-  --light:#f4f7f4;
+  --deep-green:#1f4d2b;
+  --soft-green:#eaf4ea;
+  --earth:#5a4636;
+  --accent:#b38b59;
+  --light:#fafaf7;
 }
 
 * { box-sizing:border-box; }
@@ -21,23 +22,24 @@
 body {
   margin:0;
   font-family:'Poppins', sans-serif;
-  background:#fff;
-  color:#222;
+  background:var(--light);
+  color:var(--earth);
+  line-height:1.7;
 }
 
-/* NAV */
+/* NAVIGATION */
 
 nav {
-  background:#fff;
+  background:white;
   padding:18px 10%;
   display:flex;
   justify-content:space-between;
   align-items:center;
+  border-bottom:1px solid #eee;
   position:sticky;
   top:0;
   z-index:999;
   transition:all .3s ease;
-  border-bottom:1px solid #eee;
 }
 
 nav.shrink {
@@ -45,8 +47,8 @@ nav.shrink {
 }
 
 nav img {
-  height:90px;
-  transition:all .3s ease;
+  height:85px;
+  transition:.3s;
 }
 
 nav.shrink img {
@@ -55,188 +57,149 @@ nav.shrink img {
 
 nav a {
   text-decoration:none;
-  color:#222;
-  font-weight:700;
-  margin-left:30px;
-  font-size:18px;
+  color:var(--earth);
+  font-weight:600;
+  margin-left:25px;
+  font-size:17px;
 }
 
 nav a:hover,
 nav a.active {
-  color:var(--green);
+  color:var(--deep-green);
 }
 
 /* HERO */
 
 .hero {
-  background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+  background:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),
   url('Chat gbt Lab Image.png') center/cover no-repeat;
   color:white;
   text-align:center;
-  padding:180px 20px;
+  padding:160px 20px;
 }
 
 .hero h1 {
-  font-size:48px;
-  font-weight:800;
-  margin-bottom:20px;
+  font-family:'Playfair Display', serif;
+  font-size:46px;
+  margin-bottom:15px;
 }
 
 .hero p {
-  font-size:20px;
-  max-width:800px;
+  font-size:19px;
+  max-width:750px;
   margin:auto;
   opacity:.95;
 }
 
-/* IMAGE SECTION */
+/* LAB IMAGE */
 
-.lab-container {
-  max-width:1300px;
-  margin:70px auto;
+.lab-section {
+  max-width:1200px;
+  margin:70px auto 40px;
   padding:0 20px;
   text-align:center;
 }
 
-.lab-container img {
+.lab-section img {
   width:100%;
   border-radius:14px;
-  border:5px solid var(--green);
-  box-shadow:0 20px 40px rgba(0,0,0,.15);
+  border:4px solid var(--deep-green);
+  box-shadow:0 15px 40px rgba(0,0,0,.08);
 }
 
 .view-full {
   display:inline-block;
-  margin-top:25px;
-  padding:16px 35px;
-  background:var(--green);
-  color:#fff;
+  margin-top:20px;
+  padding:14px 30px;
+  background:var(--deep-green);
+  color:white;
   text-decoration:none;
-  font-weight:700;
-  border-radius:10px;
-  font-size:18px;
+  font-weight:600;
+  border-radius:8px;
   transition:.3s;
 }
 
 .view-full:hover {
-  background:#083f15;
+  background:#163b21;
 }
 
-/* MICROBIAL SECTION */
+/* BENEFITS SECTION */
 
-.microbial-section {
-  background:var(--dark);
-  color:#fff;
-  padding:90px 20px;
+.benefits {
+  max-width:1100px;
+  margin:50px auto 90px;
+  padding:0 20px;
 }
 
-.microbial-section h2 {
+.benefits h2 {
+  font-family:'Playfair Display', serif;
   text-align:center;
-  font-size:40px;
-  font-weight:800;
-  margin-bottom:20px;
+  font-size:38px;
+  color:var(--deep-green);
+  margin-bottom:15px;
 }
 
-.microbial-section p.lead {
+.benefits p.intro {
   text-align:center;
-  max-width:850px;
-  margin:0 auto 60px;
-  font-size:20px;
-  opacity:.9;
+  max-width:750px;
+  margin:0 auto 50px;
+  font-size:18px;
 }
 
-.cards {
-  max-width:1300px;
-  margin:auto;
+.benefit-grid {
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:30px;
 }
 
-.card {
-  background:#1c2530;
-  padding:30px;
-  border-radius:16px;
-  transition:.4s ease;
-  border:1px solid rgba(255,255,255,.08);
+.benefit-card {
+  background:var(--soft-green);
+  padding:28px;
+  border-radius:14px;
+  transition:.3s ease;
+  border:1px solid #dde8dd;
 }
 
-.card:hover {
-  transform:translateY(-10px);
-  border-color:var(--accent);
+.benefit-card:hover {
+  transform:translateY(-6px);
 }
 
-.card h3 {
-  font-size:22px;
+.benefit-card h3 {
+  color:var(--deep-green);
   margin-bottom:15px;
-  color:var(--accent);
+  font-size:20px;
 }
 
-.card ul {
+.benefit-card ul {
   padding-left:18px;
-  line-height:1.7;
 }
 
-/* BENEFIT STRIP */
+/* SUMMARY STRIP */
 
-.benefit-strip {
-  background:linear-gradient(135deg,var(--green),#0e7a29);
-  color:white;
+.summary {
+  background:white;
   padding:70px 20px;
   text-align:center;
 }
 
-.benefit-strip h2 {
-  font-size:36px;
-  font-weight:800;
+.summary h2 {
+  font-family:'Playfair Display', serif;
+  font-size:34px;
   margin-bottom:20px;
+  color:var(--deep-green);
 }
 
-.benefit-strip p {
-  font-size:20px;
-  max-width:900px;
+.summary p {
+  max-width:850px;
   margin:auto;
-}
-
-/* CTA */
-
-.cta {
-  padding:100px 20px;
-  text-align:center;
-  background:#fff;
-}
-
-.cta h2 {
-  font-size:42px;
-  margin-bottom:20px;
-  font-weight:800;
-}
-
-.cta p {
-  font-size:20px;
-  margin-bottom:40px;
-}
-
-.cta a {
-  background:var(--accent);
-  padding:18px 45px;
-  color:#000;
-  text-decoration:none;
-  font-weight:800;
-  border-radius:12px;
-  font-size:20px;
-  transition:.3s;
-}
-
-.cta a:hover {
-  background:#a57c2b;
+  font-size:19px;
 }
 
 /* FOOTER */
 
 footer {
-  background:#111;
-  color:#ccc;
+  background:var(--deep-green);
+  color:white;
   text-align:center;
   padding:25px;
   font-size:14px;
@@ -245,7 +208,7 @@ footer {
 /* MOBILE */
 
 @media(max-width:768px){
-  .hero h1 { font-size:34px; }
+  .hero h1 { font-size:32px; }
   .hero p { font-size:16px; }
   nav a { font-size:14px; margin-left:15px; }
 }
@@ -268,70 +231,72 @@ footer {
 </nav>
 
 <section class="hero">
-  <h1>Science-Backed Soil Power</h1>
-  <p>Independent laboratory analysis confirms our Worm Juice is loaded with beneficial living microbes that improve soil structure, nutrient cycling and crop performance.</p>
+  <h1>Science Supporting Natural Soil Health</h1>
+  <p>Independent laboratory testing confirms our Worm Juice is rich in diverse, beneficial living microbes that support resilient soil and thriving crops.</p>
 </section>
 
-<section class="lab-container">
-  <img src="https://raw.githubusercontent.com/YassWormFarms/YassWormFarms/main/worm%20farm%20test.png" alt="Yass Worm Farms Microbial Test Results">
+<section class="lab-section">
+  <img src="https://raw.githubusercontent.com/YassWormFarms/YassWormFarms/main/worm%20farm%20test.png" alt="Yass Worm Farms Microbial Analysis">
   <br>
   <a class="view-full" href="https://raw.githubusercontent.com/YassWormFarms/YassWormFarms/main/Lab%20Report%20Latest.pdf" target="_blank">
-    View Full Lab Report
+    View Full Laboratory Report
   </a>
 </section>
 
-<section class="microbial-section">
-  <h2>Living Microbes. Real Results.</h2>
-  <p class="lead">Our premium Worm Juice contains powerful biological species working together to regenerate soil naturally.</p>
+<section class="benefits">
+  <h2>The Living Biology Inside Every Drop</h2>
+  <p class="intro">
+    Our premium Worm Juice contains a balanced community of beneficial microbes working together to regenerate soil naturally and sustainably.
+  </p>
 
-  <div class="cards">
+  <div class="benefit-grid">
 
-    <div class="card">
+    <div class="benefit-card">
       <h3>Lactic Acid Bacteria (LAB)</h3>
       <ul>
         <li>Suppress harmful pathogens</li>
         <li>Improve nutrient availability</li>
         <li>Strengthen plant immunity</li>
-        <li>Stimulate root growth</li>
+        <li>Stimulate root development</li>
       </ul>
     </div>
 
-    <div class="card">
+    <div class="benefit-card">
       <h3>Yeasts</h3>
       <ul>
-        <li>Kickstart microbial activity</li>
-        <li>Break down organic matter</li>
+        <li>Activate microbial life in soil</li>
+        <li>Break down organic material</li>
+        <li>Support early root growth</li>
         <li>Improve seedling vigour</li>
-        <li>Support soil food web</li>
       </ul>
     </div>
 
-    <div class="card">
+    <div class="benefit-card">
       <h3>Active Fungi</h3>
       <ul>
-        <li>Build stable soil aggregates</li>
+        <li>Improve soil structure</li>
         <li>Increase phosphorus uptake</li>
-        <li>Improve drought tolerance</li>
-        <li>Extend root reach</li>
+        <li>Enhance drought tolerance</li>
+        <li>Extend root access to nutrients</li>
       </ul>
     </div>
 
-    <div class="card">
+    <div class="benefit-card">
       <h3>Photosynthetic Bacteria</h3>
       <ul>
-        <li>Enhance nitrogen cycling</li>
+        <li>Enhance nutrient cycling</li>
         <li>Boost chlorophyll production</li>
-        <li>Improve photosynthesis</li>
-        <li>Increase yield potential</li>
+        <li>Support efficient photosynthesis</li>
+        <li>Encourage stronger plant growth</li>
       </ul>
     </div>
 
-    <div class="card">
+    <div class="benefit-card">
       <h3>Actinomycetes</h3>
       <ul>
         <li>Break down tough residues</li>
-        <li>Produce natural antibiotics</li>
-        <li>Improve long-term fertility</li>
+        <li>Produce natural disease suppression</li>
+        <li>Improve long-term soil fertility</li>
         <li>Protect plant roots</li>
       </ul>
     </div>
@@ -339,15 +304,14 @@ footer {
   </div>
 </section>
 
-<section class="benefit-strip">
-  <h2>What This Means For Your Farm</h2>
-  <p>Stronger roots. Better nutrient efficiency. Improved soil structure. Higher drought resilience. Increased yield potential. Built naturally — powered by biology.</p>
-</section>
-
-<section class="cta">
-  <h2>Ready to Regenerate Your Soil?</h2>
-  <p>Upgrade your soil biology today with premium Worm Juice from Yass Worm Farms.</p>
-  <a href="shop.html">Shop Now</a>
+<section class="summary">
+  <h2>What This Means For Your Soil</h2>
+  <p>
+    Improved soil structure. Greater nutrient efficiency. Stronger plant immunity. 
+    Enhanced drought resilience. Sustainable long-term fertility. 
+    <br><br>
+    Naturally derived. Scientifically verified. Built for regenerative farming.
+  </p>
 </section>
 
 <footer>
