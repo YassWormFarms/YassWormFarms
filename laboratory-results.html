@@ -1,245 +1,357 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Laboratory Results | Yass Worm Farms</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
+
 :root {
-  --green: #064d28;
-  --coffee: #4b3621;
-  --accent: #b87333;
-  --light: #f5f5f5;
-  --bg-section: #f7fff7;
-  --bg-microbial: #e0f0ff;
-  --advice-bg: linear-gradient(135deg, #e6fae6, #d4f3d4);
-  --note-bg: #D18C8C;
+  --green:#0b5d1e;
+  --dark:#0f1720;
+  --accent:#c89b3c;
+  --light:#f4f7f4;
 }
+
+* { box-sizing:border-box; }
 
 body {
-  margin: 0;
-  font-family: 'Poppins', Arial, sans-serif;
-  color: var(--coffee);
-  background: white;
-  line-height: 1.6;
+  margin:0;
+  font-family:'Poppins', sans-serif;
+  background:#fff;
+  color:#222;
 }
 
-/* HEADER */
+/* NAV */
+
 nav {
-  background: white;
-  border-bottom: 2px solid #ddd;
-  padding: 15px 10%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  transition: all 0.35s ease-in-out;
-}
-
-nav .logo {
-  height: 98px;
-  transition: height 0.35s ease-in-out;
+  background:#fff;
+  padding:18px 10%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:sticky;
+  top:0;
+  z-index:999;
+  transition:all .3s ease;
+  border-bottom:1px solid #eee;
 }
 
 nav.shrink {
-  padding: 5px 10%;
-  border-bottom: 1px solid #ccc;
+  padding:8px 10%;
 }
 
-nav.shrink .logo {
-  height: 58px;
+nav img {
+  height:90px;
+  transition:all .3s ease;
 }
 
-.nav-links {
-  display: flex;
-  gap: 30px;
+nav.shrink img {
+  height:55px;
 }
 
 nav a {
-  text-decoration: none;
-  color: var(--coffee);
-  font-weight: 700;
-  font-size: 22px;
+  text-decoration:none;
+  color:#222;
+  font-weight:700;
+  margin-left:30px;
+  font-size:18px;
 }
 
 nav a:hover,
 nav a.active {
-  color: var(--green);
+  color:var(--green);
 }
 
 /* HERO */
+
 .hero {
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('Chat gbt Lab Image.png') center/cover no-repeat;
-  color: white;
-  text-align: center;
-  padding: 180px 20px;
+  background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+  url('Chat gbt Lab Image.png') center/cover no-repeat;
+  color:white;
+  text-align:center;
+  padding:180px 20px;
 }
 
 .hero h1 {
-  font-size: 42px;
-  margin-bottom: 15px;
+  font-size:48px;
+  font-weight:800;
+  margin-bottom:20px;
 }
 
 .hero p {
-  font-size: 18px;
-  max-width: 700px;
-  margin: auto;
-  font-weight: bold;
+  font-size:20px;
+  max-width:800px;
+  margin:auto;
+  opacity:.95;
 }
 
-/* MAIN */
-main {
-  max-width: 1200px;
-  margin: 50px auto;
-  padding: 0 25px;
-}
+/* IMAGE SECTION */
 
-/* LAB IMAGE (NEW LARGER IMAGE) */
 .lab-container {
-  margin: 50px auto;
-  text-align: center;
+  max-width:1300px;
+  margin:70px auto;
+  padding:0 20px;
+  text-align:center;
 }
 
 .lab-container img {
-  width: 100%;
-  max-width: 1400px; /* increased for larger display */
-  height: auto;
-  border-radius: 12px;
-  border: 4px solid var(--green);
+  width:100%;
+  border-radius:14px;
+  border:5px solid var(--green);
+  box-shadow:0 20px 40px rgba(0,0,0,.15);
 }
 
 .view-full {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 14px 30px;
-  background: var(--green);
-  color: white;
-  text-decoration: none;
-  font-weight: 700;
-  border-radius: 10px;
-  font-size: 18px;
+  display:inline-block;
+  margin-top:25px;
+  padding:16px 35px;
+  background:var(--green);
+  color:#fff;
+  text-decoration:none;
+  font-weight:700;
+  border-radius:10px;
+  font-size:18px;
+  transition:.3s;
 }
 
-/* SECTION STYLES */
+.view-full:hover {
+  background:#083f15;
+}
+
+/* MICROBIAL SECTION */
+
 .microbial-section {
-  background: var(--bg-microbial);
-  padding: 50px 25px;
-  border-radius: 12px;
-  margin-top: 50px;
+  background:var(--dark);
+  color:#fff;
+  padding:90px 20px;
 }
 
-section h2 {
-  text-align: center;
-  color: var(--green);
-  font-size: 32px;
-  margin-bottom: 20px;
+.microbial-section h2 {
+  text-align:center;
+  font-size:40px;
+  font-weight:800;
+  margin-bottom:20px;
+}
+
+.microbial-section p.lead {
+  text-align:center;
+  max-width:850px;
+  margin:0 auto 60px;
+  font-size:20px;
+  opacity:.9;
 }
 
 .cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-  margin-top: 30px;
+  max-width:1300px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
 }
 
 .card {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  padding: 25px;
-  transition: transform 0.3s ease;
+  background:#1c2530;
+  padding:30px;
+  border-radius:16px;
+  transition:.4s ease;
+  border:1px solid rgba(255,255,255,.08);
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform:translateY(-10px);
+  border-color:var(--accent);
 }
 
 .card h3 {
-  color: var(--green);
-  margin-bottom: 15px;
+  font-size:22px;
+  margin-bottom:15px;
+  color:var(--accent);
+}
+
+.card ul {
+  padding-left:18px;
+  line-height:1.7;
+}
+
+/* BENEFIT STRIP */
+
+.benefit-strip {
+  background:linear-gradient(135deg,var(--green),#0e7a29);
+  color:white;
+  padding:70px 20px;
+  text-align:center;
+}
+
+.benefit-strip h2 {
+  font-size:36px;
+  font-weight:800;
+  margin-bottom:20px;
+}
+
+.benefit-strip p {
+  font-size:20px;
+  max-width:900px;
+  margin:auto;
+}
+
+/* CTA */
+
+.cta {
+  padding:100px 20px;
+  text-align:center;
+  background:#fff;
+}
+
+.cta h2 {
+  font-size:42px;
+  margin-bottom:20px;
+  font-weight:800;
+}
+
+.cta p {
+  font-size:20px;
+  margin-bottom:40px;
+}
+
+.cta a {
+  background:var(--accent);
+  padding:18px 45px;
+  color:#000;
+  text-decoration:none;
+  font-weight:800;
+  border-radius:12px;
+  font-size:20px;
+  transition:.3s;
+}
+
+.cta a:hover {
+  background:#a57c2b;
 }
 
 /* FOOTER */
+
 footer {
-  background: var(--coffee);
-  color: white;
-  text-align: center;
-  padding: 18px;
-  margin-top: 70px;
+  background:#111;
+  color:#ccc;
+  text-align:center;
+  padding:25px;
+  font-size:14px;
 }
 
-/* MOBILE RESPONSIVENESS */
-@media(max-width:900px){
-  nav a { font-size: 16px; }
-  .hero h1 { font-size: 32px; }
-  .hero p { font-size: 16px; }
-  .view-full { padding: 12px 24px; font-size: 16px; }
+/* MOBILE */
+
+@media(max-width:768px){
+  .hero h1 { font-size:34px; }
+  .hero p { font-size:16px; }
+  nav a { font-size:14px; margin-left:15px; }
 }
+
 </style>
 </head>
 
 <body>
 
 <nav id="navbar">
-  <img src="Logo.png" alt="Yass Worm Farms Logo" class="logo">
-  <div class="nav-links">
+  <img src="Logo.png" alt="Yass Worm Farms Logo">
+  <div>
     <a href="index.html">Home</a>
     <a href="application-rates.html">About Us</a>
     <a href="shop.html">Shop</a>
     <a href="laboratory-results.html" class="active">Laboratory Results</a>
     <a href="diy.html">DIY</a>
-    <a href="contact.html">Contact Us</a>
+    <a href="contact.html">Contact</a>
   </div>
 </nav>
 
 <section class="hero">
-  <h1>Laboratory Results</h1>
-  <p>Explore the microbial analysis of our premium Worm Juice and understand how it improves soil, crops, and pasture.</p>
+  <h1>Science-Backed Soil Power</h1>
+  <p>Independent laboratory analysis confirms our Worm Juice is loaded with beneficial living microbes that improve soil structure, nutrient cycling and crop performance.</p>
 </section>
 
-<main>
-
-<!-- LAB IMAGE EMBEDDED -->
-<div class="lab-container">
-  <img src="https://raw.githubusercontent.com/YassWormFarms/YassWormFarms/main/Lab%20Test%20Latest.jpg" alt="Latest Lab Report">
+<section class="lab-container">
+  <img src="https://raw.githubusercontent.com/YassWormFarms/YassWormFarms/main/worm%20farm%20test.png" alt="Yass Worm Farms Microbial Test Results">
   <br>
-  <a class="view-full"
-     href="https://raw.githubusercontent.com/YassWormFarms/YassWormFarms/main/Lab%20Report%20Latest.pdf"
-     target="_blank">
-     📄 View Full Lab Report in New Tab
+  <a class="view-full" href="https://raw.githubusercontent.com/YassWormFarms/YassWormFarms/main/Lab%20Report%20Latest.pdf" target="_blank">
+    View Full Lab Report
   </a>
-</div>
+</section>
 
 <section class="microbial-section">
-  <h2>Our Microbial Analysis (breakdown)</h2>
+  <h2>Living Microbes. Real Results.</h2>
+  <p class="lead">Our premium Worm Juice contains powerful biological species working together to regenerate soil naturally.</p>
+
   <div class="cards">
+
     <div class="card">
-      <h3>Active Fungi</h3>
-      <p><strong>25,000 cfu/g</strong> – Builds stable soil aggregates and improves structure.</p>
+      <h3>Lactic Acid Bacteria (LAB)</h3>
+      <ul>
+        <li>Suppress harmful pathogens</li>
+        <li>Improve nutrient availability</li>
+        <li>Strengthen plant immunity</li>
+        <li>Stimulate root growth</li>
+      </ul>
     </div>
+
     <div class="card">
       <h3>Yeasts</h3>
-      <p><strong>10,000 cfu/g</strong> – Fuels microbial food web in the root zone.</p>
+      <ul>
+        <li>Kickstart microbial activity</li>
+        <li>Break down organic matter</li>
+        <li>Improve seedling vigour</li>
+        <li>Support soil food web</li>
+      </ul>
     </div>
+
     <div class="card">
-      <h3>Lactic Acid Bacteria</h3>
-      <p><strong>470,000 cfu/g</strong> – Helps nutrient availability and plant growth.</p>
+      <h3>Active Fungi</h3>
+      <ul>
+        <li>Build stable soil aggregates</li>
+        <li>Increase phosphorus uptake</li>
+        <li>Improve drought tolerance</li>
+        <li>Extend root reach</li>
+      </ul>
     </div>
+
+    <div class="card">
+      <h3>Photosynthetic Bacteria</h3>
+      <ul>
+        <li>Enhance nitrogen cycling</li>
+        <li>Boost chlorophyll production</li>
+        <li>Improve photosynthesis</li>
+        <li>Increase yield potential</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Actinomycetes</h3>
+      <ul>
+        <li>Break down tough residues</li>
+        <li>Produce natural antibiotics</li>
+        <li>Improve long-term fertility</li>
+        <li>Protect plant roots</li>
+      </ul>
+    </div>
+
   </div>
 </section>
 
-</main>
+<section class="benefit-strip">
+  <h2>What This Means For Your Farm</h2>
+  <p>Stronger roots. Better nutrient efficiency. Improved soil structure. Higher drought resilience. Increased yield potential. Built naturally — powered by biology.</p>
+</section>
+
+<section class="cta">
+  <h2>Ready to Regenerate Your Soil?</h2>
+  <p>Upgrade your soil biology today with premium Worm Juice from Yass Worm Farms.</p>
+  <a href="shop.html">Shop Now</a>
+</section>
 
 <footer>
-  <p>&copy; 2026 Yass Worm Farms. All Rights Reserved.</p>
+  © 2026 Yass Worm Farms. All Rights Reserved.
 </footer>
 
 <script>
