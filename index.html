@@ -36,25 +36,60 @@ nav{
   align-items:center;
   position:sticky;
   top:0;
-  z-index:10;
+  z-index:1000;
 }
 
-.logo{height:95px;}
+.logo{height:85px;}
 
 .nav-links{
   display:flex;
-  gap:28px;
-  flex-wrap:wrap;
+  gap:25px;
 }
 
 nav a{
   text-decoration:none;
   color:var(--coffee);
   font-weight:700;
-  font-size:22px;
+  font-size:20px;
 }
 
 nav a:hover{color:var(--green);}
+
+/* MOBILE MENU */
+.menu-toggle{
+  display:none;
+  font-size:30px;
+  cursor:pointer;
+}
+
+@media(max-width:900px){
+
+  .menu-toggle{
+    display:block;
+  }
+
+  .nav-links{
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    width:100%;
+    background:white;
+    flex-direction:column;
+    padding:20px 0;
+    text-align:center;
+    border-bottom:2px solid #ddd;
+  }
+
+  .nav-links a{
+    padding:12px 0;
+    font-size:18px;
+  }
+
+  .nav-links.active{
+    display:flex;
+  }
+}
 
 /* HERO */
 .hero{
@@ -114,7 +149,7 @@ nav a:hover{color:var(--green);}
   box-shadow:0 12px 30px rgba(0,0,0,0.25);
 }
 
-/* LAB STATEMENT UNDER IMAGE */
+/* LAB STATEMENT */
 .lab-statement{
   max-width:1100px;
   margin:40px auto 0;
@@ -143,6 +178,7 @@ nav a:hover{color:var(--green);}
   font-weight:900;
   text-align:center;
   letter-spacing:1px;
+  color:var(--green); /* DARK GREEN ROCKET TEXT */
 }
 
 /* PUMPKINS SECTION */
@@ -259,7 +295,8 @@ footer{
 
 <nav>
   <img src="Logo.png" class="logo" alt="Yass Worm Farms Logo">
-  <div class="nav-links">
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  <div class="nav-links" id="navLinks">
     <a href="index.html">Home</a>
     <a href="application-rates.html">About Us</a>
     <a href="shop.html">Shop</a>
@@ -286,13 +323,13 @@ footer{
 
   <div class="lab-statement">
     <p>
-      OUTSTANDING LAB RESULTS — We now put our worm juice fertiliser through a specialised fermentation process resulting in a dramatic increase in microbial population —
-      <strong>550,000 microbes per gram of mixture.</strong>
-      Our Worm Juice Fertiliser is now dramatically more effective.
+      VISITORS PLEASE CHECK OUT OUR LATEST OUTSTANDING LAB RESULTS HERE —
+      Nowadays we put our worm juice fertiliser through a fermentation process resulting in a dramatic increase in the beneficial microbial population —
+      <strong>550,000 microbes per mill</strong> (or if you like, over <strong>500,000 microbes fit into a teaspoon!</strong>)
       <br><br>
-      Active Yeasts: <strong>57,000 per gram</strong><br>
-      Total Active Fungi: <strong>20,500 per gram</strong><br>
-      Active Lactic Acid Bacteria: <strong>470,000 per gram</strong>
+      Active Yeasts: <strong>57,000 per mill</strong><br>
+      Total Active Fungi: <strong>20,500 per mill</strong><br>
+      Active Lactic Acid Bacteria: <strong>470,000 per mill</strong>
       <span class="rocket">🚀 ROCKET FUEL FOR PLANTS 🚀</span>
     </p>
   </div>
@@ -323,6 +360,12 @@ footer{
 <footer>
   <p>© 2026 Yass Worm Farms. All rights reserved.</p>
 </footer>
+
+<script>
+function toggleMenu(){
+  document.getElementById("navLinks").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
