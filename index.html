@@ -15,6 +15,8 @@ content="Yass Worm Farms offers organic worm juice fertiliser and worm castings 
 :root{
   --green:#064d28;
   --coffee:#4b3621;
+  --blue:#007bff;
+  --blue-hover:#0056b3;
 }
 
 body{
@@ -132,6 +134,20 @@ nav a{
   margin-top:20px;
 }
 
+/* DIY IMAGE */
+.diy-section {
+  padding:50px 6%;
+  text-align:center;
+}
+
+.diy-section img{
+  width:100%;
+  max-width:900px;
+  border-radius:18px;
+  margin-top:20px;
+  cursor:pointer;
+}
+
 /* FOOTER */
 footer{
   background:var(--coffee);
@@ -150,6 +166,7 @@ footer{
     <a href="#">Home</a>
     <a href="#">Shop</a>
     <a href="#">Contact</a>
+    <a href="DIY.html">DIY Budget</a>
   </div>
 </nav>
 
@@ -240,10 +257,12 @@ footer{
 
   <!-- Main pumpkin image -->
   <img src="Pumpkins.jpg" alt="Pumpkins on worm windrows">
+</section>
 
-  <!-- DIY image with embedded text (from GitHub) linking to DIY page -->
+<!-- DIY IMAGE FROM GITHUB -->
+<section class="diy-section">
   <a href="DIY.html">
-    <img src="DIY.jpg" alt="DIY Fertiliser Tips" title="Click to go to DIY Tips">
+    <img src="DIY cropped.jpg" alt="DIY Budget with Yass Worm Farms" title="Click to go to DIY Tips">
   </a>
 </section>
 
