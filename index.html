@@ -190,6 +190,7 @@ nav a:hover{color:var(--green);}
 
 /* DIY SECTION */
 .diy-section{
+  position:relative;
   padding:50px 6%;
   text-align:center;
 }
@@ -198,8 +199,27 @@ nav a:hover{color:var(--green);}
   width:100%;
   max-width:900px;
   border-radius:18px;
-  margin-top:20px;
-  cursor:pointer;
+  display:block;
+}
+
+.diy-link{
+  position:relative;
+  display:inline-block;
+  text-decoration:none;
+}
+
+.diy-overlay{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  color:white;
+  background:rgba(0,0,0,0.5);
+  padding:20px 30px;
+  border-radius:12px;
+  font-size:24px;
+  font-weight:700;
+  max-width:80%;
 }
 
 /* FAMILY FARM IMAGE */
@@ -306,10 +326,14 @@ footer{
   <img src="Pumpkins.jpg" alt="Pumpkins on worm windrows">
 </section>
 
-<!-- DIY IMAGE -->
+<!-- DIY IMAGE WITH TEXT OVERLAY -->
 <section class="diy-section">
-  <a href="diy.html">
-    <img src="DIY cropped.jpg" alt="DIY Budget with Yass Worm Farms" title="Click to go to DIY Tips">
+  <a href="diy.html" class="diy-link">
+    <img src="DIY cropped.jpg" alt="DIY Worm Farm">
+    <div class="diy-overlay">
+      <h2>DIY Worm Farm System</h2>
+      <p>Click to go to DIY Tips & Budget</p>
+    </div>
   </a>
 </section>
 
