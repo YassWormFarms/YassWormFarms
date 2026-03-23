@@ -5,9 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Yass Worm Farms</title>
-
 <meta name="description"
-content="Yass Worm Farms offers organic worm juice fertiliser and worm castings to boost soil health and promote plant growth. Support a small family business today.">
+content="Yass Worm Farms offers organic worm juice fertiliser and worm castings to boost soil health and promote plant growth while reducing fertiliser costs.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,6 +17,8 @@ content="Yass Worm Farms offers organic worm juice fertiliser and worm castings 
   --green:#064d28;
   --coffee:#4b3621;
   --accent:#f4a261;
+  --blue:#007bff;
+  --blue-hover:#0056b3;
 }
 
 body{
@@ -40,11 +41,7 @@ nav{
 }
 
 .logo{height:85px;}
-
-.nav-links{
-  display:flex;
-  gap:25px;
-}
+.nav-links{display:flex;gap:25px;}
 
 nav a{
   text-decoration:none;
@@ -63,11 +60,7 @@ nav a:hover{color:var(--green);}
 }
 
 @media(max-width:900px){
-
-  .menu-toggle{
-    display:block;
-  }
-
+  .menu-toggle{display:block;}
   .nav-links{
     display:none;
     position:absolute;
@@ -80,15 +73,11 @@ nav a:hover{color:var(--green);}
     text-align:center;
     border-bottom:2px solid #ddd;
   }
-
   .nav-links a{
     padding:12px 0;
     font-size:18px;
   }
-
-  .nav-links.active{
-    display:flex;
-  }
+  .nav-links.active{display:flex;}
 }
 
 /* HERO */
@@ -114,15 +103,8 @@ nav a:hover{color:var(--green);}
   color:white;
 }
 
-.hero-text h1{
-  font-size:58px;
-  margin:0;
-}
-
-.hero-text p{
-  font-size:26px;
-  font-weight:700;
-}
+.hero-text h1{font-size:58px;margin:0;}
+.hero-text p{font-size:26px;font-weight:700;}
 
 /* LAB RESULTS */
 .lab-results{
@@ -135,60 +117,45 @@ nav a:hover{color:var(--green);}
   font-size:46px;
   color:#b87333;
   font-family:'Roboto Slab', serif;
-  border-bottom:3px solid var(--green);
-  display:inline-block;
-  margin-bottom:35px;
 }
 
-.lab-images img{
-  max-width:1000px;
-  width:100%;
-  height:auto;
+/* CALCULATOR */
+.calculator{
+  background:white;
+  padding:25px;
+  max-width:600px;
+  margin:30px auto;
   border-radius:14px;
-  border:4px solid var(--green);
-  box-shadow:0 12px 30px rgba(0,0,0,0.25);
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
 }
 
-/* LAB STATEMENT */
-.lab-statement{
-  max-width:1100px;
-  margin:40px auto 0;
-  padding:30px;
-  background:#ffffff;
-  border-left:8px solid var(--green);
-  border-radius:16px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+/* COMPARISON TABLE */
+.compare table{
+  width:100%;
+  max-width:900px;
+  margin:30px auto;
+  border-collapse:collapse;
+  background:white;
 }
 
-.lab-statement p{
-  font-size:20px;
-  font-weight:700;
-  line-height:1.7;
-  color:var(--green);
+.compare th{
+  background:var(--green);
+  color:white;
+  padding:15px;
 }
 
-.lab-statement strong{
-  color:#000;
-}
-
-.lab-link{
-  color:var(--green);
-  font-weight:900;
-  text-decoration:underline;
-}
-
-.lab-link:hover{
-  color:#b87333;
-}
-
-.lab-statement .rocket{
-  display:block;
-  margin-top:25px;
-  font-size:28px;
-  font-weight:900;
+.compare td{
+  padding:15px;
   text-align:center;
-  letter-spacing:1px;
-  color:var(--green);
+}
+
+/* INFO BLOCK */
+.info-block{
+  max-width:1100px;
+  margin:40px auto;
+  text-align:left;
+  font-size:18px;
+  line-height:1.7;
 }
 
 /* PUMPKINS SECTION */
@@ -223,57 +190,16 @@ nav a:hover{color:var(--green);}
 
 /* DIY SECTION */
 .diy-section{
-  position:relative;
-  height:650px;
-  background:#000;
-  display:flex;
-  align-items:center;
-  overflow:hidden;
+  padding:50px 6%;
+  text-align:center;
 }
 
 .diy-section img{
-  position:absolute;
-  width:120%;
-  height:120%;
-  object-fit:cover;
-}
-
-.diy-section::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(to right, rgba(0,0,0,0.78) 45%, rgba(0,0,0,0) 90%);
-}
-
-.diy-content{
-  position:relative;
-  z-index:2;
-  color:white;
-  padding-left:40px;
-  max-width:45%;
-}
-
-.diy-content h2{
-  font-size:48px;
-  color:var(--accent);
-  font-family:'Roboto Slab', serif;
-}
-
-.diy-content p{
-  font-size:22px;
-  font-weight:700;
-}
-
-.build-button{
-  display:inline-block;
-  margin-top:25px;
-  padding:14px 30px;
-  background:#007BFF;
-  color:white;
-  font-weight:700;
-  border-radius:12px;
-  text-decoration:none;
-  font-size:20px;
+  width:100%;
+  max-width:900px;
+  border-radius:18px;
+  margin-top:20px;
+  cursor:pointer;
 }
 
 /* FAMILY FARM IMAGE */
@@ -319,53 +245,78 @@ footer{
 <section class="hero">
   <div class="hero-text">
     <h1>Yass Worm Farms</h1>
-    <p>Nature’s Rocket Fuel for Plants</p>
+    <p>Cut Fertiliser Costs. Build Better Soil.</p>
   </div>
 </section>
 
 <section class="lab-results">
-  <h2>Our Epic Lab Results</h2>
+  <h2>Save $30–$100 Per Hectare</h2>
 
-  <div class="lab-images">
-    <img src="https://raw.githubusercontent.com/YassWormFarms/YassWormFarms/main/worm%20farm%20test.png" 
-         alt="Worm Farm Test Results">
+  <!-- CALCULATOR -->
+  <div class="calculator">
+    <h3>Farm Savings Calculator</h3>
+    <input type="number" id="hectares" placeholder="Hectares">
+    <br><br>
+    <button onclick="calculate()">Calculate</button>
+    <div id="result"></div>
   </div>
 
-  <div class="lab-statement">
-    <p>
-      VISITORS PLEASE CHECK OUT OUR LATEST OUTSTANDING LAB RESULTS 
-      <a href="laboratory-results.html" class="lab-link">HERE</a> —
-      Nowadays we put our worm juice fertiliser through a fermentation process resulting in a dramatic increase in the beneficial microbial population —
-      <strong>550,000 microbes per mill</strong> (or if you like, over <strong>500,000 microbes fit into a teaspoon!</strong>)
-      <br><br>
-      Active Yeasts: <strong>57,000 per mill</strong><br>
-      Total Active Fungi: <strong>20,500 per mill</strong><br>
-      Active Lactic Acid Bacteria: <strong>470,000 per mill</strong>
-      <span class="rocket">🚀 ROCKET FUEL FOR PLANTS 🚀</span>
-    </p>
+  <!-- COMPARISON TABLE -->
+  <div class="compare">
+    <table>
+      <tr>
+        <th>Superphosphate System</th>
+        <th>Worm Juice System</th>
+      </tr>
+      <tr>
+        <td>Adds phosphorus</td>
+        <td>Unlocks existing soil nutrients</td>
+      </tr>
+      <tr>
+        <td>Short-term boost</td>
+        <td>Builds long-term soil fertility</td>
+      </tr>
+      <tr>
+        <td>Prices rising sharply</td>
+        <td>Low cost per hectare</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- INFO BLOCK -->
+  <div class="info-block">
+    <h3>Why Worm Juice Works Differently</h3>
+    <p>Traditional fertilisers like superphosphate add nutrients directly to your soil, but much becomes locked up and unavailable to plants.</p>
+    <p>Worm juice contains over <strong>500,000 microbes per gram</strong> and high fungal activity, activating soil biology to unlock existing nutrients.</p>
+
+    <h3>Use Less Fertiliser — Not None</h3>
+    <p>Many farmers cut superphosphate use by 20–40% while maintaining or improving pasture growth.</p>
+
+    <h3>Fertiliser Prices Are Rising</h3>
+    <p>Global supply disruptions and war have significantly increased fertiliser prices. Reducing reliance on imported inputs protects your farm.</p>
+
+    <h3>The Smart Approach</h3>
+    <p>Combine worm juice with reduced fertiliser:<br>✔ Lower costs<br>✔ Better soil biology<br>✔ Improved long-term productivity</p>
   </div>
 </section>
 
 <section class="pumpkins-section">
   <h2>Jurassic Pumpkins!</h2>
-  <p>We planted pumpkins on our worm windrows and they HAVE GONE JURRASIC!!</p>
-  <img src="https://raw.githubusercontent.com/YassWormFarms/YassWormFarms/main/Pumpkins.jpg"
-       alt="Giant Pumpkins grown on worm windrows">
+  <p>We planted pumpkins on our worm windrows and they HAVE GONE JURASSIC!!</p>
+  <img src="Pumpkins.jpg" alt="Pumpkins on worm windrows">
 </section>
 
+<!-- DIY IMAGE -->
 <section class="diy-section">
-  <img src="DIY worm Farm image.jpg" alt="DIY Worm Farm">
-  <div class="diy-content">
-    <h2>DIY Worm Farm System</h2>
-    <p>Replace synthetic fertilisers and save thousands annually.</p>
-    <a href="diy.html" class="build-button">Build Your Worm Farm</a>
-  </div>
+  <a href="diy.html">
+    <img src="DIY cropped.jpg" alt="DIY Budget with Yass Worm Farms" title="Click to go to DIY Tips">
+  </a>
 </section>
 
+<!-- FAMILY FARM IMAGE -->
 <section class="family-farm-section">
-  <img
-    src="https://raw.githubusercontent.com/YassWormFarms/YassWormFarms/main/From%20our%20family%20farm%20to%20your%20soil%20-%20ChatGPT%20Image%20Jan%2010%2C%202026%2C%2012_22_19%20PM.png"
-    alt="From our family farm to your soil">
+  <img src="From our family farm to your soil - ChatGPT Image Jan 10, 2026, 12_22_19 PM.png"
+       alt="From our family farm to your soil">
 </section>
 
 <footer>
@@ -375,6 +326,21 @@ footer{
 <script>
 function toggleMenu(){
   document.getElementById("navLinks").classList.toggle("active");
+}
+
+function calculate(){
+  let ha = document.getElementById('hectares').value;
+  if(ha <= 0){document.getElementById('result').innerHTML = "Enter valid hectares"; return;}
+  let savingsLow = ha * 30;
+  let savingsHigh = ha * 100;
+  let costPerHa = 1.275 * 10;
+  let totalCost = costPerHa * ha;
+  let netLow = savingsLow - totalCost;
+  let netHigh = savingsHigh - totalCost;
+  document.getElementById('result').innerHTML =
+    "Saving: $" + savingsLow.toLocaleString() + " – $" + savingsHigh.toLocaleString() +
+    "<br>Cost: $" + totalCost.toLocaleString() +
+    "<br><strong>Net Benefit:</strong> $" + netLow.toLocaleString() + " – $" + netHigh.toLocaleString();
 }
 </script>
 
