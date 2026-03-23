@@ -7,26 +7,23 @@
 <title>Yass Worm Farms</title>
 
 <meta name="description"
-content="Yass Worm Farms offers organic worm juice fertiliser and worm castings to boost soil health and promote plant growth. Support a small family business today.">
+content="Yass Worm Farms offers organic worm juice fertiliser and worm castings to boost soil health and promote plant growth while reducing fertiliser costs.">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
 
 <style>
 :root{
   --green:#064d28;
   --coffee:#4b3621;
-  --accent:#f4a261;
 }
 
 body{
   margin:0;
-  font-family:'Poppins', Arial, sans-serif;
+  font-family:'Poppins', Arial;
   color:var(--coffee);
 }
 
-/* NAVIGATION */
+/* NAV */
 nav{
   background:#fff;
   border-bottom:2px solid #ddd;
@@ -34,17 +31,11 @@ nav{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  position:sticky;
-  top:0;
-  z-index:1000;
 }
 
 .logo{height:85px;}
 
-.nav-links{
-  display:flex;
-  gap:25px;
-}
+.nav-links{display:flex;gap:25px;}
 
 nav a{
   text-decoration:none;
@@ -53,73 +44,23 @@ nav a{
   font-size:20px;
 }
 
-nav a:hover{color:var(--green);}
-
-/* MOBILE MENU */
-.menu-toggle{
-  display:none;
-  font-size:30px;
-  cursor:pointer;
-}
-
-@media(max-width:900px){
-  .menu-toggle{display:block;}
-
-  .nav-links{
-    display:none;
-    position:absolute;
-    top:100%;
-    left:0;
-    width:100%;
-    background:white;
-    flex-direction:column;
-    padding:20px 0;
-    text-align:center;
-    border-bottom:2px solid #ddd;
-  }
-
-  .nav-links a{
-    padding:12px 0;
-    font-size:18px;
-  }
-
-  .nav-links.active{display:flex;}
-}
-
 /* HERO */
 .hero{
-  position:relative;
   height:70vh;
-  background:url('Home Page Main image Clear.jpg') center/cover no-repeat;
+  background:url('Home Page Main image Clear.jpg') center/cover;
   display:flex;
   align-items:center;
 }
 
-.hero::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(to right, rgba(0,0,0,0.5) 35%, rgba(0,0,0,0) 100%);
-}
-
 .hero-text{
-  position:relative;
-  z-index:2;
   margin-left:8%;
   color:white;
 }
 
-.hero-text h1{
-  font-size:58px;
-  margin:0;
-}
+.hero-text h1{font-size:58px;margin:0;}
+.hero-text p{font-size:26px;font-weight:700;}
 
-.hero-text p{
-  font-size:26px;
-  font-weight:700;
-}
-
-/* UPDATED LAB / SAVINGS SECTION */
+/* SECTION */
 .lab-results{
   padding:70px 6%;
   text-align:center;
@@ -129,13 +70,10 @@ nav a:hover{color:var(--green);}
 .lab-results h2{
   font-size:46px;
   color:#b87333;
-  font-family:'Roboto Slab', serif;
-  border-bottom:3px solid var(--green);
-  display:inline-block;
-  margin-bottom:35px;
+  font-family:'Roboto Slab';
 }
 
-/* calculator */
+/* CALCULATOR */
 .calculator{
   background:white;
   padding:25px;
@@ -145,29 +83,7 @@ nav a:hover{color:var(--green);}
   box-shadow:0 10px 25px rgba(0,0,0,0.1);
 }
 
-.calculator input{
-  padding:12px;
-  font-size:18px;
-  width:120px;
-  margin:10px;
-}
-
-.calculator button{
-  padding:12px 20px;
-  background:var(--green);
-  color:white;
-  border:none;
-  border-radius:8px;
-  cursor:pointer;
-}
-
-.result{
-  margin-top:15px;
-  font-size:18px;
-  font-weight:700;
-}
-
-/* comparison */
+/* TABLE */
 .compare table{
   width:100%;
   max-width:900px;
@@ -187,22 +103,13 @@ nav a:hover{color:var(--green);}
   text-align:center;
 }
 
-/* LAB STATEMENT */
-.lab-statement{
+/* NEW INFO BLOCK */
+.info-block{
   max-width:1100px;
-  margin:40px auto 0;
-  padding:30px;
-  background:#ffffff;
-  border-left:8px solid var(--green);
-  border-radius:16px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.08);
-}
-
-.lab-statement p{
-  font-size:20px;
-  font-weight:700;
+  margin:40px auto;
+  text-align:left;
+  font-size:18px;
   line-height:1.7;
-  color:var(--green);
 }
 
 /* PUMPKINS */
@@ -215,60 +122,13 @@ nav a:hover{color:var(--green);}
 .pumpkins-section h2{
   font-size:46px;
   color:var(--green);
-  font-family:'Roboto Slab', serif;
-}
-
-.pumpkins-section p{
-  font-size:24px;
-  font-weight:800;
+  font-family:'Roboto Slab';
 }
 
 .pumpkins-section img{
   width:100%;
   max-width:900px;
   border-radius:18px;
-}
-
-/* DIY */
-.diy-section{
-  position:relative;
-  height:650px;
-  display:flex;
-  align-items:center;
-}
-
-.diy-section img{
-  position:absolute;
-  width:120%;
-  height:120%;
-  object-fit:cover;
-}
-
-.diy-content{
-  position:relative;
-  color:white;
-  padding-left:40px;
-}
-
-.build-button{
-  display:inline-block;
-  margin-top:25px;
-  padding:14px 30px;
-  background:#007BFF;
-  color:white;
-  border-radius:12px;
-}
-
-/* FAMILY */
-.family-farm-section{
-  padding:70px 6%;
-  text-align:center;
-  background:#f5f5f5;
-}
-
-.family-farm-section img{
-  width:100%;
-  max-width:900px;
 }
 
 /* FOOTER */
@@ -285,14 +145,10 @@ footer{
 
 <nav>
   <img src="Logo.png" class="logo">
-  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-  <div class="nav-links" id="navLinks">
-    <a href="index.html">Home</a>
-    <a href="application-rates.html">About Us</a>
-    <a href="shop.html">Shop</a>
-    <a href="laboratory-results.html">Laboratory Results</a>
-    <a href="diy.html">DIY</a>
-    <a href="contact.html">Contact Us</a>
+  <div class="nav-links">
+    <a href="#">Home</a>
+    <a href="#">Shop</a>
+    <a href="#">Contact</a>
   </div>
 </nav>
 
@@ -310,69 +166,84 @@ footer{
   <div class="calculator">
     <h3>Farm Savings Calculator</h3>
     <input type="number" id="hectares" placeholder="Hectares">
-    <br>
+    <br><br>
     <button onclick="calculate()">Calculate</button>
-    <div class="result" id="result"></div>
+    <div id="result"></div>
   </div>
 
   <!-- COMPARISON -->
   <div class="compare">
     <table>
       <tr>
-        <th>Traditional Fertiliser</th>
+        <th>Superphosphate System</th>
         <th>Worm Juice System</th>
       </tr>
       <tr>
-        <td>$120–$250/ha every year</td>
-        <td>Reduce inputs 20–40%</td>
+        <td>Adds phosphorus</td>
+        <td>Unlocks existing soil nutrients</td>
       </tr>
       <tr>
-        <td>External nutrients</td>
-        <td>Unlock soil nutrients</td>
+        <td>Short-term boost</td>
+        <td>Builds long-term soil fertility</td>
       </tr>
       <tr>
-        <td>Prices rising</td>
-        <td>Lower cost exposure</td>
+        <td>Prices rising sharply</td>
+        <td>Low cost per hectare</td>
       </tr>
     </table>
   </div>
 
-  <div class="lab-statement">
+  <!-- NEW EXPLANATION -->
+  <div class="info-block">
+    <h3>Why Worm Juice Works Differently</h3>
+
     <p>
-      500,000+ microbes per gram working to unlock nutrients already in your soil —
-      turning biology into real savings on your fertiliser bill.
+      Traditional fertilisers like superphosphate work by adding nutrients directly to your soil. 
+      However, much of this phosphorus becomes locked up and unavailable to plants.
+    </p>
+
+    <p>
+      Worm juice works differently. With over <strong>500,000 microbes per gram</strong> and high fungal activity, 
+      it activates soil biology to unlock nutrients already present in your soil.
+    </p>
+
+    <h3>Use Less Fertiliser — Not None</h3>
+
+    <p>
+      The most profitable system is not replacing fertiliser completely, but reducing it.
+      Many farmers cut superphosphate use by 20–40% while maintaining or improving pasture growth.
+    </p>
+
+    <h3>Fertiliser Prices Are Rising</h3>
+
+    <p>
+      Global supply disruptions and war have significantly increased fertiliser prices in recent years. 
+      Reducing reliance on imported inputs protects your farm from rising costs.
+    </p>
+
+    <h3>The Smart Approach</h3>
+
+    <p>
+      Combine worm juice with reduced fertiliser:
+      <br>✔ Lower costs
+      <br>✔ Better soil biology
+      <br>✔ Improved long-term productivity
     </p>
   </div>
+
 </section>
 
 <section class="pumpkins-section">
   <h2>Jurassic Pumpkins!</h2>
-  <p>We planted pumpkins on our worm windrows and they HAVE GONE JURRASIC!!</p>
+  <p>We planted pumpkins on our worm windrows and they HAVE GONE JURASSIC!!</p>
   <img src="https://raw.githubusercontent.com/YassWormFarms/YassWormFarms/main/Pumpkins.jpg">
 </section>
 
-<section class="diy-section">
-  <img src="DIY worm Farm image.jpg">
-  <div class="diy-content">
-    <h2>DIY Worm Farm System</h2>
-    <p>Replace synthetic fertilisers and save thousands annually.</p>
-    <a href="diy.html" class="build-button">Build Your Worm Farm</a>
-  </div>
-</section>
-
-<section class="family-farm-section">
-  <img src="https://raw.githubusercontent.com/YassWormFarms/YassWormFarms/main/From%20our%20family%20farm%20to%20your%20soil%20-%20ChatGPT%20Image%20Jan%2010%2C%202026%2C%2012_22_19%20PM.png">
-</section>
-
 <footer>
-  <p>© 2026 Yass Worm Farms. All rights reserved.</p>
+  <p>© 2026 Yass Worm Farms</p>
 </footer>
 
 <script>
-function toggleMenu(){
-  document.getElementById("navLinks").classList.toggle("active");
-}
-
 function calculate(){
   let ha = document.getElementById('hectares').value;
 
@@ -381,19 +252,20 @@ function calculate(){
     return;
   }
 
-  let lowSaving = ha * 30;
-  let highSaving = ha * 100;
+  let savingsLow = ha * 30;
+  let savingsHigh = ha * 100;
 
-  let costPerHa = (1275 / 1000) * 5;
+  // 10L per hectare realistic rate
+  let costPerHa = 1.275 * 10;
   let totalCost = costPerHa * ha;
 
-  let netLow = lowSaving - totalCost;
-  let netHigh = highSaving - totalCost;
+  let netLow = savingsLow - totalCost;
+  let netHigh = savingsHigh - totalCost;
 
   document.getElementById('result').innerHTML =
-    "Saving: $" + lowSaving.toLocaleString() + " – $" + highSaving.toLocaleString() +
+    "Saving: $" + savingsLow.toLocaleString() + " – $" + savingsHigh.toLocaleString() +
     "<br>Cost: $" + totalCost.toLocaleString() +
-    "<br><strong>Net:</strong> $" + netLow.toLocaleString() + " – $" + netHigh.toLocaleString();
+    "<br><strong>Net Benefit:</strong> $" + netLow.toLocaleString() + " – $" + netHigh.toLocaleString();
 }
 </script>
 
