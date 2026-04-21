@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Yass Worm Farms</title>
-<meta name="description" content="Yass Worm Farms offers organic worm juice fertiliser and worm castings to boost soil health and promote plant growth while reducing fertiliser costs.">
+<meta name="description" content="Yass Worm Farms offers organic worm leachate fertiliser and worm castings to boost soil health and promote plant growth while reducing fertiliser costs.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -118,36 +118,6 @@ nav a:hover{color:var(--green);}
   font-family:'Roboto Slab', serif;
 }
 
-/* CALCULATOR */
-.calculator{
-  background:white;
-  padding:25px;
-  max-width:600px;
-  margin:30px auto;
-  border-radius:14px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.1);
-}
-
-/* COMPARISON TABLE */
-.compare table{
-  width:100%;
-  max-width:900px;
-  margin:30px auto;
-  border-collapse:collapse;
-  background:white;
-}
-
-.compare th{
-  background:var(--green);
-  color:white;
-  padding:15px;
-}
-
-.compare td{
-  padding:15px;
-  text-align:center;
-}
-
 /* INFO BLOCK */
 .info-block{
   max-width:1100px;
@@ -157,7 +127,32 @@ nav a:hover{color:var(--green);}
   line-height:1.7;
 }
 
-/* PUMPKINS SECTION */
+/* NEW MICROBIOLOGY SECTION */
+.micro-section{
+  max-width:1100px;
+  margin:60px auto;
+  padding:0 6%;
+}
+
+.micro-section h3{
+  font-size:28px;
+  color:var(--green);
+}
+
+.micro-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+  margin-top:20px;
+}
+
+.micro-card{
+  background:#f5f5f5;
+  padding:18px;
+  border-radius:10px;
+}
+
+/* PUMPKINS */
 .pumpkins-section{
   padding:70px 6%;
   background:#f9f9f9;
@@ -174,20 +169,15 @@ nav a:hover{color:var(--green);}
 .pumpkins-section p{
   font-size:24px;
   font-weight:800;
-  color:var(--coffee);
-  margin-bottom:35px;
 }
 
 .pumpkins-section img{
   width:100%;
   max-width:900px;
-  height:auto;
   border-radius:18px;
-  border:5px solid var(--green);
-  box-shadow:0 12px 30px rgba(0,0,0,0.25);
 }
 
-/* DIY SECTION */
+/* DIY */
 .diy-section{
   position:relative;
   padding:50px 6%;
@@ -198,7 +188,6 @@ nav a:hover{color:var(--green);}
   width:100%;
   max-width:900px;
   border-radius:18px;
-  display:block;
 }
 
 .diy-link{
@@ -216,12 +205,9 @@ nav a:hover{color:var(--green);}
   background:rgba(0,0,0,0.5);
   padding:20px 30px;
   border-radius:12px;
-  font-size:24px;
-  font-weight:700;
-  max-width:80%;
 }
 
-/* FAMILY FARM IMAGE */
+/* FAMILY FARM */
 .family-farm-section{
   padding:70px 6%;
   text-align:center;
@@ -231,9 +217,7 @@ nav a:hover{color:var(--green);}
 .family-farm-section img{
   width:100%;
   max-width:900px;
-  height:auto;
   border-radius:18px;
-  box-shadow:0 10px 28px rgba(0,0,0,0.25);
 }
 
 /* FOOTER */
@@ -253,11 +237,11 @@ footer{
   <div class="menu-toggle" onclick="toggleMenu()">☰</div>
   <div class="nav-links" id="navLinks">
     <a href="index.html">Home</a>
-    <a href="application-rates.html">Application Rates</a>
+    <a href="application-rates.html">About Us</a>
     <a href="shop.html">Shop</a>
     <a href="laboratory-results.html">Laboratory Results</a>
     <a href="diy.html">DIY</a>
-    <a href="contact.html">Contact</a>
+    <a href="contact.html">Contact Us</a>
   </div>
 </nav>
 
@@ -271,57 +255,52 @@ footer{
 <section class="lab-results">
   <h2>Save $30–$100 Per Hectare</h2>
 
-  <div class="calculator">
-    <h3>Farm Savings Calculator</h3>
-    <input type="number" id="hectares" placeholder="Hectares">
-    <br><br>
-    <button onclick="calculate()">Calculate</button>
-    <div id="result"></div>
-  </div>
-
-  <div class="compare">
-    <table>
-      <tr>
-        <th>Superphosphate System</th>
-        <th>Worm Juice System</th>
-      </tr>
-      <tr>
-        <td>Adds phosphorus</td>
-        <td>Unlocks existing soil nutrients</td>
-      </tr>
-      <tr>
-        <td>Short-term boost</td>
-        <td>Builds long-term soil fertility</td>
-      </tr>
-      <tr>
-        <td>Prices rising sharply</td>
-        <td>Low cost per hectare</td>
-      </tr>
-    </table>
-  </div>
-
   <div class="info-block">
-    <h3>Why Worm Juice Works Differently</h3>
+    <h3>Why Worm Leachate Works Differently</h3>
     <p>Traditional fertilisers like superphosphate add nutrients directly to your soil, but much becomes locked up and unavailable to plants.</p>
-    <p>Worm juice contains over <strong>500,000 microbes per gram</strong> and high fungal activity, activating soil biology to unlock existing nutrients.</p>
+
+    <p>Worm Leachate contains over <strong>500,000 microbes per gram</strong> and high fungal activity, activating soil biology to unlock existing nutrients.</p>
 
     <h3>Use Less Fertiliser — Not None</h3>
-    <p>Many farmers cut superphosphate use by 20–40% while maintaining or improving pasture growth.</p>
+    <p>Many farmers reduce synthetic fertiliser rates by 20–40% while maintaining or improving pasture growth and crop yields.</p>
 
     <h3>Fertiliser Prices Are Rising</h3>
     <p>Global supply disruptions and war have significantly increased fertiliser prices. Reducing reliance on imported inputs protects your farm.</p>
 
     <h3>The Smart Approach</h3>
-    <p>Combine worm juice with reduced fertiliser:<br>✔ Lower costs<br>✔ Better soil biology<br>✔ Improved long-term productivity</p>
+    <p>Combine worm leachate with reduced fertiliser:<br>
+    ✔ Lower costs (pasture + cropping)<br>
+    ✔ Better soil biology<br>
+    ✔ Improved long-term productivity</p>
+  </div>
+
+  <!-- MICROBIOLOGY SECTION ADDED -->
+  <div class="micro-section">
+    <h3>The Living Biology Inside Every Drop</h3>
+    <p>Our premium Worm Leachate contains a balanced community of beneficial microbes working together to regenerate soil naturally and sustainably.</p>
+
+    <div class="micro-grid">
+      <div class="micro-card"><strong>Lactic Acid Bacteria (LAB)</strong><br>Suppress pathogens, improve nutrient availability, strengthen immunity.</div>
+      <div class="micro-card"><strong>Yeasts</strong><br>Activate soil biology, break down organic matter, improve seedling vigour.</div>
+      <div class="micro-card"><strong>Active Fungi</strong><br>Improve structure, increase phosphorus uptake, enhance drought tolerance.</div>
+      <div class="micro-card"><strong>Photosynthetic Bacteria</strong><br>Boost nutrient cycling and plant growth efficiency.</div>
+      <div class="micro-card"><strong>Actinomycetes</strong><br>Break down residues and improve long-term fertility.</div>
+    </div>
+
+    <h3>What This Means For Your Soil</h3>
+    <p>Improved soil structure. Greater nutrient efficiency. Stronger plant immunity. Enhanced drought resilience. Sustainable long-term fertility.<br><br>
+    Naturally derived. Scientifically verified. Built for regenerative farming.</p>
   </div>
 </section>
 
+<!-- PUMPKINS (LEFT UNTOUCHED) -->
 <section class="pumpkins-section">
   <h2>Jurassic Pumpkins!</h2>
   <p>We planted pumpkins on our worm windrows and they HAVE GONE JURASSIC!!</p>
   <img src="Pumpkins.jpg" alt="Pumpkins on worm windrows">
 </section>
 
+<!-- DIY (LEFT UNTOUCHED) -->
 <section class="diy-section">
   <a href="diy.html" class="diy-link">
     <img src="DIY cropped.jpg" alt="DIY Worm Farm">
@@ -333,8 +312,7 @@ footer{
 </section>
 
 <section class="family-farm-section">
-  <img src="From our family farm to your soil - ChatGPT Image Jan 10, 2026, 12_22_19 PM.png"
-       alt="From our family farm to your soil">
+  <img src="From our family farm to your soil - ChatGPT Image Jan 10, 2026, 12_22_19 PM.png" alt="From our family farm to your soil">
 </section>
 
 <footer>
@@ -344,21 +322,6 @@ footer{
 <script>
 function toggleMenu(){
   document.getElementById("navLinks").classList.toggle("active");
-}
-
-function calculate(){
-  let ha = document.getElementById('hectares').value;
-  if(ha <= 0){document.getElementById('result').innerHTML = "Enter valid hectares"; return;}
-  let savingsLow = ha * 30;
-  let savingsHigh = ha * 100;
-  let costPerHa = 1.275 * 10;
-  let totalCost = costPerHa * ha;
-  let netLow = savingsLow - totalCost;
-  let netHigh = savingsHigh - totalCost;
-  document.getElementById('result').innerHTML =
-    "Saving: $" + savingsLow.toLocaleString() + " – $" + savingsHigh.toLocaleString() +
-    "<br>Cost: $" + totalCost.toLocaleString() +
-    "<br><strong>Net Benefit:</strong> $" + netLow.toLocaleString() + " – $" + netHigh.toLocaleString();
 }
 </script>
 
