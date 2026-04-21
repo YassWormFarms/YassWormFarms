@@ -51,34 +51,6 @@ nav a{
 
 nav a:hover{color:var(--green);}
 
-/* MOBILE MENU */
-.menu-toggle{
-  display:none;
-  font-size:30px;
-  cursor:pointer;
-}
-
-@media(max-width:900px){
-  .menu-toggle{display:block;}
-  .nav-links{
-    display:none;
-    position:absolute;
-    top:100%;
-    left:0;
-    width:100%;
-    background:white;
-    flex-direction:column;
-    padding:20px 0;
-    text-align:center;
-    border-bottom:2px solid #ddd;
-  }
-  .nav-links a{
-    padding:12px 0;
-    font-size:18px;
-  }
-  .nav-links.active{display:flex;}
-}
-
 /* HERO */
 .hero{
   position:relative;
@@ -105,7 +77,7 @@ nav a:hover{color:var(--green);}
 .hero-text h1{font-size:58px;margin:0;}
 .hero-text p{font-size:26px;font-weight:700;}
 
-/* LAB RESULTS */
+/* SECTION */
 .lab-results{
   padding:70px 6%;
   text-align:center;
@@ -127,7 +99,7 @@ nav a:hover{color:var(--green);}
   line-height:1.7;
 }
 
-/* NEW MICROBIOLOGY SECTION */
+/* MICRO SECTION */
 .micro-section{
   max-width:1100px;
   margin:60px auto;
@@ -234,8 +206,7 @@ footer{
 
 <nav>
   <img src="Logo.png" class="logo" alt="Yass Worm Farms Logo">
-  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-  <div class="nav-links" id="navLinks">
+  <div class="nav-links">
     <a href="index.html">Home</a>
     <a href="application-rates.html">About Us</a>
     <a href="shop.html">Shop</a>
@@ -253,54 +224,47 @@ footer{
 </section>
 
 <section class="lab-results">
-  <h2>Save $30–$100 Per Hectare</h2>
 
-  <div class="info-block">
-    <h3>Why Worm Leachate Works Differently</h3>
-    <p>Traditional fertilisers like superphosphate add nutrients directly to your soil, but much becomes locked up and unavailable to plants.</p>
+<h2>Save $$$ Per Hectare</h2>
 
-    <p>Worm Leachate contains over <strong>500,000 microbes per gram</strong> and high fungal activity, activating soil biology to unlock existing nutrients.</p>
+<div class="info-block">
 
-    <h3>Use Less Fertiliser — Not None</h3>
-    <p>Many farmers reduce synthetic fertiliser rates by 20–40% while maintaining or improving pasture growth and crop yields.</p>
+<h3>Enhanced Worm Leachate System</h3>
+<p>We enhance our worm leachate by adding molasses, Tri Kelp Concentrate, and K-Humic-26% through a controlled fermentation process lasting approximately 40 hours.</p>
 
-    <h3>Fertiliser Prices Are Rising</h3>
-    <p>Global supply disruptions and war have significantly increased fertiliser prices. Reducing reliance on imported inputs protects your farm.</p>
+<p>During this period the leachate is continuously circulated and aerated with compressed air to maintain oxygen levels, allowing fungi, yeast, lactic acid bacteria, and other beneficial microbes to multiply rapidly.</p>
 
-    <h3>The Smart Approach</h3>
-    <p>Combine worm leachate with reduced fertiliser:<br>
-    ✔ Lower costs (pasture + cropping)<br>
-    ✔ Better soil biology<br>
-    ✔ Improved long-term productivity</p>
-  </div>
+<h3>Why Worm Leachate Works Differently</h3>
+<p>Traditional fertilisers like superphosphate and synthetic inputs add nutrients directly to soil, but much becomes locked up and unavailable to plants.</p>
 
-  <!-- MICROBIOLOGY SECTION ADDED -->
-  <div class="micro-section">
-    <h3>The Living Biology Inside Every Drop</h3>
-    <p>Our premium Worm Leachate contains a balanced community of beneficial microbes working together to regenerate soil naturally and sustainably.</p>
+<p>Our Worm Leachate contains over 500,000 microbes per gram with high fungal activity, activating soil biology to unlock existing nutrients.</p>
 
-    <div class="micro-grid">
-      <div class="micro-card"><strong>Lactic Acid Bacteria (LAB)</strong><br>Suppress pathogens, improve nutrient availability, strengthen immunity.</div>
-      <div class="micro-card"><strong>Yeasts</strong><br>Activate soil biology, break down organic matter, improve seedling vigour.</div>
-      <div class="micro-card"><strong>Active Fungi</strong><br>Improve structure, increase phosphorus uptake, enhance drought tolerance.</div>
-      <div class="micro-card"><strong>Photosynthetic Bacteria</strong><br>Boost nutrient cycling and plant growth efficiency.</div>
-      <div class="micro-card"><strong>Actinomycetes</strong><br>Break down residues and improve long-term fertility.</div>
-    </div>
+<h3>Use Less Fertiliser — Not None</h3>
+<p>Many farmers reduce synthetic fertiliser rates by up to 50% while maintaining or improving pasture growth and crop yields.</p>
 
-    <h3>What This Means For Your Soil</h3>
-    <p>Improved soil structure. Greater nutrient efficiency. Stronger plant immunity. Enhanced drought resilience. Sustainable long-term fertility.<br><br>
-    Naturally derived. Scientifically verified. Built for regenerative farming.</p>
-  </div>
+<h3>Fertiliser Prices Are Rising</h3>
+<p>Global supply disruptions and war have significantly increased fertiliser prices. Reducing reliance on imported inputs protects your farm.</p>
+
+<h3>The Smart Approach</h3>
+<p>Combine worm leachate with reduced fertiliser:<br>
+✔ Lower costs (pasture + cropping)<br>
+✔ Better soil biology<br>
+✔ Improved long-term productivity</p>
+
+<h3>The Living Biology Inside Every Drop</h3>
+<p>Our premium Enhanced Worm Leachate Fertiliser contains a balanced community of beneficial microbes working together to regenerate soil naturally and sustainably.</p>
+
+</div>
 </section>
 
-<!-- PUMPKINS (LEFT UNTOUCHED) -->
+<!-- PUMPKINS (UNCHANGED) -->
 <section class="pumpkins-section">
   <h2>Jurassic Pumpkins!</h2>
   <p>We planted pumpkins on our worm windrows and they HAVE GONE JURASSIC!!</p>
   <img src="Pumpkins.jpg" alt="Pumpkins on worm windrows">
 </section>
 
-<!-- DIY (LEFT UNTOUCHED) -->
+<!-- DIY (UNCHANGED) -->
 <section class="diy-section">
   <a href="diy.html" class="diy-link">
     <img src="DIY cropped.jpg" alt="DIY Worm Farm">
@@ -319,15 +283,8 @@ footer{
   <p>© 2026 Yass Worm Farms. All rights reserved.</p>
 </footer>
 
-<script>
-function toggleMenu(){
-  document.getElementById("navLinks").classList.toggle("active");
-}
-</script>
-
 </body>
 </html>
-
 
 
 
