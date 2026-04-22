@@ -22,10 +22,8 @@ body {
   font-family:'Poppins', Arial, sans-serif;
   color:var(--coffee);
   background:white;
-  line-height:1.6;
 }
 
-/* NAV */
 nav {
   background:white;
   border-bottom:2px solid #ddd;
@@ -33,19 +31,11 @@ nav {
   display:flex;
   justify-content:space-between;
   align-items:center;
-  position:sticky;
-  top:0;
-  z-index:10;
 }
 
-nav .logo {
-  height:85px;
-}
+.logo { height:85px; }
 
-.nav-links {
-  display:flex;
-  gap:25px;
-}
+.nav-links { display:flex; gap:25px; }
 
 nav a {
   text-decoration:none;
@@ -54,11 +44,6 @@ nav a {
   font-size:20px;
 }
 
-nav a:hover {
-  color:var(--green);
-}
-
-/* MAIN */
 main {
   max-width:1150px;
   margin:70px auto;
@@ -69,12 +54,10 @@ h1 {
   text-align:center;
   color:var(--green);
   font-size:42px;
-  margin-bottom:50px;
 }
 
-/* PRODUCT */
 .product {
-  background:var(--card-bg);
+  background:#fff;
   border-radius:14px;
   box-shadow:0 10px 25px rgba(0,0,0,0.08);
   padding:30px;
@@ -86,36 +69,13 @@ h1 {
   height:260px;
   object-fit:cover;
   border-radius:10px;
-  margin-bottom:20px;
-}
-
-.product h3 {
-  color:var(--green);
-  margin-bottom:10px;
-}
-
-.product p {
-  margin-bottom:10px;
 }
 
 .price {
   font-weight:700;
   font-size:20px;
-  margin-bottom:10px;
 }
 
-.badge {
-  display:inline-block;
-  background:#e6f4ea;
-  color:#1e7e34;
-  padding:6px 10px;
-  border-radius:6px;
-  font-size:14px;
-  font-weight:600;
-  margin-bottom:15px;
-}
-
-/* BUTTON */
 .buy-button {
   display:inline-block;
   padding:12px 22px;
@@ -125,19 +85,13 @@ h1 {
   border-radius:6px;
   font-weight:700;
 }
-
-.buy-button:hover {
-  background:#005bb5;
-}
 </style>
 </head>
 
 <body>
 
-<!-- NAV -->
 <nav>
-  <img src="Logo.png" class="logo" alt="Yass Worm Farms Logo">
-
+  <img src="Logo.png" class="logo">
   <div class="nav-links">
     <a href="index.html">Home</a>
     <a href="application-rates.html">Application Rates</a>
@@ -153,40 +107,36 @@ h1 {
 
 <!-- 1000L -->
 <div class="product">
-  <img src="IBC_small(1).jpg" alt="1000L IBC Worm Leachate">
+  <img src="IBC.jpg">
   <h3>1000 Litre IBC Enhanced Worm Leachate Fertiliser</h3>
-  <span class="badge">Best Value – Lowest Cost per Litre</span>
-  <p>Premium bulk fertiliser designed for maximum soil biology activation and large-scale farm use.</p>
+  <p><strong>Best Value – Lowest Cost per Litre</strong></p>
   <div class="price">$1,890.00 AUD</div>
-  <a class="buy-button" href="https://buy.stripe.com/28EcN51YY83a7r34DHbAs0z" target="_blank">Buy Now</a>
+  <a class="buy-button" href="https://buy.stripe.com/28EcN51YY83a7r34DHbAs0z">Buy Now</a>
 </div>
 
 <!-- 220L -->
 <div class="product">
-  <img src="220L_small_copy(1).jpg" alt="220L Drum Worm Leachate">
+  <img src="220L.jpg">
   <h3>220 Litre Enhanced Worm Leachate Fertiliser</h3>
-  <p>High-strength liquid fertiliser ideal for farms, orchards, and soil regeneration programs.</p>
   <div class="price">$660.00 AUD</div>
-  <a class="buy-button" href="https://buy.stripe.com/3cIeVdeLKfvCcLn5HLbAs0A" target="_blank">Buy Now</a>
+  <a class="buy-button" href="https://buy.stripe.com/3cIeVdeLKfvCcLn5HLbAs0A">Buy Now</a>
 </div>
 
 <!-- 20L -->
 <div class="product">
-  <img src="20L_small.jpg" alt="20L Worm Leachate">
+  <img src="20L(2).jpg">
   <h3>20 Litre Enhanced Worm Leachate Fertiliser</h3>
-  <p>Balanced formulation for gardens, horticulture, and soil improvement applications.</p>
   <div class="price">$138.00 AUD</div>
-  <a class="buy-button" href="https://buy.stripe.com/5kQbJ11YYcjqh1D2vzbAs0B" target="_blank">Buy Now</a>
+  <a class="buy-button" href="https://buy.stripe.com/5kQbJ11YYcjqh1D2vzbAs0B">Buy Now</a>
 </div>
 
 <!-- 5L -->
 <div class="product">
-  <img src="5 litre Worm Leashate.jpeg" alt="5L Worm Leachate">
+  <img src="5 litre Worm Leashate.jpeg">
   <h3>5 Litre Enhanced Worm Leachate Fertiliser</h3>
-  <span class="badge">Perfect for Home Gardeners</span>
-  <p>Concentrated liquid fertiliser ideal for home gardens and small-scale applications.</p>
+  <p><strong>Perfect for Home Gardeners</strong></p>
   <div class="price">$39.95 AUD</div>
-  <a class="buy-button" href="https://buy.stripe.com/bJebJ16fe97e5iV7PTbAs0C" target="_blank">Buy Now</a>
+  <a class="buy-button" href="https://buy.stripe.com/bJebJ16fe97e5iV7PTbAs0C">Buy Now</a>
 </div>
 
 </main>
