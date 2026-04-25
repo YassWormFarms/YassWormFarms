@@ -8,34 +8,128 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
-body { font-family:Poppins; margin:0; }
-.product { margin:40px; }
-.product img { width:100%; max-width:400px; }
+body {
+  font-family: Poppins, sans-serif;
+  margin: 0;
+  background: #f5f5f5;
+}
+
+/* NAV BAR */
+nav {
+  background: #2c3e50;
+  padding: 15px;
+  text-align: center;
+}
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 600;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* PAGE TITLE */
+h1 {
+  text-align: center;
+  margin: 30px 0;
+}
+
+/* PRODUCT GRID */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+}
+
+.product {
+  background: white;
+  padding: 20px;
+  width: 280px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.product img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.product h3 {
+  margin: 15px 0 10px;
+}
+
+/* BUTTON */
+button {
+  background: #27ae60;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #219150;
+}
 </style>
 </head>
 
 <body>
 
+<!-- NAVIGATION -->
+<nav>
+  <a href="index.html">Home</a>
+  <a href="shop.html">Shop</a>
+  <a href="diy.html">DIY</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
 <h1>Shop</h1>
 
-<div class="product">
-  <img src="https://raw.githubusercontent.com/YassWormFarms/YassWormFarms/main/IBC_small.jpg">
-  <h3>1000L IBC</h3>
-</div>
+<div class="container">
 
-<div class="product">
-  <img src="https://raw.githubusercontent.com/YassWormFarms/YassWormFarms/main/220L_small_copy.jpg">
-  <h3>220L Drum</h3>
-</div>
+  <!-- PRODUCT 1 -->
+  <div class="product">
+    <img src="https://raw.githubusercontent.com/YassWormFarms/YassWormFarms/main/IBC_small.jpg">
+    <h3>1000L IBC</h3>
+    <a href="PASTE_STRIPE_LINK_HERE" target="_blank">
+      <button>Buy Now</button>
+    </a>
+  </div>
 
-<div class="product">
-  <img src="https://raw.githubusercontent.com/YassWormFarms/YassWormFarms/main/20L_small.jpg">
-  <h3>20L Container</h3>
-</div>
+  <!-- PRODUCT 2 -->
+  <div class="product">
+    <img src="https://raw.githubusercontent.com/YassWormFarms/YassWormFarms/main/220L_small_copy.jpg">
+    <h3>220L Drum</h3>
+    <a href="PASTE_STRIPE_LINK_HERE" target="_blank">
+      <button>Buy Now</button>
+    </a>
+  </div>
 
-<div class="product">
-  <img src="https://raw.githubusercontent.com/YassWormFarms/YassWormFarms/main/5%20litre%20Worm%20Leashate.jpeg">
-  <h3>5L Container</h3>
+  <!-- PRODUCT 3 -->
+  <div class="product">
+    <img src="https://raw.githubusercontent.com/YassWormFarms/YassWormFarms/main/20L_small.jpg">
+    <h3>20L Container</h3>
+    <a href="PASTE_STRIPE_LINK_HERE" target="_blank">
+      <button>Buy Now</button>
+    </a>
+  </div>
+
+  <!-- PRODUCT 4 -->
+  <div class="product">
+    <img src="https://raw.githubusercontent.com/YassWormFarms/YassWormFarms/main/5%20litre%20Worm%20Leashate.jpeg">
+    <h3>5L Container</h3>
+    <a href="PASTE_STRIPE_LINK_HERE" target="_blank">
+      <button>Buy Now</button>
+    </a>
+  </div>
+
 </div>
 
 </body>
