@@ -3,9 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Application Rates - Yass Worm Farms</title>
 
 <style>
+
 :root{
   --green:#064d28;
   --coffee:#4b3621;
@@ -20,7 +22,55 @@ body{
   line-height:1.7;
 }
 
+/* NAVIGATION */
+
+nav{
+  background:#fff;
+  border-bottom:2px solid #ddd;
+  padding:15px 5%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+.logo{
+  height:75px;
+}
+
+/* DESKTOP MENU */
+
+.nav-links{
+  display:flex;
+  gap:25px;
+  align-items:center;
+}
+
+nav a{
+  text-decoration:none;
+  color:var(--coffee);
+  font-weight:700;
+  font-size:18px;
+}
+
+nav a:hover{
+  color:var(--green);
+}
+
+/* HAMBURGER */
+
+.hamburger{
+  display:none;
+  font-size:34px;
+  cursor:pointer;
+  color:var(--coffee);
+  user-select:none;
+}
+
 /* HEADER */
+
 header{
   padding:40px 8%;
   background:var(--light);
@@ -40,6 +90,7 @@ h1{
 }
 
 /* SECTIONS */
+
 section{
   max-width:1000px;
   margin:40px auto;
@@ -58,24 +109,30 @@ h2{
   padding:20px;
   border-radius:10px;
   margin-top:15px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.05);
 }
 
 /* HIGHLIGHT */
+
 .highlight{
   background:#eaf6ee;
   border-left:5px solid var(--green);
   padding:18px;
   font-weight:700;
+  border-radius:8px;
 }
 
 /* WARNING */
+
 .warning{
   background:#fff6e5;
   border-left:5px solid #d97706;
   padding:18px;
+  border-radius:8px;
 }
 
 /* FOOTER */
+
 footer{
   text-align:center;
   padding:30px;
@@ -83,92 +140,214 @@ footer{
   color:white;
   margin-top:60px;
 }
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 900px){
+
+  .hamburger{
+    display:block;
+  }
+
+  .nav-links{
+    position:absolute;
+    top:100%;
+    left:0;
+    right:0;
+    background:white;
+    flex-direction:column;
+    align-items:center;
+    gap:0;
+    display:none;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  .nav-links a{
+    width:100%;
+    text-align:center;
+    padding:18px 0;
+    border-top:1px solid #eee;
+    font-size:20px;
+  }
+
+  .nav-links.active{
+    display:flex;
+  }
+
+  .logo{
+    height:65px;
+  }
+
+  h1{
+    font-size:30px;
+  }
+
+  .subtitle{
+    font-size:16px;
+  }
+
+  h2{
+    font-size:24px;
+  }
+
+  section{
+    margin:25px auto;
+  }
+
+}
+
 </style>
 </head>
 
 <body>
 
+<!-- NAVIGATION -->
+
+<nav>
+
+  <img src="Logo.png" class="logo" alt="Yass Worm Farms Logo">
+
+  <div class="hamburger" onclick="toggleMenu()">
+    ☰
+  </div>
+
+  <div class="nav-links" id="navMenu">
+    <a href="index.html">Home</a>
+    <a href="application-rates.html">Application Rates</a>
+    <a href="shop.html">Shop</a>
+    <a href="laboratory-results.html">Laboratory Results</a>
+    <a href="diy.html">DIY</a>
+    <a href="contact.html">Contact Us</a>
+  </div>
+
+</nav>
+
+<!-- HEADER -->
+
 <header>
+
   <h1>Worm Leachate Fertiliser Application Guide</h1>
+
   <div class="subtitle">
     Rocket fuel for plants — a living microbial fertiliser that unlocks soil nutrients, improves plant health, and reduces synthetic fertiliser costs.
   </div>
+
 </header>
+
+<!-- MAIN CONTENT -->
 
 <section>
 
 <div class="highlight">
 ✔ Always apply during active growth for best results  
+<br><br>
 ✔ Worm Leachate works biologically — more microbes = stronger soil response  
+<br><br>
 ✔ Can reduce synthetic fertiliser use over time
 </div>
 
 <h2>🌱 Pots / Containers / Seedlings</h2>
+
 <div class="card">
-100 mL worm juice + 1 L water (1:10)  
+100 mL worm juice + 1 L water (1:10)
 <br><br>
 Apply as a soil drench every 1–2 weeks during active growth.
 </div>
 
 <h2>🌿 Garden Beds (Soil Activation)</h2>
+
 <div class="card">
-100 mL + 5 L water  
+100 mL + 5 L water
 <br><br>
 Drench root zones thoroughly. Repeat every 1–2 weeks.
 </div>
 
 <h2>🍃 Foliar Feed (Leaf Spray)</h2>
+
 <div class="card">
-50–100 mL + 1 L water (1:20 to 1:10)  
+50–100 mL + 1 L water (1:20 to 1:10)
 <br><br>
-Spray early morning or late afternoon for best absorption. Repeat every 1–2 weeks.
+Spray early morning or late afternoon for best absorption.
+<br><br>
+Repeat every 1–2 weeks.
 </div>
 
 <h2>🌾 Lawns (Household Use)</h2>
+
 <div class="card">
-50–200 mL worm juice per 50 m²  
+50–200 mL worm juice per 50 m²
 <br><br>
 Improves colour, density, and soil biology.
 </div>
 
 <h2>🚜 Broadacre / Commercial Crops</h2>
+
 <div class="card">
-Minimum 100 L total liquid per hectare  
+
+Minimum 100 L total liquid per hectare
 <br><br>
-Recommended mix: 5–15 L worm juice per hectare, diluted in water as a carrier.  
+
+Recommended mix:
+<br>
+5–15 L worm juice per hectare diluted in water as a carrier.
 <br><br>
-Water rate is not critical — it distributes biology across the crop.  
-Worm Leachate has an accumulative biological effect (not a chemical spike).
+
+Water rate is not critical — it distributes biology across the crop.
+<br><br>
+
+Worm Leachate has an accumulative biological effect rather than a short-term chemical spike.
+
 </div>
 
 <div class="highlight">
-✔ Higher concentration = stronger long-term soil improvement  
-✔ Biological system builds over time unlike synthetic fertilisers
+✔ Higher concentration = stronger long-term soil improvement
+<br><br>
+✔ Biological systems build over time unlike synthetic fertilisers
 </div>
 
 <h2>⚠️ Precautions & Best Practice</h2>
 
 <div class="warning">
-• Do NOT use freshly chlorinated water — let stand 24 hours or use rainwater  
+
+• Do NOT use freshly chlorinated water — let stand 24 hours or use rainwater
 <br><br>
-• Once mixed, apply immediately (do not store diluted solution)  
+
+• Once mixed, apply immediately (do not store diluted solution)
 <br><br>
-• Apply at dawn or dusk or when foliage is cool/damp  
+
+• Apply at dawn or dusk or when foliage is cool/damp
 <br><br>
-• Start with lower dilution (1:20) for sensitive plants  
+
+• Start with lower dilution (1:20) for sensitive plants
 <br><br>
-• Can be mixed with organic inputs (Molasses, Kelp, Humic Acid)  
+
+• Can be mixed with organic inputs such as Molasses, Kelp and Humic Acid
 <br><br>
-• If plants respond well — increase frequency or concentration gradually  
+
+• If plants respond well increase frequency or concentration gradually
 <br><br>
-• For storage: keep sealed, vented, cool, and out of sunlight
+
+• For storage keep sealed, vented, cool and out of sunlight
+
 </div>
 
 </section>
 
+<!-- FOOTER -->
+
 <footer>
 © 2026 Yass Worm Farms. All Rights Reserved.
 </footer>
+
+<!-- HAMBURGER SCRIPT -->
+
+<script>
+
+function toggleMenu() {
+  document.getElementById("navMenu").classList.toggle("active");
+}
+
+</script>
 
 </body>
 </html>
