@@ -9,9 +9,11 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
 
 <style>
+
 :root{
   --green:#064d28;
   --coffee:#4b3621;
@@ -25,10 +27,11 @@ body{
 }
 
 /* NAVIGATION */
+
 nav{
   background:#fff;
   border-bottom:2px solid #ddd;
-  padding:15px 8%;
+  padding:15px 5%;
   display:flex;
   justify-content:space-between;
   align-items:center;
@@ -38,26 +41,40 @@ nav{
 }
 
 .logo{
-  height:85px;
+  height:75px;
 }
+
+/* DESKTOP MENU */
 
 .nav-links{
   display:flex;
   gap:25px;
+  align-items:center;
 }
 
 nav a{
   text-decoration:none;
   color:var(--coffee);
   font-weight:700;
-  font-size:20px;
+  font-size:18px;
 }
 
 nav a:hover{
   color:var(--green);
 }
 
+/* HAMBURGER */
+
+.hamburger{
+  display:none;
+  font-size:34px;
+  cursor:pointer;
+  color:var(--coffee);
+  user-select:none;
+}
+
 /* HERO */
+
 .hero{
   position:relative;
   height:70vh;
@@ -91,6 +108,7 @@ nav a:hover{
 }
 
 /* SECTION */
+
 .lab-results{
   padding:70px 6%;
   text-align:center;
@@ -104,6 +122,7 @@ nav a:hover{
 }
 
 /* INFO BLOCK */
+
 .info-block{
   max-width:1100px;
   margin:40px auto;
@@ -113,6 +132,7 @@ nav a:hover{
 }
 
 /* HIGHLIGHT BOX */
+
 .highlight-box{
   background:var(--highlight);
   border-left:6px solid var(--green);
@@ -127,6 +147,7 @@ nav a:hover{
 }
 
 /* IMAGE STYLE */
+
 .info-image{
   width:100%;
   max-width:900px;
@@ -136,21 +157,94 @@ nav a:hover{
 }
 
 /* FOOTER */
+
 footer{
   background:var(--coffee);
   color:white;
   text-align:center;
   padding:18px 0;
 }
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 900px){
+
+  .hamburger{
+    display:block;
+  }
+
+  .nav-links{
+    position:absolute;
+    top:100%;
+    left:0;
+    right:0;
+    background:white;
+    flex-direction:column;
+    align-items:center;
+    gap:0;
+    display:none;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  .nav-links a{
+    width:100%;
+    text-align:center;
+    padding:18px 0;
+    border-top:1px solid #eee;
+    font-size:20px;
+  }
+
+  .nav-links.active{
+    display:flex;
+  }
+
+  .logo{
+    height:65px;
+  }
+
+  .hero{
+    height:55vh;
+  }
+
+  .hero-text{
+    margin-left:6%;
+    margin-right:6%;
+  }
+
+  .hero-text h1{
+    font-size:40px;
+  }
+
+  .hero-text p{
+    font-size:20px;
+  }
+
+  .lab-results h2{
+    font-size:34px;
+  }
+
+  .info-block{
+    font-size:17px;
+  }
+
+}
+
 </style>
 </head>
 
 <body>
 
+<!-- NAVIGATION -->
+
 <nav>
+
   <img src="Logo.png" class="logo" alt="Yass Worm Farms Logo">
 
-  <div class="nav-links">
+  <div class="hamburger" onclick="toggleMenu()">
+    ☰
+  </div>
+
+  <div class="nav-links" id="navMenu">
     <a href="index.html">Home</a>
     <a href="application-rates.html">Application Rates</a>
     <a href="shop.html">Shop</a>
@@ -158,7 +252,10 @@ footer{
     <a href="diy.html">DIY</a>
     <a href="contact.html">Contact Us</a>
   </div>
+
 </nav>
+
+<!-- HERO -->
 
 <section class="hero">
   <div class="hero-text">
@@ -167,13 +264,14 @@ footer{
   </div>
 </section>
 
+<!-- MAIN CONTENT -->
+
 <section class="lab-results">
 
 <h2>Slash Fertiliser Costs</h2>
 
 <div class="info-block">
 
-<!-- HIGHLIGHT BOX -->
 <div class="highlight-box">
 
 <strong>Conservative Urea Cropping Scenario</strong><br><br>
@@ -270,9 +368,21 @@ class="info-image">
 
 </section>
 
+<!-- FOOTER -->
+
 <footer>
   <p>© 2026 Yass Worm Farms. All rights reserved.</p>
 </footer>
+
+<!-- HAMBURGER SCRIPT -->
+
+<script>
+
+function toggleMenu() {
+  document.getElementById("navMenu").classList.toggle("active");
+}
+
+</script>
 
 </body>
 </html>
