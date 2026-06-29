@@ -124,7 +124,56 @@ nav a:hover{
   font-weight:600;
   color:var(--coffee);
 }
+/* RULE OF THUMB */
 
+.rule-box{
+  max-width:1000px;
+  margin:30px auto 10px auto;
+  background:#eef8e8;
+  border-left:6px solid #064d28;
+  border-radius:12px;
+  padding:20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.08);
+}
+
+.rule-box img{
+  height:90px;
+  width:auto;
+}
+
+.rule-text{
+  flex:1;
+  text-align:left;
+}
+
+.rule-text h3{
+  color:#064d28;
+  margin-top:0;
+  margin-bottom:10px;
+}
+
+.rule-text p{
+  margin:0;
+  font-size:20px;
+  line-height:1.6;
+}
+
+@media (max-width:900px){
+
+  .rule-box{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .rule-text{
+    text-align:center;
+  }
+
+}
 /* SECTION */
 
 .lab-results{
@@ -280,10 +329,32 @@ footer{
 
 <section class="manager-info">
   <p>
-    <strong>Manager - James Brown</strong><br>
+    <strong>Proprietor - James Brown</strong><br>
     20 Years farming 4000 acres at Dandaragan WA.<br>
     Fat lambs, fine wool and cropping, mainly barley, wheat and sweet lupins.
   </p>
+
+<div class="rule-box">
+
+  <img src="worm Image.png" alt="Earthworm">
+
+  <div class="rule-text">
+
+    <h3>🌱 Rule of Thumb</h3>
+
+    <p>
+      <strong>Earthworms are one of the best indicators of healthy soil.</strong><br><br>
+
+      If your pasture soil is damp you should find at least
+      <strong>25 earthworms in one shovelful of soil.</strong>
+    </p>
+
+  </div>
+
+  <img src="shovel github.png" alt="Shovel">
+
+</div>
+
 </section>
 
 <!-- MAIN CONTENT -->
