@@ -139,7 +139,7 @@ nav a:hover{
   border-bottom:1px solid #ddd;
 }
 
-.manager-info p{
+.manager-info > p{
   max-width:1000px;
   margin:0 auto;
   font-size:20px;
@@ -151,22 +151,23 @@ nav a:hover{
 /* RULE OF THUMB */
 
 .rule-box{
-  max-width:1000px;
+  max-width:1100px;
   margin:30px auto 10px auto;
   background:#eef8e8;
   border-left:6px solid #064d28;
   border-radius:12px;
-  padding:20px;
+  padding:25px;
   display:flex;
-  align-items:center;
+  align-items:flex-start;
   justify-content:space-between;
-  gap:20px;
+  gap:25px;
   box-shadow:0 4px 10px rgba(0,0,0,0.08);
 }
 
-.rule-box img{
+.rule-box > img{
   height:90px;
   width:auto;
+  flex-shrink:0;
 }
 
 .rule-text{
@@ -186,36 +187,24 @@ nav a:hover{
   line-height:1.6;
 }
 
-/* GORDON'S CLOVER IMAGE */
+/* GORDON'S CLOVER PHOTO */
 
 .gordon-image{
   width:100%;
-  max-width:750px;
+  max-width:900px;
+  height:auto;
   border-radius:12px;
-  margin:25px auto 10px auto;
+  margin:30px auto 10px auto;
   display:block;
   box-shadow:0 4px 12px rgba(0,0,0,0.12);
 }
 
 .gordon-caption{
   text-align:center;
-  font-size:16px;
+  font-size:17px;
   line-height:1.5;
-  margin:0 auto 10px auto;
+  margin:0 auto 20px auto;
   color:#4b3621;
-}
-
-@media (max-width:900px){
-
-  .rule-box{
-    flex-direction:column;
-    text-align:center;
-  }
-
-  .rule-text{
-    text-align:center;
-  }
-
 }
 
 /* SECTION */
@@ -337,7 +326,7 @@ footer{
     font-size:16px;
   }
 
-  .manager-info p{
+  .manager-info > p{
     font-size:18px;
   }
 
@@ -345,12 +334,41 @@ footer{
     font-size:17px;
   }
 
+  /* RULE OF THUMB ON MOBILE */
+
+  .rule-box{
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+  }
+
+  .rule-box > img{
+    height:75px;
+  }
+
+  .rule-text{
+    width:100%;
+    text-align:center;
+  }
+
+  .rule-text p{
+    font-size:18px;
+  }
+
+  /* LARGE CLOVER PHOTO ON MOBILE */
+
   .gordon-image{
+    width:100%;
     max-width:100%;
+    height:auto;
+    margin:25px auto 10px auto;
+    border-radius:10px;
   }
 
   .gordon-caption{
     font-size:15px;
+    margin-bottom:20px;
   }
 
 }
@@ -385,6 +403,7 @@ footer{
 <!-- HERO -->
 
 <section class="hero">
+
   <div class="hero-text">
 
 ```
@@ -400,6 +419,7 @@ footer{
 ```
 
   </div>
+
 </section>
 
 <!-- MANAGER INFO -->
@@ -429,21 +449,23 @@ footer{
     Gordon, a dairy farmer from East Gippsland, has used Enhanced Worm Leachate for a number of years. As part of his soil health program, he also applies Humic Acid, Boron, Tri Kelp and Fulvic Acid to his pastures. Gordon tells me that whenever the soil is damp, he can dig virtually anywhere on his farm and consistently find at least <strong>25 earthworms in every spadeful of soil.</strong> Seeing this level of earthworm activity gives him confidence that he is maintaining healthy, biologically active soils.
   </p>
 
-  <img src="https://raw.githubusercontent.com/YassWormFarms/YassWormFarms/main/clover.jpg"
-       alt="Clover pasture on Gordon's dairy farm in East Gippsland"
-       class="gordon-image">
-
-  <p class="gordon-caption">
-    <strong>Gordon's dairy pastures in East Gippsland.</strong><br>
-    Healthy, biologically active soil supports strong pasture growth.
-  </p>
-
 </div>
 
 <img src="shovel github.png" alt="Shovel">
 ```
 
   </div>
+
+  <!-- GORDON'S CLOVER PHOTO -->
+
+<img src="https://raw.githubusercontent.com/YassWormFarms/YassWormFarms/main/clover.jpg"
+    alt="Clover pasture on Gordon's dairy farm in East Gippsland"
+    class="gordon-image">
+
+  <p class="gordon-caption">
+    <strong>Gordon's dairy pastures in East Gippsland.</strong><br>
+    Healthy, biologically active soil supports strong pasture growth.
+  </p>
 
 </section>
 
@@ -582,13 +604,17 @@ async></script>
 
 <noscript>
 <div class="statcounter">
+
 <a title="Web Analytics"
 href="https://statcounter.com/" target="_blank">
+
 <img class="statcounter"
 src="https://c.statcounter.com/13201685/0/aa3dbc18/1/"
 alt="Web Analytics"
 referrerPolicy="no-referrer-when-downgrade">
+
 </a>
+
 </div>
 </noscript>
 
@@ -596,6 +622,7 @@ referrerPolicy="no-referrer-when-downgrade">
 
 </body>
 </html>
+
 
 
 
