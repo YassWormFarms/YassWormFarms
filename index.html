@@ -194,7 +194,7 @@ nav a:hover{
   max-width:650px;
   height:auto;
   border-radius:12px;
-  margin:25px auto 10px auto;
+  margin:25px auto 5px auto;
   display:block;
   box-shadow:0 4px 12px rgba(0,0,0,0.12);
 }
@@ -203,14 +203,14 @@ nav a:hover{
   text-align:center;
   font-size:17px;
   line-height:1.5;
-  margin:0 auto 20px auto;
+  margin:0 auto 0 auto;
   color:#4b3621;
 }
 
 /* SECTION */
 
 .lab-results{
-  padding:20px 6% 70px 6%;
+  padding:0 6% 70px 6%;
   text-align:center;
   background:#f8fbf8;
 }
@@ -219,7 +219,8 @@ nav a:hover{
 
 .info-block{
   max-width:1100px;
-  margin:40px auto;
+  margin:0 auto;
+  padding-top:0;
   text-align:left;
   font-size:18px;
   line-height:1.7;
@@ -238,6 +239,15 @@ nav a:hover{
 
 .highlight-box strong{
   color:var(--green);
+}
+
+/* SPRING PROMOTION HEADING */
+
+.spring-heading{
+  color:var(--green);
+  font-size:28px;
+  line-height:1.25;
+  margin:25px 0 15px 0;
 }
 
 /* IMAGE STYLE */
@@ -362,13 +372,18 @@ footer{
     width:100%;
     max-width:650px;
     height:auto;
-    margin:25px auto 10px auto;
+    margin:20px auto 3px auto;
     border-radius:10px;
   }
 
   .gordon-caption{
     font-size:15px;
-    margin-bottom:20px;
+    margin-bottom:0;
+  }
+
+  .spring-heading{
+    font-size:24px;
+    margin-top:20px;
   }
 
 }
@@ -476,9 +491,12 @@ footer{
   <div class="info-block">
 
 ```
-<div class="highlight-box">
+<h2 class="spring-heading">
+  Spring is Coming<br>
+  Boost Yields and Save Money
+</h2>
 
-  <strong>Conservative Urea Cropping Scenario</strong><br><br>
+<div class="highlight-box">
 
   Applying 10 to 15 litres per hectare of Enhanced Worm Leachate costs approximately <strong>$18.90 to $28 per hectare</strong>.<br><br>
 
@@ -622,6 +640,7 @@ referrerPolicy="no-referrer-when-downgrade">
 
 </body>
 </html>
+
 
 
 
